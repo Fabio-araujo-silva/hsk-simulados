@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ControleAudio } from "../audio";
 import { leEstado, mudaConfig, mudaTentativa, novaTentativa, resetaSimulado, useConfig, useEstado } from "../armazenamento";
 import { confere } from "../correcao";
-import { carregaLexico, carregaProva, NOMES_PARTE, NOMES_SECAO, urlPublica } from "../dados";
+import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlPublica } from "../dados";
 import { CaixaRevisao } from "../componentes/CaixaRevisao";
 import { ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
@@ -47,7 +47,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
   const [n, setN] = useState<number>(() => {
     if (nInicial) return nInicial;
     const t = leEstado().tentativas[tid];
-    for (let i = 1; i <= 80; i++) if (!t?.respostas[i]) return i;
+    for (let i = 1; i <= 100; i++) if (!t?.respostas[i]) return i;
     return 1;
   });
   const [verRoteiro, setVerRoteiro] = useState(false);
@@ -94,15 +94,16 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     [q, tid],
   );
 
+  const ultima = prova?.questoes.length ?? 80;
   const vai = useCallback(
     (novo: number) => {
-      if (novo < 1 || novo > 80) return;
+      if (novo < 1 || novo > ultima) return;
       audio?.pausa();
       setN(novo);
       history.replaceState(null, "", `#/estudo/${id}/${novo}`);
       topoRef.current?.scrollIntoView({ block: "start" });
     },
-    [audio, id],
+    [audio, id, ultima],
   );
 
   // atalhos de teclado
@@ -122,8 +123,10 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
         else audio.toca(q.audio.s, q.audio.e);
       } else if (!revelado && q) {
         const k = e.key.toUpperCase();
-        if (q.tipo === "vf" && (k === "V" || k === "C" || k === "1")) responde(true);
-        else if (q.tipo === "vf" && (k === "F" || k === "X" || k === "E" || k === "2")) responde(false);
+        const ehVF = q.tipo === "vf" || q.tipo === "imagem-vf";
+        if (ehVF && (k === "V" || k === "C" || k === "1")) responde(true);
+        else if (ehVF && (k === "F" || k === "X" || k === "E" || k === "2")) responde(false);
+        else if (q.tipo === "imagem-abc" && /^[ABC]$/.test(k)) responde(k);
         else if (["imagem", "abc", "pareamento", "lacuna"].includes(q.tipo) && /^[A-F]$/.test(k)) {
           const grupo = q.grupo ? prova?.grupos[q.grupo] : undefined;
           const validas = q.opcoes ? Object.keys(q.opcoes) : grupo?.letras ?? Object.keys(grupo?.opcoes ?? {});
@@ -150,18 +153,18 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
   const consultas = tentativa.consultas?.[n] ?? [];
 
   return (
-    <ProvedorLeitura lexico={lexico} traducao={cfg.traducao} pinyin={cfg.pinyin} audio={audio} consultou={consultou}>
+    <ProvedorLeitura lexico={lexico} traducao={cfg.traducao} pinyin={cfg.pinyin || (regras(prova.nivel).pinyinNaProva && cfg.pinyinHsk1 !== false)} audio={audio} consultou={consultou}>
       <div className="estudo" ref={topoRef}>
         <aside className="navegador">
           <div className="nav-titulo">
             <b>{prova.id}</b> · estudo
             {resumo && (
               <small>
-                {resumo.feitas}/80 feitas · {resumo.certas} certas
+                {resumo.feitas}/{prova.questoes.length} feitas · {resumo.certas} certas
               </small>
             )}
           </div>
-          {(["L", "R", "W"] as const).map((s) => (
+          {(["L", "R", "W"] as const).filter((s) => regras(prova.nivel).questoes[s] > 0).map((s) => (
             <div key={s} className="nav-secao">
               <div className="nav-secao-nome">{NOMES_SECAO[s]}</div>
               <div className="nav-grade">
@@ -171,7 +174,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                     const r = tentativa.respostas[x.n];
                     const st = !r ? "" : r.certa || r.manual ? "certa" : "errada";
                     return (
-                      <button key={x.n} className={`nav-n ${st} ${x.n === n ? "atual" : ""}`} onClick={() => vai(x.n)} title={NOMES_PARTE[`${x.secao}${x.parte}`]}>
+                      <button key={x.n} className={`nav-n ${st} ${x.n === n ? "atual" : ""}`} onClick={() => vai(x.n)} title={nomeParte(prova.nivel, `${x.secao}${x.parte}`)}>
                         {x.n}
                       </button>
                     );
@@ -208,7 +211,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
             <div className="caminho">
               <span className="secao-nome">{NOMES_SECAO[q.secao]}</span>
               <span className="parte">
-                parte {q.parte} · {NOMES_PARTE[`${q.secao}${q.parte}`]}
+                parte {q.parte} · {nomeParte(prova.nivel, `${q.secao}${q.parte}`)}
               </span>
             </div>
             <div className="alternadores">
@@ -235,7 +238,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
             <>
               <div className="cabecalho-questao">
                 <span className="numero">{q.n}</span>
-                <span className="instrucao">{instrucao(q)}</span>
+                <span className="instrucao">{instrucao(q, prova.nivel)}</span>
               </div>
               <VisaoQuestao
                 key={q.n}
@@ -279,7 +282,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                     )}
                   </>
                 )}
-                <button className={revelado ? "pri" : "sec"} onClick={() => vai(n + 1)} disabled={n >= 80}>
+                <button className={revelado ? "pri" : "sec"} onClick={() => vai(n + 1)} disabled={n >= ultima}>
                   próxima →
                 </button>
               </div>

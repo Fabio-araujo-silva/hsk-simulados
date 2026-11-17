@@ -34,7 +34,14 @@ export interface TrechoAudio {
 }
 
 export type Secao = "L" | "R" | "W";
-export type TipoQuestao = "imagem" | "vf" | "abc" | "pareamento" | "lacuna" | "ordenar" | "hanzi";
+/**
+ * imagem:     casar com uma figura do grupo (A–F)
+ * imagem-vf:  uma figura + o que se ouve/lê → certo ou errado (HSK 1/2)
+ * imagem-abc: escolher entre três figuras A/B/C (HSK 1/2)
+ */
+export type TipoQuestao = "imagem" | "imagem-vf" | "imagem-abc" | "vf" | "abc" | "pareamento" | "lacuna" | "ordenar" | "hanzi";
+
+export type Nivel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export interface Questao {
   n: number;
@@ -60,6 +67,12 @@ export interface Questao {
   antes?: string;
   depois?: string;
   pinyin?: string;
+  /** imagem-vf: a figura da questão */
+  imagem?: string;
+  /** imagem-abc: as três figuras */
+  imagens?: Record<string, string>;
+  /** imagem-vf da leitura: a palavra impressa ao lado da figura */
+  palavra?: Frase;
   /** explicação em português (por que a resposta certa é a certa) */
   explicacao?: string;
   /** trecho do texto/áudio que justifica a resposta */
@@ -88,6 +101,7 @@ export interface Segmento {
 
 export interface Prova {
   id: string;
+  nivel: Nivel;
   titulo: string;
   origem?: string;
   /** de onde veio o texto do áudio: oficial (听力材料) ou transcrito do áudio original */
@@ -100,6 +114,7 @@ export interface Prova {
 
 export interface ResumoProva {
   id: string;
+  nivel: Nivel;
   titulo: string;
   origem?: string;
   temAudio: boolean;
@@ -206,4 +221,8 @@ export interface Config {
   novosPorDia: number;
   /** modo estudo: tocar o áudio sozinho ao abrir uma questão de listening ainda não respondida */
   tocarSozinho: boolean;
+  /** último nível escolhido na tela inicial */
+  nivel?: Nivel;
+  /** HSK 1: mostrar pinyin (como no caderno real); false = esconder */
+  pinyinHsk1?: boolean;
 }

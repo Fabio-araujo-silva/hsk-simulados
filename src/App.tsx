@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useEstado, useStatusDisco } from "./armazenamento";
 import { vencido } from "./srs";
-import { Inicio } from "./paginas/Inicio";
+import { EscolhaNivel, Inicio } from "./paginas/Inicio";
 import { PaginaEstudo } from "./paginas/Estudo";
 import { PaginaExame } from "./paginas/Exame";
 import { PaginaResultado } from "./paginas/Resultado";
@@ -70,8 +70,11 @@ export default function App() {
     case "config":
       pagina = <PaginaConfig />;
       break;
+    case "nivel":
+      pagina = <Inicio key={partes[1]} nivel={(Number(partes[1]) || 3) as 1 | 3} />;
+      break;
     default:
-      pagina = <Inicio />;
+      pagina = <EscolhaNivel />;
   }
 
   return (
@@ -79,11 +82,11 @@ export default function App() {
       {!emProva && (
         <header className="topo">
           <a href="#/" className="marca">
-            <span className="zh">汉语水平考试</span> <b>HSK 3</b> <span className="marca-sub">simulados reais</span>
+            <span className="zh">汉语水平考试</span> <b>HSK</b> <span className="marca-sub">simulados reais</span>
           </a>
           <nav>
-            <a href="#/" className={partes.length === 0 ? "on" : ""}>
-              Simulados
+            <a href={cfg.nivel ? `#/nivel/${cfg.nivel}` : "#/"} className={partes.length === 0 || partes[0] === "nivel" ? "on" : ""}>
+              Simulados{cfg.nivel ? ` · HSK ${cfg.nivel}` : ""}
             </a>
             <a href="#/revisao" className={partes[0] === "revisao" ? "on" : ""}>
               Revisão {pendentes > 0 && <span className="badge">{pendentes}</span>}

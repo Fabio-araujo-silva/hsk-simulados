@@ -12,6 +12,8 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "vite.config.ts"
+    "vite.config.ts",
+    "servidor/**/*.ts",
+    "src/vozConfig.ts"
   ]
 }

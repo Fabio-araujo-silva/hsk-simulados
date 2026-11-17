@@ -15,6 +15,7 @@ export function confere(q: Questao, valor: string | boolean | null | undefined):
   if (valor === null || valor === undefined || valor === "") return false;
   switch (q.tipo) {
     case "vf":
+    case "imagem-vf":
       return valor === q.resposta;
     case "ordenar": {
       const v = normalizaEscrita(String(valor));
@@ -31,7 +32,7 @@ export function confere(q: Questao, valor: string | boolean | null | undefined):
 /** Texto legível da resposta certa (ex.: "B · 生病了"). */
 export function textoResposta(q: Questao, grupo?: Grupo, valor: string | boolean | null = q.resposta): string {
   if (valor === null || valor === undefined) return "—";
-  if (q.tipo === "vf") return valor ? "✓ certo" : "✗ errado";
+  if (q.tipo === "vf" || q.tipo === "imagem-vf") return valor ? "✓ certo" : "✗ errado";
   if (q.tipo === "ordenar" || q.tipo === "hanzi") return String(valor);
   const letra = String(valor);
   const op: Frase | undefined = q.opcoes?.[letra] ?? grupo?.opcoes?.[letra];
@@ -50,7 +51,7 @@ export function resumoTentativa(prova: Prova, t: Tentativa) {
     porParte[k].total++;
     if (ok) porParte[k].certas++;
   }
-  return { certas, porParte, ...pontuacao(certas) };
+  return { certas, porParte, ...pontuacao(certas, prova.nivel) };
 }
 
 /** Todas as frases de uma questão (para achar frase-chave, palavras etc.). */

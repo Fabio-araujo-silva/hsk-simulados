@@ -36,6 +36,11 @@ Questão a questão, com correção imediata e **explicação em português** de
   traduzida. Selecionar um trecho mostra todas as palavras dele. Desliga quando quiser.
 - **Pinyin** sobre os caracteres (`P`), com tons de 一/不 e 儿化 como nos livros.
 - **Áudio completo + texto** rolando junto (bom para shadowing).
+- **Voz sintética** (ElevenLabs) nas questões que não têm áudio original (leitura e escrita): 🔊 lê o enunciado e
+  cada alternativa. Cada trecho é gerado **uma única vez** e fica salvo em `public/tts/` — depois toca na hora,
+  sem gastar créditos. Também funciona na correção das provas. Sem chave, usa a voz chinesa do navegador.
+- **Rascunho**: **botão direito** numa alternativa (ou figura) risca/desrisca — para ir eliminando opções,
+  inclusive no modo prova.
 - Atalhos: `←`/`→` navegar · `A`–`F` responder · `V`/`F` certo/errado · `espaço` tocar · `Enter` próxima.
 
 ### Revisão espaçada
@@ -101,8 +106,9 @@ data/trabalho/              instruções e dossiês usados pelos agentes
 ```
 
 Refazer tudo depois de mudar algo em `data/`: `python -W ignore scripts/enriquece.py tudo`.
-O alinhamento precisa do áudio em `fontes/audio/` e de `faster-whisper`; o Scribe precisa de
-`ELEVENLABS_API_KEY` no `.env` (não versionado).
+O alinhamento precisa do áudio em `fontes/audio/` e de `faster-whisper`; o Scribe e a voz sintética precisam de
+`ELEVENLABS_API_KEY` no `.env` (não versionado; a chave precisa das permissões *Speech to Text* e *Text to Speech*).
+A voz é gerada pelo servidor local (`servidor/vozSintetica.ts`) — a chave nunca vai para o navegador.
 
 **Stack**: Vite + React + TypeScript · ts-fsrs · Python (PyMuPDF, jieba, pypinyin, faster-whisper, numpy).
 **Dicionários**: [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cedict) (CC BY-SA 4.0) e listas HSK 2.0 de
@@ -110,4 +116,5 @@ O alinhamento precisa do áudio em `fontes/audio/` e de `faster-whisper`; o Scri
 
 ---
 
-As provas são material do Hanban / Chinese Testing International. **Repositório privado, uso pessoal de estudo.**
+As provas são material do Hanban / Chinese Testing International, reunidas aqui só para estudo. Traduções,
+explicações e código: livres para estudar e compartilhar com colegas.

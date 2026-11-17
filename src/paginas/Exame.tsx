@@ -2,16 +2,20 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { arquivaTentativa, leEstado, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
 import { useTempo } from "../audio";
 import { confere } from "../correcao";
-import { formataTempo, NOMES_PARTE, NOMES_SECAO, TEMPO_ESCRITA, TEMPO_FOLHA, TEMPO_LEITURA, urlPublica } from "../dados";
+import { formataTempo, nomeParte, NOMES_SECAO, regras, urlPublica } from "../dados";
 import { ProvedorLeitura, Frase } from "../componentes/Leitura";
 import { VisaoQuestao } from "../componentes/Questao";
 import type { Prova, Questao, Tentativa } from "../tipos";
 import { useAudioDaProva, useProvaELexico } from "./Estudo";
 import { vaiPara } from "../App";
+import { useRiscadas } from "../riscadas";
 
 type Etapa = NonNullable<Tentativa["etapa"]>;
 const ORDEM: Etapa[] = ["L", "Lfolha", "R", "W", "fim"];
-const TEMPO_ETAPA: Record<string, number> = { Lfolha: TEMPO_FOLHA, R: TEMPO_LEITURA, W: TEMPO_ESCRITA };
+const tempoEtapa = (prova: Prova, etapa: string): number => {
+  const t = regras(prova.nivel).tempos;
+  return etapa === "Lfolha" ? t.folha : etapa === "R" ? t.R : etapa === "W" ? t.W : 0;
+};
 
 function emAndamento(id: string) {
   return Object.values(leEstado().tentativas)
@@ -26,22 +30,28 @@ export function PaginaExame({ id }: { id: string }) {
 
   if (erro) return <div className="erro">Não consegui abrir {id}: {erro}</div>;
   if (!prova) return <div className="carregando">carregando {id}…</div>;
+  const rg = regras(prova.nivel);
   if (!tid) {
     return (
       <div className="exame-inicio">
         <h1>{prova.id} · modo prova</h1>
         <ul className="regras">
           <li>
-            <b>听力 Listening</b> — 40 questões, ~{prova.audio ? Math.round(prova.audio.duracao / 60) : 35} min de áudio contínuo (cada item é lido duas vezes), sem pausa;
-            depois, 5 min para revisar as respostas.
+            <b>听力 Listening</b> — {rg.questoes.L} questões, ~{prova.audio ? Math.round(prova.audio.duracao / 60) : 35} min de áudio contínuo (cada item é lido duas vezes),
+            sem pausa; depois, {Math.round(rg.tempos.folha / 60)} min para revisar as respostas.
           </li>
           <li>
-            <b>阅读 Leitura</b> — 30 questões em 30 min.
+            <b>阅读 Leitura</b> — {rg.questoes.R} questões em {Math.round(rg.tempos.R / 60)} min.
           </li>
+          {rg.questoes.W > 0 && (
+            <li>
+              <b>书写 Escrita</b> — {rg.questoes.W} questões em {Math.round(rg.tempos.W / 60)} min (digite os caracteres com o teclado chinês/pinyin do sistema).
+            </li>
+          )}
           <li>
-            <b>书写 Escrita</b> — 10 questões em 15 min (digite os caracteres com o teclado chinês/pinyin do sistema).
+            Sem tradução{rg.pinyinNaProva ? " (o pinyin aparece, como no caderno real)" : " e sem pinyin"}. A correção e a nota (de {rg.maximo}, aprovação com{" "}
+            {rg.aprovacao}) aparecem no final.
           </li>
-          <li>Sem tradução e sem pinyin. A correção e a nota (de 300, aprovação com 180) aparecem no final.</li>
           <li>Use fones e um lugar silencioso — como no dia.</li>
         </ul>
         {!prova.audio && <div className="aviso">Esta prova ainda não tem áudio: o listening será pulado e a nota considera só leitura e escrita.</div>}
@@ -57,7 +67,7 @@ export function PaginaExame({ id }: { id: string }) {
                   if (!confirm("Começar outra prova do zero? A que está em andamento fica arquivada (não conta na nota, mas não é apagada).")) return;
                   arquivaTentativa(pendente.id);
                   const t = novaTentativa(id, "prova");
-                  if (!prova.audio) mudaTentativa(t.id, (x) => ({ ...x, etapa: "R", semListening: true, restante: TEMPO_LEITURA }));
+                  if (!prova.audio) mudaTentativa(t.id, (x) => ({ ...x, etapa: "R", semListening: true, restante: tempoEtapa(prova, "R") }));
                   setTid(t.id);
                 }}
               >
@@ -69,7 +79,7 @@ export function PaginaExame({ id }: { id: string }) {
               className="pri grande"
               onClick={() => {
                 const t = novaTentativa(id, "prova");
-                if (!prova.audio) mudaTentativa(t.id, (x) => ({ ...x, etapa: "R", semListening: true, restante: TEMPO_LEITURA }));
+                if (!prova.audio) mudaTentativa(t.id, (x) => ({ ...x, etapa: "R", semListening: true, restante: tempoEtapa(prova, "R") }));
                 setTid(t.id);
               }}
             >
@@ -101,10 +111,11 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   const avanca = useCallback(() => {
     mudaTentativa(tid, (x) => {
       const i = ORDEM.indexOf(x.etapa ?? "L");
-      const prox = ORDEM[Math.min(i + 1, ORDEM.length - 1)];
-      return { ...x, etapa: prox, etapaInicio: Date.now(), restante: TEMPO_ETAPA[prox], ...(prox === "fim" ? { fim: Date.now() } : {}) };
+      let prox = ORDEM[Math.min(i + 1, ORDEM.length - 1)];
+      if (prox === "W" && !regras(prova.nivel).questoes.W) prox = "fim"; // HSK 1/2 não têm escrita
+      return { ...x, etapa: prox, etapaInicio: Date.now(), restante: tempoEtapa(prova, prox), ...(prox === "fim" ? { fim: Date.now() } : {}) };
     });
-  }, [tid]);
+  }, [tid, prova]);
 
   // fim → resultado
   useEffect(() => {
@@ -141,10 +152,10 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   useEffect(() => {
     if (etapa === "L" || etapa === "fim" || !iniciado) return;
     const id = window.setInterval(() => {
-      mudaTentativa(tid, (x) => ({ ...x, restante: Math.max(0, (x.restante ?? TEMPO_ETAPA[etapa]) - 1) }));
+      mudaTentativa(tid, (x) => ({ ...x, restante: Math.max(0, (x.restante ?? tempoEtapa(prova, etapa)) - 1) }));
     }, 1000);
     return () => window.clearInterval(id);
-  }, [etapa, tid, iniciado]);
+  }, [etapa, tid, iniciado, prova]);
 
   useEffect(() => {
     if (etapa !== "L" && etapa !== "fim" && t?.restante === 0) avanca();
@@ -192,7 +203,7 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   const restante = etapa === "L" ? Math.max(0, (audio?.duracao || prova.audio?.duracao || 0) - tempo) : t.restante ?? 0;
 
   return (
-    <ProvedorLeitura lexico={null} traducao={false} pinyin={false} audio={null}>
+    <ProvedorLeitura lexico={null} traducao={false} pinyin={false} pinyinFixo={regras(prova.nivel).pinyinNaProva} audio={null}>
       <div className="exame">
         <header className="exame-topo">
           <b>{prova.id}</b>
@@ -211,14 +222,15 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
           <button
             className="sec"
             onClick={() => {
-              const msg = etapa === "L" ? "Pular o resto do áudio e ir para a revisão do listening?" : etapa === "W" ? "Entregar a prova?" : "Encerrar esta seção e seguir?";
+              const ultimaEtapa = etapa === "W" || (etapa === "R" && !regras(prova.nivel).questoes.W);
+              const msg = etapa === "L" ? "Pular o resto do áudio e ir para a revisão do listening?" : ultimaEtapa ? "Entregar a prova?" : "Encerrar esta seção e seguir?";
               if (confirm(msg)) {
                 if (etapa === "L") audio?.pausa();
                 avanca();
               }
             }}
           >
-            {etapa === "W" ? "entregar prova" : "encerrar seção →"}
+            {etapa === "W" || (etapa === "R" && !regras(prova.nivel).questoes.W) ? "entregar prova" : "encerrar seção →"}
           </button>
         </header>
         <FolhaProva prova={prova} questoes={questoes} t={t} responde={responde} tocandoN={tocandoN} />
@@ -250,14 +262,14 @@ function FolhaProva({ prova, questoes, t, responde, tocandoN }: { prova: Prova; 
         return (
           <section key={b.chave} className="bloco">
             <h3>
-              {NOMES_PARTE[b.parte]} <small>({b.qs[0].n}–{b.qs[b.qs.length - 1].n})</small>
+              {nomeParte(prova.nivel, b.parte)} <small>({b.qs[0].n}–{b.qs[b.qs.length - 1].n})</small>
             </h3>
-            {agrupado && grupo && <CabecalhoGrupo grupo={grupo} tipo={b.qs[0].tipo} />}
+            {agrupado && grupo && <CabecalhoGrupo grupo={grupo} tipo={b.qs[0].tipo} chave={`${prova.id}:${b.grupo}`} />}
             {b.qs.map((q) => (
               <div key={q.n} ref={(el) => (refs.current[q.n] = el)} className={`item-folha ${tocandoN === q.n ? "tocando" : ""}`}>
                 <span className="numero">{q.n}</span>
                 {agrupado && grupo ? (
-                  <LinhaGrupo q={q} grupo={grupo} valor={t.respostas[q.n]?.valor ?? null} onResponde={(v) => responde(q, v)} />
+                  <LinhaGrupo q={q} grupo={grupo} chave={`${prova.id}:${q.n}`} valor={t.respostas[q.n]?.valor ?? null} onResponde={(v) => responde(q, v)} />
                 ) : (
                   <VisaoQuestao prova={prova} q={q} valor={t.respostas[q.n]?.valor ?? null} revelado={false} modo="prova" onResponde={(v) => responde(q, v)} />
                 )}
@@ -270,12 +282,17 @@ function FolhaProva({ prova, questoes, t, responde, tocandoN }: { prova: Prova; 
   );
 }
 
-function CabecalhoGrupo({ grupo, tipo }: { grupo: NonNullable<Prova["grupos"][string]>; tipo: string }) {
+function CabecalhoGrupo({ grupo, tipo, chave }: { grupo: NonNullable<Prova["grupos"][string]>; tipo: string; chave: string }) {
+  const [riscadas, alterna] = useRiscadas(chave);
+  const risca = (l: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    alterna(l);
+  };
   if (tipo === "imagem") {
     return (
       <div className="imagens pequenas">
         {(grupo.letras ?? []).map((l) => (
-          <div key={l} className={`imagem ${grupo.exemploUsa === l ? "apagada" : ""}`}>
+          <div key={l} className={`imagem ${grupo.exemploUsa === l ? "apagada" : ""} ${riscadas.has(l) ? "riscada" : ""}`} onContextMenu={risca(l)} title="botão direito: riscar (rascunho)">
             <span className="letra">{l}</span>
             {grupo.imagens?.[l] && <img src={urlPublica(grupo.imagens[l])} alt={l} />}
             {grupo.exemploUsa === l && <span className="tag">exemplo</span>}
@@ -287,7 +304,7 @@ function CabecalhoGrupo({ grupo, tipo }: { grupo: NonNullable<Prova["grupos"][st
   return (
     <div className={tipo === "lacuna" ? "banco" : "lista-opcoes"}>
       {Object.entries(grupo.opcoes ?? {}).map(([l, f]) => (
-        <div key={l} className={`opcao estatica ${grupo.exemplo?.resposta === l ? "apagada" : ""}`}>
+        <div key={l} className={`opcao estatica ${grupo.exemplo?.resposta === l ? "apagada" : ""} ${riscadas.has(l) ? "riscada" : ""}`} onContextMenu={risca(l)} title="botão direito: riscar (rascunho)">
           <span className="letra">{l}</span> <Frase f={f} inerte />
         </div>
       ))}
@@ -300,12 +317,13 @@ function CabecalhoGrupo({ grupo, tipo }: { grupo: NonNullable<Prova["grupos"][st
   );
 }
 
-function LinhaGrupo({ q, grupo, valor, onResponde }: { q: Questao; grupo: NonNullable<Prova["grupos"][string]>; valor: string | boolean | null; onResponde: (v: string) => void }) {
+function LinhaGrupo({ q, grupo, chave, valor, onResponde }: { q: Questao; grupo: NonNullable<Prova["grupos"][string]>; chave: string; valor: string | boolean | null; onResponde: (v: string) => void }) {
+  const [riscadas, alterna] = useRiscadas(chave);
   const letras = q.tipo === "imagem" ? grupo.letras ?? [] : Object.keys(grupo.opcoes ?? {});
   const doExemplo = q.tipo === "imagem" ? grupo.exemploUsa : grupo.exemplo?.resposta;
   return (
     <div className="linha-grupo">
-      {q.tipo !== "imagem" && (
+      {(q.tipo !== "imagem" || q.texto) && (
         <div className="linha-texto">
           {q.texto && <Frase f={q.texto} inerte />}
           {q.linhas?.map((l, i) => (
@@ -317,7 +335,17 @@ function LinhaGrupo({ q, grupo, valor, onResponde }: { q: Questao; grupo: NonNul
       )}
       <div className="bolhas">
         {letras.map((l) => (
-          <button key={l} className={`bolha ${valor === l ? "ativa" : ""}`} disabled={l === doExemplo} onClick={() => onResponde(l)}>
+          <button
+            key={l}
+            className={`bolha ${valor === l ? "ativa" : ""} ${riscadas.has(l) ? "riscada" : ""}`}
+            disabled={l === doExemplo}
+            onClick={() => onResponde(l)}
+            onContextMenu={(e) => {
+              e.preventDefault();
+              alterna(l);
+            }}
+            title="botão direito: riscar (rascunho)"
+          >
             {l}
           </button>
         ))}

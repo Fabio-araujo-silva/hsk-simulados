@@ -166,7 +166,7 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
               <>
                 <div className="cabecalho-questao">
                   <span className="numero">{q.n}</span>
-                  <span className="instrucao">{instrucao(q)}</span>
+                  <span className="instrucao">{instrucao(q, prova?.nivel)}</span>
                 </div>
                 <VisaoQuestao
                   prova={prova!}

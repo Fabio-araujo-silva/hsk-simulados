@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { salvaCartoes, useConfig, useEstado } from "../armazenamento";
 import { sugereCartoes } from "../cartoes";
 import { resumoTentativa, textoResposta } from "../correcao";
-import { NOMES_PARTE, NOMES_SECAO } from "../dados";
+import { nomeParte, NOMES_SECAO, regras } from "../dados";
 import { CaixaRevisao } from "../componentes/CaixaRevisao";
 import { ProvedorLeitura } from "../componentes/Leitura";
 import { VisaoQuestao } from "../componentes/Questao";
@@ -55,19 +55,19 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
         <p className="data">{new Date(t.fim ?? t.inicio).toLocaleString("pt-BR")}</p>
 
         <div className="placar">
-          {(["L", "R", "W"] as const).map((s) => (
+          {(["L", "R", "W"] as const).filter((s) => regras(prova.nivel).questoes[s] > 0).map((s) => (
             <div key={s} className="placar-secao">
               <small>{NOMES_SECAO[s]}</small>
               <b>{t.semListening && s === "L" ? "—" : res[s]}</b>
               <span>
-                {res.certas[s]}/{s === "L" ? 40 : s === "R" ? 30 : 10} certas
+                {res.certas[s]}/{regras(prova.nivel).questoes[s]} certas
               </span>
             </div>
           ))}
           <div className={`placar-total ${res.aprovado ? "aprovado" : "reprovado"}`}>
             <small>total</small>
             <b>{res.total}</b>
-            <span>{res.aprovado ? "aprovado (≥ 180)" : `faltam ${180 - res.total} p/ 180`}</span>
+            <span>{res.aprovado ? `aprovado (≥ ${res.aprovacao})` : `faltam ${res.aprovacao - res.total} p/ ${res.aprovacao}`}</span>
           </div>
         </div>
         <p className="nota-rodape">Nota estimada: cada seção vale 100 pontos, proporcional aos acertos (a nota oficial usa uma escala equalizada, mas fica próxima disso).</p>
@@ -76,7 +76,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
         <div className="partes">
           {Object.entries(res.porParte).map(([k, v]) => (
             <div key={k} className="parte-barra">
-              <span>{NOMES_PARTE[k]}</span>
+              <span>{nomeParte(prova.nivel, k)}</span>
               <div className="barra">
                 <div className="barra-cheia" style={{ width: `${(v.certas / v.total) * 100}%` }} />
               </div>
@@ -158,7 +158,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
               <div key={q.n} className={`item-revisar ${ok ? "ok" : "erro"}`}>
                 <button className="item-cabeca" onClick={() => setAberta(aberta === q.n ? null : q.n)}>
                   <span className="numero">{q.n}</span>
-                  <span className="parte">{NOMES_PARTE[`${q.secao}${q.parte}`]}</span>
+                  <span className="parte">{nomeParte(prova.nivel, `${q.secao}${q.parte}`)}</span>
                   <span className="sua zh">sua: {r ? textoResposta(q, grupo, r.valor) : "—"}</span>
                   {!ok && <span className="oficial zh">certa: {textoResposta(q, grupo)}</span>}
                   <span className="seta">{aberta === q.n ? "▲" : "▼"}</span>

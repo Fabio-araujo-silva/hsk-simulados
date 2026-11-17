@@ -1,4 +1,4 @@
-import type { Lexico, Prova, ResumoProva } from "./tipos";
+import type { Lexico, Nivel, Prova, ResumoProva, Secao } from "./tipos";
 
 const BASE = import.meta.env.BASE_URL;
 const cache = new Map<string, Promise<unknown>>();
@@ -21,12 +21,73 @@ export const carregaLexico = () => busca<Lexico>("conteudo/lexico.json");
 
 export const urlPublica = (caminho: string) => BASE + caminho;
 
-/** Pontuação HSK 3: cada seção vale 100; total 300; aprovação com 180. */
-export function pontuacao(certas: { L: number; R: number; W: number }) {
-  const L = Math.round((certas.L / 40) * 100);
-  const R = Math.round((certas.R / 30) * 100);
-  const W = Math.round((certas.W / 10) * 100);
-  return { L, R, W, total: L + R + W, aprovado: L + R + W >= 180 };
+// ------------------------------------------------------------------ regras por nível
+
+export interface RegrasNivel {
+  nome: string;
+  /** questões por seção */
+  questoes: Record<Secao, number>;
+  /** tempos fixos (s): passar o listening para a folha, leitura, escrita */
+  tempos: { folha: number; R: number; W: number };
+  /** pontuação máxima (100 por seção) e mínima para aprovação */
+  maximo: number;
+  aprovacao: number;
+  /** o caderno real imprime pinyin sobre os caracteres */
+  pinyinNaProva: boolean;
+  /** resumo das regras para a tela inicial */
+  resumo: string[];
+}
+
+export const REGRAS: Record<number, RegrasNivel> = {
+  1: {
+    nome: "HSK 1",
+    questoes: { L: 20, R: 20, W: 0 },
+    tempos: { folha: 3 * 60, R: 17 * 60, W: 0 },
+    maximo: 200,
+    aprovacao: 120,
+    pinyinNaProva: true,
+    resumo: [
+      "40 questões em ~40 min: 听力 20 (≈15 min de áudio, cada item lido duas vezes) + 阅读 20 (17 min).",
+      "O caderno traz pinyin sobre os caracteres.",
+      "Cada seção vale 100 pontos: total 200, aprovação com 120.",
+      "Vocabulário: 150 palavras.",
+    ],
+  },
+  3: {
+    nome: "HSK 3",
+    questoes: { L: 40, R: 30, W: 10 },
+    tempos: { folha: 5 * 60, R: 30 * 60, W: 15 * 60 },
+    maximo: 300,
+    aprovacao: 180,
+    pinyinNaProva: false,
+    resumo: [
+      "80 questões em ~90 min: 听力 40 (≈35 min de áudio, cada item lido duas vezes) + 阅读 30 (30 min) + 书写 10 (15 min).",
+      "Sem pinyin no caderno (só nas questões 76–80, para escrever o caractere).",
+      "Cada seção vale 100 pontos: total 300, aprovação com 180.",
+      "Vocabulário: 600 palavras.",
+    ],
+  },
+};
+
+export const regras = (nivel: Nivel | number | undefined) => REGRAS[nivel ?? 3] ?? REGRAS[3];
+
+/** Seção de uma questão pelo número (para resumos sem carregar a prova). */
+export function secaoDe(nivel: Nivel | number, n: number): Secao {
+  const q = regras(nivel).questoes;
+  if (n <= q.L) return "L";
+  if (n <= q.L + q.R) return "R";
+  return "W";
+}
+
+/** Nota estimada: cada seção vale 100, proporcional aos acertos. */
+export function pontuacao(certas: { L: number; R: number; W: number }, nivel: Nivel | number = 3) {
+  const rg = regras(nivel);
+  const sec = (s: Secao) => (rg.questoes[s] ? Math.round((certas[s] / rg.questoes[s]) * 100) : 0);
+  const L = sec("L");
+  const R = sec("R");
+  const W = sec("W");
+  const total = L + R + W;
+  return { L, R, W, total, maximo: rg.maximo, aprovacao: rg.aprovacao, aprovado: total >= rg.aprovacao };
 }
 
 export const NOMES_SECAO: Record<string, string> = {
@@ -35,21 +96,32 @@ export const NOMES_SECAO: Record<string, string> = {
   W: "书写 Escrita",
 };
 
-export const NOMES_PARTE: Record<string, string> = {
-  "L1": "Diálogo ↔ figura",
-  "L2": "Certo ou errado",
-  "L3": "Diálogo curto",
-  "L4": "Diálogo longo",
-  "R1": "Pergunta ↔ resposta",
-  "R2": "Lacunas (banco de palavras)",
-  "R3": "Compreensão de texto",
-  "W1": "Ordenar a frase",
-  "W2": "Escrever o caractere",
+const PARTES: Record<number, Record<string, string>> = {
+  1: {
+    L1: "Figura: certo ou errado",
+    L2: "Escolher a figura (A/B/C)",
+    L3: "Diálogo ↔ figura",
+    L4: "Pergunta (A/B/C)",
+    R1: "Figura × palavra: certo ou errado",
+    R2: "Frase ↔ figura",
+    R3: "Pergunta ↔ resposta",
+    R4: "Lacunas (banco de palavras)",
+  },
+  3: {
+    L1: "Diálogo ↔ figura",
+    L2: "Certo ou errado",
+    L3: "Diálogo curto",
+    L4: "Diálogo longo",
+    R1: "Pergunta ↔ resposta",
+    R2: "Lacunas (banco de palavras)",
+    R3: "Compreensão de texto",
+    W1: "Ordenar a frase",
+    W2: "Escrever o caractere",
+  },
 };
 
-export const TEMPO_LEITURA = 30 * 60; // s
-export const TEMPO_ESCRITA = 15 * 60; // s
-export const TEMPO_FOLHA = 5 * 60; // s para passar respostas do listening
+/** Nome da parte ("L1", "R2"…) no nível dado. */
+export const nomeParte = (nivel: Nivel | number | undefined, chave: string) => PARTES[nivel ?? 3]?.[chave] ?? chave;
 
 export function formataTempo(seg: number) {
   seg = Math.max(0, Math.round(seg));

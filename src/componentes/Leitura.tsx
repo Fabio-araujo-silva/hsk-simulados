@@ -20,6 +20,8 @@ interface Ctx {
   lexico: Lexico | null;
   traducao: boolean;
   pinyin: boolean;
+  /** pinyin mesmo no modo prova (o caderno do HSK 1/2 imprime pinyin) */
+  pinyinFixo?: boolean;
   audio: ControleAudio | null;
   mostraDica: (d: Dica | null) => void;
   /** registra palavras consultadas (viram sugestões de cartões) */
@@ -40,6 +42,7 @@ export function ProvedorLeitura(props: {
   lexico: Lexico | null;
   traducao: boolean;
   pinyin: boolean;
+  pinyinFixo?: boolean;
   audio: ControleAudio | null;
   consultou?: (w: string) => void;
   children: ReactNode;
@@ -52,8 +55,8 @@ export function ProvedorLeitura(props: {
     else timer.current = window.setTimeout(() => setDica(null), 120);
   }, []);
   const valor = useMemo(
-    () => ({ lexico: props.lexico, traducao: props.traducao, pinyin: props.pinyin, audio: props.audio, mostraDica, consultou: props.consultou }),
-    [props.lexico, props.traducao, props.pinyin, props.audio, mostraDica, props.consultou],
+    () => ({ lexico: props.lexico, traducao: props.traducao, pinyin: props.pinyin, pinyinFixo: props.pinyinFixo, audio: props.audio, mostraDica, consultou: props.consultou }),
+    [props.lexico, props.traducao, props.pinyin, props.pinyinFixo, props.audio, mostraDica, props.consultou],
   );
   useEffect(() => {
     if (!props.traducao) setDica(null);
@@ -151,6 +154,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
   }, [f, destaque]);
 
   if (!f) return null;
+  const comPinyin = (ctx.pinyin && !inerte) || !!ctx.pinyinFixo;
   const traduzFrase = semSpoiler ? f.ptL ?? undefined : f.pt;
 
   const aoEntrar = (i: number, ev: React.MouseEvent) => {
@@ -206,7 +210,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
   };
 
   return (
-    <span className={`frase ${ctx.pinyin && !inerte ? "com-pinyin" : ""} ${className ?? ""}`} ref={refSpan} onMouseUp={aoSoltar}>
+    <span className={`frase ${comPinyin ? "com-pinyin" : ""} ${className ?? ""}`} ref={refSpan} onMouseUp={aoSoltar}>
       {f.tk.map((w, i) => {
         const pont = ehPontuacao(w);
         const t1 = f.a?.[i];
@@ -222,7 +226,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
           destacados.has(i) ? "destacado" : "",
         ].join(" ");
         const conteudo =
-          ctx.pinyin && !inerte && !pont && f.py[i] ? (
+          comPinyin && !pont && f.py[i] ? (
             <ruby>
               {w}
               <rt>{f.py[i]}</rt>

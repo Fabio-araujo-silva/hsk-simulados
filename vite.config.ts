@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
 import type { IncomingMessage, ServerResponse } from "node:http";
+import { vozSintetica } from "./servidor/vozSintetica";
 
 /**
  * Guarda o progresso (provas, respostas, cartões) num arquivo do projeto:
@@ -92,8 +93,8 @@ function progressoEmDisco(): Plugin {
 
 // base relativa: o build funciona aberto de qualquer pasta/servidor estático
 export default defineConfig({
-  plugins: [react(), progressoEmDisco()],
+  plugins: [react(), progressoEmDisco(), vozSintetica(__dirname)],
   base: "./",
-  server: { port: 5180, watch: { ignored: ["**/progresso/**", "**/fontes/**", "**/data/**"] } },
+  server: { port: 5180, watch: { ignored: ["**/progresso/**", "**/fontes/**", "**/data/**", "**/public/tts/**"] } },
   preview: { port: 5180 },
 });

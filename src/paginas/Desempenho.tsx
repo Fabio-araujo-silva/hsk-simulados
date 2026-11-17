@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useEstado } from "../armazenamento";
 import { resumoTentativa } from "../correcao";
-import { carregaIndice, carregaProva, NOMES_PARTE } from "../dados";
+import { carregaIndice, carregaProva, nomeParte, regras } from "../dados";
 import type { Prova } from "../tipos";
 
 /** Notas de todas as provas feitas + aproveitamento por tipo de questão. */
@@ -35,7 +35,7 @@ export function PaginaDesempenho() {
       for (const q of p.questoes) {
         const r = t.respostas[q.n];
         if (!r) continue;
-        const k = `${q.secao}${q.parte}`;
+        const k = `${p.nivel ?? 3}:${q.secao}${q.parte}`;
         acc[k] ??= { certas: 0, total: 0 };
         acc[k].total++;
         if (r.certa || r.manual) acc[k].certas++;
@@ -53,7 +53,6 @@ export function PaginaDesempenho() {
     );
   }
 
-  const max = 300;
   return (
     <div className="desempenho">
       <h1>Desempenho</h1>
@@ -63,12 +62,12 @@ export function PaginaDesempenho() {
       ) : (
         <>
           <div className="grafico-notas" role="img" aria-label="evolução das notas">
-            <div className="linha-180" style={{ bottom: `${(180 / max) * 100}%` }}>
-              <span>180</span>
+            <div className="linha-180" style={{ bottom: "60%" }} title="aprovação (60% dos pontos)">
+              <span>60%</span>
             </div>
             {exames.map(({ t, r }) => (
               <a key={t.id} href={`#/resultado/${t.id}`} className="coluna" title={`${t.prova} · ${r.total}`}>
-                <div className={`barra-v ${r.aprovado ? "aprovado" : "reprovado"}`} style={{ height: `${(r.total / max) * 100}%` }}>
+                <div className={`barra-v ${r.aprovado ? "aprovado" : "reprovado"}`} style={{ height: `${(r.total / r.maximo) * 100}%` }}>
                   <span>{r.total}</span>
                 </div>
                 <small>{t.prova.replace("H3", "")}</small>
@@ -95,7 +94,7 @@ export function PaginaDesempenho() {
                   <td>{t.prova}</td>
                   <td>{t.semListening ? "—" : r.L}</td>
                   <td>{r.R}</td>
-                  <td>{r.W}</td>
+                  <td>{regras(provas[t.prova].nivel).questoes.W ? r.W : "—"}</td>
                   <td className={r.aprovado ? "aprovado" : "reprovado"}>{r.total}</td>
                 </tr>
               ))}
@@ -107,7 +106,9 @@ export function PaginaDesempenho() {
       <div className="partes">
         {porParte.map(([k, v]) => (
           <div key={k} className="parte-barra">
-            <span>{NOMES_PARTE[k]}</span>
+            <span>
+              HSK {k.split(":")[0]} · {nomeParte(Number(k.split(":")[0]), k.split(":")[1])}
+            </span>
             <div className="barra">
               <div className="barra-cheia" style={{ width: `${(v.certas / v.total) * 100}%` }} />
             </div>
