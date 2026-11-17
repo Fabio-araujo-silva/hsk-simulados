@@ -1,0 +1,2550 @@
+[
+ {
+  "w": "机场",
+  "py": "jīchǎng",
+  "en": "airport; airfield; (slang) service provider for Shadowsocks or similar software for circumventing Internet censorship",
+  "hsk": 2,
+  "exemplo": "机场"
+ },
+ {
+  "w": "教",
+  "py": "jiào",
+  "en": "to teach; to instruct",
+  "hsk": 3,
+  "exemplo": "我看您对中国历史很了解，您是教历史的吗？"
+ },
+ {
+  "w": "跟",
+  "py": "gēn",
+  "en": "heel; to follow closely; to go with",
+  "hsk": 3,
+  "exemplo": "同意，去年我就跟你说应该换一个新的了。"
+ },
+ {
+  "w": "疼",
+  "py": "téng",
+  "en": "(it) hurts; sore; to love dearly",
+  "hsk": 3,
+  "exemplo": "休息一下吧，我现在腿也疼，脚也疼。上来的时候我怎么没觉得这么累。"
+ },
+ {
+  "w": "累",
+  "py": "lèi",
+  "en": "used in 累累[lei2 lei2]; used in 累贅|累赘[lei2 zhui5] and 累墜|累坠[lei2 zhui5]",
+  "hsk": 2,
+  "exemplo": "休息一下吧，我现在腿也疼，脚也疼。上来的时候我怎么没觉得这么累。"
+ },
+ {
+  "w": "妈妈",
+  "py": "māmā",
+  "en": "mama; mommy; mother",
+  "hsk": 1,
+  "exemplo": "妈妈和儿子"
+ },
+ {
+  "w": "裙子",
+  "py": "qúnzi",
+  "en": "skirt",
+  "hsk": 3,
+  "exemplo": "那没关系，我不怕冷，我明天要穿我的新裙子。"
+ },
+ {
+  "w": "决定",
+  "py": "juédìng",
+  "en": "to decide; to determine; to make up one's mind; decision (CL:個|个[ge4],項|项[xiang4])",
+  "hsk": 3,
+  "exemplo": "你决定了？好，我看你明天敢不敢穿。"
+ },
+ {
+  "w": "方便",
+  "py": "fāngbiàn",
+  "en": "convenient; suitable; to facilitate; to make things easy; having money to spare",
+  "hsk": 3,
+  "exemplo": "您可以选择火车站（＿＿）的宾馆，住那儿会更方便。"
+ },
+ {
+  "w": "近",
+  "py": "jìn",
+  "en": "near; close to; approximately",
+  "hsk": 2,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "阿姨",
+  "py": "āyí",
+  "en": "maternal aunt; term of address for a woman of one's mother's generation; childcare worker; nanny",
+  "hsk": 3,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "一般",
+  "py": "yìbān",
+  "en": "same; ordinary; so-so",
+  "hsk": 3,
+  "exemplo": "有人问我长得像谁，这个问题不太好回答。家里人一般觉得我的鼻子和耳朵像我爸爸，眼睛像我妈妈。"
+ },
+ {
+  "w": "耳朵",
+  "py": "ěrduǒ",
+  "en": "ear; handle (on a cup)",
+  "hsk": 3,
+  "exemplo": "有人问我长得像谁，这个问题不太好回答。家里人一般觉得我的鼻子和耳朵像我爸爸，眼睛像我妈妈。"
+ },
+ {
+  "w": "弟弟",
+  "py": "dìdi",
+  "en": "younger brother",
+  "hsk": 2,
+  "exemplo": "弟弟"
+ },
+ {
+  "w": "高兴",
+  "py": "gāoxìng",
+  "en": "happy; glad; willing (to do sth)",
+  "hsk": 1,
+  "exemplo": "高兴地"
+ },
+ {
+  "w": "礼物",
+  "py": "lǐwù",
+  "en": "gift; present",
+  "hsk": 3,
+  "exemplo": "一个礼物"
+ },
+ {
+  "w": "出租车",
+  "py": "chūzūchē",
+  "en": "taxi; (Tw) rental car",
+  "hsk": 1,
+  "exemplo": "医院离这儿很远，我们坐出租车去吧。"
+ },
+ {
+  "w": "国家",
+  "py": "guójiā",
+  "en": "country; nation; state",
+  "hsk": 3,
+  "exemplo": "你好，请帮我查一下国家图书馆的电话，谢谢。"
+ },
+ {
+  "w": "检查",
+  "py": "jiǎnchá",
+  "en": "inspection; to examine; to inspect",
+  "hsk": 3,
+  "exemplo": "你最好再检查一下，看还有没有问题。"
+ },
+ {
+  "w": "裤子",
+  "py": "kùzi",
+  "en": "trousers; pants",
+  "hsk": 3,
+  "exemplo": "这条裤子你花了多少钱？"
+ },
+ {
+  "w": "听力",
+  "py": "tīnglì",
+  "en": "hearing; listening ability",
+  "hsk": null,
+  "exemplo": "HSK（三级）听力考试分四部分，共40题。"
+ },
+ {
+  "w": "双",
+  "py": "shuāng",
+  "en": "two; double; pair",
+  "hsk": 3,
+  "exemplo": "明天同学结婚，我在想穿哪双鞋好呢。"
+ },
+ {
+  "w": "瘦",
+  "py": "shòu",
+  "en": "thin; to lose weight; (of clothing) tight",
+  "hsk": 3,
+  "exemplo": "是，我骑了四个月了，一共瘦了六斤。"
+ },
+ {
+  "w": "记得",
+  "py": "jìde",
+  "en": "to remember",
+  "hsk": 3,
+  "exemplo": "好极了！只是你要注意身体，我记得你有一个多星期没去跑步了。"
+ },
+ {
+  "w": "认为",
+  "py": "rènwéi",
+  "en": "to believe; to think; to consider; to feel",
+  "hsk": 3,
+  "exemplo": "有些人不喜欢吃蛋糕，是因为太甜了；有些人不喜欢吃蛋糕，是因为害怕长胖。但小孩子看见蛋糕是不会客气的，他们认为蛋糕越甜越好吃。"
+ },
+ {
+  "w": "关心",
+  "py": "guānxīn",
+  "en": "to be concerned about; to care about",
+  "hsk": 3,
+  "exemplo": "大家都很关心您的身体，现在好些了吗？"
+ },
+ {
+  "w": "南",
+  "py": "nán",
+  "en": "used in 南無|南无[na1 mo2]",
+  "hsk": 3,
+  "exemplo": "你再向南走两百米就能看到了，我就在书店门口等你。"
+ },
+ {
+  "w": "见面",
+  "py": "jiànmiàn",
+  "en": "to meet; to see each other",
+  "hsk": 3,
+  "exemplo": "他们打算在哪儿见面？"
+ },
+ {
+  "w": "文化",
+  "py": "wénhuà",
+  "en": "culture; civilization; cultural",
+  "hsk": 3,
+  "exemplo": "文化"
+ },
+ {
+  "w": "新闻",
+  "py": "xīnwén",
+  "en": "news",
+  "hsk": 3,
+  "exemplo": "在看新闻"
+ },
+ {
+  "w": "面条",
+  "py": "miàntiáo",
+  "en": "noodles",
+  "hsk": 3,
+  "exemplo": "你先来个苹果，我去给你做碗面条儿。"
+ },
+ {
+  "w": "司机",
+  "py": "sījī",
+  "en": "chauffeur; driver",
+  "hsk": 3,
+  "exemplo": "我哥是司机，我问问他，看他有没有时间。"
+ },
+ {
+  "w": "鱼",
+  "py": "yú",
+  "en": "fish (CL:條|条[tiao2],尾[wei3]); used in the names of various aquatic animals that are not fish (including abalone 鮑魚|鲍鱼[ba",
+  "hsk": 2,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "环境",
+  "py": "huánjìng",
+  "en": "environment; circumstances; surroundings",
+  "hsk": 3,
+  "exemplo": "这个城市的环境"
+ },
+ {
+  "w": "姓",
+  "py": "xìng",
+  "en": "family name; surname; to be surnamed ...",
+  "hsk": 2,
+  "exemplo": "我不认识他，你知道他姓什么、叫什么吗？"
+ },
+ {
+  "w": "有点儿",
+  "py": "yǒudiǎnr",
+  "en": "slightly; a little; somewhat",
+  "hsk": null,
+  "exemplo": "他感冒了，有点儿发烧。"
+ },
+ {
+  "w": "饿",
+  "py": "è",
+  "en": "hungry; to starve (sb)",
+  "hsk": 3,
+  "exemplo": "今天把我饿坏了，还有什么吃的吗？"
+ },
+ {
+  "w": "多少",
+  "py": "duōshǎo",
+  "en": "number; amount; somewhat",
+  "hsk": 1,
+  "exemplo": "这条裤子你花了多少钱？"
+ },
+ {
+  "w": "周末",
+  "py": "zhōumò",
+  "en": "weekend",
+  "hsk": 3,
+  "exemplo": "我的几个同事周末想去北京玩儿，但他们都不会开车。"
+ },
+ {
+  "w": "舒服",
+  "py": "shūfú",
+  "en": "comfortable; feeling well",
+  "hsk": 3,
+  "exemplo": "舒服"
+ },
+ {
+  "w": "办公室",
+  "py": "bàngōngshì",
+  "en": "office; business premises",
+  "hsk": 3,
+  "exemplo": "我九点前必须回到办公室，经理有事情找我，再见。"
+ },
+ {
+  "w": "办法",
+  "py": "bànfǎ",
+  "en": "way of handling sth; means; measure; (practical) solution to a problem",
+  "hsk": 3,
+  "exemplo": "他总是哭，有什么办法可以让他不哭吗？"
+ },
+ {
+  "w": "帮助",
+  "py": "bāngzhù",
+  "en": "assistance; aid; to help; to assist",
+  "hsk": 2,
+  "exemplo": "很大，我做练习的时候，它很有帮助。"
+ },
+ {
+  "w": "节目",
+  "py": "jiémù",
+  "en": "(TV or radio) program; show; item; act; segment; number (on the program of a concert, variety show or cultural event); a",
+  "hsk": 3,
+  "exemplo": "告诉我你想看什么节目。"
+ },
+ {
+  "w": "旧",
+  "py": "jiù",
+  "en": "old; opposite: new 新; former",
+  "hsk": 3,
+  "exemplo": "这是辆旧车。"
+ },
+ {
+  "w": "害怕",
+  "py": "hàipà",
+  "en": "to be afraid; to be scared",
+  "hsk": 3,
+  "exemplo": "有些人不喜欢吃蛋糕，是因为太甜了；有些人不喜欢吃蛋糕，是因为害怕长胖。但小孩子看见蛋糕是不会客气的，他们认为蛋糕越甜越好吃。"
+ },
+ {
+  "w": "踢",
+  "py": "tī",
+  "en": "to kick; to play (e.g. soccer); (slang) butch (in a lesbian relationship)",
+  "hsk": 2,
+  "exemplo": "他有很多爱好，唱歌、画画儿、踢足球、玩儿音乐，什么都会，而且水平也都特别高。"
+ },
+ {
+  "w": "足球",
+  "py": "zúqiú",
+  "en": "soccer; football; a soccer ball; a football",
+  "hsk": null,
+  "exemplo": "他有很多爱好，唱歌、画画儿、踢足球、玩儿音乐，什么都会，而且水平也都特别高。"
+ },
+ {
+  "w": "而且",
+  "py": "érqiě",
+  "en": "(not only ...) but also; moreover; in addition; furthermore",
+  "hsk": 3,
+  "exemplo": "他有很多爱好，唱歌、画画儿、踢足球、玩儿音乐，什么都会，而且水平也都特别高。"
+ },
+ {
+  "w": "便宜",
+  "py": "piányi",
+  "en": "convenient",
+  "hsk": 2,
+  "exemplo": "您先看看这种颜色的怎么样？这种手机很便宜，只要两千多块钱。它还可以照相，现在卖得很不错。"
+ },
+ {
+  "w": "宾馆",
+  "py": "bīnguǎn",
+  "en": "guesthouse; lodge; hotel",
+  "hsk": 3,
+  "exemplo": "宾馆"
+ },
+ {
+  "w": "今年",
+  "py": "jīnnián",
+  "en": "this year",
+  "hsk": null,
+  "exemplo": "又下雪了！今年下过几次雪了？"
+ },
+ {
+  "w": "同意",
+  "py": "tóngyì",
+  "en": "to agree; to consent; to approve",
+  "hsk": 3,
+  "exemplo": "同意，去年我就跟你说应该换一个新的了。"
+ },
+ {
+  "w": "热",
+  "py": "rè",
+  "en": "to warm up; to heat up; hot (of weather)",
+  "hsk": 1,
+  "exemplo": "很热"
+ },
+ {
+  "w": "电梯",
+  "py": "diàntī",
+  "en": "elevator; escalator",
+  "hsk": 3,
+  "exemplo": "当然可以，我先看一下您的票，好，您向左走，坐电梯上二层。"
+ },
+ {
+  "w": "离开",
+  "py": "líkāi",
+  "en": "to depart; to leave",
+  "hsk": 3,
+  "exemplo": "不要离开"
+ },
+ {
+  "w": "护照",
+  "py": "hùzhào",
+  "en": "passport",
+  "hsk": 3,
+  "exemplo": "我的护照在你包里吗？"
+ },
+ {
+  "w": "聪明",
+  "py": "cōngmíng",
+  "en": "intelligent; clever; bright; acute (of sight and hearing)",
+  "hsk": 3,
+  "exemplo": "对一个女人来说，漂亮、聪明都很重要，但（＿＿）更重要的是快乐。"
+ },
+ {
+  "w": "满意",
+  "py": "mǎnyì",
+  "en": "satisfied; pleased; to one's satisfaction",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "旁边",
+  "py": "pángbiān",
+  "en": "side; adjacent place",
+  "hsk": 2,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "号",
+  "py": "hào",
+  "en": "(bound form) to wail; to howl",
+  "hsk": 2,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "饱",
+  "py": "bǎo",
+  "en": "to eat till full; satisfied",
+  "hsk": 3,
+  "exemplo": "我已经饱了，不想吃米饭了。"
+ },
+ {
+  "w": "岁",
+  "py": "suì",
+  "en": "variant of 歲|岁[sui4], year; years old",
+  "hsk": 1,
+  "exemplo": "那是我叔叔的儿子，一岁多了。"
+ },
+ {
+  "w": "打扫",
+  "py": "dǎsǎo",
+  "en": "to clean; to sweep",
+  "hsk": 3,
+  "exemplo": "打扫"
+ },
+ {
+  "w": "为了",
+  "py": "wèile",
+  "en": "for; for the purpose of; in order to",
+  "hsk": 3,
+  "exemplo": "为了让自己更健康，他每天都花一个小时去锻炼身体。"
+ },
+ {
+  "w": "结婚",
+  "py": "jiéhūn",
+  "en": "to marry; to get married",
+  "hsk": 3,
+  "exemplo": "明天同学结婚，我在想穿哪双鞋好呢。"
+ },
+ {
+  "w": "总是",
+  "py": "zǒngshì",
+  "en": "always",
+  "hsk": 3,
+  "exemplo": "他总是哭，有什么办法可以让他不哭吗？"
+ },
+ {
+  "w": "读",
+  "py": "dú",
+  "en": "comma; phrase marked by pause",
+  "hsk": 1,
+  "exemplo": "没什么好看的，我还是读我的书吧。"
+ },
+ {
+  "w": "万",
+  "py": "wàn",
+  "en": "used in 万俟[Mo4 qi2]",
+  "hsk": 3,
+  "exemplo": "这辆车现在能卖十万块钱吧，我两年前买的时候花了二十多万。"
+ },
+ {
+  "w": "电脑",
+  "py": "diànnǎo",
+  "en": "computer",
+  "hsk": 1,
+  "exemplo": "她每天到办公室的第一件事就是打开电脑，看电子邮件，然后才开始别的工作。"
+ },
+ {
+  "w": "生气",
+  "py": "shēngqì",
+  "en": "to get angry; to be furious; vitality; liveliness",
+  "hsk": 3,
+  "exemplo": "生气了"
+ },
+ {
+  "w": "服务员",
+  "py": "fúwùyuán",
+  "en": "waiter; waitress; attendant",
+  "hsk": 2,
+  "exemplo": "服务员，我房间里的灯坏了。"
+ },
+ {
+  "w": "打篮球",
+  "py": "dǎlánqiú",
+  "en": null,
+  "hsk": 2,
+  "exemplo": "喜欢打篮球"
+ },
+ {
+  "w": "腿",
+  "py": "tuǐ",
+  "en": "leg",
+  "hsk": 3,
+  "exemplo": "休息一下吧，我现在腿也疼，脚也疼。上来的时候我怎么没觉得这么累。"
+ },
+ {
+  "w": "照顾",
+  "py": "zhàogù",
+  "en": "to take care of; to show consideration; to attend to",
+  "hsk": 3,
+  "exemplo": "这几天我不在家，小狗就请你帮我照顾了。"
+ },
+ {
+  "w": "虽然",
+  "py": "suīrán",
+  "en": "although; even though (often used correlatively with 可是[ke3 shi4] or 但是[dan4 shi4] etc)",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "树",
+  "py": "shù",
+  "en": "tree; to cultivate; to set up",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "遇到",
+  "py": "yùdào",
+  "en": "to meet; to run into; to come across",
+  "hsk": 3,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "马",
+  "py": "mǎ",
+  "en": "surname Ma; abbr. for Malaysia 馬來西亞|马来西亚[Ma3 lai2 xi1 ya4]",
+  "hsk": 3,
+  "exemplo": "女儿第一次骑马的时候比较害怕。"
+ },
+ {
+  "w": "一直",
+  "py": "yìzhí",
+  "en": "straight (in a straight line); continuously; always; all the way through",
+  "hsk": 3,
+  "exemplo": "一直"
+ },
+ {
+  "w": "帽子",
+  "py": "màozi",
+  "en": "hat; cap; (fig.) label",
+  "hsk": 3,
+  "exemplo": "眼镜，帽子，地图，啤酒，一个也不能少。"
+ },
+ {
+  "w": "八",
+  "py": "bā",
+  "en": "eight",
+  "hsk": 1,
+  "exemplo": "你明天到办公室找我，我在七零七；如果我不在，你就上八楼，到八零三会议室找我，我可能在那儿开会。"
+ },
+ {
+  "w": "除了",
+  "py": "chúle",
+  "en": "apart from; besides; in addition to (used to exclude, as in 除了他，誰也沒來|除了他，谁也没来[chu2 le5 ta1 , shei2 ye3 mei2 lai2] \"apart",
+  "hsk": 3,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ },
+ {
+  "w": "报纸",
+  "py": "bàozhǐ",
+  "en": "newspaper; newsprint",
+  "hsk": 2,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ },
+ {
+  "w": "迟到",
+  "py": "chídào",
+  "en": "to arrive late",
+  "hsk": 3,
+  "exemplo": "迟到了"
+ },
+ {
+  "w": "生病",
+  "py": "shēngbìng",
+  "en": "to fall ill",
+  "hsk": 2,
+  "exemplo": "生病了"
+ },
+ {
+  "w": "灯",
+  "py": "dēng",
+  "en": "lamp; light; lantern",
+  "hsk": 3,
+  "exemplo": "服务员，我房间里的灯坏了。"
+ },
+ {
+  "w": "数学",
+  "py": "shùxué",
+  "en": "mathematics",
+  "hsk": 3,
+  "exemplo": "不是，我是教数学的，但我对历史很有兴趣。"
+ },
+ {
+  "w": "上网",
+  "py": "shàngwǎng",
+  "en": "to go online; to connect to the Internet; (of a document etc) to be uploaded to the Internet",
+  "hsk": 3,
+  "exemplo": "上网"
+ },
+ {
+  "w": "飞机",
+  "py": "fēijī",
+  "en": "airplane",
+  "hsk": 1,
+  "exemplo": "我明天早上的飞机，今天中午有时间见个面吗？"
+ },
+ {
+  "w": "突然",
+  "py": "tūrán",
+  "en": "sudden; abrupt; unexpected",
+  "hsk": 3,
+  "exemplo": "刚才天气多好啊，突然就刮起大风了。"
+ },
+ {
+  "w": "行李箱",
+  "py": "xínglǐxiāng",
+  "en": "suitcase; baggage compartment; overhead bin",
+  "hsk": 3,
+  "exemplo": "那个行李箱是什么样的？"
+ },
+ {
+  "w": "矮",
+  "py": "ǎi",
+  "en": "(of a person) short; (of a wall etc) low; (of rank) inferior (to); lower (than)",
+  "hsk": 3,
+  "exemplo": "很矮"
+ },
+ {
+  "w": "没关系",
+  "py": "méiguānxì",
+  "en": "it doesn't matter",
+  "hsk": 1,
+  "exemplo": "那没关系，我不怕冷，我明天要穿我的新裙子。"
+ },
+ {
+  "w": "明白",
+  "py": "míngbái",
+  "en": "clear; obvious; unequivocal; sensible; reasonable; to understand; to realize",
+  "hsk": 3,
+  "exemplo": "就是说白天的时间短了，天黑的时间早了，明白了？"
+ },
+ {
+  "w": "小姐",
+  "py": "xiǎojiě",
+  "en": "young lady; miss; (slang) prostitute",
+  "hsk": 1,
+  "exemplo": "小姐，请问表演什么时候开始？"
+ },
+ {
+  "w": "表演",
+  "py": "biǎoyǎn",
+  "en": "play; show; performance",
+  "hsk": 3,
+  "exemplo": "小姐，请问表演什么时候开始？"
+ },
+ {
+  "w": "衬衫",
+  "py": "chènshān",
+  "en": "shirt; blouse",
+  "hsk": 3,
+  "exemplo": "你看看，在你自己的衬衫里呢。"
+ },
+ {
+  "w": "电视",
+  "py": "diànshì",
+  "en": "television; TV",
+  "hsk": 1,
+  "exemplo": "你等一下，我去把电视的声音关小一些。"
+ },
+ {
+  "w": "完成",
+  "py": "wánchéng",
+  "en": "to complete; to accomplish",
+  "hsk": 3,
+  "exemplo": "我的作业早就完成了。"
+ },
+ {
+  "w": "火车站",
+  "py": "huǒchēzhàn",
+  "en": "train station",
+  "hsk": 1,
+  "exemplo": "您可以选择火车站（＿＿）的宾馆，住那儿会更方便。"
+ },
+ {
+  "w": "衣服",
+  "py": "yīfú",
+  "en": "clothes",
+  "hsk": 1,
+  "exemplo": "天气冷，你多穿点儿衣服，小心（＿＿）。"
+ },
+ {
+  "w": "猫",
+  "py": "māo",
+  "en": "cat (CL:隻|只[zhi1]); (dialect) to hide oneself; (loanword) (coll.) modem",
+  "hsk": 1,
+  "exemplo": "B：一定是（＿＿）猫喝了。"
+ },
+ {
+  "w": "为",
+  "py": "wèi",
+  "en": "as (in the capacity of); to take sth as; to act as",
+  "hsk": 2,
+  "exemplo": "B：今天是9月10日，教师（＿＿）！这是为老师准备的。"
+ },
+ {
+  "w": "故事",
+  "py": "gùshì",
+  "en": "old practice",
+  "hsk": 3,
+  "exemplo": "请大家把黑板上的这些词写在本子上，回家后用这些词语写一个小故事，别忘了，最少写100字。"
+ },
+ {
+  "w": "冬天",
+  "py": "dōngtiān",
+  "en": "winter",
+  "hsk": null,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "新鲜",
+  "py": "xīnxiān",
+  "en": "fresh (experience, food etc); freshness; novel",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "一点儿",
+  "py": "yìdiǎnr",
+  "en": "erhua variant of 一點|一点[yi1 dian3]",
+  "hsk": null,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "热情",
+  "py": "rèqíng",
+  "en": "cordial; enthusiastic; passion",
+  "hsk": 3,
+  "exemplo": "上海人很热情"
+ },
+ {
+  "w": "介绍",
+  "py": "jièshào",
+  "en": "to introduce (sb to sb); to give a presentation; to present (sb for a job etc)",
+  "hsk": 2,
+  "exemplo": "世界真的很小，我昨天才发现，你给小张介绍的男朋友是我妻子以前的同事。"
+ },
+ {
+  "w": "久",
+  "py": "jiǔ",
+  "en": "(of a period of time) long",
+  "hsk": 3,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "年级",
+  "py": "niánjí",
+  "en": "grade; year (in school, college etc)",
+  "hsk": 3,
+  "exemplo": "小刘是一位小学老师，教三年级的数学，他虽然很年轻，但是课讲得很好，同学们都很喜欢他。"
+ },
+ {
+  "w": "回答",
+  "py": "huídá",
+  "en": "to reply; to answer; reply; answer",
+  "hsk": 2,
+  "exemplo": "有人问我长得像谁，这个问题不太好回答。家里人一般觉得我的鼻子和耳朵像我爸爸，眼睛像我妈妈。"
+ },
+ {
+  "w": "上午",
+  "py": "shàngwǔ",
+  "en": "morning",
+  "hsk": 1,
+  "exemplo": "上午的考试"
+ },
+ {
+  "w": "照",
+  "py": "zhào",
+  "en": "variant of 照[zhao4]; to shine; to illuminate",
+  "hsk": null,
+  "exemplo": "我们是去年秋天结婚的，你看，这张照片就是那会儿照的。"
+ },
+ {
+  "w": "上班",
+  "py": "shàngbān",
+  "en": "to go to work; to be on duty; to start work",
+  "hsk": 2,
+  "exemplo": "去上班"
+ },
+ {
+  "w": "跑",
+  "py": "pǎo",
+  "en": "(of an animal) to paw (the ground)",
+  "hsk": null,
+  "exemplo": "A：儿子，快起床，外面天气非常好，我们出去跑跑步。"
+ },
+ {
+  "w": "喂",
+  "py": "wèi",
+  "en": "hello (when answering the phone)",
+  "hsk": 1,
+  "exemplo": "喂，请问张经理在吗？"
+ },
+ {
+  "w": "骑",
+  "py": "qí",
+  "en": "(Tw) saddle horse; mounted soldier",
+  "hsk": 3,
+  "exemplo": "你每天都骑自行车上下班？"
+ },
+ {
+  "w": "药",
+  "py": "yào",
+  "en": "leaf of the iris; variant of 藥|药[yao4]",
+  "hsk": 2,
+  "exemplo": "真的不需要吃药吗？"
+ },
+ {
+  "w": "解决",
+  "py": "jiějué",
+  "en": "to solve; to resolve; to settle (a problem); to eliminate; to wipe out (an enemy, bandits etc)",
+  "hsk": 3,
+  "exemplo": "你看，上次出现的问题，我已经解决了。"
+ },
+ {
+  "w": "或者",
+  "py": "huòzhě",
+  "en": "or; possibly; maybe; perhaps",
+  "hsk": 3,
+  "exemplo": "给他一块儿糖，或者和他做游戏。"
+ },
+ {
+  "w": "地图",
+  "py": "dìtú",
+  "en": "map",
+  "hsk": 3,
+  "exemplo": "眼镜，帽子，地图，啤酒，一个也不能少。"
+ },
+ {
+  "w": "啤酒",
+  "py": "píjiǔ",
+  "en": "beer (loanword)",
+  "hsk": 3,
+  "exemplo": "眼镜，帽子，地图，啤酒，一个也不能少。"
+ },
+ {
+  "w": "普通话",
+  "py": "pǔtōnghuà",
+  "en": "Putonghua; standard Mandarin",
+  "hsk": 3,
+  "exemplo": "我以前以为北京话就是普通话，到北京两年后，我才发现不是这样的。"
+ },
+ {
+  "w": "担心",
+  "py": "dānxīn",
+  "en": "anxious; worried; uneasy",
+  "hsk": 3,
+  "exemplo": "没事，不用担心。就是感冒发烧，很快就会好的。"
+ },
+ {
+  "w": "教室",
+  "py": "jiàoshì",
+  "en": "classroom",
+  "hsk": 2,
+  "exemplo": "教室"
+ },
+ {
+  "w": "奇怪",
+  "py": "qíguài",
+  "en": "strange; odd; to marvel",
+  "hsk": 3,
+  "exemplo": "真奇怪，动物园里今天怎么这么安静？"
+ },
+ {
+  "w": "安静",
+  "py": "ānjìng",
+  "en": "quiet; peaceful; calm",
+  "hsk": 3,
+  "exemplo": "真奇怪，动物园里今天怎么这么安静？"
+ },
+ {
+  "w": "脚",
+  "py": "jiǎo",
+  "en": "foot; leg (of an animal or an object); base (of an object)",
+  "hsk": 3,
+  "exemplo": "休息一下吧，我现在腿也疼，脚也疼。上来的时候我怎么没觉得这么累。"
+ },
+ {
+  "w": "爬山",
+  "py": "páshān",
+  "en": "to go for a hike (esp. in the hills or mountains)",
+  "hsk": 3,
+  "exemplo": "爬山"
+ },
+ {
+  "w": "秋天",
+  "py": "qiūtiān",
+  "en": "autumn",
+  "hsk": null,
+  "exemplo": "北方的秋天就是这样的。"
+ },
+ {
+  "w": "关系",
+  "py": "guānxì",
+  "en": "relation; relationship; connection; to concern; to involve; to affect; guanxi (personal connections)",
+  "hsk": 3,
+  "exemplo": "说话人最可能是什么关系？"
+ },
+ {
+  "w": "票",
+  "py": "piào",
+  "en": "ticket; ballot; banknote",
+  "hsk": 2,
+  "exemplo": "当然可以，我先看一下您的票，好，您向左走，坐电梯上二层。"
+ },
+ {
+  "w": "椅子",
+  "py": "yǐzi",
+  "en": "chair",
+  "hsk": 1,
+  "exemplo": "椅子上"
+ },
+ {
+  "w": "渴",
+  "py": "kě",
+  "en": "thirsty",
+  "hsk": 3,
+  "exemplo": "好的，我也有些渴了。"
+ },
+ {
+  "w": "桌子",
+  "py": "zhuōzi",
+  "en": "table; desk",
+  "hsk": 1,
+  "exemplo": "他很高，这张桌子太低，坐着很不（＿＿）。"
+ },
+ {
+  "w": "牛奶",
+  "py": "niúnǎi",
+  "en": "cow's milk",
+  "hsk": 2,
+  "exemplo": "A：牛奶呢？"
+ },
+ {
+  "w": "黑板",
+  "py": "hēibǎn",
+  "en": "blackboard",
+  "hsk": 3,
+  "exemplo": "请大家把黑板上的这些词写在本子上，回家后用这些词语写一个小故事，别忘了，最少写100字。"
+ },
+ {
+  "w": "草",
+  "py": "cǎo",
+  "en": "grass; straw; manuscript",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "复习",
+  "py": "fùxí",
+  "en": "to review; revision",
+  "hsk": 3,
+  "exemplo": "没复习"
+ },
+ {
+  "w": "们",
+  "py": "men",
+  "en": "plural marker for pronouns, and nouns referring to individuals",
+  "hsk": null,
+  "exemplo": "小刘是一位小学老师，教三年级的数学，他虽然很年轻，但是课讲得很好，同学们都很喜欢他。"
+ },
+ {
+  "w": "要求",
+  "py": "yāoqiú",
+  "en": "to request; to require; requirement",
+  "hsk": 3,
+  "exemplo": "对学生要求高"
+ },
+ {
+  "w": "角",
+  "py": "jiǎo",
+  "en": "angle; corner; horn",
+  "hsk": 3,
+  "exemplo": "一元是10角，一角是10分。"
+ },
+ {
+  "w": "中间",
+  "py": "zhōngjiān",
+  "en": "the middle; the inside; in the middle; within; between; among; during; in the meantime",
+  "hsk": 3,
+  "exemplo": "中间穿红裙子的一定是他妹妹。"
+ },
+ {
+  "w": "前面",
+  "py": "qiánmiàn",
+  "en": "ahead; in front; preceding",
+  "hsk": 1,
+  "exemplo": "你看，这上面写着1.21元，前面的1表示元，中间的2表示角，最后的1表示分。明白了吗？"
+ },
+ {
+  "w": "铅笔",
+  "py": "qiānbǐ",
+  "en": "(lead) pencil",
+  "hsk": 3,
+  "exemplo": "我是一个中学老师，教学生画画儿。每次下课前，我会把下次学生要带的东西写在黑板上，但每次上课时，总会有学生忘了拿铅笔。"
+ },
+ {
+  "w": "学",
+  "py": "xué",
+  "en": "to learn; to study; to imitate",
+  "hsk": null,
+  "exemplo": "你怎么知道她在学汉语？我还以为你不关心她的学习呢。"
+ },
+ {
+  "w": "菜单",
+  "py": "càidān",
+  "en": "menu",
+  "hsk": 3,
+  "exemplo": "把菜单儿给我，我们喝杯绿茶吧？"
+ },
+ {
+  "w": "绿",
+  "py": "lǜ",
+  "en": "used in names",
+  "hsk": 3,
+  "exemplo": "把菜单儿给我，我们喝杯绿茶吧？"
+ },
+ {
+  "w": "其实",
+  "py": "qíshí",
+  "en": "actually; in fact; really",
+  "hsk": 3,
+  "exemplo": "其实"
+ },
+ {
+  "w": "感冒",
+  "py": "gǎnmào",
+  "en": "to catch cold; (common) cold; (coll.) to be interested in (often used in the negative)",
+  "hsk": 3,
+  "exemplo": "感冒"
+ },
+ {
+  "w": "自行车",
+  "py": "zìxíngchē",
+  "en": "bicycle; bike",
+  "hsk": 2,
+  "exemplo": "你每天都骑自行车上下班？"
+ },
+ {
+  "w": "六",
+  "py": "liù",
+  "en": "six; 6",
+  "hsk": 1,
+  "exemplo": "是，我骑了四个月了，一共瘦了六斤。"
+ },
+ {
+  "w": "极",
+  "py": "jí",
+  "en": "extremely; pole (geography, physics); utmost",
+  "hsk": 3,
+  "exemplo": "好极了！只是你要注意身体，我记得你有一个多星期没去跑步了。"
+ },
+ {
+  "w": "练习",
+  "py": "liànxí",
+  "en": "to practice; exercise; drill",
+  "hsk": 3,
+  "exemplo": "很大，我做练习的时候，它很有帮助。"
+ },
+ {
+  "w": "七",
+  "py": "qī",
+  "en": "seven; 7",
+  "hsk": 1,
+  "exemplo": "你明天到办公室找我，我在七零七；如果我不在，你就上八楼，到八零三会议室找我，我可能在那儿开会。"
+ },
+ {
+  "w": "看见",
+  "py": "kànjiàn",
+  "en": "to see; to catch sight of",
+  "hsk": 1,
+  "exemplo": "有些人不喜欢吃蛋糕，是因为太甜了；有些人不喜欢吃蛋糕，是因为害怕长胖。但小孩子看见蛋糕是不会客气的，他们认为蛋糕越甜越好吃。"
+ },
+ {
+  "w": "向",
+  "py": "xiàng",
+  "en": "towards; to face; to turn towards",
+  "hsk": 2,
+  "exemplo": "你再向南走两百米就能看到了，我就在书店门口等你。"
+ },
+ {
+  "w": "贵",
+  "py": "guì",
+  "en": "short name for Guizhou 貴州|贵州[Gui4 zhou1]",
+  "hsk": 2,
+  "exemplo": "买个贵的"
+ },
+ {
+  "w": "中午",
+  "py": "zhōngwǔ",
+  "en": "noon; midday",
+  "hsk": 1,
+  "exemplo": "我明天早上的飞机，今天中午有时间见个面吗？"
+ },
+ {
+  "w": "方",
+  "py": "fāng",
+  "en": "square; power or involution (math.); upright",
+  "hsk": 5,
+  "exemplo": "你是南方人，你们那儿这个季节怎么样？"
+ },
+ {
+  "w": "终于",
+  "py": "zhōngyú",
+  "en": "at last; in the end; finally",
+  "hsk": 3,
+  "exemplo": "我终于有了自己的大房子了，明天就可以搬家了。"
+ },
+ {
+  "w": "清楚",
+  "py": "qīngchǔ",
+  "en": "clear; distinct; to understand thoroughly",
+  "hsk": 3,
+  "exemplo": "姐姐给我买的，我也不太清楚。"
+ },
+ {
+  "w": "可爱",
+  "py": "kě'ài",
+  "en": "adorable; cute; lovely",
+  "hsk": 3,
+  "exemplo": "这个小孩儿胖胖的，真可爱。"
+ },
+ {
+  "w": "花园",
+  "py": "huāyuán",
+  "en": "garden (for flowers, ornamental plants etc); (landscaped) park; yard with decorative plants",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "几乎",
+  "py": "jīhū",
+  "en": "almost; nearly; practically",
+  "hsk": 3,
+  "exemplo": "我去年春节去过一次上海，今年再去的时候，发现那里的变化非常大。经过那条街道时，我几乎不认识了。"
+ },
+ {
+  "w": "一边",
+  "py": "yìbiān",
+  "en": "one side; either side; on the one hand",
+  "hsk": 3,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "咖啡",
+  "py": "kāfēi",
+  "en": "(loanword) coffee",
+  "hsk": 2,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "其他",
+  "py": "qítā",
+  "en": "other; (sth or sb) else; the rest",
+  "hsk": 3,
+  "exemplo": "其他班的成绩"
+ },
+ {
+  "w": "放心",
+  "py": "fàngxīn",
+  "en": "to feel relieved; to feel reassured; to be at ease",
+  "hsk": 3,
+  "exemplo": "没问题，你就放心吧。"
+ },
+ {
+  "w": "杯",
+  "py": "bēi",
+  "en": "cup; trophy cup; classifier for certain containers of liquids: glass, cup",
+  "hsk": null,
+  "exemplo": "把菜单儿给我，我们喝杯绿茶吧？"
+ },
+ {
+  "w": "早点儿",
+  "py": "zǎodiǎnr",
+  "en": "a bit earlier",
+  "hsk": null,
+  "exemplo": "今天我想早点儿回家。看了看手表，才五点。过了一会儿再看表，还是五点，我这才发现我的手表不走了。"
+ },
+ {
+  "w": "游戏",
+  "py": "yóuxì",
+  "en": "game (CL:場|场[chang3]); to play",
+  "hsk": 3,
+  "exemplo": "给他一块儿糖，或者和他做游戏。"
+ },
+ {
+  "w": "有名",
+  "py": "yǒumíng",
+  "en": "famous; well-known",
+  "hsk": 3,
+  "exemplo": "我这次来北京，只能住三天，所以我只能选择一两个最有名的地方去看看，以后有机会再去别的地方。"
+ },
+ {
+  "w": "面包",
+  "py": "miànbāo",
+  "en": "bread",
+  "hsk": 3,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ },
+ {
+  "w": "事",
+  "py": "shì",
+  "en": "matter; thing; item",
+  "hsk": null,
+  "exemplo": "她每天到办公室的第一件事就是打开电脑，看电子邮件，然后才开始别的工作。"
+ },
+ {
+  "w": "北方",
+  "py": "běifāng",
+  "en": "north; the northern part a country; China north of the Yellow River",
+  "hsk": 3,
+  "exemplo": "北方的秋天就是这样的。"
+ },
+ {
+  "w": "敢",
+  "py": "gǎn",
+  "en": "to dare; daring; (polite) may I venture",
+  "hsk": 3,
+  "exemplo": "你决定了？好，我看你明天敢不敢穿。"
+ },
+ {
+  "w": "云",
+  "py": "yún",
+  "en": "(classical) to say",
+  "hsk": 3,
+  "exemplo": "多云"
+ },
+ {
+  "w": "懂",
+  "py": "dǒng",
+  "en": "to understand; to comprehend",
+  "hsk": 2,
+  "exemplo": "天“短”了是什么意思？我没听懂。"
+ },
+ {
+  "w": "对不起",
+  "py": "duìbùqǐ",
+  "en": "I'm sorry; excuse me; I beg your pardon; to let (sb) down; to disappoint",
+  "hsk": 1,
+  "exemplo": "对不起，我刚洗了个澡，没听见，有什么事吗？"
+ },
+ {
+  "w": "刚",
+  "py": "gāng",
+  "en": "(literary) hard; firm; strong; exactly; precisely; barely; only just",
+  "hsk": null,
+  "exemplo": "对不起，我刚洗了个澡，没听见，有什么事吗？"
+ },
+ {
+  "w": "日",
+  "py": "rì",
+  "en": "(bound form) sun; day; day of the month",
+  "hsk": 1,
+  "exemplo": "B：今天是9月10日，教师（＿＿）！这是为老师准备的。"
+ },
+ {
+  "w": "鸟",
+  "py": "niǎo",
+  "en": "variant of 屌[diao3]; penis",
+  "hsk": 3,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "会议",
+  "py": "huìyì",
+  "en": "meeting; conference",
+  "hsk": 3,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "经过",
+  "py": "jīngguò",
+  "en": "to pass; to go through; process",
+  "hsk": 3,
+  "exemplo": "我去年春节去过一次上海，今年再去的时候，发现那里的变化非常大。经过那条街道时，我几乎不认识了。"
+ },
+ {
+  "w": "街道",
+  "py": "jiēdào",
+  "en": "street; subdistrict; residential district",
+  "hsk": 3,
+  "exemplo": "我去年春节去过一次上海，今年再去的时候，发现那里的变化非常大。经过那条街道时，我几乎不认识了。"
+ },
+ {
+  "w": "世界",
+  "py": "shìjiè",
+  "en": "world",
+  "hsk": 3,
+  "exemplo": "世界真的很小，我昨天才发现，你给小张介绍的男朋友是我妻子以前的同事。"
+ },
+ {
+  "w": "眼睛",
+  "py": "yǎnjīng",
+  "en": "eye",
+  "hsk": 2,
+  "exemplo": "有人问我长得像谁，这个问题不太好回答。家里人一般觉得我的鼻子和耳朵像我爸爸，眼睛像我妈妈。"
+ },
+ {
+  "w": "远",
+  "py": "yuǎn",
+  "en": "far; distant; remote",
+  "hsk": 2,
+  "exemplo": "医院离这儿很远，我们坐出租车去吧。"
+ },
+ {
+  "w": "打电话",
+  "py": "dǎdiànhuà",
+  "en": "to make a telephone call",
+  "hsk": 1,
+  "exemplo": "打电话"
+ },
+ {
+  "w": "变",
+  "py": "biàn",
+  "en": "to change; to become different; to transform",
+  "hsk": null,
+  "exemplo": "你总是吃甜的东西，不怕变胖吗？"
+ },
+ {
+  "w": "太阳",
+  "py": "tàiyáng",
+  "en": "sun; sunlight; sunshine; temple (on the side of the human head) (abbr. for 太陽穴|太阳穴[tai4 yang2 xue2])",
+  "hsk": 3,
+  "exemplo": "太阳从西边出来了吗？他今天怎么这么早就起床了？他一般都要睡到8点以后才起床。"
+ },
+ {
+  "w": "必须",
+  "py": "bìxū",
+  "en": "must; to have to",
+  "hsk": 3,
+  "exemplo": "我九点前必须回到办公室，经理有事情找我，再见。"
+ },
+ {
+  "w": "再见",
+  "py": "zàijiàn",
+  "en": "goodbye; see you again later",
+  "hsk": 1,
+  "exemplo": "我九点前必须回到办公室，经理有事情找我，再见。"
+ },
+ {
+  "w": "鞋",
+  "py": "xié",
+  "en": "shoe",
+  "hsk": 3,
+  "exemplo": "明天同学结婚，我在想穿哪双鞋好呢。"
+ },
+ {
+  "w": "跑步",
+  "py": "pǎobù",
+  "en": "to run; to jog; (military) to march at the double",
+  "hsk": 2,
+  "exemplo": "好极了！只是你要注意身体，我记得你有一个多星期没去跑步了。"
+ },
+ {
+  "w": "眼镜",
+  "py": "yǎnjìng",
+  "en": "spectacles; eyeglasses",
+  "hsk": 3,
+  "exemplo": "眼镜，帽子，地图，啤酒，一个也不能少。"
+ },
+ {
+  "w": "盘子",
+  "py": "pánzi",
+  "en": "tray; plate; dish",
+  "hsk": 3,
+  "exemplo": "我做饭，你洗盘子和碗，怎么样？"
+ },
+ {
+  "w": "发烧",
+  "py": "fāshāo",
+  "en": "to have a high temperature (from illness); to have a fever; (fig.) to be fascinated with; to obsess over; (fig.) flouris",
+  "hsk": 3,
+  "exemplo": "没事，不用担心。就是感冒发烧，很快就会好的。"
+ },
+ {
+  "w": "商店",
+  "py": "shāngdiàn",
+  "en": "store; shop",
+  "hsk": 1,
+  "exemplo": "商店"
+ },
+ {
+  "w": "游泳",
+  "py": "yóuyǒng",
+  "en": "swimming; to swim",
+  "hsk": 2,
+  "exemplo": "游泳"
+ },
+ {
+  "w": "起床",
+  "py": "qǐchuáng",
+  "en": "to get out of bed; to get up",
+  "hsk": 2,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "脸",
+  "py": "liǎn",
+  "en": "face",
+  "hsk": 3,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "男朋友",
+  "py": "nánpéngyǒu",
+  "en": "boyfriend",
+  "hsk": null,
+  "exemplo": "世界真的很小，我昨天才发现，你给小张介绍的男朋友是我妻子以前的同事。"
+ },
+ {
+  "w": "香蕉",
+  "py": "xiāngjiāo",
+  "en": "banana",
+  "hsk": 3,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "鸡蛋",
+  "py": "jīdàn",
+  "en": "(chicken) egg; hen's egg",
+  "hsk": 2,
+  "exemplo": "鸡蛋"
+ },
+ {
+  "w": "红",
+  "py": "hóng",
+  "en": "used in 女紅|女红[nu : 3 gong1]",
+  "hsk": 2,
+  "exemplo": "中间穿红裙子的一定是他妹妹。"
+ },
+ {
+  "w": "忘记",
+  "py": "wàngjì",
+  "en": "to forget",
+  "hsk": 3,
+  "exemplo": "学生会忘记拿什么？"
+ },
+ {
+  "w": "哥哥",
+  "py": "gēgē",
+  "en": "older brother",
+  "hsk": 2,
+  "exemplo": "那个地方很有名，蓝天，白云，绿草，很多人喜欢去那里旅游。我哥哥家就住在那儿，他们家旁边有一条小河，河边有高高的树，河里游着一种黄色的小鱼。"
+ },
+ {
+  "w": "字典",
+  "py": "zìdiǎn",
+  "en": "Chinese character dictionary (containing entries for single characters, contrasted with a 詞典|词典[ci2 dian3], which has en",
+  "hsk": 3,
+  "exemplo": "明天是妹妹的生日，我给她买了本汉语字典。"
+ },
+ {
+  "w": "唱歌",
+  "py": "chànggē",
+  "en": "to sing a song",
+  "hsk": 2,
+  "exemplo": "他有很多爱好，唱歌、画画儿、踢足球、玩儿音乐，什么都会，而且水平也都特别高。"
+ },
+ {
+  "w": "千",
+  "py": "qiān",
+  "en": "thousand",
+  "hsk": 2,
+  "exemplo": "您先看看这种颜色的怎么样？这种手机很便宜，只要两千多块钱。它还可以照相，现在卖得很不错。"
+ },
+ {
+  "w": "跳舞",
+  "py": "tiàowǔ",
+  "en": "to dance",
+  "hsk": 2,
+  "exemplo": "爱跳舞"
+ },
+ {
+  "w": "筷子",
+  "py": "kuàizi",
+  "en": "chopsticks",
+  "hsk": 3,
+  "exemplo": "你准备了几双筷子？"
+ },
+ {
+  "w": "下午",
+  "py": "xiàwǔ",
+  "en": "afternoon; p.m.",
+  "hsk": 1,
+  "exemplo": "下午两点半。"
+ },
+ {
+  "w": "祝",
+  "py": "zhù",
+  "en": "to pray for; to wish (sb bon voyage, happy birthday etc); person who invokes the spirits during sacrificial ceremonies",
+  "hsk": 3,
+  "exemplo": "那祝你在新的一年里学习更上一层楼。"
+ },
+ {
+  "w": "洗手间",
+  "py": "xǐshǒujiān",
+  "en": "toilet; lavatory; washroom",
+  "hsk": 3,
+  "exemplo": "洗手间"
+ },
+ {
+  "w": "低",
+  "py": "dī",
+  "en": "low; beneath; to lower (one's head)",
+  "hsk": 3,
+  "exemplo": "他很高，这张桌子太低，坐着很不（＿＿）。"
+ },
+ {
+  "w": "厨房",
+  "py": "chúfáng",
+  "en": "kitchen",
+  "hsk": 3,
+  "exemplo": "A：你家的厨房真干净！"
+ },
+ {
+  "w": "常",
+  "py": "cháng",
+  "en": "always; ever; often",
+  "hsk": null,
+  "exemplo": "人们常说：今天工作不努力，明天努力找工作。"
+ },
+ {
+  "w": "头发",
+  "py": "tóufà",
+  "en": "hair (on the head)",
+  "hsk": 3,
+  "exemplo": "头发很长"
+ },
+ {
+  "w": "差",
+  "py": "chà",
+  "en": "difference; discrepancy; (math.) difference (amount remaining after a subtraction); (literary) a little; somewhat; sligh",
+  "hsk": 3,
+  "exemplo": "差"
+ },
+ {
+  "w": "刷牙",
+  "py": "shuāyá",
+  "en": "to brush one's teeth",
+  "hsk": null,
+  "exemplo": "不，我已经刷牙了。"
+ },
+ {
+  "w": "举行",
+  "py": "jǔxíng",
+  "en": "to hold (a meeting, ceremony etc)",
+  "hsk": 3,
+  "exemplo": "这里的香蕉非常有名，每年8月这里会举行一个香蕉节，所以，夏季有很多人来这里玩儿。"
+ },
+ {
+  "w": "黄",
+  "py": "huáng",
+  "en": "yellow; pornographic; to fall through",
+  "hsk": 3,
+  "exemplo": "小黄，明天上午我有个会，你帮我去机场接李先生吧。他明天8点的飞机，你早点儿去，早半个小时到，好不好？谢谢你了。"
+ },
+ {
+  "w": "作用",
+  "py": "zuòyòng",
+  "en": "to act on; to affect; action; function; activity; impact; result; effect",
+  "hsk": 3,
+  "exemplo": "这个电子词典的作用大不大？"
+ },
+ {
+  "w": "以为",
+  "py": "yǐwéi",
+  "en": "to think; to believe (often with the implication that the belief is mistaken – unless referring to one's own current bel",
+  "hsk": 3,
+  "exemplo": "我以前以为北京话就是普通话，到北京两年后，我才发现不是这样的。"
+ },
+ {
+  "w": "冰箱",
+  "py": "bīngxiāng",
+  "en": "refrigerator; (old) icebox",
+  "hsk": 3,
+  "exemplo": "这个冰箱太旧了，我们买个新的吧。"
+ },
+ {
+  "w": "季节",
+  "py": "jìjié",
+  "en": "time; season; period",
+  "hsk": 3,
+  "exemplo": "你是南方人，你们那儿这个季节怎么样？"
+ },
+ {
+  "w": "晴天",
+  "py": "qíngtiān",
+  "en": "clear sky; sunny day",
+  "hsk": null,
+  "exemplo": "明天是晴天还是阴天？"
+ },
+ {
+  "w": "夏天",
+  "py": "xiàtiān",
+  "en": "summer",
+  "hsk": null,
+  "exemplo": "夏天来了"
+ },
+ {
+  "w": "电话",
+  "py": "diànhuà",
+  "en": "telephone; phone call; phone number",
+  "hsk": null,
+  "exemplo": "男的刚才为什么没接电话？"
+ },
+ {
+  "w": "睡觉",
+  "py": "shuìjiào",
+  "en": "to go to bed; to sleep",
+  "hsk": 1,
+  "exemplo": "在睡觉"
+ },
+ {
+  "w": "小心",
+  "py": "xiǎoxīn",
+  "en": "to be careful; to take care",
+  "hsk": 3,
+  "exemplo": "天气冷，你多穿点儿衣服，小心（＿＿）。"
+ },
+ {
+  "w": "睡",
+  "py": "shuì",
+  "en": "to sleep; to lie down",
+  "hsk": null,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "葡萄",
+  "py": "pútáo",
+  "en": "grape",
+  "hsk": 3,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "左边",
+  "py": "zuǒbiān",
+  "en": "left; the left side; to the left of",
+  "hsk": 2,
+  "exemplo": "您站中间就可以了，好，再（＿＿）左边一点儿，非常好！"
+ },
+ {
+  "w": "店",
+  "py": "diàn",
+  "en": "inn; old-style hotel (CL:家[jia1]); (bound form) shop; store",
+  "hsk": null,
+  "exemplo": "就在这条街的东边，有个眼镜店。"
+ },
+ {
+  "w": "船",
+  "py": "chuán",
+  "en": "boat; vessel; ship",
+  "hsk": 2,
+  "exemplo": "我看老李的脸色不太好，一问才知道他昨天晚上没睡好觉。他说，他第一次坐船，以为和坐车没什么不同，他现在明白了，差远了。"
+ },
+ {
+  "w": "帮忙",
+  "py": "bāngmáng",
+  "en": "to help; to lend a hand; to do a favor",
+  "hsk": 3,
+  "exemplo": "太好了！需要我帮忙吗？"
+ },
+ {
+  "w": "节",
+  "py": "jié",
+  "en": "joint; node; (bound form) section; segment; solar term (one of the 24 divisions of the year in the traditional Chinese c",
+  "hsk": 5,
+  "exemplo": "节"
+ },
+ {
+  "w": "晚饭",
+  "py": "wǎnfàn",
+  "en": "evening meal; dinner; supper",
+  "hsk": null,
+  "exemplo": "晚饭做好了，准备吃饭了。"
+ },
+ {
+  "w": "出现",
+  "py": "chūxiàn",
+  "en": "to appear; to arise; to emerge; to show up",
+  "hsk": 3,
+  "exemplo": "你看，上次出现的问题，我已经解决了。"
+ },
+ {
+  "w": "电子邮件",
+  "py": "diànziyóujiàn",
+  "en": "email",
+  "hsk": null,
+  "exemplo": "她每天到办公室的第一件事就是打开电脑，看电子邮件，然后才开始别的工作。"
+ },
+ {
+  "w": "颜色",
+  "py": "yánsè",
+  "en": "color; countenance; appearance",
+  "hsk": 2,
+  "exemplo": "您先看看这种颜色的怎么样？这种手机很便宜，只要两千多块钱。它还可以照相，现在卖得很不错。"
+ },
+ {
+  "w": "见",
+  "py": "jiàn",
+  "en": "to see; to meet; to appear (to be sth)",
+  "hsk": null,
+  "exemplo": "我明天早上的飞机，今天中午有时间见个面吗？"
+ },
+ {
+  "w": "蓝色",
+  "py": "lánsè",
+  "en": "blue (color)",
+  "hsk": null,
+  "exemplo": "好的，谢谢你。那个蓝色的是我的。"
+ },
+ {
+  "w": "进",
+  "py": "jìn",
+  "en": "to go forward; to advance; to go in",
+  "hsk": 2,
+  "exemplo": "谢谢，现在可以进去了吗？"
+ },
+ {
+  "w": "苹果",
+  "py": "píngguǒ",
+  "en": "Apple (American tech company)",
+  "hsk": 1,
+  "exemplo": "你先来个苹果，我去给你做碗面条儿。"
+ },
+ {
+  "w": "使",
+  "py": "shǐ",
+  "en": "to make; to cause; to enable",
+  "hsk": 3,
+  "exemplo": "使他觉得满意的是："
+ },
+ {
+  "w": "河",
+  "py": "hé",
+  "en": "river (CL:條|条[tiao2],道[dao4]); (bound form) the Yellow River; (bound form) the Milky Way",
+  "hsk": 3,
+  "exemplo": "离河很近"
+ },
+ {
+  "w": "羊肉",
+  "py": "yángròu",
+  "en": "mutton; goat meat",
+  "hsk": 2,
+  "exemplo": "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？"
+ },
+ {
+  "w": "果汁",
+  "py": "guǒzhī",
+  "en": "fruit juice",
+  "hsk": 3,
+  "exemplo": "果汁"
+ },
+ {
+  "w": "变得",
+  "py": "biàndé",
+  "en": "to become",
+  "hsk": null,
+  "exemplo": "变得"
+ },
+ {
+  "w": "米饭",
+  "py": "mǐfàn",
+  "en": "(cooked) rice",
+  "hsk": 1,
+  "exemplo": "我已经饱了，不想吃米饭了。"
+ },
+ {
+  "w": "句子",
+  "py": "jùzi",
+  "en": "sentence",
+  "hsk": 3,
+  "exemplo": "除了这个句子意思有些不清楚外，其他都不错。"
+ },
+ {
+  "w": "那么",
+  "py": "nàme",
+  "en": "like that; in that way; to that extent; (before a number) ... or so; about ...; then; in that case",
+  "hsk": null,
+  "exemplo": "你不用那么客气。走，去看表演吧。"
+ },
+ {
+  "w": "下雨",
+  "py": "xiàyǔ",
+  "en": "to rain",
+  "hsk": 1,
+  "exemplo": "带上伞吧，天阴了，可能会下雨。"
+ },
+ {
+  "w": "春天",
+  "py": "chūntiān",
+  "en": "spring (season)",
+  "hsk": null,
+  "exemplo": "春天"
+ },
+ {
+  "w": "节日",
+  "py": "jiérì",
+  "en": "holiday; festival",
+  "hsk": 3,
+  "exemplo": "2月14号早上，她正要去上班的时候，突然看到男朋友拿着鲜花站在门口。她这才明白今天是他们的节日。"
+ },
+ {
+  "w": "伞",
+  "py": "sǎn",
+  "en": "umbrella; parasol",
+  "hsk": 3,
+  "exemplo": "昨天的雨下得非常大，我没带伞。"
+ },
+ {
+  "w": "刻",
+  "py": "kè",
+  "en": "quarter (hour); moment; to carve",
+  "hsk": 3,
+  "exemplo": "刻"
+ },
+ {
+  "w": "第二",
+  "py": "dì'èr",
+  "en": "second; number two; next",
+  "hsk": null,
+  "exemplo": "第二部分"
+ },
+ {
+  "w": "相同",
+  "py": "xiāngtóng",
+  "en": "identical; same",
+  "hsk": 3,
+  "exemplo": "北京话和普通话是相同的。"
+ },
+ {
+  "w": "刮",
+  "py": "guā",
+  "en": "to scrape; to blow; to shave",
+  "hsk": 3,
+  "exemplo": "刚才天气多好啊，突然就刮起大风了。"
+ },
+ {
+  "w": "刘",
+  "py": "liú",
+  "en": "(classical) a type of battle-ax; to kill; to slaughter",
+  "hsk": null,
+  "exemplo": "小刘是一位小学老师，教三年级的数学，他虽然很年轻，但是课讲得很好，同学们都很喜欢他。"
+ },
+ {
+  "w": "饭",
+  "py": "fàn",
+  "en": "cooked rice; meal; (loanword) fan",
+  "hsk": null,
+  "exemplo": "越高的地方越冷，山路也越难走。但是不用担心，有我呢，我去年秋天爬过这个山，这儿我还是比较了解的。我饿了，我们先坐下来吃点儿饭、喝点儿水，然后再爬。一会儿我们可以从中间这条路上去。"
+ },
+ {
+  "w": "白",
+  "py": "bái",
+  "en": "surname Bai; Bai ethnic group",
+  "hsk": 2,
+  "exemplo": "那个地方很有名，蓝天，白云，绿草，很多人喜欢去那里旅游。我哥哥家就住在那儿，他们家旁边有一条小河，河边有高高的树，河里游着一种黄色的小鱼。"
+ },
+ {
+  "w": "起来",
+  "py": "qǐlái",
+  "en": "to stand up; to get up; also pr. [qi3lai2]",
+  "hsk": 4,
+  "exemplo": "你怎么突然想起来买车了？"
+ },
+ {
+  "w": "九",
+  "py": "jiǔ",
+  "en": "nine; 9",
+  "hsk": 1,
+  "exemplo": "我九点前必须回到办公室，经理有事情找我，再见。"
+ },
+ {
+  "w": "斤",
+  "py": "jīn",
+  "en": "catty; (PRC) weight equal to 500 g; (Tw) weight equal to 600 g",
+  "hsk": null,
+  "exemplo": "是，我骑了四个月了，一共瘦了六斤。"
+ },
+ {
+  "w": "做饭",
+  "py": "zuòfàn",
+  "en": "to prepare a meal; to cook",
+  "hsk": null,
+  "exemplo": "我做饭，你洗盘子和碗，怎么样？"
+ },
+ {
+  "w": "动物园",
+  "py": "dòngwùyuán",
+  "en": "zoo",
+  "hsk": null,
+  "exemplo": "真奇怪，动物园里今天怎么这么安静？"
+ },
+ {
+  "w": "西",
+  "py": "xī",
+  "en": "the West; abbr. for Spain 西班牙[Xi1 ban1 ya2]; Spanish",
+  "hsk": 3,
+  "exemplo": "我现在就在学校西门，但我没找到你说的书店。"
+ },
+ {
+  "w": "东",
+  "py": "dōng",
+  "en": "east; host (i.e. sitting on east side of guest); landlord",
+  "hsk": 3,
+  "exemplo": "学校东门"
+ },
+ {
+  "w": "右边",
+  "py": "yòubiān",
+  "en": "right side; right, to the right",
+  "hsk": 2,
+  "exemplo": "右边那个最大的，蓝色的，上面有我的名字。"
+ },
+ {
+  "w": "早",
+  "py": "zǎo",
+  "en": "early; morning; Good morning!",
+  "hsk": null,
+  "exemplo": "就是说白天的时间短了，天黑的时间早了，明白了？"
+ },
+ {
+  "w": "信",
+  "py": "xìn",
+  "en": "letter; mail; to trust",
+  "hsk": 3,
+  "exemplo": "给她写信"
+ },
+ {
+  "w": "照相机",
+  "py": "zhàoxiàngjī",
+  "en": "camera",
+  "hsk": 3,
+  "exemplo": "你看见我的照相机了吗？我记得放在包里了啊。"
+ },
+ {
+  "w": "动物",
+  "py": "dòngwù",
+  "en": "animal",
+  "hsk": 3,
+  "exemplo": "这个房子真的很不错，厨房和洗手间都很大，房子后面还有一个小花园，像您这么喜欢小动物，有个花园会很方便。"
+ },
+ {
+  "w": "查",
+  "py": "chá",
+  "en": "to research; to check; to investigate",
+  "hsk": null,
+  "exemplo": "您好，3260号为您服务，请问您查哪儿？"
+ },
+ {
+  "w": "饭馆",
+  "py": "fànguǎn",
+  "en": "restaurant",
+  "hsk": 1,
+  "exemplo": "饭馆"
+ },
+ {
+  "w": "难过",
+  "py": "nánguò",
+  "en": "to feel sad; to feel unwell; (of life) to be difficult",
+  "hsk": 3,
+  "exemplo": "别难过了，考试成绩不是最重要的。"
+ },
+ {
+  "w": "不同",
+  "py": "bùtóng",
+  "en": "different; distinct; not the same",
+  "hsk": null,
+  "exemplo": "我看老李的脸色不太好，一问才知道他昨天晚上没睡好觉。他说，他第一次坐船，以为和坐车没什么不同，他现在明白了，差远了。"
+ },
+ {
+  "w": "开车",
+  "py": "kāichē",
+  "en": "to drive a car (or train etc); (slang) to post sexual content online; to make a sexual joke",
+  "hsk": null,
+  "exemplo": "我的几个同事周末想去北京玩儿，但他们都不会开车。"
+ },
+ {
+  "w": "快点儿",
+  "py": "kuàidiǎnr",
+  "en": "erhua variant of 快點|快点[kuai4 dian3]",
+  "hsk": null,
+  "exemplo": "快点儿吧，一起吃，菜冷了就不好吃了。"
+ },
+ {
+  "w": "阴天",
+  "py": "yīntiān",
+  "en": "cloudy day; overcast sky",
+  "hsk": null,
+  "exemplo": "明天是晴天还是阴天？"
+ },
+ {
+  "w": "姐姐",
+  "py": "jiějiě",
+  "en": "older sister",
+  "hsk": 2,
+  "exemplo": "姐姐给我买的，我也不太清楚。"
+ },
+ {
+  "w": "句",
+  "py": "jù",
+  "en": "sentence; clause; phrase",
+  "hsk": null,
+  "exemplo": "这句话的意思主要是："
+ },
+ {
+  "w": "黑色",
+  "py": "hēisè",
+  "en": "black",
+  "hsk": null,
+  "exemplo": "我拿的是那把黑色的，短的那把。"
+ },
+ {
+  "w": "选",
+  "py": "xuǎn",
+  "en": "to choose; to pick; to select",
+  "hsk": null,
+  "exemplo": "我明天穿什么衣服好？你帮我选选？"
+ },
+ {
+  "w": "蓝",
+  "py": "lán",
+  "en": "blue; indigo plant",
+  "hsk": 3,
+  "exemplo": "蓝颜色的"
+ },
+ {
+  "w": "边",
+  "py": "biān",
+  "en": "side; edge; margin",
+  "hsk": null,
+  "exemplo": "低年级学生喜欢边玩儿边学。"
+ },
+ {
+  "w": "刮风",
+  "py": "guāfēng",
+  "en": "to be windy",
+  "hsk": null,
+  "exemplo": "也刮风，但没有这么大。"
+ },
+ {
+  "w": "几天",
+  "py": "jǐtiān",
+  "en": "several days",
+  "hsk": null,
+  "exemplo": "这几天我不在家，小狗就请你帮我照顾了。"
+ },
+ {
+  "w": "外",
+  "py": "wài",
+  "en": "outside; in addition; foreign",
+  "hsk": 2,
+  "exemplo": "除了这个句子意思有些不清楚外，其他都不错。"
+ },
+ {
+  "w": "后面",
+  "py": "hòumiàn",
+  "en": "the back; the rear; the last bit; behind; near the end; at the back; later; afterwards",
+  "hsk": 1,
+  "exemplo": "这个房子真的很不错，厨房和洗手间都很大，房子后面还有一个小花园，像您这么喜欢小动物，有个花园会很方便。"
+ },
+ {
+  "w": "山",
+  "py": "shān",
+  "en": "mountain; hill (CL:座[zuo4]); (coll.) small bundle of straw for silkworms to spin cocoons on",
+  "hsk": null,
+  "exemplo": "这个山我来过很多次了，但还不知道它叫什么山。"
+ },
+ {
+  "w": "汉字",
+  "py": "hànzì",
+  "en": "Chinese character(s)",
+  "hsk": null,
+  "exemplo": "他的汉字"
+ },
+ {
+  "w": "最好",
+  "py": "zuìhǎo",
+  "en": "best; had better ...; it would be best to ...",
+  "hsk": 4,
+  "exemplo": "你最好再检查一下，看还有没有问题。"
+ },
+ {
+  "w": "表",
+  "py": "biǎo",
+  "en": "exterior surface; family relationship via females; to show (one's opinion)",
+  "hsk": null,
+  "exemplo": "今天我想早点儿回家。看了看手表，才五点。过了一会儿再看表，还是五点，我这才发现我的手表不走了。"
+ },
+ {
+  "w": "词典",
+  "py": "cídiǎn",
+  "en": "dictionary",
+  "hsk": 4,
+  "exemplo": "这个电子词典的作用大不大？"
+ },
+ {
+  "w": "左",
+  "py": "zuǒ",
+  "en": "left; the Left (politics); east",
+  "hsk": null,
+  "exemplo": "当然可以，我先看一下您的票，好，您向左走，坐电梯上二层。"
+ },
+ {
+  "w": "洗澡",
+  "py": "xǐzǎo",
+  "en": "to bathe; to take a shower",
+  "hsk": 3,
+  "exemplo": "在洗澡"
+ },
+ {
+  "w": "词",
+  "py": "cí",
+  "en": "word; statement; speech; lyrics; a form of lyric poetry, flourishing in the Song dynasty 宋朝[Song4 chao2] (CL:首[shou3])",
+  "hsk": null,
+  "exemplo": "请大家把黑板上的这些词写在本子上，回家后用这些词语写一个小故事，别忘了，最少写100字。"
+ },
+ {
+  "w": "词语",
+  "py": "cíyǔ",
+  "en": "word (general term including monosyllables through to short phrases); term (e.g. technical term); expression",
+  "hsk": 3,
+  "exemplo": "请大家把黑板上的这些词写在本子上，回家后用这些词语写一个小故事，别忘了，最少写100字。"
+ },
+ {
+  "w": "晚",
+  "py": "wǎn",
+  "en": "evening; night; late",
+  "hsk": null,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "咖啡馆",
+  "py": "kāfēiguǎn",
+  "en": "café; coffee shop",
+  "hsk": null,
+  "exemplo": "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。"
+ },
+ {
+  "w": "最后",
+  "py": "zuìhòu",
+  "en": "final; last; ultimate; finally; in the end",
+  "hsk": 4,
+  "exemplo": "这是最后一块儿。"
+ },
+ {
+  "w": "风",
+  "py": "fēng",
+  "en": "wind; news; style",
+  "hsk": null,
+  "exemplo": "外面的风刮得真大！"
+ },
+ {
+  "w": "公斤",
+  "py": "gōngjīn",
+  "en": "kilogram (kg)",
+  "hsk": 2,
+  "exemplo": "有60公斤"
+ },
+ {
+  "w": "考",
+  "py": "kǎo",
+  "en": "to beat; to hit; variant of 考[kao3]",
+  "hsk": null,
+  "exemplo": "明天上午考数学，你（＿＿）得怎么样了？"
+ },
+ {
+  "w": "不见",
+  "py": "bújiàn",
+  "en": "not to see; not to meet; to have disappeared",
+  "hsk": null,
+  "exemplo": "到了机场，他发现护照不见了，在行李箱里找了半天，也没找到，很着急。"
+ },
+ {
+  "w": "黑",
+  "py": "hēi",
+  "en": "short name for Heilongjiang 黑龍江|黑龙江[Hei1 long2 jiang1]",
+  "hsk": 2,
+  "exemplo": "“6月的天，孩子的脸，说变就变。”刚才还是大晴天，现在就要用伞了。雨越下越大，天也变得越来越黑，街上一辆出租车也打不到了。"
+ },
+ {
+  "w": "早饭",
+  "py": "zǎofàn",
+  "en": "breakfast",
+  "hsk": null,
+  "exemplo": "过去，他喜欢每天早上起床后，一边吃早饭，一边看报纸。现在，他没有这个习惯了，因为太忙了，没时间了。"
+ },
+ {
+  "w": "试",
+  "py": "shì",
+  "en": "to test; to try; experiment",
+  "hsk": 4,
+  "exemplo": "还不错，你再试试蓝色的，看看哪个更好。"
+ },
+ {
+  "w": "雨",
+  "py": "yǔ",
+  "en": "rain",
+  "hsk": null,
+  "exemplo": "昨天的雨下得非常大，我没带伞。"
+ },
+ {
+  "w": "秒",
+  "py": "miǎo",
+  "en": "second (unit of time); arc second (angular measurement unit); (coll.) instantly",
+  "hsk": 5,
+  "exemplo": "（音乐，30秒，渐弱）"
+ },
+ {
+  "w": "渐弱",
+  "py": "jiànruò",
+  "en": "to fade out; gradually weakening; diminuendo",
+  "hsk": null,
+  "exemplo": "（音乐，30秒，渐弱）"
+ },
+ {
+  "w": "共",
+  "py": "gòng",
+  "en": "common; general; to share",
+  "hsk": null,
+  "exemplo": "HSK（三级）听力考试分四部分，共40题。"
+ },
+ {
+  "w": "客气",
+  "py": "kèqì",
+  "en": "polite; courteous; formal",
+  "hsk": null,
+  "exemplo": "有些人不喜欢吃蛋糕，是因为太甜了；有些人不喜欢吃蛋糕，是因为害怕长胖。但小孩子看见蛋糕是不会客气的，他们认为蛋糕越甜越好吃。"
+ },
+ {
+  "w": "打开",
+  "py": "dǎkāi",
+  "en": "to open; to show (a ticket); to turn on",
+  "hsk": null,
+  "exemplo": "她每天到办公室的第一件事就是打开电脑，看电子邮件，然后才开始别的工作。"
+ },
+ {
+  "w": "照相",
+  "py": "zhàoxiàng",
+  "en": "to take a photograph",
+  "hsk": null,
+  "exemplo": "您先看看这种颜色的怎么样？这种手机很便宜，只要两千多块钱。它还可以照相，现在卖得很不错。"
+ },
+ {
+  "w": "面",
+  "py": "miàn",
+  "en": "face; side; surface",
+  "hsk": null,
+  "exemplo": "我明天早上的飞机，今天中午有时间见个面吗？"
+ },
+ {
+  "w": "妈",
+  "py": "mā",
+  "en": "ma; mom; mother",
+  "hsk": null,
+  "exemplo": "好，妈，碗在哪儿呢？"
+ },
+ {
+  "w": "下面",
+  "py": "xiàmiàn",
+  "en": "below; under; next",
+  "hsk": null,
+  "exemplo": "关于表演，下面哪个是对的？"
+ },
+ {
+  "w": "听说",
+  "py": "tīngshuō",
+  "en": "to hear (sth said); one hears (that); hearsay",
+  "hsk": null,
+  "exemplo": "听说你要去国外读书？"
+ },
+ {
+  "w": "牙",
+  "py": "yá",
+  "en": "tooth; ivory",
+  "hsk": null,
+  "exemplo": "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。"
+ },
+ {
+  "w": "大学",
+  "py": "dàxué",
+  "en": "the Great Learning, one of the Four Books 四書|四书[Si4 shu1] in Confucianism",
+  "hsk": null,
+  "exemplo": "妹妹在北京上大学，三年级。"
+ },
+ {
+  "w": "网上",
+  "py": "wǎngshàng",
+  "en": "online",
+  "hsk": null,
+  "exemplo": "这次比赛的新要求和需要注意的一些问题网上都有，你上网看一下，回去跟同学们也说一下。"
+ },
+ {
+  "w": "该",
+  "py": "gāi",
+  "en": "should; ought to; probably",
+  "hsk": null,
+  "exemplo": "是，如果我喜欢历史跟我喜欢音乐一样该多好。"
+ },
+ {
+  "w": "饭店",
+  "py": "fàndiàn",
+  "en": "restaurant; hotel",
+  "hsk": null,
+  "exemplo": "饭店"
+ },
+ {
+  "w": "它们",
+  "py": "tāmen",
+  "en": "they; them",
+  "hsk": null,
+  "exemplo": "看书时会遇到一些历史上的人或者国家的名字，这些字现在很多都不用了，想要知道它们的读音和意思，还需要词典的帮助，所以有本词典很方便。"
+ },
+ {
+  "w": "北",
+  "py": "běi",
+  "en": "north; (classical) to be defeated",
+  "hsk": null,
+  "exemplo": "看地图？很容易，上北、下南、左西、右东，明白了？"
+ },
+ {
+  "w": "学会",
+  "py": "xuéhuì",
+  "en": "to learn; to master; institute; learned society; (scholarly) association",
+  "hsk": null,
+  "exemplo": "孩子在学会说话以前，就已经懂得了哭和笑，他们借这样的办法来告诉别人自己饿了、生气了、不舒服或者很高兴、很满意。慢慢大一点以后，他们就开始用一些简单的词语来表示自己的意思了。"
+ },
+ {
+  "w": "步",
+  "py": "bù",
+  "en": "a step; a pace; walk",
+  "hsk": null,
+  "exemplo": "刚参加工作，年轻人不要“眼高手低”，不要“小事不愿意做，大事又做不了”。应该认真做好每一件小事，一步一步慢慢来。"
+ },
+ {
+  "w": "中文",
+  "py": "zhōngwén",
+  "en": "Chinese language",
+  "hsk": 4,
+  "exemplo": "你觉得学中文难不难？"
+ },
+ {
+  "w": "发",
+  "py": "fā",
+  "en": "to send out; to show (one's feeling); to issue",
+  "hsk": 4,
+  "exemplo": "再见，有事可以给我打电话或者发电子邮件。"
+ },
+ {
+  "w": "零",
+  "py": "líng",
+  "en": "zero; nought; zero sign",
+  "hsk": 1,
+  "exemplo": "你明天到办公室找我，我在七零七；如果我不在，你就上八楼，到八零三会议室找我，我可能在那儿开会。"
+ },
+ {
+  "w": "会议室",
+  "py": "huìyìshì",
+  "en": "meeting room; conference room",
+  "hsk": null,
+  "exemplo": "你明天到办公室找我，我在七零七；如果我不在，你就上八楼，到八零三会议室找我，我可能在那儿开会。"
+ },
+ {
+  "w": "百",
+  "py": "bǎi",
+  "en": "hundred; numerous; all kinds of",
+  "hsk": 2,
+  "exemplo": "你再向南走两百米就能看到了，我就在书店门口等你。"
+ },
+ {
+  "w": "起",
+  "py": "qǐ",
+  "en": "to rise; to raise; to get up",
+  "hsk": null,
+  "exemplo": "刚才天气多好啊，突然就刮起大风了。"
+ },
+ {
+  "w": "黄色",
+  "py": "huángsè",
+  "en": "yellow; vulgar; lewd; pornographic",
+  "hsk": null,
+  "exemplo": "黄色的"
+ },
+ {
+  "w": "哥",
+  "py": "gē",
+  "en": "elder brother",
+  "hsk": null,
+  "exemplo": "我哥是司机，我问问他，看他有没有时间。"
+ },
+ {
+  "w": "河边",
+  "py": "hébiān",
+  "en": "river bank",
+  "hsk": null,
+  "exemplo": "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。"
+ },
+ {
+  "w": "姐",
+  "py": "jiě",
+  "en": "older sister",
+  "hsk": null,
+  "exemplo": "姐，祝您生日快乐！"
+ },
+ {
+  "w": "红色",
+  "py": "hóngsè",
+  "en": "red (color); revolutionary",
+  "hsk": null,
+  "exemplo": "你不知道？儿子昨天买了两只小鸟，一只红色的，一只黄色的。"
+ },
+ {
+  "w": "阴",
+  "py": "yīn",
+  "en": "overcast (weather); cloudy; shady",
+  "hsk": 2,
+  "exemplo": "带上伞吧，天阴了，可能会下雨。"
+ },
+ {
+  "w": "白色",
+  "py": "báisè",
+  "en": "white; fig. reactionary; anti-communist",
+  "hsk": null,
+  "exemplo": "我想穿裙子，这条白色的怎么样？"
+ },
+ {
+  "w": "东边",
+  "py": "dōngbiān",
+  "en": "east; east side; eastern part",
+  "hsk": null,
+  "exemplo": "就在这条街的东边，有个眼镜店。"
+ },
+ {
+  "w": "女朋友",
+  "py": "nǚpéngyǒu",
+  "en": "girlfriend",
+  "hsk": null,
+  "exemplo": "他女朋友比他大一岁，很可爱，而且很聪明。"
+ },
+ {
+  "w": "办",
+  "py": "bàn",
+  "en": "to take care of (a matter); to deal with (a task, procedure etc); to organize (an event); to establish; to set up; to ma",
+  "hsk": null,
+  "exemplo": "中午我去银行办点儿事，把你的自行车借我用用。"
+ },
+ {
+  "w": "骑车",
+  "py": "qíchē",
+  "en": "to ride a bike (motorbike or bicycle)",
+  "hsk": null,
+  "exemplo": "我今天没骑车，打出租车来的。你再问问小李？"
+ },
+ {
+  "w": "相机",
+  "py": "xiàngjī",
+  "en": "camera (abbr. for 照相機|照相机[zhao4 xiang4 ji1]); at the opportune moment; as the circumstances allow",
+  "hsk": null,
+  "exemplo": "这个相机可以吗？"
+ },
+ {
+  "w": "雨伞",
+  "py": "yǔsǎn",
+  "en": "umbrella",
+  "hsk": null,
+  "exemplo": "你怎么知道带雨伞？"
+ },
+ {
+  "w": "出国",
+  "py": "chūguó",
+  "en": "to go abroad; to leave the country",
+  "hsk": null,
+  "exemplo": "明天就要出国了？在外面注意身体，照顾好自己。"
+ },
+ {
+  "w": "东北",
+  "py": "dōngběi",
+  "en": "Northeast China; Manchuria",
+  "hsk": null,
+  "exemplo": "老包是东北人，爱吃米饭。他总是对办公室里的人说，哪个地方的大米也没有东北的大米好吃。"
+ },
+ {
+  "w": "一块儿",
+  "py": "yíkuàir",
+  "en": "erhua variant of 一塊|一块[yi1 kuai4]",
+  "hsk": null,
+  "exemplo": "给他一块儿糖，或者和他做游戏。"
+ },
+ {
+  "w": "玩",
+  "py": "wán",
+  "en": "to play; to have fun; to trifle with",
+  "hsk": 2,
+  "exemplo": "他在北京玩了很多地方。"
+ },
+ {
+  "w": "火车",
+  "py": "huǒchē",
+  "en": "train",
+  "hsk": null,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ },
+ {
+  "w": "周",
+  "py": "zhōu",
+  "en": "surname Zhou; Zhou Dynasty (1046–256 BC)",
+  "hsk": null,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ },
+ {
+  "w": "明",
+  "py": "míng",
+  "en": "Ming Dynasty (1368–1644); surname Ming; Ming (c. 2000 BC), fourth of the legendary Flame Emperors, 炎帝[Yan2 di4] descende",
+  "hsk": null,
+  "exemplo": "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。"
+ }
+]

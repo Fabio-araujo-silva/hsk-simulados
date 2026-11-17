@@ -1,0 +1,1879 @@
+{
+ "id": "H31005",
+ "transcricao": "oficial",
+ "fontes": [
+  "fontes\\raw\\H31005\\H31005.pdf"
+ ],
+ "grupos": {
+  "L1a": {
+   "questoes": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "letras": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "exemploUsa": "D",
+   "imagens": {
+    "A": "img/H31005/L1a-A.png",
+    "B": "img/H31005/L1a-B.png",
+    "C": "img/H31005/L1a-C.png",
+    "D": "img/H31005/L1a-D.png",
+    "E": "img/H31005/L1a-E.png",
+    "F": "img/H31005/L1a-F.png"
+   }
+  },
+  "L1b": {
+   "questoes": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "letras": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "exemploUsa": null,
+   "imagens": {
+    "A": "img/H31005/L1b-A.png",
+    "B": "img/H31005/L1b-B.png",
+    "C": "img/H31005/L1b-C.png",
+    "D": "img/H31005/L1b-D.png",
+    "E": "img/H31005/L1b-E.png"
+   }
+  },
+  "R1a": {
+   "questoes": [
+    41,
+    42,
+    43,
+    44,
+    45
+   ],
+   "opcoes": {
+    "A": "问我吗？在报纸下面吧。",
+    "B": "明天的考试要求带铅笔。",
+    "C": "这么小就会写自己的名字了？真不简单。",
+    "D": "你弟弟的工作怎么样了？",
+    "E": "当然。我们先坐公共汽车，然后换地铁。",
+    "F": "你这么忙，有时间去运动吗？"
+   },
+   "exemplo": {
+    "texto": "你知道怎么去那儿吗？",
+    "resposta": "E"
+   }
+  },
+  "R1b": {
+   "questoes": [
+    46,
+    47,
+    48,
+    49,
+    50
+   ],
+   "opcoes": {
+    "A": "你了解他吗？这么快就和他结婚了！",
+    "B": "阿姨，那您买的时候花了多少钱？",
+    "C": "你这条裙子是不是有点儿短？",
+    "D": "不用客气了，你一会儿洗碗筷和盘子吧。",
+    "E": "很近，就在这条街的后面。"
+   },
+   "exemplo": null
+  },
+  "R2a": {
+   "questoes": [
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "opcoes": {
+    "A": "讲",
+    "B": "绿",
+    "C": "健康",
+    "D": "习惯",
+    "E": "声音",
+    "F": "年级"
+   },
+   "exemplo": {
+    "texto": "她说话的（＿＿）多好听啊！",
+    "resposta": "E"
+   }
+  },
+  "R2b": {
+   "questoes": [
+    56,
+    57,
+    58,
+    59,
+    60
+   ],
+   "opcoes": {
+    "A": "教",
+    "B": "多么",
+    "C": "河",
+    "D": "爱好",
+    "E": "满意",
+    "F": "终于"
+   },
+   "exemplo": {
+    "texto": "A：你有什么（＿＿）？\nB：我喜欢体育。",
+    "resposta": "D"
+   }
+  }
+ },
+ "roteiro": [
+  {
+   "tipo": "musica",
+   "texto": "（音乐，30秒，渐弱）"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（三级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（三级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（三级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "HSK（三级）听力考试分四部分，共40题。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "请大家注意，听力考试现在开始。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第一部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共10个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": "男",
+     "txt": "喂，请问张经理在吗？"
+    },
+    {
+     "fal": "女",
+     "txt": "他正在开会，您半个小时以后再打，好吗？"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第1到5题："
+  },
+  {
+   "tipo": "questao",
+   "n": 1
+  },
+  {
+   "tipo": "questao",
+   "n": 2
+  },
+  {
+   "tipo": "questao",
+   "n": 3
+  },
+  {
+   "tipo": "questao",
+   "n": 4
+  },
+  {
+   "tipo": "questao",
+   "n": 5
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第6到10题："
+  },
+  {
+   "tipo": "questao",
+   "n": 6
+  },
+  {
+   "tipo": "questao",
+   "n": 7
+  },
+  {
+   "tipo": "questao",
+   "n": 8
+  },
+  {
+   "tipo": "questao",
+   "n": 9
+  },
+  {
+   "tipo": "questao",
+   "n": 10
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第二部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共10个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "为了让自己更健康，他每天都花一个小时去锻炼身体。"
+    },
+    {
+     "fal": "★",
+     "txt": "他希望自己很健康。"
+    },
+    {
+     "fal": null,
+     "txt": "今天我想早点儿回家。看了看手表，才五点。过了一会儿再看表，还是五点，我这才发现我的手表不走了。"
+    },
+    {
+     "fal": "★",
+     "txt": "那块儿手表不是他的。"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第11题："
+  },
+  {
+   "tipo": "questao",
+   "n": 11
+  },
+  {
+   "tipo": "questao",
+   "n": 12
+  },
+  {
+   "tipo": "questao",
+   "n": 13
+  },
+  {
+   "tipo": "questao",
+   "n": 14
+  },
+  {
+   "tipo": "questao",
+   "n": 15
+  },
+  {
+   "tipo": "questao",
+   "n": 16
+  },
+  {
+   "tipo": "questao",
+   "n": 17
+  },
+  {
+   "tipo": "questao",
+   "n": 18
+  },
+  {
+   "tipo": "questao",
+   "n": 19
+  },
+  {
+   "tipo": "questao",
+   "n": 20
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第三部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共10个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": "男",
+     "txt": "小王，帮我开一下门，好吗？谢谢！"
+    },
+    {
+     "fal": "女",
+     "txt": "没问题。您去超市了？买了这么多东西。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的想让小王做什么？"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第21题："
+  },
+  {
+   "tipo": "questao",
+   "n": 21
+  },
+  {
+   "tipo": "questao",
+   "n": 22
+  },
+  {
+   "tipo": "questao",
+   "n": 23
+  },
+  {
+   "tipo": "questao",
+   "n": 24
+  },
+  {
+   "tipo": "questao",
+   "n": 25
+  },
+  {
+   "tipo": "questao",
+   "n": 26
+  },
+  {
+   "tipo": "questao",
+   "n": 27
+  },
+  {
+   "tipo": "questao",
+   "n": 28
+  },
+  {
+   "tipo": "questao",
+   "n": 29
+  },
+  {
+   "tipo": "questao",
+   "n": 30
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第四部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共10个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": "女",
+     "txt": "晚饭做好了，准备吃饭了。"
+    },
+    {
+     "fal": "男",
+     "txt": "等一会儿，比赛还有三分钟就结束了。"
+    },
+    {
+     "fal": "女",
+     "txt": "快点儿吧，一起吃，菜冷了就不好吃了。"
+    },
+    {
+     "fal": "男",
+     "txt": "你先吃，我马上就看完了。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的在做什么？"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第31题："
+  },
+  {
+   "tipo": "questao",
+   "n": 31
+  },
+  {
+   "tipo": "questao",
+   "n": 32
+  },
+  {
+   "tipo": "questao",
+   "n": 33
+  },
+  {
+   "tipo": "questao",
+   "n": 34
+  },
+  {
+   "tipo": "questao",
+   "n": 35
+  },
+  {
+   "tipo": "questao",
+   "n": 36
+  },
+  {
+   "tipo": "questao",
+   "n": 37
+  },
+  {
+   "tipo": "questao",
+   "n": 38
+  },
+  {
+   "tipo": "questao",
+   "n": 39
+  },
+  {
+   "tipo": "questao",
+   "n": 40
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "听力考试现在结束。"
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1a",
+   "resposta": "F",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "我这是第一次听小李唱歌，他唱得真不错。"
+    },
+    {
+     "fal": "男",
+     "txt": "唱歌和跳舞，他都是高水平。"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1a",
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "这是球赛结束后我们照的照片，你看照得怎么样？"
+    },
+    {
+     "fal": "女",
+     "txt": "球赛？你参加足球比赛了？"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1a",
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "今天第一天上课，你觉得怎么样？"
+    },
+    {
+     "fal": "男",
+     "txt": "很好，我喜欢这儿，谢谢您的关心。"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1a",
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "这个礼物真的是送给我的吗？"
+    },
+    {
+     "fal": "女",
+     "txt": "当然了，祝你生日快乐！"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1a",
+   "resposta": "E",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "孩子总是一边听音乐一边看书，她能记住吗？"
+    },
+    {
+     "fal": "男",
+     "txt": "没关系，年轻人都这样。"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1b",
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "你想把这箱子搬到哪儿去？要我帮忙吗？"
+    },
+    {
+     "fal": "女",
+     "txt": "不用，我把它放楼下就可以了。"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1b",
+   "resposta": "D",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "面条儿好了，你给姐姐打个电话，让她来一起吃吧。"
+    },
+    {
+     "fal": "男",
+     "txt": "我正在打呢，但没有人接。"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1b",
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "我把需要注意的问题，都写在电子邮件里了。"
+    },
+    {
+     "fal": "女",
+     "txt": "好的，我现在就看。"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1b",
+   "resposta": "E",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "这两双鞋，你觉得哪双更漂亮一些？"
+    },
+    {
+     "fal": "女",
+     "txt": "都漂亮。你要是喜欢就两双都买。"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem",
+   "grupo": "L1b",
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "下车吧，我们到了，这就是我的公司。"
+    },
+    {
+     "fal": "女",
+     "txt": "这么快就到了？我以为很远呢。"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "他在准备晚饭。",
+   "resposta": true,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "帮我从冰箱里拿几个鸡蛋，今天晚上我们多做几个菜。"
+    },
+    {
+     "fal": "★",
+     "txt": "他在准备晚饭。"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "要认真听老师说的话。",
+   "resposta": true,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "老师说话的时候，你要认真听，不要老是“一个耳朵进，一个耳朵出”。"
+    },
+    {
+     "fal": "★",
+     "txt": "要认真听老师说的话。"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "他已经把书还了。",
+   "resposta": false,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "上周，我从学校图书馆里借了一本书。现在已经看完了，我打算明天去把它还了。"
+    },
+    {
+     "fal": "★",
+     "txt": "他已经把书还了。"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "他害怕小动物。",
+   "resposta": false,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "到现在，我还清楚地记得，小时候，几乎每天都要看《动物世界》这个节目，看这个节目让我认识了很多动物。"
+    },
+    {
+     "fal": "★",
+     "txt": "他害怕小动物。"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "女儿的成绩提高了。",
+   "resposta": false,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "女儿最近天天上网玩游戏，影响了学习成绩，我和妻子都很头疼。"
+    },
+    {
+     "fal": "★",
+     "txt": "女儿的成绩提高了。"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "他长得很高。",
+   "resposta": false,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "虽然我只有一米六三，但是我还是特别爱打篮球，而且打得很好。"
+    },
+    {
+     "fal": "★",
+     "txt": "他长得很高。"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "北方和南方的天气不一样。",
+   "resposta": true,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "夏天的时候，人们喜欢到北方城市旅游，因为这时候北方不是很热；到了冬天，人们就比较喜欢到南方城市旅游，因为南方的冬天不会太冷。"
+    },
+    {
+     "fal": "★",
+     "txt": "北方和南方的天气不一样。"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "他喜欢去公园读书。",
+   "resposta": true,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "我家附近有个公园，我经常去公园的草地上看书，那儿人很少，非常安静。"
+    },
+    {
+     "fal": "★",
+     "txt": "他喜欢去公园读书。"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "数学是他的爱好。",
+   "resposta": false,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "在叔叔的影响下，我也对历史很有兴趣，看过很多历史书，知道不少历史故事。"
+    },
+    {
+     "fal": "★",
+     "txt": "数学是他的爱好。"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "vf",
+   "afirmacao": "手表不像以前那么重要了。",
+   "resposta": true,
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "以前人们用手表来看时间，手机出现后，人们发现用手机看时间也很方便，所以很多人不用手表了。"
+    },
+    {
+     "fal": "★",
+     "txt": "手表不像以前那么重要了。"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "要去刷牙",
+    "B": "不锻炼了",
+    "C": "现在起床"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "外面的风刮得特别大，你还出去跑步吗？"
+    },
+    {
+     "fal": "男",
+     "txt": "不出去了，今天多睡一会儿。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的是什么意思？"
+    }
+   ],
+   "pergunta": "男的是什么意思？"
+  },
+  {
+   "n": 22,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "回家",
+    "B": "银行",
+    "C": "图书馆"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "你要去哪儿？我让司机开车送你去吧。"
+    },
+    {
+     "fal": "女",
+     "txt": "不用了，谢谢，我去国家图书馆，坐地铁很方便。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的要去哪儿？"
+    }
+   ],
+   "pergunta": "女的要去哪儿？"
+  },
+  {
+   "n": 23,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "打车",
+    "B": "骑车",
+    "C": "坐公共汽车"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "中午我去银行办点儿事，把你的自行车借我用用。"
+    },
+    {
+     "fal": "男",
+     "txt": "我今天没骑车，打出租车来的。你再问问小李？"
+    },
+    {
+     "fal": "问",
+     "txt": "男的今天是怎么来的？"
+    }
+   ],
+   "pergunta": "男的今天是怎么来的？"
+  },
+  {
+   "n": 24,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "同事",
+    "B": "邻居",
+    "C": "夫妻"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "洗手间的灯怎么没关啊？"
+    },
+    {
+     "fal": "女",
+     "txt": "儿子说要洗澡，他去拿换洗的衣服了。"
+    },
+    {
+     "fal": "问",
+     "txt": "他们最可能是什么关系？"
+    }
+   ],
+   "pergunta": "他们最可能是什么关系？"
+  },
+  {
+   "n": 25,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "饭店",
+    "B": "办公室",
+    "C": "火车站"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "先生您好，您现在点菜吗？"
+    },
+    {
+     "fal": "男",
+     "txt": "我还有几个朋友，等他们来了以后再点。"
+    },
+    {
+     "fal": "问",
+     "txt": "他们现在在哪儿？"
+    }
+   ],
+   "pergunta": "他们现在在哪儿？"
+  },
+  {
+   "n": 26,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "7：00",
+    "B": "9：30",
+    "C": "10：05"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "几点了？今天的会议几点开始？"
+    },
+    {
+     "fal": "女",
+     "txt": "现在是九点一刻，再有十五分钟开始。"
+    },
+    {
+     "fal": "问",
+     "txt": "会议几点开始？"
+    }
+   ],
+   "pergunta": "会议几点开始？"
+  },
+  {
+   "n": 27,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "爬山",
+    "B": "等电梯",
+    "C": "做练习"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "好了没？电梯来了，快一点儿。"
+    },
+    {
+     "fal": "男",
+     "txt": "我马上就好。等等我。"
+    },
+    {
+     "fal": "问",
+     "txt": "他们在做什么？"
+    }
+   ],
+   "pergunta": "他们在做什么？"
+  },
+  {
+   "n": 28,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "要去接人",
+    "B": "忘带护照了",
+    "C": "要去拿行李箱"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "喂，我已经下飞机了，我现在去拿行李箱。"
+    },
+    {
+     "fal": "女",
+     "txt": "好的，别着急，我很快就到机场了，东边那个门口见。"
+    },
+    {
+     "fal": "问",
+     "txt": "关于女的，可以知道什么？"
+    }
+   ],
+   "pergunta": "关于女的，可以知道什么？"
+  },
+  {
+   "n": 29,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "很大",
+    "B": "很好吃",
+    "C": "很便宜"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "这条鱼真大，在哪儿买的？"
+    },
+    {
+     "fal": "男",
+     "txt": "我从楼下超市买的，八斤多呢。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的觉得那条鱼怎么样？"
+    }
+   ],
+   "pergunta": "女的觉得那条鱼怎么样？"
+  },
+  {
+   "n": 30,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "男的",
+    "B": "同学们",
+    "C": "爷爷奶奶"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "怎么样，最近好点儿了吗？"
+    },
+    {
+     "fal": "女",
+     "txt": "医生说我很快就能出院了，放心吧。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的想让谁放心？"
+    }
+   ],
+   "pergunta": "女的想让谁放心？"
+  },
+  {
+   "n": 31,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "他又饿了",
+    "B": "咖啡太甜了",
+    "C": "女的应该在教室"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "真奇怪，你怎么在这里喝咖啡呢？"
+    },
+    {
+     "fal": "女",
+     "txt": "在这儿喝咖啡很奇怪吗？"
+    },
+    {
+     "fal": "男",
+     "txt": "我刚才看见你在教室里。"
+    },
+    {
+     "fal": "女",
+     "txt": "不可能，你一定看错了，我上午一直在这儿。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的为什么觉得奇怪？"
+    }
+   ],
+   "pergunta": "男的为什么觉得奇怪？"
+  },
+  {
+   "n": 32,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "很有名",
+    "B": "是校长",
+    "C": "穿白衬衫"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "今天你穿哪件衬衫？"
+    },
+    {
+     "fal": "男",
+     "txt": "白色的。如果公司事情多，我可能要晚一点儿回来。"
+    },
+    {
+     "fal": "女",
+     "txt": "知道了。下雪了，路上开车一定要小心。"
+    },
+    {
+     "fal": "男",
+     "txt": "别为我担心了，我会开得很慢的。"
+    },
+    {
+     "fal": "问",
+     "txt": "关于男的，可以知道什么？"
+    }
+   ],
+   "pergunta": "关于男的，可以知道什么？"
+  },
+  {
+   "n": 33,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "最新的",
+    "B": "普通的",
+    "C": "蓝颜色的"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "这个相机可以吗？"
+    },
+    {
+     "fal": "女",
+     "txt": "一般。那个蓝色的比较好，你说呢？"
+    },
+    {
+     "fal": "男",
+     "txt": "那个太贵，我们再看看其他的吧。"
+    },
+    {
+     "fal": "女",
+     "txt": "贵吗？才三千块，就买那个吧。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的希望买哪种照相机？"
+    }
+   ],
+   "pergunta": "女的希望买哪种照相机？"
+  },
+  {
+   "n": 34,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "客人",
+    "B": "哥哥",
+    "C": "王小姐"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "经理，您的信。"
+    },
+    {
+     "fal": "男",
+     "txt": "先放我桌子上吧。客人几点到？"
+    },
+    {
+     "fal": "女",
+     "txt": "他们已经到宾馆了，半个小时后到公司。"
+    },
+    {
+     "fal": "男",
+     "txt": "好的，等他们到了就告诉我。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的在等谁？"
+    }
+   ],
+   "pergunta": "男的在等谁？"
+  },
+  {
+   "n": 35,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "商店",
+    "B": "医院",
+    "C": "北京"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "你的感冒还没好？"
+    },
+    {
+     "fal": "女",
+     "txt": "没呢，吃了些药也不起作用。"
+    },
+    {
+     "fal": "男",
+     "txt": "有一个星期了吧？这么久了，你去医院看一下吧。"
+    },
+    {
+     "fal": "女",
+     "txt": "是，我打算星期六去看看。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的星期六要去哪里？"
+    }
+   ],
+   "pergunta": "女的星期六要去哪里？"
+  },
+  {
+   "n": 36,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "洗碗",
+    "B": "复习",
+    "C": "踢足球"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "洗碗还是打扫房间，你选择哪一个？"
+    },
+    {
+     "fal": "男",
+     "txt": "让我想一想，我，洗碗。"
+    },
+    {
+     "fal": "女",
+     "txt": "好，那现在请你去厨房吧。"
+    },
+    {
+     "fal": "男",
+     "txt": "你让我看完体育新闻再去洗，好不好？"
+    },
+    {
+     "fal": "问",
+     "txt": "男的选择了什么？"
+    }
+   ],
+   "pergunta": "男的选择了什么？"
+  },
+  {
+   "n": 37,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "服务员",
+    "B": "她妈妈",
+    "C": "她的学生"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "刚才还是大太阳，这会儿就下雨了。"
+    },
+    {
+     "fal": "女",
+     "txt": "是，这天气一会儿晴一会儿阴的。"
+    },
+    {
+     "fal": "男",
+     "txt": "你怎么知道带雨伞？"
+    },
+    {
+     "fal": "女",
+     "txt": "早上我妈把它放我包里了。"
+    },
+    {
+     "fal": "问",
+     "txt": "谁把雨伞放包里的？"
+    }
+   ],
+   "pergunta": "谁把雨伞放包里的？"
+  },
+  {
+   "n": 38,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "3张",
+    "B": "8张",
+    "C": "10张"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "电影票多少钱一张？"
+    },
+    {
+     "fal": "男",
+     "txt": "八十。"
+    },
+    {
+     "fal": "女",
+     "txt": "好，我买三张。"
+    },
+    {
+     "fal": "男",
+     "txt": "对不起，您要买几点的？"
+    },
+    {
+     "fal": "问",
+     "txt": "女的要买几张电影票？"
+    }
+   ],
+   "pergunta": "女的要买几张电影票？"
+  },
+  {
+   "n": 39,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "吃饱了",
+    "B": "口渴了",
+    "C": "不愿意变胖"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "经常吃甜的东西容易变胖。"
+    },
+    {
+     "fal": "女",
+     "txt": "我同意，所以我不吃糖。"
+    },
+    {
+     "fal": "男",
+     "txt": "那你怎么还敢吃那么多蛋糕？"
+    },
+    {
+     "fal": "女",
+     "txt": "没关系，这种蛋糕不甜，没放糖。"
+    },
+    {
+     "fal": "问",
+     "txt": "女的为什么不吃糖？"
+    }
+   ],
+   "pergunta": "女的为什么不吃糖？"
+  },
+  {
+   "n": 40,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "坏了",
+    "B": "该换了",
+    "C": "放得太低了"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "你听一下，这是什么声音？"
+    },
+    {
+     "fal": "男",
+     "txt": "像是空调的声音？"
+    },
+    {
+     "fal": "女",
+     "txt": "是不是坏了？应该找人检查一下了。"
+    },
+    {
+     "fal": "男",
+     "txt": "这个周末我们去买个新的吧，这个空调太旧了。"
+    },
+    {
+     "fal": "问",
+     "txt": "男的认为空调怎么了？"
+    }
+   ],
+   "pergunta": "男的认为空调怎么了？"
+  },
+  {
+   "n": 41,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1a",
+   "enunciado": "我天天去游泳，你没发现我瘦了？",
+   "resposta": "F"
+  },
+  {
+   "n": 42,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1a",
+   "enunciado": "我丈夫给他介绍了一家电脑公司，但他还没决定去不去。",
+   "resposta": "D"
+  },
+  {
+   "n": 43,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1a",
+   "enunciado": "没问题，我昨天下午就准备好了。",
+   "resposta": "B"
+  },
+  {
+   "n": 44,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1a",
+   "enunciado": "大家都觉得他又聪明又可爱。",
+   "resposta": "C"
+  },
+  {
+   "n": 45,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1a",
+   "enunciado": "你看见我的眼镜了吗？又找不到了。",
+   "resposta": "A"
+  },
+  {
+   "n": 46,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1b",
+   "enunciado": "你相信吗？这把椅子去年春天卖100万。",
+   "resposta": "B"
+  },
+  {
+   "n": 47,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1b",
+   "enunciado": "真的？那我穿裤子好了。",
+   "resposta": "C"
+  },
+  {
+   "n": 48,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1b",
+   "enunciado": "第一次见面我就喜欢上他了。",
+   "resposta": "A"
+  },
+  {
+   "n": 49,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1b",
+   "enunciado": "你累了吧？休息一下，我来做饭。",
+   "resposta": "D"
+  },
+  {
+   "n": 50,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "pareamento",
+   "grupo": "R1b",
+   "enunciado": "你们上次去的那个饭馆儿离这儿远吗？",
+   "resposta": "E"
+  },
+  {
+   "n": 51,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2a",
+   "enunciado": "蓝天，白云，（＿＿）树，那儿的环境真好。",
+   "resposta": "B"
+  },
+  {
+   "n": 52,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2a",
+   "enunciado": "妹妹的孩子今年7岁了，应该上一（＿＿）了。",
+   "resposta": "F"
+  },
+  {
+   "n": 53,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2a",
+   "enunciado": "有不懂的地方，就去查字典，这是一个比较好的学习（＿＿）。",
+   "resposta": "D"
+  },
+  {
+   "n": 54,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2a",
+   "enunciado": "爸爸，您每天喝杯红葡萄酒，对（＿＿）很有帮助。",
+   "resposta": "C"
+  },
+  {
+   "n": 55,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2a",
+   "enunciado": "跟以前比，我现在的普通话（＿＿）得好多了。",
+   "resposta": "A"
+  },
+  {
+   "n": 56,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2b",
+   "enunciado": "A：这是一个（＿＿）好的机会啊！你必须去。\nB：一共只有两个月？那好吧。",
+   "resposta": "B"
+  },
+  {
+   "n": 57,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2b",
+   "enunciado": "A：地图上这儿有条（＿＿），怎么没看见啊？\nB：你看错了，还在前面呢。",
+   "resposta": "C"
+  },
+  {
+   "n": 58,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2b",
+   "enunciado": "A：我画完了，您看看，（＿＿）吗？\nB：好极了，你画得越来越好了。",
+   "resposta": "E"
+  },
+  {
+   "n": 59,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2b",
+   "enunciado": "A：你（＿＿）回来了，啤酒买了吗？\nB：医生不让你喝酒吃肉。我买了些果汁和牛奶。",
+   "resposta": "F"
+  },
+  {
+   "n": 60,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "lacuna",
+   "grupo": "R2b",
+   "enunciado": "A：您做过哪些工作？\nB：我以前是大学老师，主要（＿＿）东西方文化比较。",
+   "resposta": "A"
+  },
+  {
+   "n": 61,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "不同的季节可以用不同的颜色来表示，我们用黄色表示秋季，那夏季呢？",
+   "pergunta": "黄色常被用来表示：",
+   "opcoes": {
+    "A": "春天",
+    "B": "秋天",
+    "C": "冬天"
+   },
+   "resposta": "B"
+  },
+  {
+   "n": 62,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "2月14号早上，她正要去上班的时候，突然看到男朋友拿着鲜花站在门口。她这才明白今天是他们的节日。",
+   "pergunta": "根据这段话，可以知道：",
+   "opcoes": {
+    "A": "她那天迟到了",
+    "B": "男朋友很难过",
+    "C": "男朋友要送她花"
+   },
+   "resposta": "C"
+  },
+  {
+   "n": 63,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "你的菜单里有水果饭吗？你想学着做水果饭吗？其实很简单，把米饭做好后，再把一块儿一块儿新鲜的水果放进去，水果饭就完成了。你可以做苹果饭，香蕉饭，如果你愿意，还可以做西瓜饭。",
+   "pergunta": "水果饭：",
+   "opcoes": {
+    "A": "不需要水",
+    "B": "很容易做",
+    "C": "是一种面包"
+   },
+   "resposta": "B"
+  },
+  {
+   "n": 64,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "听说你下个星期就要离开北京回国了？我下星期不在北京，没办法去机场送你了，这个小熊猫送给你，欢迎你明年再到中国来。",
+   "pergunta": "他为什么现在送礼物？",
+   "opcoes": {
+    "A": "担心有变化",
+    "B": "想学习汉语",
+    "C": "下星期不在北京"
+   },
+   "resposta": "C"
+  },
+  {
+   "n": 65,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "他在我生病的时候照顾过我，在我遇到问题的时候帮助过我，在我心中，他是我最好的朋友。",
+   "pergunta": "我遇到问题时，他：",
+   "opcoes": {
+    "A": "非常生气",
+    "B": "身体不太好",
+    "C": "帮我解决问题"
+   },
+   "resposta": "C"
+  },
+  {
+   "n": 66,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "中国有句老话，叫“有借有还，再借不难”，是说向别人借的东西，用完就要还回去，这样才能让别人相信你，下次还会借给你。",
+   "pergunta": "借了别人的东西：",
+   "opcoes": {
+    "A": "要记得还",
+    "B": "要洗干净",
+    "C": "别用太长时间"
+   },
+   "resposta": "A"
+  },
+  {
+   "n": 67,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "这辆车有上下两层，很多人都愿意坐上边那层，因为坐得高，眼睛看得远，一路上经过的地方，你都可以看得更清楚。",
+   "pergunta": "关于这辆车，可以知道：",
+   "opcoes": {
+    "A": "司机很热情",
+    "B": "一共有两层",
+    "C": "下层不能坐人"
+   },
+   "resposta": "B"
+  },
+  {
+   "n": 68,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "小王上午脸色不太好，同事们以为他病了，问他怎么了，他笑着回答说：“昨晚看球赛，两点才睡觉。”",
+   "pergunta": "小王昨天晚上：",
+   "opcoes": {
+    "A": "发烧了",
+    "B": "看比赛了",
+    "C": "看表演了"
+   },
+   "resposta": "B"
+  },
+  {
+   "n": 69,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "没关系，她哭是因为刚才听到一个孩子在唱《月亮船》，这使她突然想起了很多过去的事情。",
+   "pergunta": "她为什么哭？",
+   "opcoes": {
+    "A": "想起了过去",
+    "B": "鼻子不舒服",
+    "C": "不想说再见"
+   },
+   "resposta": "A"
+  },
+  {
+   "n": 70,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "abc",
+   "texto": "下班后我们一起去喝茶吧，就在公司旁边，30元一位，除了茶水，还送一些吃的。你那个朋友姓什么？我忘了，把他也叫上？",
+   "pergunta": "那个茶馆儿怎么样？",
+   "opcoes": {
+    "A": "椅子很矮",
+    "B": "在花园里",
+    "C": "送吃的东西"
+   },
+   "resposta": "C"
+  },
+  {
+   "n": 71,
+   "secao": "W",
+   "parte": 1,
+   "tipo": "ordenar",
+   "pecas": [
+    "黑色",
+    "李小姐的头发",
+    "是",
+    "的"
+   ],
+   "resposta": "李小姐的头发是黑色的。"
+  },
+  {
+   "n": 72,
+   "secao": "W",
+   "parte": 1,
+   "tipo": "ordenar",
+   "pecas": [
+    "时候",
+    "举行",
+    "会议",
+    "什么"
+   ],
+   "aceitasOficiais": [
+    "什么时候举行会议？"
+   ],
+   "resposta": "会议什么时候举行？"
+  },
+  {
+   "n": 73,
+   "secao": "W",
+   "parte": 1,
+   "tipo": "ordenar",
+   "pecas": [
+    "努力",
+    "学习",
+    "很",
+    "他们班的学生"
+   ],
+   "resposta": "他们班的学生学习很努力。"
+  },
+  {
+   "n": 74,
+   "secao": "W",
+   "parte": 1,
+   "tipo": "ordenar",
+   "pecas": [
+    "喜欢",
+    "吃",
+    "都",
+    "马和羊",
+    "草"
+   ],
+   "resposta": "马和羊都喜欢吃草。"
+  },
+  {
+   "n": 75,
+   "secao": "W",
+   "parte": 1,
+   "tipo": "ordenar",
+   "pecas": [
+    "自己的",
+    "腿脚",
+    "老年人",
+    "要",
+    "关心"
+   ],
+   "resposta": "老年人要关心自己的腿脚。"
+  },
+  {
+   "n": 76,
+   "secao": "W",
+   "parte": 2,
+   "tipo": "hanzi",
+   "antes": "老师，黑板",
+   "pinyin": "zhōng",
+   "depois": "间的这个词是什么意思？",
+   "resposta": "中"
+  },
+  {
+   "n": 77,
+   "secao": "W",
+   "parte": 2,
+   "tipo": "hanzi",
+   "antes": "他不喜欢猫，也不喜欢狗，但他家有3",
+   "pinyin": "zhī",
+   "depois": "小鸟。",
+   "resposta": "只"
+  },
+  {
+   "n": 78,
+   "secao": "W",
+   "parte": 2,
+   "tipo": "hanzi",
+   "antes": "明天星期",
+   "pinyin": "rì",
+   "depois": "，你作业写完没？还有几个题？",
+   "resposta": "日"
+  },
+  {
+   "n": 79,
+   "secao": "W",
+   "parte": 2,
+   "tipo": "hanzi",
+   "antes": "不是左边，我说的是",
+   "pinyin": "yòu",
+   "depois": "边的那个帽子。",
+   "resposta": "右"
+  },
+  {
+   "n": 80,
+   "secao": "W",
+   "parte": 2,
+   "tipo": "hanzi",
+   "antes": "你带钱了吗？我还差3角5",
+   "pinyin": "fēn",
+   "depois": "。",
+   "resposta": "分"
+  }
+ ]
+}

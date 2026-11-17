@@ -1,0 +1,18 @@
+node_modules/
+dist/
+# material bruto baixado (PDFs originais, dicionários, áudios brutos, transcrições do whisper)
+fontes/raw/
+fontes/audio/
+fontes/dic/
+fontes/whisper/
+*.log
+.DS_Store
+
+# progresso pessoal (fica no disco; backups diários em progresso/backups)
+progresso/
+
+# chaves
+.env
+fontes/scribe/
+__pycache__/
+*.tsbuildinfo

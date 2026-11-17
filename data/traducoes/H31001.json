@@ -1,0 +1,1108 @@
+{
+  "frases": {
+    "大家好！欢迎参加HSK（三级）考试。": "Olá a todos! Bem-vindos ao exame HSK (nível 3).",
+    "HSK（三级）听力考试分四部分，共40题。": "A prova de compreensão auditiva do HSK (nível 3) tem quatro partes, com 40 questões no total.",
+    "请大家注意，听力考试现在开始。": "Atenção, por favor: a prova de compreensão auditiva começa agora.",
+    "第一部分": "Primeira parte",
+    "一共10个题，每题听两次。": "São 10 questões no total, e cada uma será ouvida duas vezes.",
+    "喂，请问张经理在吗？": "Alô, por favor, o gerente Zhang está?",
+    "他正在开会，您半个小时以后再打，好吗？": "Ele está em reunião agora. Poderia ligar de novo daqui a meia hora?",
+    "现在开始第1到5题：": "Agora começam as questões de 1 a 5:",
+    "现在开始第6到10题：": "Agora começam as questões de 6 a 10:",
+    "第二部分": "Segunda parte",
+    "为了让自己更健康，他每天都花一个小时去锻炼身体。": "Para ficar mais saudável, ele passa uma hora por dia fazendo exercícios.",
+    "他希望自己很健康。": "Ele quer ser saudável.",
+    "今天我想早点儿回家。看了看手表，才五点。过了一会儿再看表，还是五点，我这才发现我的手表不走了。": "Hoje eu queria ir para casa um pouco mais cedo. Olhei o relógio: eram só cinco horas. Depois de um tempo olhei de novo e ainda eram cinco horas; só então percebi que meu relógio tinha parado.",
+    "那块儿手表不是他的。": "Aquele relógio não é dele.",
+    "现在开始第11题：": "Agora começa a questão 11:",
+    "第三部分": "Terceira parte",
+    "小王，帮我开一下门，好吗？谢谢！": "Xiao Wang, pode abrir a porta para mim? Obrigado!",
+    "没问题。您去超市了？买了这么多东西。": "Sem problema. O senhor foi ao supermercado? Comprou tanta coisa!",
+    "男的想让小王做什么？": "O que o homem quer que Xiao Wang faça?",
+    "现在开始第21题：": "Agora começa a questão 21:",
+    "第四部分": "Quarta parte",
+    "晚饭做好了，准备吃饭了。": "O jantar está pronto, vamos comer.",
+    "等一会儿，比赛还有三分钟就结束了。": "Espera um pouco, faltam só três minutos para o jogo acabar.",
+    "快点儿吧，一起吃，菜冷了就不好吃了。": "Anda logo, vamos comer juntos; se a comida esfriar, não fica gostosa.",
+    "你先吃，我马上就看完了。": "Pode comer primeiro, eu já estou acabando de assistir.",
+    "男的在做什么？": "O que o homem está fazendo?",
+    "现在开始第31题：": "Agora começa a questão 31:",
+    "听力考试现在结束。": "A prova de compreensão auditiva termina agora.",
+    "太好了！需要我帮忙吗？": "Que ótimo! Precisa da minha ajuda?",
+    "今天把我饿坏了，还有什么吃的吗？": "Hoje eu fiquei morrendo de fome. Ainda tem alguma coisa para comer?",
+    "你最好再检查一下，看还有没有问题。": "É melhor você revisar mais uma vez, para ver se ainda tem algum problema.",
+    "没问题，你就放心吧。": "Sem problema, pode ficar tranquilo.",
+    "当然。我们先坐公共汽车，然后换地铁。": "Claro. Primeiro pegamos o ônibus e depois trocamos para o metrô.",
+    "这条裤子你花了多少钱？": "Quanto você pagou por esta calça?",
+    "你知道怎么去那儿吗？": "Você sabe como chegar lá?",
+    "银行马上就要关门了。": "O banco já vai fechar.",
+    "那是我叔叔的儿子，一岁多了。": "Aquele é o filho do meu tio; tem pouco mais de um ano.",
+    "把菜单儿给我，我们喝杯绿茶吧？": "Me passa o cardápio. Vamos tomar um chá verde?",
+    "我的几个同事周末想去北京玩儿，但他们都不会开车。": "Alguns colegas de trabalho meus querem passear em Pequim no fim de semana, mas nenhum deles sabe dirigir.",
+    "昨天的雨下得非常大，我没带伞。": "Ontem choveu muito forte, e eu não estava com guarda-chuva.",
+    "其实": "na verdade; na realidade",
+    "感冒": "resfriado; resfriar-se",
+    "附近": "perto; arredores",
+    "舒服": "confortável; sentir-se bem",
+    "声音": "som; voz",
+    "把": "partícula bǎ (traz o objeto para antes do verbo)",
+    "她说话的声音多好听啊！": "Como é bonita a voz dela!",
+    "刻": "quarto de hora (15 minutos)",
+    "一直": "o tempo todo; continuamente; sempre",
+    "节": "festa; data comemorativa (também: classificador de aulas)",
+    "爱好": "hobby; passatempo",
+    "被": "partícula bèi (voz passiva: ser … por)",
+    "打扫": "limpar; fazer faxina",
+    "A：你有什么爱好？": "A: Quais são os seus hobbies?",
+    "B：我喜欢体育。": "B: Eu gosto de esportes.",
+    "你一直看手表，有什么着急的事情吗？": "Você não para de olhar o relógio. Tem alguma coisa urgente?",
+    "我九点前必须回到办公室，经理有事情找我，再见。": "Tenho que voltar ao escritório antes das nove; o gerente quer falar comigo. Tchau!",
+    "你想什么呢？要出去吗？": "Está pensando em quê? Vai sair?",
+    "明天同学结婚，我在想穿哪双鞋好呢。": "Amanhã é o casamento de um colega de turma, e estou pensando em qual par de sapatos usar.",
+    "你每天都骑自行车上下班？": "Você vai e volta do trabalho de bicicleta todos os dias?",
+    "是，我骑了四个月了，一共瘦了六斤。": "Sim, já faz quatro meses que vou de bicicleta, e emagreci seis jin (3 quilos) no total.",
+    "真的不需要吃药吗？": "Não precisa mesmo tomar remédio?",
+    "不需要，回去多喝水，休息两天就好了。": "Não precisa. Em casa, beba bastante água e descanse dois dias, que você fica bom.",
+    "你看，上次出现的问题，我已经解决了。": "Olha, aquele problema que apareceu da última vez, eu já resolvi.",
+    "好极了！只是你要注意身体，我记得你有一个多星期没去跑步了。": "Excelente! Só que você precisa cuidar da saúde: pelo que eu lembro, faz mais de uma semana que você não vai correr.",
+    "他总是哭，有什么办法可以让他不哭吗？": "Ele vive chorando. Tem algum jeito de fazer ele parar de chorar?",
+    "给他一块儿糖，或者和他做游戏。": "Dê uma bala para ele, ou brinque com ele.",
+    "这个电子词典的作用大不大？": "Esse dicionário eletrônico é muito útil?",
+    "很大，我做练习的时候，它很有帮助。": "Muito. Quando eu faço exercícios, ele ajuda bastante.",
+    "眼镜，帽子，地图，啤酒，一个也不能少。": "Óculos, chapéu, mapa, cerveja... não pode faltar nenhum.",
+    "好了，准备得很认真，我相信你已经准备好了。": "Pronto, você se preparou com muito cuidado; acredito que já está tudo pronto.",
+    "我做饭，你洗盘子和碗，怎么样？": "Eu cozinho e você lava os pratos e as tigelas, que tal?",
+    "那还是我做饭吧，我愿意做饭。": "Então é melhor eu cozinhar; prefiro cozinhar.",
+    "告诉我你想看什么节目。": "Me diga que programa você quer ver.",
+    "没什么好看的，我还是读我的书吧。": "Não tem nada de bom para ver; acho melhor ler o meu livro.",
+    "我以前以为北京话就是普通话，到北京两年后，我才发现不是这样的。": "Antes eu achava que o dialeto de Pequim era o próprio mandarim padrão; só depois de dois anos em Pequim percebi que não é assim.",
+    "北京话和普通话是相同的。": "O dialeto de Pequim e o mandarim padrão são iguais.",
+    "你明天到办公室找我，我在七零七；如果我不在，你就上八楼，到八零三会议室找我，我可能在那儿开会。": "Amanhã me procure no escritório, estou na sala 707; se eu não estiver lá, suba ao oitavo andar e me procure na sala de reuniões 803, devo estar lá em reunião.",
+    "会议室在八层。": "A sala de reuniões fica no oitavo andar.",
+    "会议室在8层。": "A sala de reuniões fica no 8º andar.",
+    "我已经从图书馆出来了，那几本书都还了，你们等我一会儿，我很快就到。": "Já saí da biblioteca e devolvi todos aqueles livros. Me esperem um pouco, chego logo.",
+    "他已经到了。": "Ele já chegou.",
+    "这辆车现在能卖十万块钱吧，我两年前买的时候花了二十多万。": "Hoje dá para vender este carro por uns cem mil yuan; quando o comprei, dois anos atrás, paguei mais de duzentos mil.",
+    "这是辆旧车。": "Este é um carro usado.",
+    "有些人不喜欢吃蛋糕，是因为太甜了；有些人不喜欢吃蛋糕，是因为害怕长胖。但小孩子看见蛋糕是不会客气的，他们认为蛋糕越甜越好吃。": "Algumas pessoas não gostam de bolo porque é doce demais; outras não gostam porque têm medo de engordar. Mas as crianças, quando veem um bolo, não fazem cerimônia: para elas, quanto mais doce, mais gostoso.",
+    "小孩子爱吃蛋糕。": "As crianças adoram bolo.",
+    "我这次来北京，只能住三天，所以我只能选择一两个最有名的地方去看看，以后有机会再去别的地方。": "Desta vez só posso ficar três dias em Pequim, então só posso escolher um ou dois dos lugares mais famosos para visitar; os outros ficam para uma próxima oportunidade.",
+    "他在北京玩了很多地方。": "Ele passeou por muitos lugares em Pequim.",
+    "每次坐火车前，周明都会去超市买一些东西，除了面包、水果，他还要买一些报纸。": "Toda vez, antes de pegar o trem, Zhou Ming vai ao supermercado comprar algumas coisas: além de pão e frutas, ele também compra alguns jornais.",
+    "周明坐火车时喜欢看报纸。": "Zhou Ming gosta de ler jornal quando anda de trem.",
+    "他有很多爱好，唱歌、画画儿、踢足球、玩儿音乐，什么都会，而且水平也都特别高。": "Ele tem muitos hobbies — cantar, desenhar, jogar futebol, tocar música —, sabe fazer de tudo, e ainda por cima faz tudo muito bem.",
+    "他喜欢音乐，也喜欢运动。": "Ele gosta de música e também de esporte.",
+    "她每天到办公室的第一件事就是打开电脑，看电子邮件，然后才开始别的工作。": "Todo dia, a primeira coisa que ela faz ao chegar ao escritório é ligar o computador e ler os e-mails; só depois começa o resto do trabalho.",
+    "她对自己的工作没兴趣。": "Ela não tem interesse pelo próprio trabalho.",
+    "您先看看这种颜色的怎么样？这种手机很便宜，只要两千多块钱。它还可以照相，现在卖得很不错。": "Veja primeiro este, nesta cor, que tal? Este modelo de celular é bem barato, só pouco mais de dois mil yuan. Ele também tira fotos e está vendendo muito bem.",
+    "他们在买空调。": "Eles estão comprando um ar-condicionado.",
+    "大家都很关心您的身体，现在好些了吗？": "Todo mundo está preocupado com a sua saúde. Já está um pouco melhor?",
+    "没事，不用担心。就是感冒发烧，很快就会好的。": "Não é nada, não precisa se preocupar. É só um resfriado com febre; logo vou ficar bom.",
+    "男的怎么了？": "O que aconteceu com o homem?",
+    "迟到了": "chegou atrasado",
+    "生病了": "ficou doente",
+    "生气了": "ficou bravo",
+    "服务员，我房间里的灯坏了。": "Moça, a luz do meu quarto quebrou.",
+    "好的，先生，我马上让人来换一个。": "Certo, senhor. Vou mandar alguém trocar agora mesmo.",
+    "他们最可能在哪里？": "Onde eles provavelmente estão?",
+    "教室": "sala de aula",
+    "机场": "aeroporto",
+    "宾馆": "hotel",
+    "真奇怪，动物园里今天怎么这么安静？": "Que estranho, por que o zoológico está tão quieto hoje?",
+    "大家都在那边儿看新来的大熊猫呢。": "Está todo mundo lá do outro lado, vendo o panda-gigante que acabou de chegar.",
+    "关于大熊猫，可以知道什么？": "O que se pode saber sobre o panda-gigante?",
+    "有两只": "são dois",
+    "爱跳舞": "adora dançar",
+    "是新来的": "acabou de chegar",
+    "又下雪了！今年下过几次雪了？": "Está nevando de novo! Quantas vezes já nevou este ano?",
+    "已经下过两次了，这是第三次了。": "Já nevou duas vezes; esta é a terceira.",
+    "今年下了几次雪了？": "Quantas vezes nevou este ano até agora?",
+    "一次": "uma vez",
+    "两次": "duas vezes",
+    "三次": "três vezes",
+    "我现在就在学校西门，但我没找到你说的书店。": "Estou agora mesmo no portão oeste da escola, mas não achei a livraria que você falou.",
+    "你再向南走两百米就能看到了，我就在书店门口等你。": "Ande mais duzentos metros para o sul que você vai ver. Estou te esperando bem na porta da livraria.",
+    "女的要去哪儿？": "Aonde a mulher quer ir?",
+    "商店": "loja",
+    "书店": "livraria",
+    "学校东门": "portão leste da escola",
+    "我看您对中国历史很了解，您是教历史的吗？": "Vejo que a senhora entende muito de história da China. A senhora dá aula de história?",
+    "不是，我是教数学的，但我对历史很有兴趣。": "Não, eu dou aula de matemática, mas me interesso muito por história.",
+    "女的是教什么的？": "O que a mulher ensina?",
+    "汉语": "chinês (língua)",
+    "历史": "história",
+    "数学": "matemática",
+    "你喜欢踢足球吗？": "Você gosta de jogar futebol?",
+    "我很少踢足球，但是我喜欢看足球比赛。": "Eu jogo futebol muito pouco, mas gosto de assistir a jogos de futebol.",
+    "男的主要是什么意思？": "O que o homem quer dizer, principalmente?",
+    "喜欢看球赛": "gosta de assistir a jogos",
+    "喜欢打篮球": "gosta de jogar basquete",
+    "喜欢参加比赛": "gosta de participar de competições",
+    "这个冰箱太旧了，我们买个新的吧。": "Esta geladeira está velha demais, vamos comprar uma nova.",
+    "同意，去年我就跟你说应该换一个新的了。": "Concordo. Já no ano passado eu te disse que a gente devia trocar por uma nova.",
+    "女的希望怎么样？": "O que a mulher quer?",
+    "买个新的": "comprar uma nova",
+    "买个贵的": "comprar uma cara",
+    "先借一个": "pegar uma emprestada primeiro",
+    "休息一下吧，我现在腿也疼，脚也疼。上来的时候我怎么没觉得这么累。": "Vamos descansar um pouco; agora estão doendo as pernas e os pés. Como é que na subida eu não me senti tão cansada?",
+    "上山容易下山难，你不知道？": "Subir a montanha é fácil, descer é que é difícil. Você não sabia?",
+    "他们做什么了？": "O que eles fizeram?",
+    "上网": "navegar na internet",
+    "爬山": "subir a montanha; fazer trilha",
+    "游泳": "nadar",
+    "我明天早上的飞机，今天中午有时间见个面吗？": "Meu voo é amanhã de manhã. Você tem tempo para a gente se ver hoje ao meio-dia?",
+    "好的，那我们还是老地方见。": "Tá bom, então a gente se encontra no lugar de sempre.",
+    "他们打算在哪儿见面？": "Onde eles pretendem se encontrar?",
+    "国外": "no exterior",
+    "飞机上": "no avião",
+    "老地方": "no lugar de sempre",
+    "刚才天气多好啊，突然就刮起大风了。": "Agora há pouco o tempo estava tão bom, e de repente começou a ventar forte.",
+    "北方的秋天就是这样的。": "O outono no norte é assim mesmo.",
+    "你是南方人，你们那儿这个季节怎么样？": "Você é do sul; como é essa época do ano lá na sua terra?",
+    "也刮风，但没有这么大。": "Também venta, mas não tão forte assim.",
+    "他们在说什么？": "Sobre o que eles estão falando?",
+    "习惯": "hábitos; costumes",
+    "天气": "tempo (clima)",
+    "文化": "cultura",
+    "你准备了几双筷子？": "Quantos pares de hashi você separou?",
+    "三双啊。": "Três pares.",
+    "再拿两双，你爷爷奶奶一会儿就过来，我们一起吃。": "Pegue mais dois pares; seus avós chegam daqui a pouco e vamos comer todos juntos.",
+    "好，妈，碗在哪儿呢？": "Tá bom, mãe. Cadê as tigelas?",
+    "说话人最可能是什么关系？": "Qual é a relação mais provável entre as pessoas que falam?",
+    "夫妻": "marido e mulher",
+    "妈妈和儿子": "mãe e filho",
+    "爸爸和女儿": "pai e filha",
+    "我帮您拿行李吧。": "Deixe que eu ajudo a senhora com a bagagem.",
+    "好的，谢谢你。那个蓝色的是我的。": "Está bem, obrigada. Aquela azul é a minha.",
+    "哪个是您的？": "Qual é a da senhora?",
+    "右边那个最大的，蓝色的，上面有我的名字。": "Aquela da direita, a maior, azul, com o meu nome em cima.",
+    "那个行李箱是什么样的？": "Como é aquela mala?",
+    "很矮": "muito baixa",
+    "很大": "muito grande",
+    "黄色的": "amarela",
+    "明天是晴天还是阴天？": "Amanhã vai fazer sol ou vai ficar nublado?",
+    "晴天，比今天冷。": "Vai fazer sol, e mais frio do que hoje.",
+    "那没关系，我不怕冷，我明天要穿我的新裙子。": "Então tudo bem, eu não tenho medo de frio; amanhã vou usar minha saia nova.",
+    "你决定了？好，我看你明天敢不敢穿。": "Já decidiu? Tá bom, quero ver se amanhã você vai ter coragem de usar.",
+    "明天天气怎么样？": "Como vai estar o tempo amanhã?",
+    "多云": "com nuvens (parcialmente nublado)",
+    "很热": "muito quente",
+    "更冷": "mais frio",
+    "李老师，您有两个孩子？": "Professora Li, a senhora tem dois filhos?",
+    "不，我只有一个女儿。": "Não, só tenho uma filha.",
+    "那照片上的这个女孩儿是谁？": "Então quem é esta menina na foto?",
+    "那是我们邻居的女儿，我女儿的好朋友。": "É a filha dos nossos vizinhos, uma grande amiga da minha filha.",
+    "那个女孩儿是谁的孩子？": "De quem é filha aquela menina?",
+    "邻居的": "dos vizinhos",
+    "客人的": "de uma visita",
+    "校长的": "do diretor da escola",
+    "现在天“短”了。": "Agora os dias ficaram “curtos”.",
+    "天“短”了是什么意思？我没听懂。": "O que quer dizer “os dias ficaram curtos”? Não entendi.",
+    "就是说白天的时间短了，天黑的时间早了，明白了？": "Quer dizer que o período de luz do dia ficou mais curto e escurece mais cedo. Entendeu?",
+    "我明白了，就是晚上的时间长了，白天的时间短了。": "Entendi: as noites ficaram mais longas e os dias, mais curtos.",
+    "天“短”了表示什么意思？": "O que significa “os dias ficaram curtos”?",
+    "夏天来了": "o verão chegou",
+    "月亮出来了": "a lua apareceu",
+    "天黑得早了": "escurece mais cedo",
+    "小姐，请问表演什么时候开始？": "Moça, por favor, a que horas começa a apresentação?",
+    "下午两点半。": "Às duas e meia da tarde.",
+    "谢谢，现在可以进去了吗？": "Obrigado. Já posso entrar?",
+    "当然可以，我先看一下您的票，好，您向左走，坐电梯上二层。": "Claro que pode. Deixe-me ver o seu ingresso primeiro... pronto. Siga pela esquerda e pegue o elevador até o segundo andar.",
+    "关于表演，下面哪个是对的？": "Sobre a apresentação, qual das alternativas está correta?",
+    "在二层": "é no segundo andar",
+    "影响不大": "não tem muito impacto",
+    "已经结束了": "já terminou",
+    "听说你要去国外读书？": "Ouvi dizer que você vai estudar no exterior?",
+    "是，下周五的飞机。": "Sim, meu voo é na sexta que vem.",
+    "那祝你在新的一年里学习更上一层楼。": "Então te desejo que, no novo ano, seus estudos subam mais um degrau.",
+    "谢谢您！": "Muito obrigado!",
+    "女的希望男的怎么样？": "O que a mulher deseja para o homem?",
+    "不要离开": "não ir embora",
+    "给她写信": "escrever cartas para ela",
+    "有更好的成绩": "ter resultados ainda melhores",
+    "我的护照在你包里吗？": "Meu passaporte está na sua bolsa?",
+    "没有啊，只有我的。你的放哪儿了？": "Não, só tem o meu. Onde você pôs o seu?",
+    "奇怪，我记得给你了。": "Estranho, eu lembro de ter te dado.",
+    "你看看，在你自己的衬衫里呢。": "Olha só: está aí na sua própria camisa.",
+    "护照是在哪儿找到的？": "Onde o passaporte foi encontrado?",
+    "衬衫里": "na camisa",
+    "洗手间": "no banheiro",
+    "椅子上": "na cadeira",
+    "你在忙什么呢？刚才打你的手机你也不接。": "Você estava ocupado com o quê? Liguei para o seu celular agora há pouco e você nem atendeu.",
+    "对不起，我刚洗了个澡，没听见，有什么事吗？": "Desculpa, acabei de tomar banho e não ouvi. O que houve?",
+    "我想问问你公司里的一些事情。": "Queria te perguntar umas coisas da sua empresa.",
+    "你等一下，我去把电视的声音关小一些。": "Espera um pouco, vou abaixar o volume da TV.",
+    "男的刚才为什么没接电话？": "Por que o homem não atendeu o telefone agora há pouco?",
+    "在洗澡": "estava tomando banho",
+    "在睡觉": "estava dormindo",
+    "在看新闻": "estava vendo o noticiário",
+    "我的作业早就完成了。": "Terminei minha lição de casa faz tempo.",
+    "你先来个苹果，我去给你做碗面条儿。": "Come uma maçã primeiro, que eu vou fazer uma tigela de macarrão para você.",
+    "我终于有了自己的大房子了，明天就可以搬家了。": "Finalmente tenho minha própria casa grande; amanhã já posso me mudar.",
+    "这几天我不在家，小狗就请你帮我照顾了。": "Vou ficar uns dias fora de casa; por favor, cuide do meu cachorrinho para mim.",
+    "姐姐给我买的，我也不太清楚。": "Foi minha irmã mais velha que comprou para mim; eu também não sei direito.",
+    "这个小孩儿胖胖的，真可爱。": "Essa criança é gordinha, que fofa!",
+    "我哥是司机，我问问他，看他有没有时间。": "Meu irmão mais velho é motorista; vou perguntar a ele para ver se tem tempo.",
+    "你怎么又生病了？": "Como é que você ficou doente de novo?",
+    "没关系，我明天去也可以。": "Não tem problema, posso ir amanhã.",
+    "好的，我也有些渴了。": "Tá bom, eu também estou com um pouco de sede.",
+    "电影马上就要开始了，把手机关了吧。": "O filme já vai começar, desligue o celular.",
+    "他很高，这张桌子太低，坐着很不舒服。": "Ele é alto, e esta mesa é baixa demais: sentar aqui não é nada confortável.",
+    "您可以选择火车站附近的宾馆，住那儿会更方便。": "Você pode escolher um hotel perto da estação de trem; ficar lá vai ser mais prático.",
+    "天气冷，你多穿点儿衣服，小心感冒。": "Está frio; vista mais roupa e cuidado para não se resfriar.",
+    "对一个女人来说，漂亮、聪明都很重要，但其实更重要的是快乐。": "Para uma mulher, ser bonita e inteligente é importante, mas, na verdade, o que importa mais é ser feliz.",
+    "A：请问，现在是十一点吗？": "A: Com licença, são onze horas agora?",
+    "B：现在十一点十五了，您的表慢了一刻。": "B: Já são onze e quinze; o seu relógio está atrasado um quarto de hora.",
+    "A：最近怎么一直没看见他？": "A: Por que ultimamente eu não tenho visto ele?",
+    "B：他去旅游了，可能这个周末才能回来。": "B: Ele foi viajar; talvez só volte neste fim de semana.",
+    "A：牛奶呢？": "A: Cadê o leite?",
+    "B：一定是被猫喝了。": "B: Com certeza foi bebido pelo gato.",
+    "A：你家的厨房真干净！": "A: A cozinha da sua casa está muito limpa!",
+    "B：当然了，为了欢迎你，我已经打扫了两个多小时了。": "B: Claro! Para receber você, eu já passei mais de duas horas fazendo faxina.",
+    "A：买这么多鲜花，今天是谁的生日啊？": "A: Comprou tantas flores! Hoje é aniversário de quem?",
+    "B：今天是9月10日，教师节！这是为老师准备的。": "B: Hoje é 10 de setembro, Dia do Professor! São para os professores.",
+    "这句话的意思主要是：": "O sentido principal desta frase é:",
+    "人们常说：今天工作不努力，明天努力找工作。": "As pessoas costumam dizer: quem não se esforça no trabalho hoje vai se esforçar amanhã para procurar emprego.",
+    "要努力工作": "é preciso trabalhar com empenho",
+    "明天会更好": "amanhã será melhor",
+    "时间过得太快": "o tempo passa rápido demais",
+    "说话人最可能是做什么的？": "Qual é, provavelmente, a profissão de quem fala?",
+    "请大家把黑板上的这些词写在本子上，回家后用这些词语写一个小故事，别忘了，最少写100字。": "Pessoal, por favor, copiem no caderno estas palavras do quadro e, em casa, usem essas palavras para escrever uma historinha. Não esqueçam: no mínimo 100 caracteres.",
+    "老师": "professor(a)",
+    "学生": "aluno(a)",
+    "经理": "gerente",
+    "使他觉得满意的是：": "O que o deixa satisfeito é:",
+    "我对这儿很满意，虽然没有花园，但是离河边很近，那里有草地，有大树，还有鸟；虽然冬天天气很冷，但是空气新鲜，而且房间里一点儿也不冷。": "Estou muito satisfeito com este lugar. Embora não tenha jardim, fica bem perto da beira do rio, onde há gramado, árvores grandes e passarinhos; embora no inverno faça muito frio, o ar é puro, e dentro do quarto não faz nem um pouco de frio.",
+    "没有花园": "não tem jardim",
+    "房间很大": "o quarto é grande",
+    "离河很近": "fica perto do rio",
+    "他今天早上：": "Hoje de manhã, ele:",
+    "昨天晚上睡得太晚，今天起床时已经8点多了，我刷了牙，洗了脸，就出来了，差点儿忘了关门。到了公司，会议已经开始了。没办法，我只能站在外面等休息时间。": "Ontem à noite fui dormir muito tarde, e hoje, quando levantei, já passava das 8. Escovei os dentes, lavei o rosto e saí; quase esqueci de fechar a porta. Quando cheguei à empresa, a reunião já tinha começado. Não teve jeito: tive de ficar em pé lá fora esperando o intervalo.",
+    "没复习": "não revisou a matéria",
+    "忘了关门": "esqueceu de fechar a porta",
+    "根据这段话，可以知道：": "De acordo com o texto, pode-se saber que:",
+    "我去年春节去过一次上海，今年再去的时候，发现那里的变化非常大。经过那条街道时，我几乎不认识了。": "No Ano-Novo Chinês do ano passado fui uma vez a Xangai; quando voltei lá este ano, vi que a cidade tinha mudado muito. Ao passar por aquela rua, quase não a reconheci.",
+    "现在是春节": "agora é o Ano-Novo Chinês",
+    "上海变化很大": "Xangai mudou muito",
+    "上海人很热情": "o povo de Xangai é muito caloroso",
+    "小张的男朋友是我妻子：": "O namorado de Xiao Zhang, em relação à minha esposa, é:",
+    "世界真的很小，我昨天才发现，你给小张介绍的男朋友是我妻子以前的同事。": "O mundo é mesmo pequeno: só ontem descobri que o namorado que você apresentou para a Xiao Zhang é um ex-colega de trabalho da minha esposa.",
+    "以前的同事": "ex-colega de trabalho",
+    "以前的丈夫": "ex-marido",
+    "以前的男朋友": "ex-namorado",
+    "下班后，在路上遇到一个老同学。好久没见面，我们就在公司旁边那个咖啡馆里坐了坐，一边喝咖啡一边说了些过去的事，所以回来晚了。": "Depois do trabalho, encontrei um velho colega de escola no caminho. Fazia muito tempo que não nos víamos, então sentamos um pouco naquele café ao lado da empresa e, tomando café, conversamos sobre os velhos tempos. Por isso voltei tarde.",
+    "他回到家了": "ele já voltou para casa",
+    "他正在喝咖啡": "ele está tomando café agora",
+    "咖啡馆在公园旁边": "o café fica ao lado do parque",
+    "学生为什么喜欢刘老师？": "Por que os alunos gostam do professor Liu?",
+    "小刘是一位小学老师，教三年级的数学，他虽然很年轻，但是课讲得很好，同学们都很喜欢他。": "Xiao Liu é professor de escola primária e ensina matemática para o terceiro ano. Embora seja bem jovem, ele explica a matéria muito bem, e todos os alunos gostam muito dele.",
+    "很年轻": "é muito jovem",
+    "课讲得好": "explica bem a matéria",
+    "对学生要求高": "é exigente com os alunos",
+    "家里需要买什么？": "O que é preciso comprar para casa?",
+    "今天12号了，晚上陈阿姨要来家里，家里有菜，有鱼，还有些羊肉，但是没有水果了，你去买些香蕉、葡萄吧，再买个西瓜？": "Hoje já é dia 12, e à noite a tia Chen vem aqui em casa. Temos verduras, peixe e um pouco de carne de carneiro, mas acabaram as frutas. Vá comprar umas bananas e uvas — e quem sabe uma melancia também?",
+    "鸡蛋": "ovos",
+    "水果": "frutas",
+    "果汁": "suco",
+    "关于他，下面哪个是对的？": "Sobre ele, qual das alternativas está correta?",
+    "有人问我长得像谁，这个问题不太好回答。家里人一般觉得我的鼻子和耳朵像我爸爸，眼睛像我妈妈。": "Alguém me perguntou com quem eu me pareço; essa pergunta não é muito fácil de responder. Em geral, minha família acha que meu nariz e minhas orelhas são parecidos com os do meu pai, e meus olhos, com os da minha mãe.",
+    "头发很长": "tem cabelo comprido",
+    "不像妈妈": "não se parece com a mãe",
+    "鼻子像爸爸": "tem o nariz parecido com o do pai",
+    "弟弟高兴地笑了。": "Meu irmão mais novo sorriu, todo contente.",
+    "上午的考试比较简单。": "A prova da manhã foi relativamente fácil.",
+    "这个城市的环境变得越来越好了。": "O meio ambiente desta cidade está ficando cada vez melhor.",
+    "那位医生送给他一个礼物。": "Aquele médico deu um presente para ele.",
+    "其他班的成绩也有很大提高。": "As notas das outras turmas também melhoraram muito.",
+    "医院离这儿很远，我们坐出租车去吧。": "O hospital fica longe daqui; vamos de táxi.",
+    "一元是10角，一角是10分。": "Um yuan vale 10 jiao, e um jiao vale 10 fen.",
+    "我不认识他，你知道他姓什么、叫什么吗？": "Eu não o conheço. Você sabe qual é o sobrenome dele e como ele se chama?",
+    "中间穿红裙子的一定是他妹妹。": "A do meio, de saia vermelha, com certeza é a irmã mais nova dele.",
+    "我已经饱了，不想吃米饭了。": "Já estou satisfeito, não quero mais arroz."
+  },
+  "lacunas": {
+    "电影马上就要开始了，（＿＿）手机关了吧。": "O filme já vai começar, ___ desligue o celular.",
+    "他很高，这张桌子太低，坐着很不（＿＿）。": "Ele é alto, e esta mesa é baixa demais: sentar aqui não é nada ___.",
+    "您可以选择火车站（＿＿）的宾馆，住那儿会更方便。": "Você pode escolher um hotel ___ da estação de trem; ficar lá vai ser mais prático.",
+    "天气冷，你多穿点儿衣服，小心（＿＿）。": "Está frio; vista mais roupa e cuidado para não ___.",
+    "对一个女人来说，漂亮、聪明都很重要，但（＿＿）更重要的是快乐。": "Para uma mulher, ser bonita e inteligente é importante, mas ___ o que importa mais é ser feliz.",
+    "B：现在十一点十五了，您的表慢了一（＿＿）。": "B: Já são onze e quinze; o seu relógio está atrasado um ___.",
+    "A：最近怎么（＿＿）没看见他？": "A: Por que ultimamente eu ___ não vejo ele?",
+    "B：一定是（＿＿）猫喝了。": "B: Com certeza foi bebido ___ gato.",
+    "B：当然了，为了欢迎你，我已经（＿＿）了两个多小时了。": "B: Claro! Para receber você, eu já passei mais de duas horas ___.",
+    "B：今天是9月10日，教师（＿＿）！这是为老师准备的。": "B: Hoje é 10 de setembro, ___ do Professor! São para os professores.",
+    "医院离这儿很远，我们坐（＿＿）租车去吧。": "O hospital fica longe daqui; vamos de ___.",
+    "一（＿＿）是10角，一角是10分。": "Um ___ vale 10 jiao, e um jiao vale 10 fen.",
+    "我不认识他，你知道他姓什么、（＿＿）什么吗？": "Eu não o conheço. Você sabe qual é o sobrenome dele e como ele se ___?",
+    "（＿＿）间穿红裙子的一定是他妹妹。": "A do ___, de saia vermelha, com certeza é a irmã mais nova dele.",
+    "我已经饱了，不想吃（＿＿）饭了。": "Já estou satisfeito, não quero mais ___."
+  },
+  "questoes": {
+    "1": {
+      "explicacao": "Ela comenta que ele 一直看手表 ('não para de olhar o relógio'), e ele explica: 我九点前必须回到办公室 — precisa voltar ao escritório antes das nove, porque o gerente quer falar com ele. A figura B mostra exatamente isso: um homem de terno, com uma pasta, olhando o relógio de pulso.",
+      "trecho": "你一直看手表",
+      "palavras": [
+        "手表",
+        "着急",
+        "必须",
+        "办公室"
+      ]
+    },
+    "2": {
+      "explicacao": "Ela diz 我在想穿哪双鞋好呢 — está pensando em qual par de sapatos usar no casamento do colega amanhã. A figura C mostra uma moça pensativa diante de vários pares de sapatos. Lembre: 双 é o classificador de pares (一双鞋 = um par de sapatos).",
+      "trecho": "我在想穿哪双鞋好呢",
+      "palavras": [
+        "结婚",
+        "双",
+        "鞋"
+      ]
+    },
+    "3": {
+      "explicacao": "Ela pergunta se ele vai 骑自行车上下班 ('de bicicleta para o trabalho e de volta') todo dia, e ele confirma: já faz quatro meses e emagreceu seis jin (3 kg). A figura E mostra um rapaz de terno apoiado numa bicicleta.",
+      "trecho": "骑自行车上下班",
+      "palavras": [
+        "骑",
+        "自行车",
+        "上下班",
+        "瘦"
+      ]
+    },
+    "4": {
+      "explicacao": "Ele pergunta 真的不需要吃药吗？ e ela responde que não precisa de remédio: basta 多喝水，休息两天 ('beber bastante água e descansar dois dias'). Quem dá esse tipo de orientação é a médica — figura F, a mulher de jaleco com estetoscópio e prancheta.",
+      "trecho": "回去多喝水，休息两天就好了",
+      "palavras": [
+        "药",
+        "需要",
+        "休息"
+      ]
+    },
+    "5": {
+      "explicacao": "Ela mostra que 上次出现的问题，我已经解决了 — já resolveu o problema que tinha aparecido da última vez — e ele elogia (好极了！). É uma cena de trabalho no escritório: figura A, o homem de terno olhando o computador da colega. O 跑步 (correr) aparece só como conselho de saúde, não é o que acontece na cena.",
+      "trecho": "我已经解决了",
+      "palavras": [
+        "问题",
+        "解决",
+        "注意",
+        "跑步"
+      ]
+    },
+    "6": {
+      "explicacao": "Ele pergunta o que fazer, porque 他总是哭 ('ele vive chorando'), e ela sugere dar uma bala (糖) ou brincar com ele (做游戏). A figura B mostra um bebê chorando enquanto o pai tenta distraí-lo com um brinquedo.",
+      "trecho": "他总是哭",
+      "palavras": [
+        "哭",
+        "办法",
+        "糖",
+        "游戏"
+      ]
+    },
+    "7": {
+      "explicacao": "Ela pergunta se o 电子词典 (dicionário eletrônico) é útil — 作用大不大 — e ele responde 很大: ajuda muito quando ele faz exercícios. A figura C mostra um menino estudando com um aparelhinho eletrônico, ao lado de uma mulher que o ajuda.",
+      "trecho": "电子词典的作用大不大",
+      "palavras": [
+        "词典",
+        "作用",
+        "练习",
+        "帮助"
+      ]
+    },
+    "8": {
+      "explicacao": "Ele lista o que vai levar — 眼镜，帽子，地图，啤酒 (óculos, chapéu, mapa, cerveja) — e diz 一个也不能少 ('não pode faltar nenhum'). Ela elogia a preparação (准备得很认真). A figura A mostra alguém com uma mochila enorme, carregada de coisas para a viagem.",
+      "trecho": "一个也不能少",
+      "palavras": [
+        "眼镜",
+        "帽子",
+        "地图",
+        "认真"
+      ]
+    },
+    "9": {
+      "explicacao": "Ela propõe 我做饭，你洗盘子和碗 ('eu cozinho e você lava a louça'), mas ele responde 那还是我做饭吧 — prefere cozinhar ele mesmo. A figura D mostra o homem preparando a comida. 还是…吧 indica a opção preferida ('é melhor…').",
+      "trecho": "那还是我做饭吧",
+      "palavras": [
+        "做饭",
+        "盘子",
+        "碗",
+        "愿意"
+      ]
+    },
+    "10": {
+      "explicacao": "Ele pergunta que 节目 (programa de TV) ela quer ver, mas ela responde 没什么好看的，我还是读我的书吧 — não tem nada bom passando, prefere continuar lendo. A figura E mostra a mulher lendo um livro no sofá enquanto o homem segura o controle remoto.",
+      "trecho": "我还是读我的书吧",
+      "palavras": [
+        "节目",
+        "还是",
+        "读"
+      ]
+    },
+    "11": {
+      "explicacao": "Errada. A pessoa diz que antes 以为 ('achava' — crença que se revela falsa) que o dialeto de Pequim era o mandarim padrão, mas depois de dois anos lá 我才发现不是这样的 — descobriu que não é assim. Logo, 北京话 e 普通话 não são a mesma coisa.",
+      "trecho": "我才发现不是这样的",
+      "palavras": [
+        "以为",
+        "普通话",
+        "发现",
+        "相同"
+      ]
+    },
+    "12": {
+      "explicacao": "Certa. A pessoa diz: se eu não estiver na 707, 你就上八楼，到八零三会议室找我 — suba ao oitavo andar e me procure na sala de reuniões 803. 八楼 = 八层 = 8层 (楼 e 层 servem para andar). Não confunda com 七零七, que é a sala onde a pessoa fica.",
+      "trecho": "上八楼，到八零三会议室",
+      "palavras": [
+        "会议室",
+        "楼",
+        "层",
+        "如果"
+      ]
+    },
+    "13": {
+      "explicacao": "Errada. Ele acabou de sair da biblioteca (从图书馆出来了) e pede 你们等我一会儿，我很快就到 — 'me esperem um pouco, já chego'. 很快就到 mostra que ele ainda está a caminho; portanto, ainda não chegou.",
+      "trecho": "我很快就到",
+      "palavras": [
+        "已经",
+        "图书馆",
+        "一会儿"
+      ]
+    },
+    "14": {
+      "explicacao": "Certa. Ele comprou o carro 两年前 ('há dois anos') por mais de 200 mil yuan, e hoje só conseguiria vender por uns 100 mil. Um carro com dois anos de uso, que já perdeu valor, é um 旧车 (carro usado). 辆 é o classificador de veículos.",
+      "trecho": "我两年前买的时候",
+      "palavras": [
+        "辆",
+        "旧",
+        "万",
+        "卖"
+      ]
+    },
+    "15": {
+      "explicacao": "Certa. Os adultos evitam bolo por ser doce demais ou por medo de engordar, 但小孩子看见蛋糕是不会客气的 — as crianças 'não fazem cerimônia' diante de um bolo — e acham que 越甜越好吃 ('quanto mais doce, mais gostoso'). Ou seja, crianças adoram bolo.",
+      "trecho": "小孩子看见蛋糕是不会客气的",
+      "palavras": [
+        "蛋糕",
+        "客气",
+        "甜",
+        "认为"
+      ]
+    },
+    "16": {
+      "explicacao": "Errada. Ele só pode ficar três dias (只能住三天), então 只能选择一两个最有名的地方 — vai visitar só um ou dois lugares famosos e deixar o resto para outra oportunidade (以后有机会再去). Ele não passeou por muitos lugares.",
+      "trecho": "只能选择一两个最有名的地方",
+      "palavras": [
+        "选择",
+        "有名",
+        "机会",
+        "地方"
+      ]
+    },
+    "17": {
+      "explicacao": "Certa. Toda vez, antes de pegar o trem, Zhou Ming compra pão e frutas, e 他还要买一些报纸 — também compra jornais. Comprar jornal sempre para a viagem indica que ele gosta de ler jornal no trem. Estrutura: 除了 A，还 B = 'além de A, também B'.",
+      "trecho": "他还要买一些报纸",
+      "palavras": [
+        "除了",
+        "报纸",
+        "超市",
+        "面包"
+      ]
+    },
+    "18": {
+      "explicacao": "Certa. Entre os hobbies dele estão 踢足球 (jogar futebol = esporte, 运动) e 玩儿音乐 (tocar música = 音乐), e ele faz tudo muito bem. Então ele gosta de música e também de esporte.",
+      "trecho": "踢足球、玩儿音乐",
+      "palavras": [
+        "爱好",
+        "音乐",
+        "运动",
+        "水平"
+      ]
+    },
+    "19": {
+      "explicacao": "Errada. O áudio só descreve a rotina dela: 第一件事就是打开电脑，看电子邮件 — ao chegar, liga o computador e lê os e-mails, e só depois (然后才) começa o resto do trabalho. Nada indica falta de interesse (没兴趣); a afirmação inventa algo que o áudio não diz.",
+      "trecho": "第一件事就是打开电脑",
+      "palavras": [
+        "电子邮件",
+        "兴趣",
+        "然后"
+      ]
+    },
+    "20": {
+      "explicacao": "Errada. Quem fala está vendendo um celular: 这种手机很便宜 ('este celular é barato'), custa pouco mais de 2 mil yuan e ainda 可以照相 ('tira fotos'). Eles estão comprando um celular, não um 空调 (ar-condicionado).",
+      "trecho": "这种手机很便宜",
+      "palavras": [
+        "手机",
+        "便宜",
+        "照相",
+        "空调"
+      ]
+    },
+    "21": {
+      "explicacao": "Ela diz que todos se preocupam com a saúde dele (关心您的身体), e ele explica: 就是感冒发烧 — 'é só um resfriado com febre'. Então ele está doente: 生病了. Não se fala de atraso (迟到) nem de raiva (生气).",
+      "trecho": "就是感冒发烧",
+      "palavras": [
+        "关心",
+        "感冒",
+        "发烧",
+        "生病"
+      ]
+    },
+    "22": {
+      "explicacao": "Ele chama a 服务员 (atendente) e reclama: 我房间里的灯坏了 ('a luz do meu quarto quebrou'); ela responde 好的，先生 e manda trocar. Atendente + 'o meu quarto' = hotel (宾馆), não sala de aula nem aeroporto.",
+      "trecho": "我房间里的灯坏了",
+      "palavras": [
+        "服务员",
+        "灯",
+        "坏",
+        "宾馆"
+      ]
+    },
+    "23": {
+      "explicacao": "O zoológico está silencioso porque todo mundo foi 看新来的大熊猫 — ver o panda que acabou de chegar. Logo, o panda 是新来的. Quantidade (两只) e dança (跳舞) não são mencionadas.",
+      "trecho": "看新来的大熊猫",
+      "palavras": [
+        "动物园",
+        "安静",
+        "熊猫"
+      ]
+    },
+    "24": {
+      "explicacao": "Pegadinha de contagem: 已经下过两次了，这是第三次了 — já tinha nevado duas vezes, e a neve de agora é a terceira. Contando a de hoje, foram três vezes (三次). 下过 = 'já nevou' (过 = experiência passada); 第三次 = 'a terceira vez'.",
+      "trecho": "这是第三次了",
+      "palavras": [
+        "又",
+        "雪",
+        "过",
+        "次"
+      ]
+    },
+    "25": {
+      "explicacao": "Ela diz 我没找到你说的书店 ('não achei a livraria que você falou'), e ele responde que vai esperá-la 在书店门口 ('na porta da livraria'). O destino é a livraria (书店). O 西门 (portão oeste) é só onde ela está agora — não confunda com 学校东门.",
+      "trecho": "我没找到你说的书店",
+      "palavras": [
+        "书店",
+        "门口",
+        "向",
+        "米"
+      ]
+    },
+    "26": {
+      "explicacao": "Ele acha que ela ensina história, mas ela nega: 不是，我是教数学的 — ensina matemática; história é só um interesse (对历史很有兴趣). 教 + matéria + 的 = 'quem ensina tal matéria' (professor de…).",
+      "trecho": "我是教数学的",
+      "palavras": [
+        "了解",
+        "历史",
+        "数学",
+        "兴趣"
+      ]
+    },
+    "27": {
+      "explicacao": "Ele diz 我很少踢足球，但是我喜欢看足球比赛 — joga pouco, mas gosta de assistir a jogos de futebol. 球赛 = 'jogo de bola' (球 + 比赛); aqui se refere ao 足球比赛 que ele gosta de assistir. Ele não fala de basquete (篮球) nem de participar de competições.",
+      "trecho": "但是我喜欢看足球比赛",
+      "palavras": [
+        "很少",
+        "比赛",
+        "球赛"
+      ]
+    },
+    "28": {
+      "explicacao": "Ele sugere comprar uma geladeira nova e ela concorda: 同意，去年我就跟你说应该换一个新的了 — já no ano passado achava que deviam trocar por uma nova. Ela quer 买个新的; preço (贵) e empréstimo (借) não aparecem.",
+      "trecho": "应该换一个新的了",
+      "palavras": [
+        "冰箱",
+        "旧",
+        "同意",
+        "换"
+      ]
+    },
+    "29": {
+      "explicacao": "Ela está com dor nas pernas e nos pés e diz que 上来的时候 ('na subida') não se cansou tanto; ele responde 上山容易下山难 — 'subir a montanha é fácil, difícil é descer'. Então eles subiram uma montanha: 爬山.",
+      "trecho": "上山容易下山难",
+      "palavras": [
+        "爬山",
+        "上山",
+        "容易",
+        "累"
+      ]
+    },
+    "30": {
+      "explicacao": "Ele viaja amanhã cedo e quer encontrá-la hoje ao meio-dia; ela responde 那我们还是老地方见 — 'então a gente se vê no lugar de sempre' (老地方). O avião (飞机) só aparece porque ele vai viajar; não é o local do encontro.",
+      "trecho": "我们还是老地方见",
+      "palavras": [
+        "老地方",
+        "见面",
+        "打算"
+      ]
+    },
+    "31": {
+      "explicacao": "Eles comentam que 突然就刮起大风了 ('de repente começou a ventar forte'), que o outono no norte é assim e como é o vento no sul nessa época. O assunto é o tempo (天气), não hábitos (习惯) nem cultura (文化).",
+      "trecho": "突然就刮起大风了",
+      "palavras": [
+        "突然",
+        "刮风",
+        "季节",
+        "天气"
+      ]
+    },
+    "32": {
+      "explicacao": "A mulher fala de 你爷爷奶奶 ('os seus avós') e o rapaz responde 好，妈 ('tá, mãe'). Se ele chama a mulher de 妈, ela é a mãe e ele, o filho: 妈妈和儿子. 'Marido e mulher' e 'pai e filha' não combinam com isso.",
+      "trecho": "好，妈，碗在哪儿呢",
+      "palavras": [
+        "筷子",
+        "双",
+        "爷爷",
+        "奶奶"
+      ]
+    },
+    "33": {
+      "explicacao": "Ela descreve a mala: 右边那个最大的，蓝色的 — a maior, a da direita, azul, com o nome dela. Logo, é uma mala grande (很大). Amarela (黄色) está errado — ela é 蓝色 (azul) — e 'baixa' (矮) não é mencionado.",
+      "trecho": "右边那个最大的",
+      "palavras": [
+        "行李箱",
+        "蓝色",
+        "右边",
+        "最"
+      ]
+    },
+    "34": {
+      "explicacao": "Ele responde 晴天，比今天冷 — vai fazer sol e mais frio que hoje. 比今天冷 = 'mais frio que hoje', isto é, 更冷. Não haverá nuvens (é 晴天, não 阴天 nem 多云), e muito menos calor.",
+      "trecho": "晴天，比今天冷",
+      "palavras": [
+        "晴天",
+        "阴天",
+        "比",
+        "更"
+      ]
+    },
+    "35": {
+      "explicacao": "A professora Li tem só uma filha; sobre a menina da foto ela diz 那是我们邻居的女儿 — é a filha dos vizinhos (e amiga da filha dela). Então a criança é 邻居的.",
+      "trecho": "那是我们邻居的女儿",
+      "palavras": [
+        "照片",
+        "邻居",
+        "女儿"
+      ]
+    },
+    "36": {
+      "explicacao": "Ela explica que 天“短”了 significa 白天的时间短了，天黑的时间早了 — o período de luz fica mais curto e escurece mais cedo. É exatamente a opção C, 天黑得早了. Verão e lua não têm nada a ver.",
+      "trecho": "天黑的时间早了",
+      "palavras": [
+        "短",
+        "白天",
+        "黑",
+        "明白"
+      ]
+    },
+    "37": {
+      "explicacao": "A funcionária confere o ingresso e orienta: 您向左走，坐电梯上二层 — 'vá pela esquerda e pegue o elevador até o segundo andar'. Logo, a apresentação é 在二层. Ela só começa às 14h30 e ele ainda vai entrar, então 已经结束了 está errado.",
+      "trecho": "坐电梯上二层",
+      "palavras": [
+        "表演",
+        "票",
+        "电梯",
+        "层"
+      ]
+    },
+    "38": {
+      "explicacao": "Ele vai estudar no exterior, e ela deseja 学习更上一层楼 — expressão que significa 'subir mais um andar', ou seja, chegar a um nível ainda mais alto nos estudos. Isso equivale a 有更好的成绩 ('ter resultados melhores'). Ela não pede que ele fique nem que escreva cartas.",
+      "trecho": "学习更上一层楼",
+      "palavras": [
+        "祝",
+        "更上一层楼",
+        "成绩"
+      ]
+    },
+    "39": {
+      "explicacao": "Ele procura o passaporte na bolsa dela, mas lá só está o dela. No fim ela mostra: 在你自己的衬衫里呢 — estava na camisa dele mesmo. Banheiro (洗手间) e cadeira (椅子) não são mencionados.",
+      "trecho": "在你自己的衬衫里呢",
+      "palavras": [
+        "护照",
+        "包",
+        "记得",
+        "衬衫"
+      ]
+    },
+    "40": {
+      "explicacao": "Ela reclama que ligou e ele não atendeu; ele explica: 我刚洗了个澡，没听见 — estava tomando banho e não ouviu. 洗澡 é verbo separável: 洗了个澡 = 'tomei um banho'. A TV só aparece depois (ele vai abaixar o volume), por isso 在看新闻 é pegadinha.",
+      "trecho": "我刚洗了个澡，没听见",
+      "palavras": [
+        "接",
+        "洗澡",
+        "声音"
+      ]
+    },
+    "41": {
+      "explicacao": "Quem diz 我的作业早就完成了 ('terminei a lição faz tempo') recebe a resposta lógica C: 你最好再检查一下，看还有没有问题 — 'é melhor revisar mais uma vez para ver se ainda há algum erro'. 早就 = 'já faz tempo'; 最好 = 'o melhor é…'.",
+      "trecho": "我的作业早就完成了",
+      "palavras": [
+        "作业",
+        "完成",
+        "检查",
+        "最好"
+      ]
+    },
+    "42": {
+      "explicacao": "你先来个苹果，我去给你做碗面条儿 ('come uma maçã primeiro, vou fazer um macarrão para você') responde a quem está com fome, como em B (今天把我饿坏了，还有什么吃的吗？). 饿坏了 = 'morrendo de fome' (坏 como complemento de grau extremo); 来个 = 'pegue/coma um'.",
+      "trecho": "我去给你做碗面条儿",
+      "palavras": [
+        "饿",
+        "面条",
+        "苹果"
+      ]
+    },
+    "43": {
+      "explicacao": "A pessoa conta que 终于有了自己的大房子 e 明天就可以搬家了 ('amanhã já posso me mudar'). A reação natural é A: 太好了！需要我帮忙吗？ — comemorar e oferecer ajuda com a mudança.",
+      "trecho": "明天就可以搬家了",
+      "palavras": [
+        "终于",
+        "搬家",
+        "帮忙"
+      ]
+    },
+    "44": {
+      "explicacao": "O pedido 小狗就请你帮我照顾了 ('por favor, cuide do meu cachorrinho') pede uma resposta de aceitação: D, 没问题，你就放心吧 — 'sem problema, pode ficar tranquilo'. 放心 = 'ficar tranquilo, sem preocupação'.",
+      "trecho": "小狗就请你帮我照顾了",
+      "palavras": [
+        "照顾",
+        "放心"
+      ]
+    },
+    "45": {
+      "explicacao": "姐姐给我买的，我也不太清楚 ('foi minha irmã que comprou, não sei direito') responde a uma pergunta sobre o preço de algo que a pessoa ganhou: F (这条裤子你花了多少钱？). 条 é o classificador de calças; 花钱 = gastar dinheiro.",
+      "trecho": "姐姐给我买的",
+      "palavras": [
+        "清楚",
+        "裤子",
+        "花"
+      ]
+    },
+    "46": {
+      "explicacao": "这个小孩儿胖胖的，真可爱 ('essa criança é gordinha, que fofa') comenta sobre uma criança pequena, e B explica quem ela é: 那是我叔叔的儿子，一岁多了. A repetição 胖胖的 suaviza o adjetivo: 'gordinho'.",
+      "trecho": "这个小孩儿胖胖的",
+      "palavras": [
+        "胖",
+        "可爱",
+        "叔叔"
+      ]
+    },
+    "47": {
+      "explicacao": "我哥是司机 ('meu irmão mais velho é motorista') resolve o problema de D: os colegas querem ir a Pequim no fim de semana, mas 都不会开车 ('nenhum sabe dirigir'). 看他有没有时间 = 'para ver se ele tem tempo'.",
+      "trecho": "我哥是司机",
+      "palavras": [
+        "司机",
+        "开车",
+        "同事"
+      ]
+    },
+    "48": {
+      "explicacao": "你怎么又生病了？ ('como você ficou doente de novo?') combina com E: 昨天的雨下得非常大，我没带伞 — pegou chuva forte sem guarda-chuva, por isso adoeceu. 又 = 'de novo' (algo que já aconteceu antes).",
+      "trecho": "你怎么又生病了",
+      "palavras": [
+        "又",
+        "生病",
+        "带",
+        "伞"
+      ]
+    },
+    "49": {
+      "explicacao": "没关系，我明天去也可以 ('tudo bem, posso ir amanhã') responde ao aviso A: 银行马上就要关门了 ('o banco já vai fechar'). 马上就要…了 = 'está prestes a…'.",
+      "trecho": "我明天去也可以",
+      "palavras": [
+        "银行",
+        "关门",
+        "马上"
+      ]
+    },
+    "50": {
+      "explicacao": "好的，我也有些渴了 ('tá bom, também estou com um pouco de sede') aceita o convite de C (把菜单儿给我，我们喝杯绿茶吧？). A ligação é 渴 (com sede) ↔ 喝杯绿茶 (tomar um chá verde).",
+      "trecho": "我也有些渴了",
+      "palavras": [
+        "渴",
+        "菜单",
+        "绿茶"
+      ]
+    },
+    "51": {
+      "explicacao": "Estrutura com 把: 把 + objeto + verbo + resultado — 把 + 手机 + 关 + 了 = 'desligue o celular'. 把 traz o objeto (手机) para antes do verbo e destaca o que se faz com ele. Entre as opções, só 把 forma a estrutura 'objeto + verbo' que a frase pede.",
+      "trecho": "（＿＿）手机关了吧",
+      "palavras": [
+        "把",
+        "手机",
+        "关"
+      ]
+    },
+    "52": {
+      "explicacao": "Depois de 很不 vem um adjetivo: 坐着很不舒服 = 'ficar sentado é muito desconfortável'. Ele é alto e a mesa é baixa, então sentar ali incomoda. 舒服 = confortável, sentir-se bem; 坐着 = 'sentado' (着 indica estado).",
+      "trecho": "这张桌子太低，坐着很不（＿＿）",
+      "palavras": [
+        "舒服",
+        "低",
+        "桌子"
+      ]
+    },
+    "53": {
+      "explicacao": "Padrão lugar + 附近 + 的 + substantivo: 火车站附近的宾馆 = 'hotel perto da estação de trem'. A continuação 住那儿会更方便 ('ficar lá vai ser mais prático') confirma que se fala de localização.",
+      "trecho": "火车站（＿＿）的宾馆",
+      "palavras": [
+        "附近",
+        "宾馆",
+        "方便",
+        "选择"
+      ]
+    },
+    "54": {
+      "explicacao": "小心 + algo ruim = 'cuidado para não…': 小心感冒 = 'cuidado para não se resfriar'. O contexto 天气冷，你多穿点儿衣服 ('está frio, vista mais roupa') leva direto ao resfriado (感冒).",
+      "trecho": "多穿点儿衣服，小心（＿＿）",
+      "palavras": [
+        "感冒",
+        "小心",
+        "穿",
+        "衣服"
+      ]
+    },
+    "55": {
+      "explicacao": "其实 ('na verdade') introduz o que realmente importa, em contraste com o que foi dito antes: beleza e inteligência são importantes, 但其实更重要的是快乐 — 'mas, na verdade, o mais importante é ser feliz'. É um advérbio e vem logo depois de 但, antes do resto da oração.",
+      "trecho": "但（＿＿）更重要的是快乐",
+      "palavras": [
+        "其实",
+        "重要",
+        "聪明",
+        "快乐"
+      ]
+    },
+    "56": {
+      "explicacao": "一刻 = um quarto de hora (15 minutos). A pessoa achava que eram 十一点, mas já são 十一点十五, então o relógio está 慢了一刻 — atrasado 15 minutos. Lembre: 一刻 = 15 min, 三刻 = 45 min; 慢 = atrasado, 快 = adiantado.",
+      "trecho": "现在十一点十五了，您的表慢了一（＿＿）",
+      "palavras": [
+        "刻",
+        "慢",
+        "表"
+      ]
+    },
+    "57": {
+      "explicacao": "一直 + 没 + verbo = 'não … durante todo esse tempo', isto é, 'faz tempo que não …': 最近怎么一直没看见他？ = 'por que não tenho visto ele ultimamente?'. A resposta confirma a ausência: ele foi viajar e só volta no fim de semana. 一直 vem antes da negação 没.",
+      "trecho": "最近怎么（＿＿）没看见他",
+      "palavras": [
+        "一直",
+        "最近",
+        "旅游"
+      ]
+    },
+    "58": {
+      "explicacao": "Voz passiva com 被: (sujeito) + 被 + agente + verbo — 被猫喝了 = 'foi bebido pelo gato'. O sujeito (牛奶) fica subentendido: vem da pergunta 牛奶呢 ('cadê o leite?'). 一定是 = 'com certeza foi'.",
+      "trecho": "一定是（＿＿）猫喝了",
+      "palavras": [
+        "被",
+        "牛奶",
+        "一定"
+      ]
+    },
+    "59": {
+      "explicacao": "A cozinha está limpíssima (真干净) porque a pessoa passou mais de duas horas fazendo faxina: 我已经打扫了两个多小时了. Verbo + 了 + duração + 了 = ação que já dura esse tempo. 打扫 = limpar, fazer faxina.",
+      "trecho": "我已经（＿＿）了两个多小时了",
+      "palavras": [
+        "打扫",
+        "厨房",
+        "干净",
+        "欢迎"
+      ]
+    },
+    "60": {
+      "explicacao": "教师节 = Dia do Professor (na China, 10 de setembro). 节 forma nomes de datas comemorativas: 春节, 教师节, 儿童节. As flores (鲜花) são para os professores, por isso não é aniversário de ninguém.",
+      "trecho": "今天是9月10日，教师（＿＿）",
+      "palavras": [
+        "节",
+        "教师",
+        "鲜花",
+        "生日"
+      ]
+    },
+    "61": {
+      "explicacao": "O ditado diz: se hoje você não se esforça no trabalho (今天工作不努力), amanhã vai ter de se esforçar para procurar emprego (明天努力找工作). A mensagem é trabalhar com empenho agora: 要努力工作. Nada fala de 'amanhã será melhor' nem do tempo passando.",
+      "trecho": "今天工作不努力",
+      "palavras": [
+        "努力",
+        "工作",
+        "找"
+      ]
+    },
+    "62": {
+      "explicacao": "Quem fala dá instruções a uma turma: copiar no caderno as palavras do 黑板 (quadro) e, em casa, escrever uma historinha de no mínimo 100 caracteres. Passar lição de casa é coisa de professor (老师).",
+      "trecho": "请大家把黑板上的这些词写在本子上",
+      "palavras": [
+        "黑板",
+        "本子",
+        "词语",
+        "故事"
+      ]
+    },
+    "63": {
+      "explicacao": "Ele está satisfeito 虽然没有花园 ('embora não haja jardim'), 但是离河边很近 ('mas fica bem perto do rio'). O que agrada é a proximidade do rio — opção C. 'Não ter jardim' é justamente o ponto negativo, e o tamanho do quarto nem é mencionado.",
+      "trecho": "但是离河边很近",
+      "palavras": [
+        "满意",
+        "虽然",
+        "离",
+        "河"
+      ]
+    },
+    "64": {
+      "explicacao": "Ele acordou depois das 8 e, quando chegou à empresa, 会议已经开始了 — a reunião já tinha começado e ele teve de esperar do lado de fora. Ou seja, 迟到了 (chegou atrasado). Pegadinha: 差点儿忘了关门 = 'quase esqueceu de fechar a porta' — ele não esqueceu.",
+      "trecho": "会议已经开始了",
+      "palavras": [
+        "会议",
+        "差点儿",
+        "迟到"
+      ]
+    },
+    "65": {
+      "explicacao": "Ao voltar a Xangai, ele 发现那里的变化非常大 — viu que a cidade mudou muito, a ponto de quase não reconhecer (几乎不认识) a rua. Opção B. O 春节 foi quando ele visitou no ano passado; nada diz que agora é 春节.",
+      "trecho": "发现那里的变化非常大",
+      "palavras": [
+        "春节",
+        "变化",
+        "几乎",
+        "认识"
+      ]
+    },
+    "66": {
+      "explicacao": "O texto diz 你给小张介绍的男朋友是我妻子以前的同事 — o namorado de Xiao Zhang é ex-colega de trabalho da esposa. 以前的 = 'antigo, ex-'; 同事 = colega de trabalho. 'Ex-marido' e 'ex-namorado' são pegadinhas.",
+      "trecho": "是我妻子以前的同事",
+      "palavras": [
+        "介绍",
+        "妻子",
+        "以前",
+        "同事"
+      ]
+    },
+    "67": {
+      "explicacao": "Ele encontrou um velho colega, tomou café e conversou, 所以回来晚了 — 'por isso voltei tarde'. Ou seja, ele já está de volta em casa (A). O café foi antes, não agora (B errada), e o café fica 在公司旁边 (ao lado da empresa), não do parque (C errada).",
+      "trecho": "所以回来晚了",
+      "palavras": [
+        "遇到",
+        "一边",
+        "咖啡馆",
+        "旁边"
+      ]
+    },
+    "68": {
+      "explicacao": "A estrutura 虽然…但是… mostra o motivo: 他虽然很年轻，但是课讲得很好 — 'embora seja jovem, ele explica a matéria muito bem', e por isso os alunos gostam dele. Ser jovem é só a concessão; o motivo é 课讲得好. Ser exigente (要求高) não é mencionado.",
+      "trecho": "但是课讲得很好",
+      "palavras": [
+        "虽然",
+        "年轻",
+        "讲"
+      ]
+    },
+    "69": {
+      "explicacao": "Em casa há verduras, peixe e carne de carneiro, 但是没有水果了 ('mas acabaram as frutas'). Por isso pedem bananas, uvas e uma melancia — todas 水果. Ovos (鸡蛋) e suco (果汁) não são citados.",
+      "trecho": "但是没有水果了",
+      "palavras": [
+        "水果",
+        "香蕉",
+        "葡萄",
+        "西瓜"
+      ]
+    },
+    "70": {
+      "explicacao": "A família acha que 我的鼻子和耳朵像我爸爸，眼睛像我妈妈 — nariz e orelhas como os do pai, olhos como os da mãe. Logo, C (鼻子像爸爸). B está errada porque os olhos se parecem com os da mãe, e cabelo nem é mencionado.",
+      "trecho": "我的鼻子和耳朵像我爸爸",
+      "palavras": [
+        "像",
+        "鼻子",
+        "耳朵",
+        "一般"
+      ]
+    },
+    "71": {
+      "explicacao": "Sujeito + adjetivo + 地 + verbo: 弟弟 (sujeito) + 高兴地 ('alegremente') + 笑了 (verbo + 了). A partícula 地 (de) transforma o adjetivo 高兴 em advérbio de modo, que sempre vem antes do verbo.",
+      "trecho": "弟弟高兴地笑了。",
+      "palavras": [
+        "高兴",
+        "地",
+        "笑"
+      ]
+    },
+    "72": {
+      "explicacao": "Sujeito + advérbio de grau + adjetivo: 上午的考试 ('a prova da manhã') + 比较 ('relativamente') + 简单 ('fácil'). Em chinês, o adjetivo funciona como predicado sem 是, e o advérbio de grau vem logo antes dele.",
+      "trecho": "上午的考试比较简单。",
+      "palavras": [
+        "考试",
+        "比较",
+        "简单"
+      ]
+    },
+    "73": {
+      "explicacao": "Sujeito + 变得 + 越来越 + adjetivo + 了: 这个城市的环境 (sujeito) + 变得 ('tornar-se') + 越来越好 ('cada vez melhor') + 了 (mudança de situação). O 了 vai no fim da frase, indicando que a situação mudou.",
+      "trecho": "这个城市的环境变得越来越好了。",
+      "palavras": [
+        "城市",
+        "环境",
+        "变得",
+        "越来越"
+      ]
+    },
+    "74": {
+      "explicacao": "Sujeito + 送给 + quem recebe + o que é dado: 那位医生 (sujeito; 位 é o classificador respeitoso para pessoas) + 送给他 ('deu a ele') + 一个礼物 ('um presente'). 那位 vem antes de 医生: demonstrativo + classificador + substantivo.",
+      "trecho": "那位医生送给他一个礼物。",
+      "palavras": [
+        "位",
+        "医生",
+        "送",
+        "礼物"
+      ]
+    },
+    "75": {
+      "explicacao": "Sujeito + 也 + 有 + 很大 + 提高: 其他班的成绩 ('as notas das outras turmas') + 也 ('também', advérbio que vem antes do verbo) + 有很大提高 ('tiveram uma grande melhora'). 有 + 很大 + 提高/变化 é um jeito comum de dizer 'melhorar/mudar muito'.",
+      "trecho": "其他班的成绩也有很大提高。",
+      "palavras": [
+        "其他",
+        "成绩",
+        "也",
+        "提高"
+      ]
+    },
+    "76": {
+      "explicacao": "出 (chū, 'sair') forma 出租车 = táxi (出租 'alugar' + 车 'carro'). O hospital é longe, então 坐出租车去 = 'vamos de táxi'. Para lembrar: 出 parece duas montanhas (山) empilhadas — é o mesmo 出 de 出去 e 出来.",
+      "trecho": "医院离这儿很远，我们坐出租车去吧。",
+      "palavras": [
+        "出租车",
+        "医院",
+        "远"
+      ]
+    },
+    "77": {
+      "explicacao": "元 (yuán) é a unidade da moeda chinesa: 一元 = 10 角 = 100 分 (na fala do dia a dia, 元 vira 块 e 角 vira 毛). A frase descreve exatamente essa divisão. Para lembrar: 元 tem 二 em cima e 儿 embaixo.",
+      "trecho": "一元是10角，一角是10分。",
+      "palavras": [
+        "元",
+        "角",
+        "分"
+      ]
+    },
+    "78": {
+      "explicacao": "叫 (jiào) = 'chamar(-se)': 他叫什么？ = 'como ele se chama?'. A frase pede o sobrenome (姓什么) e o nome (叫什么), a dupla clássica para perguntar o nome completo. Componentes: 口 (boca — chamar é com a voz) + 丩 (dá o som).",
+      "trecho": "我不认识他，你知道他姓什么、叫什么吗？",
+      "palavras": [
+        "认识",
+        "姓",
+        "叫"
+      ]
+    },
+    "79": {
+      "explicacao": "中 (zhōng) = 'meio, centro'; com 间 forma 中间 = 'no meio'. 中间穿红裙子的 = 'a do meio, de saia vermelha'. O desenho ajuda: um traço vertical cortando um retângulo (口) bem no centro. É o mesmo 中 de 中国.",
+      "trecho": "中间穿红裙子的一定是他妹妹。",
+      "palavras": [
+        "中间",
+        "裙子",
+        "一定",
+        "妹妹"
+      ]
+    },
+    "80": {
+      "explicacao": "米 (mǐ) = arroz (o grão); 米饭 = arroz cozido, a refeição. 我已经饱了，不想吃米饭了 = 'já estou satisfeito, não quero mais arroz'. O caractere parece grãos espalhados em volta de uma cruz (十). 米 também é 'metro': 两百米 = '200 metros', na questão 25.",
+      "trecho": "我已经饱了，不想吃米饭了。",
+      "palavras": [
+        "饱",
+        "米饭"
+      ]
+    }
+  },
+  "aceitas": {}
+}

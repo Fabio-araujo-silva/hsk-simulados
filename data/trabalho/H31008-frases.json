@@ -1,0 +1,1353 @@
+[
+ {
+  "zh": "大家好！欢迎参加HSK（三级）考试。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "HSK（三级）听力考试分四部分，共40题。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "请大家注意，听力考试现在开始。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第一部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "一共10个题，每题听两次。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "喂，请问张经理在吗？",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "他正在开会，您半个小时以后再打，好吗？",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第1到5题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "现在开始第6到10题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第二部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "为了让自己更健康，他每天都花一个小时去锻炼身体。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "他希望自己很健康。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "今天我想早点儿回家。看了看手表，才五点。过了一会儿再看表，还是五点，我这才发现我的手表不走了。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "那块儿手表不是他的。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第11题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第三部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "小王，帮我开一下门，好吗？谢谢！",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "没问题。您去超市了？买了这么多东西。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "男的想让小王做什么？",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第21题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第四部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "晚饭做好了，准备吃饭了。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "等一会儿，比赛还有三分钟就结束了。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "快点儿吧，一起吃，菜冷了就不好吃了。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "你先吃，我马上就看完了。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "男的在做什么？",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第31题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "听力考试现在结束。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "真冷啊，把空调打开吧。",
+  "ctx": "grupo R1a opção A"
+ },
+ {
+  "zh": "我等个朋友，先给我来一杯咖啡吧，谢谢。",
+  "ctx": "grupo R1a opção B"
+ },
+ {
+  "zh": "如果不下雪，我要和同学们去爬山。",
+  "ctx": "grupo R1a opção C"
+ },
+ {
+  "zh": "报纸上有什么新闻吗？",
+  "ctx": "grupo R1a opção D"
+ },
+ {
+  "zh": "当然。我们先坐公共汽车，然后换地铁。",
+  "ctx": "grupo R1a opção E"
+ },
+ {
+  "zh": "没问题，那些题都非常简单。",
+  "ctx": "grupo R1a opção F"
+ },
+ {
+  "zh": "你知道怎么去那儿吗？",
+  "ctx": "grupo R1a exemplo"
+ },
+ {
+  "zh": "我记得你弟弟以前特别胖。",
+  "ctx": "grupo R1b opção A"
+ },
+ {
+  "zh": "祝您生日快乐！这是我送您的礼物。",
+  "ctx": "grupo R1b opção B"
+ },
+ {
+  "zh": "今天我来洗碗，你累一天了，去看电视吧。",
+  "ctx": "grupo R1b opção C"
+ },
+ {
+  "zh": "你不舒服吗？需不需要去房间休息一下？",
+  "ctx": "grupo R1b opção D"
+ },
+ {
+  "zh": "明天就要出国了？在外面注意身体，照顾好自己。",
+  "ctx": "grupo R1b opção E"
+ },
+ {
+  "zh": "聪明",
+  "ctx": "grupo R2a opção A"
+ },
+ {
+  "zh": "几乎",
+  "ctx": "grupo R2a opção B"
+ },
+ {
+  "zh": "解决",
+  "ctx": "grupo R2a opção C"
+ },
+ {
+  "zh": "历史",
+  "ctx": "grupo R2a opção D"
+ },
+ {
+  "zh": "声音",
+  "ctx": "grupo R2a opção E"
+ },
+ {
+  "zh": "关系",
+  "ctx": "grupo R2a opção F"
+ },
+ {
+  "zh": "她说话的声音多好听啊！",
+  "ctx": "grupo R2a exemplo"
+ },
+ {
+  "zh": "画",
+  "ctx": "grupo R2b opção A"
+ },
+ {
+  "zh": "简单",
+  "ctx": "grupo R2b opção B"
+ },
+ {
+  "zh": "选择",
+  "ctx": "grupo R2b opção C"
+ },
+ {
+  "zh": "爱好",
+  "ctx": "grupo R2b opção D"
+ },
+ {
+  "zh": "结婚",
+  "ctx": "grupo R2b opção E"
+ },
+ {
+  "zh": "马上",
+  "ctx": "grupo R2b opção F"
+ },
+ {
+  "zh": "A：你有什么爱好？",
+  "ctx": "grupo R2b exemplo"
+ },
+ {
+  "zh": "B：我喜欢体育。",
+  "ctx": "grupo R2b exemplo"
+ },
+ {
+  "zh": "我的头发是不是有点儿长？",
+  "ctx": "q1 áudio (女)"
+ },
+ {
+  "zh": "不长，我觉得现在很好，很漂亮。",
+  "ctx": "q1 áudio (男)"
+ },
+ {
+  "zh": "这么多？一共是多少钱？",
+  "ctx": "q2 áudio (男)"
+ },
+ {
+  "zh": "一共是三十元五角六分。",
+  "ctx": "q2 áudio (女)"
+ },
+ {
+  "zh": "你看他的一双小脚多么可爱啊，他叫什么？",
+  "ctx": "q3 áudio (女)"
+ },
+ {
+  "zh": "我们还没想好呢，有时间你帮我们想个好名字吧。",
+  "ctx": "q3 áudio (男)"
+ },
+ {
+  "zh": "东西都买好了吗？",
+  "ctx": "q4 áudio (男)"
+ },
+ {
+  "zh": "都买好了，羊肉、鸡蛋、面条、苹果。我们回家吧。",
+  "ctx": "q4 áudio (女)"
+ },
+ {
+  "zh": "你拿好，小心点儿。",
+  "ctx": "q5 áudio (女)"
+ },
+ {
+  "zh": "放心吧，我又不是第一次换灯了。",
+  "ctx": "q5 áudio (男)"
+ },
+ {
+  "zh": "这是女儿想要的那种鞋吧？",
+  "ctx": "q6 áudio (男)"
+ },
+ {
+  "zh": "不是，不是这种，女儿喜欢那种上面有小动物的。",
+  "ctx": "q6 áudio (女)"
+ },
+ {
+  "zh": "不要一边走一边看，对眼睛不好。",
+  "ctx": "q7 áudio (女)"
+ },
+ {
+  "zh": "好的，我上了飞机再看。",
+  "ctx": "q7 áudio (男)"
+ },
+ {
+  "zh": "洗手间里放的是什么花儿？",
+  "ctx": "q8 áudio (男)"
+ },
+ {
+  "zh": "那不是花儿，是一种草，昨天朋友送我的。",
+  "ctx": "q8 áudio (女)"
+ },
+ {
+  "zh": "我的电脑突然不能上网了，是不是又坏了？",
+  "ctx": "q9 áudio (女)"
+ },
+ {
+  "zh": "别担心，我来看看，应该不是电脑的问题。",
+  "ctx": "q9 áudio (男)"
+ },
+ {
+  "zh": "这是给你的礼物，打开看看喜不喜欢？",
+  "ctx": "q10 áudio (男)"
+ },
+ {
+  "zh": "我还以为你忘了我的生日了，谢谢你！",
+  "ctx": "q10 áudio (女)"
+ },
+ {
+  "zh": "这是我自己做的面包，果汁也是我自己用水果做的，你多来点儿，别客气。",
+  "ctx": "q11 áudio (narrador)"
+ },
+ {
+  "zh": "果汁是刚买的。",
+  "ctx": "q11 áudio (★)"
+ },
+ {
+  "zh": "老师，黑板上的那个句子是不是写错了？中间少了一个词。",
+  "ctx": "q12 áudio (narrador)"
+ },
+ {
+  "zh": "老师多写了一个词语。",
+  "ctx": "q12 áudio (★)"
+ },
+ {
+  "zh": "小孩子没有不喜欢吃糖的，我的孩子也是。她去学校上课的时候，书包里除了书和铅笔，经常还会出现两块儿糖。",
+  "ctx": "q13 áudio (narrador)"
+ },
+ {
+  "zh": "他孩子经常带糖去学校。",
+  "ctx": "q13 áudio (★)"
+ },
+ {
+  "zh": "刚才在电梯里我们见过面，没想到这么快又见面了。你也是来参加今天的考试的？",
+  "ctx": "q14 áudio (narrador)"
+ },
+ {
+  "zh": "他们现在在电梯里。",
+  "ctx": "q14 áudio (★)"
+ },
+ {
+  "zh": "今天是中秋节，中秋节晚上的月亮像个大盘子，非常漂亮。",
+  "ctx": "q15 áudio (narrador)"
+ },
+ {
+  "zh": "今天的月亮很大。",
+  "ctx": "q15 áudio (★)"
+ },
+ {
+  "zh": "小鸡和小狗准备学游泳。小鸡害怕水，第二天就不学了。小狗刚开始也不敢，但是下了一次水后，就不害怕了，慢慢地就学会了。",
+  "ctx": "q16 áudio (narrador)"
+ },
+ {
+  "zh": "小鸡会游泳。",
+  "ctx": "q16 áudio (★)"
+ },
+ {
+  "zh": "我爱打篮球，不喜欢踢足球，小王的丈夫说他也爱打篮球。其实，她丈夫只是喜欢看比赛。",
+  "ctx": "q17 áudio (narrador)"
+ },
+ {
+  "zh": "小王的丈夫爱看篮球比赛。",
+  "ctx": "q17 áudio (★)"
+ },
+ {
+  "zh": "有些人的机会特别多，这不奇怪。因为他们很努力，对工作非常认真，机会就是为这样的人准备的。",
+  "ctx": "q18 áudio (narrador)"
+ },
+ {
+  "zh": "努力的人机会多。",
+  "ctx": "q18 áudio (★)"
+ },
+ {
+  "zh": "葡萄虽然好吃，但是不太容易洗干净，所以我更喜欢吃香蕉，因为吃香蕉很方便。",
+  "ctx": "q19 áudio (narrador)"
+ },
+ {
+  "zh": "葡萄不好吃。",
+  "ctx": "q19 áudio (★)"
+ },
+ {
+  "zh": "老刘每次喝一点儿啤酒，脸、鼻子、耳朵就会变红，而且喜欢跟人说话。你别担心，他休息一会儿就没事了。",
+  "ctx": "q20 áudio (narrador)"
+ },
+ {
+  "zh": "老刘喝酒容易脸红。",
+  "ctx": "q20 áudio (★)"
+ },
+ {
+  "zh": "饿了吧？晚饭去哪儿吃？",
+  "ctx": "q21 áudio (女)"
+ },
+ {
+  "zh": "我不太饿，中午吃得太饱，我们简单吃点儿就可以了。",
+  "ctx": "q21 áudio (男)"
+ },
+ {
+  "zh": "关于男的，可以知道什么？",
+  "ctx": "q21 áudio (问)"
+ },
+ {
+  "zh": "喜欢运动",
+  "ctx": "q21 opção A"
+ },
+ {
+  "zh": "他不太饿",
+  "ctx": "q21 opção B"
+ },
+ {
+  "zh": "想吃米饭",
+  "ctx": "q21 opção C"
+ },
+ {
+  "zh": "一会儿你离开的时候，别忘记关空调。",
+  "ctx": "q22 áudio (男)"
+ },
+ {
+  "zh": "好的，我知道了，再见。",
+  "ctx": "q22 áudio (女)"
+ },
+ {
+  "zh": "男的希望女的怎么样？",
+  "ctx": "q22 áudio (问)"
+ },
+ {
+  "zh": "去看医生",
+  "ctx": "q22 opção A"
+ },
+ {
+  "zh": "别去上班",
+  "ctx": "q22 opção B"
+ },
+ {
+  "zh": "别忘关空调",
+  "ctx": "q22 opção C"
+ },
+ {
+  "zh": "你说我今天穿裙子好还是穿裤子好？",
+  "ctx": "q23 áudio (女)"
+ },
+ {
+  "zh": "今天天气冷，穿裙子你不怕腿冷吗？",
+  "ctx": "q23 áudio (男)"
+ },
+ {
+  "zh": "男的是什么意思？",
+  "ctx": "q23 áudio (问)"
+ },
+ {
+  "zh": "裤子短",
+  "ctx": "q23 opção A"
+ },
+ {
+  "zh": "穿裤子好",
+  "ctx": "q23 opção B"
+ },
+ {
+  "zh": "别穿旧裙子",
+  "ctx": "q23 opção C"
+ },
+ {
+  "zh": "李校长，楼下哪辆车是您的？",
+  "ctx": "q24 áudio (男)"
+ },
+ {
+  "zh": "我的车在楼后面，车号后四位是六五二零。",
+  "ctx": "q24 áudio (女)"
+ },
+ {
+  "zh": "李校长的车在哪里？",
+  "ctx": "q24 áudio (问)"
+ },
+ {
+  "zh": "楼后面",
+  "ctx": "q24 opção A"
+ },
+ {
+  "zh": "教室旁边",
+  "ctx": "q24 opção B"
+ },
+ {
+  "zh": "饭馆儿东边",
+  "ctx": "q24 opção C"
+ },
+ {
+  "zh": "爷爷，您再向右一点儿，和奶奶站得近一些。",
+  "ctx": "q25 áudio (女)"
+ },
+ {
+  "zh": "好，这样可以吗？",
+  "ctx": "q25 áudio (男)"
+ },
+ {
+  "zh": "他们正在做什么？",
+  "ctx": "q25 áudio (问)"
+ },
+ {
+  "zh": "照相",
+  "ctx": "q25 opção A"
+ },
+ {
+  "zh": "写信",
+  "ctx": "q25 opção B"
+ },
+ {
+  "zh": "买手机",
+  "ctx": "q25 opção C"
+ },
+ {
+  "zh": "你不是要去银行吗？怎么这么快就回来了？",
+  "ctx": "q26 áudio (男)"
+ },
+ {
+  "zh": "外面下雨了，你给我拿把雨伞吧。",
+  "ctx": "q26 áudio (女)"
+ },
+ {
+  "zh": "女的要去哪儿？",
+  "ctx": "q26 áudio (问)"
+ },
+ {
+  "zh": "商店",
+  "ctx": "q26 opção A"
+ },
+ {
+  "zh": "银行",
+  "ctx": "q26 opção B"
+ },
+ {
+  "zh": "图书馆",
+  "ctx": "q26 opção C"
+ },
+ {
+  "zh": "请安静，我介绍一下，这位是我们新来的同事王可可。",
+  "ctx": "q27 áudio (女)"
+ },
+ {
+  "zh": "大家好，我姓王，以后叫我小王就可以了。",
+  "ctx": "q27 áudio (男)"
+ },
+ {
+  "zh": "他们是什么关系？",
+  "ctx": "q27 áudio (问)"
+ },
+ {
+  "zh": "夫妻",
+  "ctx": "q27 opção A"
+ },
+ {
+  "zh": "同事",
+  "ctx": "q27 opção B"
+ },
+ {
+  "zh": "哥哥和妹妹",
+  "ctx": "q27 opção C"
+ },
+ {
+  "zh": "你笑什么呢？",
+  "ctx": "q28 áudio (男)"
+ },
+ {
+  "zh": "你看，大门口那个人的帽子被风刮跑了。",
+  "ctx": "q28 áudio (女)"
+ },
+ {
+  "zh": "大门口那个人怎么了？",
+  "ctx": "q28 áudio (问)"
+ },
+ {
+  "zh": "哭了",
+  "ctx": "q28 opção A"
+ },
+ {
+  "zh": "生气了",
+  "ctx": "q28 opção B"
+ },
+ {
+  "zh": "帽子被刮跑了",
+  "ctx": "q28 opção C"
+ },
+ {
+  "zh": "你听，外面是什么声音？",
+  "ctx": "q29 áudio (女)"
+ },
+ {
+  "zh": "是小鸟在叫。走，我们去花园看看。",
+  "ctx": "q29 áudio (男)"
+ },
+ {
+  "zh": "他们要去哪儿？",
+  "ctx": "q29 áudio (问)"
+ },
+ {
+  "zh": "花园",
+  "ctx": "q29 opção A"
+ },
+ {
+  "zh": "河边",
+  "ctx": "q29 opção B"
+ },
+ {
+  "zh": "电影院",
+  "ctx": "q29 opção C"
+ },
+ {
+  "zh": "上个月借的这几本书该还了，今天还没时间……",
+  "ctx": "q30 áudio (男)"
+ },
+ {
+  "zh": "今天必须还吗？我去图书馆学习，我帮你还吧。",
+  "ctx": "q30 áudio (女)"
+ },
+ {
+  "zh": "女的要帮男的做什么？",
+  "ctx": "q30 áudio (问)"
+ },
+ {
+  "zh": "还书",
+  "ctx": "q30 opção A"
+ },
+ {
+  "zh": "打扫房间",
+  "ctx": "q30 opção B"
+ },
+ {
+  "zh": "检查作业",
+  "ctx": "q30 opção C"
+ },
+ {
+  "zh": "我们是不是走错了？",
+  "ctx": "q31 áudio (男)"
+ },
+ {
+  "zh": "有可能，这条街我们走过吗？",
+  "ctx": "q31 áudio (女)"
+ },
+ {
+  "zh": "我也不知道。我只是觉得离宾馆越来越远了。",
+  "ctx": "q31 áudio (男)"
+ },
+ {
+  "zh": "别着急，我们问问别人。",
+  "ctx": "q31 áudio (女)"
+ },
+ {
+  "zh": "他们遇到什么问题了？",
+  "ctx": "q31 áudio (问)"
+ },
+ {
+  "zh": "客人不满意",
+  "ctx": "q31 opção A"
+ },
+ {
+  "zh": "护照不见了",
+  "ctx": "q31 opção B"
+ },
+ {
+  "zh": "不认识路了",
+  "ctx": "q31 opção C"
+ },
+ {
+  "zh": "你好，我去火车站。",
+  "ctx": "q32 áudio (女)"
+ },
+ {
+  "zh": "北京有好几个火车站，您要去哪个火车站？",
+  "ctx": "q32 áudio (男)"
+ },
+ {
+  "zh": "我看看，车票上写的是北京西站。",
+  "ctx": "q32 áudio (女)"
+ },
+ {
+  "zh": "好的，明白了。",
+  "ctx": "q32 áudio (男)"
+ },
+ {
+  "zh": "他们最可能在哪儿？",
+  "ctx": "q32 áudio (问)"
+ },
+ {
+  "zh": "超市",
+  "ctx": "q32 opção A"
+ },
+ {
+  "zh": "地铁上",
+  "ctx": "q32 opção B"
+ },
+ {
+  "zh": "出租车上",
+  "ctx": "q32 opção C"
+ },
+ {
+  "zh": "你怎么不参加这次长跑比赛？",
+  "ctx": "q33 áudio (男)"
+ },
+ {
+  "zh": "我跑得太慢，我怕影响我们班的成绩，所以……",
+  "ctx": "q33 áudio (女)"
+ },
+ {
+  "zh": "没关系，其他同学也都参加。",
+  "ctx": "q33 áudio (男)"
+ },
+ {
+  "zh": "那好吧，我也去锻炼一下。",
+  "ctx": "q33 áudio (女)"
+ },
+ {
+  "zh": "关于女的，可以知道什么？",
+  "ctx": "q33 áudio (问)"
+ },
+ {
+  "zh": "生病了",
+  "ctx": "q33 opção A"
+ },
+ {
+  "zh": "跑得慢",
+  "ctx": "q33 opção B"
+ },
+ {
+  "zh": "长得矮",
+  "ctx": "q33 opção C"
+ },
+ {
+  "zh": "你这些照片照得真漂亮。",
+  "ctx": "q34 áudio (女)"
+ },
+ {
+  "zh": "主要是新买的相机好。",
+  "ctx": "q34 áudio (男)"
+ },
+ {
+  "zh": "这张是在哪儿照的？",
+  "ctx": "q34 áudio (女)"
+ },
+ {
+  "zh": "我们家附近的那个公园，我们以前一起去过。",
+  "ctx": "q34 áudio (男)"
+ },
+ {
+  "zh": "那张照片是在哪儿照的？",
+  "ctx": "q34 áudio (问)"
+ },
+ {
+  "zh": "公园",
+  "ctx": "q34 opção A"
+ },
+ {
+  "zh": "机场",
+  "ctx": "q34 opção B"
+ },
+ {
+  "zh": "办公室",
+  "ctx": "q34 opção C"
+ },
+ {
+  "zh": "妈，这西瓜您什么时候买的？",
+  "ctx": "q35 áudio (男)"
+ },
+ {
+  "zh": "昨天中午买的，怎么了，不新鲜了？",
+  "ctx": "q35 áudio (女)"
+ },
+ {
+  "zh": "新鲜，也很甜，很好吃。",
+  "ctx": "q35 áudio (男)"
+ },
+ {
+  "zh": "那就好，我以为不好吃呢。",
+  "ctx": "q35 áudio (女)"
+ },
+ {
+  "zh": "这个西瓜怎么样？",
+  "ctx": "q35 áudio (问)"
+ },
+ {
+  "zh": "很一般",
+  "ctx": "q35 opção A"
+ },
+ {
+  "zh": "很好吃",
+  "ctx": "q35 opção B"
+ },
+ {
+  "zh": "不太甜",
+  "ctx": "q35 opção C"
+ },
+ {
+  "zh": "天快黑了，我们该回去了。",
+  "ctx": "q36 áudio (女)"
+ },
+ {
+  "zh": "好，你们是坐公共汽车来的？",
+  "ctx": "q36 áudio (男)"
+ },
+ {
+  "zh": "不是，我们骑自行车来的。",
+  "ctx": "q36 áudio (女)"
+ },
+ {
+  "zh": "那路上小心点儿。欢迎下次再来。",
+  "ctx": "q36 áudio (男)"
+ },
+ {
+  "zh": "女的是怎么来的？",
+  "ctx": "q36 áudio (问)"
+ },
+ {
+  "zh": "骑车来的",
+  "ctx": "q36 opção A"
+ },
+ {
+  "zh": "坐船来的",
+  "ctx": "q36 opção B"
+ },
+ {
+  "zh": "同事送来的",
+  "ctx": "q36 opção C"
+ },
+ {
+  "zh": "才七点，你今天起得真早。",
+  "ctx": "q37 áudio (男)"
+ },
+ {
+  "zh": "今天是我第一天上班，一定不能迟到。",
+  "ctx": "q37 áudio (女)"
+ },
+ {
+  "zh": "你那个公司不是就在附近吗？",
+  "ctx": "q37 áudio (男)"
+ },
+ {
+  "zh": "是在附近，但是我走路去也要半个小时。",
+  "ctx": "q37 áudio (女)"
+ },
+ {
+  "zh": "工作很忙",
+  "ctx": "q37 opção A"
+ },
+ {
+  "zh": "不想起床",
+  "ctx": "q37 opção B"
+ },
+ {
+  "zh": "希望别迟到",
+  "ctx": "q37 opção C"
+ },
+ {
+  "zh": "你好，中间这个包怎么卖？",
+  "ctx": "q38 áudio (女)"
+ },
+ {
+  "zh": "一百七十五。",
+  "ctx": "q38 áudio (男)"
+ },
+ {
+  "zh": "还有其他颜色的吗？",
+  "ctx": "q38 áudio (女)"
+ },
+ {
+  "zh": "还有红色的。",
+  "ctx": "q38 áudio (男)"
+ },
+ {
+  "zh": "女的要看哪个包？",
+  "ctx": "q38 áudio (问)"
+ },
+ {
+  "zh": "红色的",
+  "ctx": "q38 opção A"
+ },
+ {
+  "zh": "左边的",
+  "ctx": "q38 opção B"
+ },
+ {
+  "zh": "右边的",
+  "ctx": "q38 opção C"
+ },
+ {
+  "zh": "阿姨，我发现您变得越来越年轻了。",
+  "ctx": "q39 áudio (男)"
+ },
+ {
+  "zh": "真的吗？那我更要多锻炼身体了。",
+  "ctx": "q39 áudio (女)"
+ },
+ {
+  "zh": "您现在每天早上还跑步吗？",
+  "ctx": "q39 áudio (男)"
+ },
+ {
+  "zh": "是，天气好的时候，我都去跑。",
+  "ctx": "q39 áudio (女)"
+ },
+ {
+  "zh": "男的认为阿姨变得怎么样了？",
+  "ctx": "q39 áudio (问)"
+ },
+ {
+  "zh": "更胖了",
+  "ctx": "q39 opção A"
+ },
+ {
+  "zh": "更瘦了",
+  "ctx": "q39 opção B"
+ },
+ {
+  "zh": "更年轻了",
+  "ctx": "q39 opção C"
+ },
+ {
+  "zh": "明天休息，今晚想看什么节目啊？",
+  "ctx": "q40 áudio (女)"
+ },
+ {
+  "zh": "今晚有足球，现在八点了吗？",
+  "ctx": "q40 áudio (男)"
+ },
+ {
+  "zh": "现在才七点一刻，还有四十五分钟呢。",
+  "ctx": "q40 áudio (女)"
+ },
+ {
+  "zh": "不会吧？你的手表慢了吧？",
+  "ctx": "q40 áudio (男)"
+ },
+ {
+  "zh": "男的想看什么节目？",
+  "ctx": "q40 áudio (问)"
+ },
+ {
+  "zh": "音乐",
+  "ctx": "q40 opção A"
+ },
+ {
+  "zh": "体育",
+  "ctx": "q40 opção B"
+ },
+ {
+  "zh": "新闻",
+  "ctx": "q40 opção C"
+ },
+ {
+  "zh": "上午的数学考试怎么样？",
+  "ctx": "q41 frase"
+ },
+ {
+  "zh": "先生，请问您喝点儿什么？",
+  "ctx": "q42 frase"
+ },
+ {
+  "zh": "这个周末你打算做什么？",
+  "ctx": "q43 frase"
+ },
+ {
+  "zh": "还没看呢，我洗完澡再看。",
+  "ctx": "q44 frase"
+ },
+ {
+  "zh": "你衣服穿得太少了，是不是感冒了？",
+  "ctx": "q45 frase"
+ },
+ {
+  "zh": "没关系，我吃过药了。",
+  "ctx": "q46 frase"
+ },
+ {
+  "zh": "他从去年秋天开始锻炼，现在不到70公斤。",
+  "ctx": "q47 frase"
+ },
+ {
+  "zh": "好，我会给你打电话或者写电子邮件的。",
+  "ctx": "q48 frase"
+ },
+ {
+  "zh": "不用，你把筷子和杯子拿过来就可以了。",
+  "ctx": "q49 frase"
+ },
+ {
+  "zh": "大家来吃蛋糕吧，这块儿大的给你。",
+  "ctx": "q50 frase"
+ },
+ {
+  "zh": "这个城市有几百年的（＿＿）了。",
+  "ctx": "q51 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "这个城市有几百年的历史了。",
+  "ctx": "q51 linha completa (lacuna preenchida com 历史)"
+ },
+ {
+  "zh": "儿子长大了，都快一米八了，（＿＿）和他爸爸一样高了。",
+  "ctx": "q52 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "儿子长大了，都快一米八了，几乎和他爸爸一样高了。",
+  "ctx": "q52 linha completa (lacuna preenchida com 几乎)"
+ },
+ {
+  "zh": "小黄是我的好朋友，她和我的（＿＿）一直很好。",
+  "ctx": "q53 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "小黄是我的好朋友，她和我的关系一直很好。",
+  "ctx": "q53 linha completa (lacuna preenchida com 关系)"
+ },
+ {
+  "zh": "多吃鱼会使人变得更（＿＿）。",
+  "ctx": "q54 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "多吃鱼会使人变得更聪明。",
+  "ctx": "q54 linha completa (lacuna preenchida com 聪明)"
+ },
+ {
+  "zh": "我们已经找到（＿＿）问题的办法了。",
+  "ctx": "q55 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "我们已经找到解决问题的办法了。",
+  "ctx": "q55 linha completa (lacuna preenchida com 解决)"
+ },
+ {
+  "zh": "A：你（＿＿）的这是猫？",
+  "ctx": "q56 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "A：你画的这是猫？",
+  "ctx": "q56 linha completa (lacuna preenchida com 画)"
+ },
+ {
+  "zh": "B：大熊猫！它在爬树。这也看不懂？",
+  "ctx": "q56 linha"
+ },
+ {
+  "zh": "A：你低着头想什么呢？",
+  "ctx": "q57 linha"
+ },
+ {
+  "zh": "B：是工作还是读书，我不知道应该怎么（＿＿）才好。",
+  "ctx": "q57 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "B：是工作还是读书，我不知道应该怎么选择才好。",
+  "ctx": "q57 linha completa (lacuna preenchida com 选择)"
+ },
+ {
+  "zh": "A：你渴不？我想去买点儿水。",
+  "ctx": "q58 linha"
+ },
+ {
+  "zh": "B：那你快一点儿，表演（＿＿）就要开始了。",
+  "ctx": "q58 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "B：那你快一点儿，表演马上就要开始了。",
+  "ctx": "q58 linha completa (lacuna preenchida com 马上)"
+ },
+ {
+  "zh": "A：相信我，这件事对公司不会有影响的。",
+  "ctx": "q59 linha"
+ },
+ {
+  "zh": "B：夏经理，你把事情想得太（＿＿）了。",
+  "ctx": "q59 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "B：夏经理，你把事情想得太简单了。",
+  "ctx": "q59 linha completa (lacuna preenchida com 简单)"
+ },
+ {
+  "zh": "A：好久没看见白老师了，他不在这儿住了？",
+  "ctx": "q60 linha"
+ },
+ {
+  "zh": "B：是，他（＿＿）以后就和妻子搬到学校去住了。",
+  "ctx": "q60 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "B：是，他结婚以后就和妻子搬到学校去住了。",
+  "ctx": "q60 linha completa (lacuna preenchida com 结婚)"
+ },
+ {
+  "zh": "这里最近几年怎么样？",
+  "ctx": "q61 pergunta"
+ },
+ {
+  "zh": "最近几年，这里的变化很大，车辆更多了，街道更干净了，天更蓝了，树更绿了。",
+  "ctx": "q61 texto"
+ },
+ {
+  "zh": "环境变好了",
+  "ctx": "q61 opção A"
+ },
+ {
+  "zh": "和过去相同",
+  "ctx": "q61 opção B"
+ },
+ {
+  "zh": "变得更差了",
+  "ctx": "q61 opção C"
+ },
+ {
+  "zh": "这段话告诉我们：",
+  "ctx": "q62 pergunta"
+ },
+ {
+  "zh": "人们根据季节的变化来决定喝什么茶。老人们经常说：“春天最好喝花茶，冬天最好喝红茶。”",
+  "ctx": "q62 texto"
+ },
+ {
+  "zh": "茶有什么作用",
+  "ctx": "q62 opção A"
+ },
+ {
+  "zh": "老人爱喝红茶",
+  "ctx": "q62 opção B"
+ },
+ {
+  "zh": "不同季节喝不同的茶",
+  "ctx": "q62 opção C"
+ },
+ {
+  "zh": "这段话的主要意思是：",
+  "ctx": "q63 pergunta"
+ },
+ {
+  "zh": "汉字有多少个？这个问题谁也回答不清楚，《汉语大字典》里有五六万字，普通的小字典，一本也有八九千字。但人们常用的也就两千多个，认识这两千多个字，读书看报就没什么问题了。",
+  "ctx": "q63 texto"
+ },
+ {
+  "zh": "汉字很难写",
+  "ctx": "q63 opção A"
+ },
+ {
+  "zh": "要学会查字典",
+  "ctx": "q63 opção B"
+ },
+ {
+  "zh": "常用汉字不多",
+  "ctx": "q63 opção C"
+ },
+ {
+  "zh": "在网上买东西：",
+  "ctx": "q64 pergunta"
+ },
+ {
+  "zh": "为什么很多人愿意在网上买东西呢？因为非常方便，而且还便宜，如果对买到的东西有不满意的地方，也可以要求换新的。",
+  "ctx": "q64 texto"
+ },
+ {
+  "zh": "比较贵",
+  "ctx": "q64 opção A"
+ },
+ {
+  "zh": "花钱少",
+  "ctx": "q64 opção B"
+ },
+ {
+  "zh": "花的时间多",
+  "ctx": "q64 opção C"
+ },
+ {
+  "zh": "儿子昨天的作业为什么没错？",
+  "ctx": "q65 pergunta"
+ },
+ {
+  "zh": "儿子的作业总是做错，但昨天的一个也没错。老师问：“有人帮你写作业了？”“没有，我爸爸昨天没时间，我想我应该自己完成了。”",
+  "ctx": "q65 texto"
+ },
+ {
+  "zh": "自己做的",
+  "ctx": "q65 opção A"
+ },
+ {
+  "zh": "爸爸帮忙了",
+  "ctx": "q65 opção B"
+ },
+ {
+  "zh": "认真复习了",
+  "ctx": "q65 opção C"
+ },
+ {
+  "zh": "“这个习惯”说的是：",
+  "ctx": "q66 pergunta"
+ },
+ {
+  "zh": "晚上睡觉前喝一杯热牛奶，能帮助人们睡得更好。你有这个习惯吗？",
+  "ctx": "q66 texto"
+ },
+ {
+  "zh": "帮助别人",
+  "ctx": "q66 opção A"
+ },
+ {
+  "zh": "睡前刷牙",
+  "ctx": "q66 opção B"
+ },
+ {
+  "zh": "睡前喝牛奶",
+  "ctx": "q66 opção C"
+ },
+ {
+  "zh": "新年晚会：",
+  "ctx": "q67 pergunta"
+ },
+ {
+  "zh": "新年前一天，每个班都举行了新年晚会。学生们在晚会上唱歌、跳舞、做游戏，玩得高兴极了。",
+  "ctx": "q67 texto"
+ },
+ {
+  "zh": "已经结束了",
+  "ctx": "q67 opção A"
+ },
+ {
+  "zh": "参加的人不多",
+  "ctx": "q67 opção B"
+ },
+ {
+  "zh": "在1月1日举行",
+  "ctx": "q67 opção C"
+ },
+ {
+  "zh": "爸妈同意什么了？",
+  "ctx": "q68 pergunta"
+ },
+ {
+  "zh": "我从小就喜欢旅游，但爸妈不让我一个人出去玩儿。我16岁生日那天，他们终于同意了。为了这次旅游，我买了一个小行李箱，还有地图。",
+  "ctx": "q68 texto"
+ },
+ {
+  "zh": "教我游泳",
+  "ctx": "q68 opção A"
+ },
+ {
+  "zh": "我一个人去旅游",
+  "ctx": "q68 opção B"
+ },
+ {
+  "zh": "跟我一起去旅游",
+  "ctx": "q68 opção C"
+ },
+ {
+  "zh": "我在找什么东西？",
+  "ctx": "q69 pergunta"
+ },
+ {
+  "zh": "喂，你帮我看看，我的眼镜是不是在桌子上？什么？在椅子上？好，我知道了。",
+  "ctx": "q69 texto"
+ },
+ {
+  "zh": "椅子",
+  "ctx": "q69 opção A"
+ },
+ {
+  "zh": "衬衫",
+  "ctx": "q69 opção B"
+ },
+ {
+  "zh": "眼镜",
+  "ctx": "q69 opção C"
+ },
+ {
+  "zh": "这本书主要介绍：",
+  "ctx": "q70 pergunta"
+ },
+ {
+  "zh": "你想了解历史吗？这本书是一个很好的选择。书里讲了世界上很多国家的历史故事，相信爱好历史的人一定会对它有兴趣。",
+  "ctx": "q70 texto"
+ },
+ {
+  "zh": "中国文化",
+  "ctx": "q70 opção A"
+ },
+ {
+  "zh": "历史故事",
+  "ctx": "q70 opção B"
+ },
+ {
+  "zh": "兴趣爱好",
+  "ctx": "q70 opção C"
+ },
+ {
+  "zh": "那位邻居很热情。",
+  "ctx": "q71 frase correta (escrita)"
+ },
+ {
+  "zh": "这个楼一共三层。",
+  "ctx": "q72 frase correta (escrita)"
+ },
+ {
+  "zh": "菜单被服务员拿走了。",
+  "ctx": "q73 frase correta (escrita)"
+ },
+ {
+  "zh": "中国南方的雨水比北方多。",
+  "ctx": "q74 frase correta (escrita)"
+ },
+ {
+  "zh": "把冰箱放厨房里吧。",
+  "ctx": "q75 frase correta (escrita)"
+ },
+ {
+  "zh": "你姐姐的孩子上几年级？",
+  "ctx": "q76 frase completa (escrita, caractere 几)"
+ },
+ {
+  "zh": "你姐姐的孩子上（＿＿）年级？",
+  "ctx": "q76 frase com lacuna (traduza deixando ___)",
+  "lacuna": true
+ },
+ {
+  "zh": "马小姐，谢谢关心，我不发烧了，头也不疼了。",
+  "ctx": "q77 frase completa (escrita, caractere 心)"
+ },
+ {
+  "zh": "马小姐，谢谢关（＿＿），我不发烧了，头也不疼了。",
+  "ctx": "q77 frase com lacuna (traduza deixando ___)",
+  "lacuna": true
+ },
+ {
+  "zh": "对不起，下午有个重要的会议，我让司机去医院接你好不好？",
+  "ctx": "q78 frase completa (escrita, caractere 下)"
+ },
+ {
+  "zh": "对不起，（＿＿）午有个重要的会议，我让司机去医院接你好不好？",
+  "ctx": "q78 frase com lacuna (traduza deixando ___)",
+  "lacuna": true
+ },
+ {
+  "zh": "经过4个星期的练习，叔叔的普通话水平有了很大提高。",
+  "ctx": "q79 frase completa (escrita, caractere 大)"
+ },
+ {
+  "zh": "经过4个星期的练习，叔叔的普通话水平有了很（＿＿）提高。",
+  "ctx": "q79 frase com lacuna (traduza deixando ___)",
+  "lacuna": true
+ },
+ {
+  "zh": "这个小太阳表示晴天，云表示阴天。",
+  "ctx": "q80 frase completa (escrita, caractere 云)"
+ },
+ {
+  "zh": "这个小太阳表示晴天，（＿＿）表示阴天。",
+  "ctx": "q80 frase com lacuna (traduza deixando ___)",
+  "lacuna": true
+ }
+]
