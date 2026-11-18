@@ -173,16 +173,24 @@ function grava() {
   gravacaoDisco = window.setTimeout(() => void enviaDisco(), 800);
 }
 
-window.addEventListener("beforeunload", () => {
+/** grava já o que está pendente (sem esperar o atraso de 0,8 s) — para quando a aba some */
+function gravaAgora() {
   if (!carregado || !sujo) return;
   if (statusDisco === "sem-servidor") gravaLocal();
   else {
+    window.clearTimeout(gravacaoDisco);
+    sujo = false;
     try {
       navigator.sendBeacon(API, new Blob([JSON.stringify(estado)], { type: "application/json" }));
     } catch {
-      /* ignora */
+      sujo = true;
     }
   }
+}
+window.addEventListener("beforeunload", gravaAgora);
+// trocar de aba, minimizar ou bloquear o celular: o beforeunload nem sempre chega a disparar depois disso
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") gravaAgora();
 });
 
 function muda(f: (e: Estado) => Estado) {
