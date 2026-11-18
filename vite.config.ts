@@ -49,8 +49,10 @@ function progressoEmDisco({ nome, rota, arquivo, prefixo }: ArquivoProgresso): P
     if (fs.existsSync(arq)) {
       const antigo = fs.readFileSync(arq, "utf-8");
       const nAntigo = tamanho(antigo);
-      // proteção: se o novo estado tiver bem menos itens, guarda o anterior à parte
-      if (nAntigo > 5 && tamanho(txt) < nAntigo * 0.6) {
+      const nNovo = tamanho(txt);
+      // proteção: se o novo estado encolher muito (ou ficar vazio, como ao formatar),
+      // guarda o anterior à parte — o backup diário abaixo é sobrescrito com o estado novo
+      if (nAntigo > 0 && nNovo < nAntigo && (nNovo === 0 || nNovo < nAntigo * 0.6)) {
         fs.writeFileSync(path.join(backups, `${prefixo}antes-${Date.now()}.json`), antigo);
       }
     }
