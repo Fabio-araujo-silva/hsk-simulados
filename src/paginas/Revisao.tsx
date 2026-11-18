@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useFilaRevisao } from "../filaRevisao";
 import { ControleAudio } from "../audio";
 import { contaNovoHoje, hojeChave, salvaCartoes, useConfig, useEstado } from "../armazenamento";
 import { confere } from "../correcao";
@@ -11,8 +12,6 @@ import { AbasRevisao, type Aba } from "../componentes/AbasRevisao";
 import { usePendentes } from "../pendentes";
 import { useEstado as useEstadoHskk } from "../hskk/armazenamento";
 import { RevisaoOral } from "../hskk/paginas/Revisao";
-
-const ANTECIPA_MS = 20 * 60 * 1000; // aprendendo: pode antecipar até 20 min se não houver mais nada
 
 /**
  * Revisão espaçada do app: a do HSK (leitura e escrita) e, quando houver frases orais do HSKK, uma escolha no topo.
@@ -44,38 +43,8 @@ function RevisaoHsk() {
   const cartoes = useEstado((e) => e.cartoes);
   const novosHoje = useEstado((e) => e.novosHoje[hojeChave()] ?? 0);
   const cfg = useConfig();
-  const [agora, setAgora] = useState(Date.now());
-  const [antecipar, setAntecipar] = useState(false);
-
-  useEffect(() => {
-    const id = window.setInterval(() => setAgora(Date.now()), 15000);
-    return () => window.clearInterval(id);
-  }, []);
-
-  const fila = useMemo(() => {
-    const lista = Object.values(cartoes);
-    const limite = antecipar ? agora + ANTECIPA_MS : agora;
-    const revisoes = lista.filter((c) => !ehNovo(c) && c.srs.due <= limite).sort((a, b) => a.srs.due - b.srs.due);
-    const vagas = Math.max(0, cfg.novosPorDia - novosHoje);
-    const novos = lista.filter(ehNovo).sort((a, b) => a.criado - b.criado).slice(0, vagas);
-    // intercala: 1 novo a cada 3 revisões
-    const out: Cartao[] = [];
-    let i = 0;
-    let j = 0;
-    while (i < revisoes.length || j < novos.length) {
-      for (let k = 0; k < 3 && i < revisoes.length; k++) out.push(revisoes[i++]);
-      if (j < novos.length) out.push(novos[j++]);
-    }
-    return out;
-  }, [cartoes, agora, antecipar, cfg.novosPorDia, novosHoje]);
-
-  const proximo = useMemo(() => {
-    const futuros = Object.values(cartoes).filter((c) => !ehNovo(c) && c.srs.due > agora);
-    return futuros.length ? Math.min(...futuros.map((c) => c.srs.due)) : null;
-  }, [cartoes, agora]);
-
+  const { fila, atual, proximo, podeAntecipar, antecipa } = useFilaRevisao(cartoes, novosHoje, cfg.novosPorDia);
   const total = Object.keys(cartoes).length;
-  const atual = fila[0];
 
   if (!total) {
     return (
@@ -97,8 +66,8 @@ function RevisaoHsk() {
           {total} cartões no total.{" "}
           {proximo && `Próxima revisão: ${new Date(proximo).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })}.`}
         </p>
-        {proximo && proximo - agora < ANTECIPA_MS && !antecipar && (
-          <button className="sec" onClick={() => setAntecipar(true)}>
+        {podeAntecipar && (
+          <button className="sec" onClick={antecipa}>
             revisar os que vencem nos próximos minutos
           </button>
         )}
