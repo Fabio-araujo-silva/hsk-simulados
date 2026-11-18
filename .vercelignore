@@ -1,9 +1,7 @@
 # O que a Vercel não precisa para o build do site público (menos coisa para enviar/clonar).
-# A mídia pesada vai para o Cloudflare R2 (scripts/publica_midia.mjs); ver docs/deploy.md.
-public/audio
-public/img
-public/hskk/audio
-public/hskk/img
+# A mídia (public/audio, public/img, public/hskk/audio, public/hskk/img, ~550 MB) VAI: no primeiro lançamento ela é
+# servida pela própria Vercel. Se um dia ela for para um bucket (VITE_MIDIA_URL, docs/deploy.md), dá para voltar a
+# listar essas pastas aqui.
 fontes
 progresso
 data

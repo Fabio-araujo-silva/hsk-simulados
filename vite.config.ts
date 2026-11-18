@@ -110,16 +110,22 @@ function progressoEmDisco({ nome, rota, arquivo, prefixo }: ArquivoProgresso): P
   };
 }
 
-/** Pastas de public/ que no build público ficam no bucket de mídia (VITE_MIDIA_URL; ver src/dados.ts → urlMidia). */
+/** Pastas de public/ que no build público podem ficar num bucket de mídia (VITE_MIDIA_URL; ver src/dados.ts → urlMidia). */
 const PASTAS_MIDIA = ["audio", "img", "hskk/audio", "hskk/img"];
 
+/** VITE_MIDIA_URL com um bucket de verdade (vazia ou "mesmo-site" = a mídia vai no próprio site, como no modo local). */
+const temBucket = (midiaUrl: string | undefined) => {
+  const v = midiaUrl?.trim() ?? "";
+  return v !== "" && v !== "mesmo-site";
+};
+
 /**
- * Build do site público: o áudio original e as figuras (~550 MB) não vão para dist/ — a Vercel não comporta e eles
- * são servidos do bucket (scripts/publica_midia.mjs). O Vite copiaria public/ inteiro; aqui a cópia é feita à mão,
- * pulando essas pastas. Sem VITE_MIDIA_URL o plugin não faz nada e o build é o de sempre.
+ * Build com bucket de mídia (VITE_MIDIA_URL): o áudio original e as figuras (~550 MB) não vão para dist/ — são servidos
+ * do bucket (scripts/publica_midia.mjs). O Vite copiaria public/ inteiro; aqui a cópia é feita à mão, pulando essas
+ * pastas. Sem bucket o plugin não faz nada e o build é o de sempre (a mídia vai junto em dist/).
  */
 function midiaForaDoBuild(midiaUrl: string | undefined): Plugin {
-  const ativo = !!midiaUrl?.trim();
+  const ativo = temBucket(midiaUrl);
   const publico = path.resolve(__dirname, "public");
   const fora = new Set(PASTAS_MIDIA.map((p) => path.join(publico, p)));
   let saida = path.resolve(__dirname, "dist");
@@ -144,8 +150,7 @@ function midiaForaDoBuild(midiaUrl: string | undefined): Plugin {
  *  - modo local: um substituto vazio. Assim o modo local não depende do pacote estar instalado — uma cópia do
  *    projeto que puxou estas mudanças sem rodar `npm install` continua abrindo no `npm run dev` — e o build local
  *    não carrega os ~230 KB da biblioteca em dist/assets.
- * Também barra o build público sem VITE_MIDIA_URL: sem ela o site sairia sem áudio nem figuras e sem nenhum erro
- * (o .vercelignore não manda public/audio e public/img para a Vercel).
+ * Build público sem bucket de mídia (VITE_MIDIA_URL vazia ou "mesmo-site"): só avisa que a mídia vai junto no site.
  */
 function nuvemDoBuild(env: Record<string, string>): Plugin {
   const publico = !!(env.VITE_SUPABASE_URL?.trim() && env.VITE_SUPABASE_ANON_KEY?.trim());
@@ -154,9 +159,9 @@ function nuvemDoBuild(env: Record<string, string>): Plugin {
     name: "nuvem-do-build",
     enforce: "pre",
     config(_c, { command }) {
-      if (publico && command === "build" && !env.VITE_MIDIA_URL?.trim())
-        throw new Error(
-          "build público (VITE_SUPABASE_*) sem VITE_MIDIA_URL: o site sairia sem áudio e sem figuras. Defina VITE_MIDIA_URL (docs/deploy.md, passo 4).",
+      if (publico && command === "build" && !temBucket(env.VITE_MIDIA_URL))
+        console.warn(
+          "[nuvem-do-build] build público sem bucket de mídia (VITE_MIDIA_URL): o áudio e as figuras (~550 MB) vão junto no site, servidos pela própria Vercel.",
         );
     },
     resolveId: (id) => (id === ID ? "\0" + ID : undefined),
