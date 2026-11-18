@@ -1,0 +1,55 @@
+{
+ "_nota": "As figuras 1–5 saíam da página do 听力材料 (que também tem os rótulos 1．…5．); recortadas à mão da p. 7 do 大纲.",
+ "recortes": [
+  {
+   "pagina": 7,
+   "rect": [
+    238,
+    352,
+    274,
+    422
+   ],
+   "nome": "q1.png"
+  },
+  {
+   "pagina": 7,
+   "rect": [
+    211,
+    436,
+    301,
+    503
+   ],
+   "nome": "q2.png"
+  },
+  {
+   "pagina": 7,
+   "rect": [
+    220,
+    517,
+    292,
+    586
+   ],
+   "nome": "q3.png"
+  },
+  {
+   "pagina": 7,
+   "rect": [
+    213,
+    605,
+    299,
+    662
+   ],
+   "nome": "q4.png"
+  },
+  {
+   "pagina": 7,
+   "rect": [
+    212,
+    687,
+    299,
+    744
+   ],
+   "nome": "q5.png"
+  }
+ ]
+}

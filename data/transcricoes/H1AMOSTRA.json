@@ -1,0 +1,372 @@
+{
+ "substituiOficial": true,
+ "_nota": "Texto OFICIAL do 听力材料 do 样卷 (大纲 HSK 一级, Hanban; fontes/raw/SAMPLE1), só sem o pinyin intercalado do PDF. Instruções e exemplos idênticos aos do H10901. Gerado por limpeza automática + conferência.",
+ "roteiro": [
+  {
+   "tipo": "musica",
+   "texto": "（音乐，30秒，渐弱）"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "HSK（一级）听力考试分四部分，共20题。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "请大家注意，听力考试现在开始。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第一部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "很高兴"
+    },
+    {
+     "fal": null,
+     "txt": "看电影"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第1题："
+  },
+  {
+   "tipo": "questao",
+   "n": 1
+  },
+  {
+   "tipo": "questao",
+   "n": 2
+  },
+  {
+   "tipo": "questao",
+   "n": 3
+  },
+  {
+   "tipo": "questao",
+   "n": 4
+  },
+  {
+   "tipo": "questao",
+   "n": 5
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第二部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "这是我的书。"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第6题："
+  },
+  {
+   "tipo": "questao",
+   "n": 6
+  },
+  {
+   "tipo": "questao",
+   "n": 7
+  },
+  {
+   "tipo": "questao",
+   "n": 8
+  },
+  {
+   "tipo": "questao",
+   "n": 9
+  },
+  {
+   "tipo": "questao",
+   "n": 10
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第三部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": "女",
+     "txt": "你好！"
+    },
+    {
+     "fal": "男",
+     "txt": "你好！很高兴认识你。"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第11题："
+  },
+  {
+   "tipo": "questao",
+   "n": 11
+  },
+  {
+   "tipo": "questao",
+   "n": 12
+  },
+  {
+   "tipo": "questao",
+   "n": 13
+  },
+  {
+   "tipo": "questao",
+   "n": 14
+  },
+  {
+   "tipo": "questao",
+   "n": 15
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第四部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "下午我去商店，我想买一些水果。"
+    },
+    {
+     "fal": "问",
+     "txt": "她下午去哪里？"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第16题："
+  },
+  {
+   "tipo": "questao",
+   "n": 16
+  },
+  {
+   "tipo": "questao",
+   "n": 17
+  },
+  {
+   "tipo": "questao",
+   "n": 18
+  },
+  {
+   "tipo": "questao",
+   "n": 19
+  },
+  {
+   "tipo": "questao",
+   "n": 20
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "听力考试现在结束。"
+  }
+ ],
+ "questoes": {
+  "1": [
+   {
+    "fal": null,
+    "txt": "坐出租车"
+   }
+  ],
+  "2": [
+   {
+    "fal": null,
+    "txt": "明天见"
+   }
+  ],
+  "3": [
+   {
+    "fal": null,
+    "txt": "十二点"
+   }
+  ],
+  "4": [
+   {
+    "fal": null,
+    "txt": "喝水"
+   }
+  ],
+  "5": [
+   {
+    "fal": null,
+    "txt": "打电话"
+   }
+  ],
+  "6": [
+   {
+    "fal": null,
+    "txt": "你的衣服很漂亮。"
+   }
+  ],
+  "7": [
+   {
+    "fal": null,
+    "txt": "他们在工作。"
+   }
+  ],
+  "8": [
+   {
+    "fal": null,
+    "txt": "我朋友是老师。"
+   }
+  ],
+  "9": [
+   {
+    "fal": null,
+    "txt": "李小姐，请坐。"
+   }
+  ],
+  "10": [
+   {
+    "fal": null,
+    "txt": "我儿子在大学读书。"
+   }
+  ],
+  "11": [
+   {
+    "fal": "男",
+    "txt": "这个椅子多少钱？"
+   },
+   {
+    "fal": "女",
+    "txt": "七十块。"
+   }
+  ],
+  "12": [
+   {
+    "fal": "女",
+    "txt": "他会开车吗？"
+   },
+   {
+    "fal": "男",
+    "txt": "会。他开车三年多了。"
+   }
+  ],
+  "13": [
+   {
+    "fal": "男",
+    "txt": "你去哪儿了？"
+   },
+   {
+    "fal": "女",
+    "txt": "我去买了些东西。"
+   }
+  ],
+  "14": [
+   {
+    "fal": "女",
+    "txt": "今天我请你吃饭。"
+   },
+   {
+    "fal": "男",
+    "txt": "太好了，我想吃中国菜。"
+   }
+  ],
+  "15": [
+   {
+    "fal": "男",
+    "txt": "他们是谁？"
+   },
+   {
+    "fal": "女",
+    "txt": "他们三个都是我的学生。"
+   }
+  ],
+  "16": [
+   {
+    "fal": null,
+    "txt": "明天是二月二十五日，星期三。"
+   },
+   {
+    "fal": "问",
+    "txt": "明天是星期几？"
+   }
+  ],
+  "17": [
+   {
+    "fal": null,
+    "txt": "我会说汉语，我能写一些汉字。"
+   },
+   {
+    "fal": "问",
+    "txt": "他会什么？"
+   }
+  ],
+  "18": [
+   {
+    "fal": null,
+    "txt": "下个月，我和王老师去北京。"
+   },
+   {
+    "fal": "问",
+    "txt": "他和谁去北京？"
+   }
+  ],
+  "19": [
+   {
+    "fal": null,
+    "txt": "我有一个女儿，今年四岁了。"
+   },
+   {
+    "fal": "问",
+    "txt": "女儿几岁了？"
+   }
+  ],
+  "20": [
+   {
+    "fal": null,
+    "txt": "昨天下雨了，很冷。"
+   },
+   {
+    "fal": "问",
+    "txt": "昨天天气怎么样？"
+   }
+  ]
+ }
+}

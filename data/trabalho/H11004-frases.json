@@ -1,0 +1,431 @@
+[
+ {
+  "zh": "大家好！欢迎参加HSK（一级）考试。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "HSK（一级）听力考试分四部分，共20题。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "请大家注意，听力考试现在开始。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第一部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "一共5个题，每题听两次。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "很高兴",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "看电影",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第1题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第二部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "这是我的书。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第6题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第三部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "你好！",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "你好！很高兴认识你。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第11题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "第四部分",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "下午我去商店，我想买一些水果。",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "她下午去哪里？",
+  "ctx": "exemplo do áudio"
+ },
+ {
+  "zh": "现在开始第16题：",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "听力考试现在结束。",
+  "ctx": "instrução do áudio"
+ },
+ {
+  "zh": "打电话。",
+  "ctx": "grupo R3 opção A"
+ },
+ {
+  "zh": "我没看。",
+  "ctx": "grupo R3 opção B"
+ },
+ {
+  "zh": "桌子上。",
+  "ctx": "grupo R3 opção C"
+ },
+ {
+  "zh": "没关系。",
+  "ctx": "grupo R3 opção D"
+ },
+ {
+  "zh": "李小姐的。",
+  "ctx": "grupo R3 opção E"
+ },
+ {
+  "zh": "好的，谢谢！",
+  "ctx": "grupo R3 opção F"
+ },
+ {
+  "zh": "你喝水吗？",
+  "ctx": "grupo R3 exemplo"
+ },
+ {
+  "zh": "里",
+  "ctx": "grupo R4 opção A"
+ },
+ {
+  "zh": "能",
+  "ctx": "grupo R4 opção B"
+ },
+ {
+  "zh": "岁",
+  "ctx": "grupo R4 opção C"
+ },
+ {
+  "zh": "名字",
+  "ctx": "grupo R4 opção D"
+ },
+ {
+  "zh": "多少",
+  "ctx": "grupo R4 opção E"
+ },
+ {
+  "zh": "喜欢",
+  "ctx": "grupo R4 opção F"
+ },
+ {
+  "zh": "你叫什么名字？",
+  "ctx": "grupo R4 exemplo"
+ },
+ {
+  "zh": "三本书",
+  "ctx": "q1 áudio (narrador)"
+ },
+ {
+  "zh": "对不起",
+  "ctx": "q2 áudio (narrador)"
+ },
+ {
+  "zh": "很漂亮",
+  "ctx": "q3 áudio (narrador)"
+ },
+ {
+  "zh": "买衣服",
+  "ctx": "q4 áudio (narrador)"
+ },
+ {
+  "zh": "二零零八年",
+  "ctx": "q5 áudio (narrador)"
+ },
+ {
+  "zh": "他在睡觉呢。",
+  "ctx": "q6 áudio (narrador)"
+ },
+ {
+  "zh": "你怎么了，不高兴了？",
+  "ctx": "q7 áudio (narrador)"
+ },
+ {
+  "zh": "太热了，有水吗？我想喝水。",
+  "ctx": "q8 áudio (narrador)"
+ },
+ {
+  "zh": "现在是下午一点十分。",
+  "ctx": "q9 áudio (narrador)"
+ },
+ {
+  "zh": "他去火车站了。",
+  "ctx": "q10 áudio (narrador)"
+ },
+ {
+  "zh": "前面那个医生叫什么名字？",
+  "ctx": "q11 áudio (男)"
+ },
+ {
+  "zh": "他？他叫李明。",
+  "ctx": "q11 áudio (女)"
+ },
+ {
+  "zh": "喂，你回家了？",
+  "ctx": "q12 áudio (女)"
+ },
+ {
+  "zh": "没，我在出租车上，我去学校。",
+  "ctx": "q12 áudio (男)"
+ },
+ {
+  "zh": "你坐几点的飞机？",
+  "ctx": "q13 áudio (男)"
+ },
+ {
+  "zh": "上午九点。",
+  "ctx": "q13 áudio (女)"
+ },
+ {
+  "zh": "谢谢你的水果。",
+  "ctx": "q14 áudio (女)"
+ },
+ {
+  "zh": "不客气。你多吃苹果。",
+  "ctx": "q14 áudio (男)"
+ },
+ {
+  "zh": "这些人是谁？",
+  "ctx": "q15 áudio (男)"
+ },
+ {
+  "zh": "他们都是我在中国认识的朋友。",
+  "ctx": "q15 áudio (女)"
+ },
+ {
+  "zh": "下个月，我去北京。",
+  "ctx": "q16 áudio (narrador)"
+ },
+ {
+  "zh": "他什么时候去北京？",
+  "ctx": "q16 áudio (问)"
+ },
+ {
+  "zh": "后天",
+  "ctx": "q16 opção A"
+ },
+ {
+  "zh": "下个星期",
+  "ctx": "q16 opção B"
+ },
+ {
+  "zh": "下个月",
+  "ctx": "q16 opção C"
+ },
+ {
+  "zh": "他是小学老师，他有很多学生。",
+  "ctx": "q17 áudio (narrador)"
+ },
+ {
+  "zh": "他是哪儿的老师？",
+  "ctx": "q17 áudio (问)"
+ },
+ {
+  "zh": "小学",
+  "ctx": "q17 opção A"
+ },
+ {
+  "zh": "中学",
+  "ctx": "q17 opção B"
+ },
+ {
+  "zh": "大学",
+  "ctx": "q17 opção C"
+ },
+ {
+  "zh": "他是我儿子的同学，听儿子说，他在医院工作。",
+  "ctx": "q18 áudio (narrador)"
+ },
+ {
+  "zh": "谁在医院工作？",
+  "ctx": "q18 áudio (问)"
+ },
+ {
+  "zh": "我",
+  "ctx": "q18 opção A"
+ },
+ {
+  "zh": "儿子",
+  "ctx": "q18 opção B"
+ },
+ {
+  "zh": "儿子的同学",
+  "ctx": "q18 opção C"
+ },
+ {
+  "zh": "我在那儿住三天，星期天回来，再见。",
+  "ctx": "q19 áudio (narrador)"
+ },
+ {
+  "zh": "他哪天回来？",
+  "ctx": "q19 áudio (问)"
+ },
+ {
+  "zh": "星期三",
+  "ctx": "q19 opção A"
+ },
+ {
+  "zh": "星期四",
+  "ctx": "q19 opção B"
+ },
+ {
+  "zh": "星期日",
+  "ctx": "q19 opção C"
+ },
+ {
+  "zh": "他的汉语很好，他会写不少汉字。",
+  "ctx": "q20 áudio (narrador)"
+ },
+ {
+  "zh": "他的汉语怎么样？",
+  "ctx": "q20 áudio (问)"
+ },
+ {
+  "zh": "很好",
+  "ctx": "q20 opção A"
+ },
+ {
+  "zh": "不会写",
+  "ctx": "q20 opção B"
+ },
+ {
+  "zh": "不会读",
+  "ctx": "q20 opção C"
+ },
+ {
+  "zh": "猫",
+  "ctx": "q21 palavra ao lado da figura"
+ },
+ {
+  "zh": "四",
+  "ctx": "q22 palavra ao lado da figura"
+ },
+ {
+  "zh": "女儿",
+  "ctx": "q23 palavra ao lado da figura"
+ },
+ {
+  "zh": "茶",
+  "ctx": "q24 palavra ao lado da figura"
+ },
+ {
+  "zh": "说话",
+  "ctx": "q25 palavra ao lado da figura"
+ },
+ {
+  "zh": "你想坐哪个椅子？",
+  "ctx": "q26 frase"
+ },
+ {
+  "zh": "王先生在商店买东西呢。",
+  "ctx": "q27 frase"
+ },
+ {
+  "zh": "下雨了，天气很冷。",
+  "ctx": "q28 frase"
+ },
+ {
+  "zh": "来，看我这儿，一，二，三，好。",
+  "ctx": "q29 frase"
+ },
+ {
+  "zh": "他昨天去学习开车了。",
+  "ctx": "q30 frase"
+ },
+ {
+  "zh": "那个电影怎么样？",
+  "ctx": "q31 frase"
+ },
+ {
+  "zh": "这是谁的电脑？",
+  "ctx": "q32 frase"
+ },
+ {
+  "zh": "对不起，你不喜欢狗？",
+  "ctx": "q33 frase"
+ },
+ {
+  "zh": "她在家做什么呢？",
+  "ctx": "q34 frase"
+ },
+ {
+  "zh": "爸，我的杯子呢？",
+  "ctx": "q35 frase"
+ },
+ {
+  "zh": "中午我（＿＿）请你吃饭吗？",
+  "ctx": "q36 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "中午我能请你吃饭吗？",
+  "ctx": "q36 linha completa (lacuna preenchida com 能)"
+ },
+ {
+  "zh": "王老师今年60（＿＿）了。",
+  "ctx": "q37 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "王老师今年60岁了。",
+  "ctx": "q37 linha completa (lacuna preenchida com 岁)"
+ },
+ {
+  "zh": "他和他妈妈都（＿＿）看电视。",
+  "ctx": "q38 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "他和他妈妈都喜欢看电视。",
+  "ctx": "q38 linha completa (lacuna preenchida com 喜欢)"
+ },
+ {
+  "zh": "女：我爱吃这个菜，这个菜（＿＿）钱？",
+  "ctx": "q39 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "女：我爱吃这个菜，这个菜多少钱？",
+  "ctx": "q39 linha completa (lacuna preenchida com 多少)"
+ },
+ {
+  "zh": "男：17块。",
+  "ctx": "q39 linha"
+ },
+ {
+  "zh": "男：你在哪儿？我没看见你。",
+  "ctx": "q40 linha"
+ },
+ {
+  "zh": "女：我在饭店（＿＿），我看见你了。",
+  "ctx": "q40 linha com lacuna (traduza deixando ___ no lugar da palavra)",
+  "lacuna": true
+ },
+ {
+  "zh": "女：我在饭店里，我看见你了。",
+  "ctx": "q40 linha completa (lacuna preenchida com 里)"
+ }
+]
