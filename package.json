@@ -1,9 +1,9 @@
 {
-  "name": "hsk3-simulados",
+  "name": "hsk-simulados",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Simulados reais do HSK 3 (2.0) com modo prova, modo estudo, áudio sincronizado, tradução por hover e revisão espaçada.",
+  "description": "Simulados reais do HSK 1–3 (2.0) e do HSKK 中级 (prova oral) com modo prova, modo estudo, áudio sincronizado, tradução por hover, gravação da voz com correção automática e revisão espaçada.",
   "scripts": {
     "dev": "vite",
     "build": "npm run typecheck && vite build",
