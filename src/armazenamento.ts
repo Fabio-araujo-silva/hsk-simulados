@@ -1,11 +1,13 @@
 import { useSyncExternalStore } from "react";
 import type { Cartao, Config, EstadoVocab, MarcaVocab, Tentativa } from "./tipos";
 import { leBackup } from "./backup";
+import { criaSincronia } from "./sincronia";
 
-// Estado do usuário. Fica em DOIS lugares, sempre sincronizados:
-//  1. localStorage do navegador (instantâneo);
-//  2. progresso/progresso.json na pasta do projeto, via /api/progresso do servidor local
-//     (com backup diário em progresso/backups/). Se o navegador limpar os dados, nada se perde.
+// Estado do usuário. Fica na memória e num destino que manda (src/sincronia.ts):
+//  - modo local: progresso/progresso.json na pasta do projeto, via /api/progresso do servidor local
+//    (com backup diário em progresso/backups/). Se o navegador limpar os dados, nada se perde;
+//  - site público: a nuvem (Supabase) para quem entrou na conta, ou só o localStorage sem login;
+//  - site estático sem servidor: o localStorage.
 // Resetar um simulado nunca apaga nada: a tentativa antiga é arquivada e continua no histórico.
 
 interface Estado {
@@ -66,15 +68,6 @@ function normaliza(e: Partial<Estado> | null | undefined): Estado {
   };
 }
 
-function carregaLocal(): Estado {
-  try {
-    const bruto = localStorage.getItem(CHAVE);
-    return bruto ? normaliza(JSON.parse(bruto)) : vazio();
-  } catch {
-    return vazio();
-  }
-}
-
 const quando = (x: { atualizado?: number; inicio?: number; criado?: number; srs?: { last_review?: number } }) =>
   x.atualizado ?? x.srs?.last_review ?? x.inicio ?? x.criado ?? 0;
 
@@ -105,113 +98,32 @@ export function mescla(a: Estado, b: Estado): Estado {
   };
 }
 
-// começa vazio: o estado de verdade vem do arquivo em disco (ou, sem servidor, do navegador)
+// começa vazio: o estado de verdade vem do arquivo em disco, da nuvem (site público) ou, sem nenhum dos dois, do navegador
 let estado: Estado = vazio();
-let carregado = false;
-let sujo = false;
 const ouvintes = new Set<() => void>();
-let gravacaoLocal: number | undefined;
-let gravacaoDisco: number | undefined;
 
-// ------------------------------------------------------- sincronização em disco
+// ------------------------------------------------------- sincronização (disco, nuvem ou navegador)
 
-export type StatusDisco = "verificando" | "ok" | "salvando" | "sem-servidor" | "erro";
-let statusDisco: StatusDisco = "verificando";
-const ouvintesStatus = new Set<() => void>();
-const mudaStatus = (s: StatusDisco) => {
-  statusDisco = s;
-  ouvintesStatus.forEach((o) => o());
-};
-export function useStatusDisco() {
-  return useSyncExternalStore(
-    (o) => {
-      ouvintesStatus.add(o);
-      return () => ouvintesStatus.delete(o);
-    },
-    () => statusDisco,
-  );
-}
-
-const API = `${import.meta.env.BASE_URL}api/progresso`;
-
-async function enviaDisco() {
-  if (statusDisco === "sem-servidor" || !carregado || !sujo) return;
-  sujo = false;
-  mudaStatus("salvando");
-  try {
-    const r = await fetch(API, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(estado) });
-    mudaStatus(r.ok ? "ok" : "erro");
-  } catch {
-    mudaStatus("erro");
-  }
-}
-
-async function iniciaDisco() {
-  try {
-    const r = await fetch(API, { cache: "no-store" });
-    const tipo = r.headers.get("content-type") ?? "";
-    if (r.status !== 204 && (!r.ok || !tipo.includes("json"))) throw new Error("sem servidor local");
-    // o ARQUIVO LOCAL manda: nada do navegador é misturado nem restaurado
-    estado = r.status === 204 ? vazio() : normaliza(await r.json());
-    try {
-      localStorage.removeItem(CHAVE);
-    } catch {
-      /* ignora */
-    }
-    carregado = true;
-    mudaStatus("ok");
-  } catch {
-    // site estático sem o servidor local: aí sim usa o navegador (+ backup manual)
-    estado = carregaLocal();
-    carregado = true;
-    mudaStatus("sem-servidor");
-  }
-  ouvintes.forEach((o) => o());
-}
-void iniciaDisco();
-
-function gravaLocal() {
-  try {
-    localStorage.setItem(CHAVE, JSON.stringify(estado));
-  } catch (err) {
-    console.error("não foi possível salvar no navegador", err);
-  }
-}
-
-function grava() {
-  sujo = true;
-  if (statusDisco === "sem-servidor") {
-    window.clearTimeout(gravacaoLocal);
-    gravacaoLocal = window.setTimeout(gravaLocal, 150);
-    return;
-  }
-  window.clearTimeout(gravacaoDisco);
-  gravacaoDisco = window.setTimeout(() => void enviaDisco(), 800);
-}
-
-/** grava já o que está pendente (sem esperar o atraso de 0,8 s) — para quando a aba some */
-function gravaAgora() {
-  if (!carregado || !sujo) return;
-  if (statusDisco === "sem-servidor") gravaLocal();
-  else {
-    window.clearTimeout(gravacaoDisco);
-    sujo = false;
-    try {
-      navigator.sendBeacon(API, new Blob([JSON.stringify(estado)], { type: "application/json" }));
-    } catch {
-      sujo = true;
-    }
-  }
-}
-window.addEventListener("beforeunload", gravaAgora);
-// trocar de aba, minimizar ou bloquear o celular: o beforeunload nem sempre chega a disparar depois disso
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "hidden") gravaAgora();
+const sincronia = criaSincronia<Estado>({
+  parte: "hsk",
+  chave: CHAVE,
+  api: `${import.meta.env.BASE_URL}api/progresso`,
+  vazio,
+  normaliza,
+  mescla,
+  le: () => estado,
+  troca: (e) => {
+    estado = e;
+    ouvintes.forEach((o) => o());
+  },
 });
+export type { StatusDisco } from "./sincronia";
+export const useStatusDisco = sincronia.useStatus;
+sincronia.inicia();
 
 function muda(f: (e: Estado) => Estado) {
   estado = { ...f(estado), salvoEm: Date.now() };
-  grava();
+  sincronia.grava();
   ouvintes.forEach((o) => o());
 }
 
@@ -345,13 +257,7 @@ export function zeraVocab() {
 export function formataTudo() {
   // vocabulário com data 0, como o resto: restaurar um backup depois traz as marcações de volta
   muda((e) => ({ ...vazio(), config: e.config, vocab: { ...vocabVazio(), pinyinSempre: e.vocab.pinyinSempre } }));
-  try {
-    localStorage.removeItem(CHAVE);
-  } catch {
-    /* ignora */
-  }
-  window.clearTimeout(gravacaoDisco);
-  void enviaDisco();
+  sincronia.formatou();
 }
 
 // ------------------------------------------------------------------- backup

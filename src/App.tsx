@@ -13,6 +13,10 @@ import { PaginaCartoes } from "./paginas/Cartoes";
 import { PaginaVocabulario } from "./paginas/Vocabulario";
 import { PaginaDesempenho } from "./paginas/Desempenho";
 import { PaginaConfig } from "./paginas/Config";
+import { PaginaConta } from "./paginas/Conta";
+import { PaginaSobre } from "./paginas/Sobre";
+import { useConta } from "./nuvem";
+import { MODO_PUBLICO } from "./publico";
 
 function useRota() {
   const [h, setH] = useState(() => window.location.hash.slice(1) || "/");
@@ -37,12 +41,51 @@ function juntaStatus(a: StatusDisco, b: StatusDisco): StatusDisco {
   return "ok";
 }
 
+/** Site público: onde o progresso está ("✓ salvo na nuvem" / "só neste navegador") e o acesso à conta. */
+function StatusPublico({ disco, logado, naConta }: { disco: StatusDisco; logado: boolean; naConta: boolean }) {
+  const texto = !logado
+    ? "só neste navegador"
+    : disco === "ok"
+      ? "✓ salvo na nuvem"
+      : disco === "salvando"
+        ? "salvando…"
+        : disco === "erro"
+          ? "⚠ sem conexão com a nuvem"
+          : "";
+  return (
+    <>
+      <a href="#/conta" className={naConta ? "on" : ""} title={logado ? "Sua conta" : "Entre com o seu e-mail para salvar o progresso na nuvem"}>
+        {logado ? "Conta" : "Entrar"}
+      </a>
+      <span
+        className={`status-disco ${logado && disco === "ok" ? "ok" : disco === "erro" ? "erro" : ""}`}
+        title={
+          logado
+            ? "Seu progresso fica salvo na nuvem, na sua conta"
+            : "Sem conta, o progresso fica só neste navegador — entre (com o seu e-mail) para salvar na nuvem e usar em outros aparelhos"
+        }
+      >
+        {texto}
+        {!logado && (
+          <>
+            {" · "}
+            <a href="#/conta" className="entre-nuvem">
+              entre para salvar na nuvem
+            </a>
+          </>
+        )}
+      </span>
+    </>
+  );
+}
+
 export default function App() {
   const rota = useRota();
   const disco = juntaStatus(useStatusDisco(), useStatusDiscoHskk());
   const partes = rota.split("/").filter(Boolean);
   const cfg = useEstado((e) => e.config);
   const pendentes = usePendentes();
+  const conta = useConta();
 
   // prova em andamento ocupa a tela toda (sem distrações) — a do HSK e a do HSKK
   const emProva = (partes[0] === "prova" && partes.length >= 2) || ehProvaHskk(partes);
@@ -80,6 +123,12 @@ export default function App() {
       break;
     case "config":
       pagina = <PaginaConfig />;
+      break;
+    case "conta":
+      pagina = <PaginaConta />;
+      break;
+    case "sobre":
+      pagina = <PaginaSobre />;
       break;
     case "nivel":
       pagina = <Inicio key={partes[1]} nivel={(Number(partes[1]) || 3) as Nivel} />;
@@ -121,22 +170,31 @@ export default function App() {
             <a href="#/config" className={partes[0] === "config" ? "on" : ""} title="Configurações e backup">
               ⚙
             </a>
-            <span
-              className={`status-disco ${disco === "ok" ? "ok" : disco === "erro" ? "erro" : ""}`}
-              title={
-                disco === "sem-servidor"
-                  ? "Sem o servidor local: o progresso fica só neste navegador — baixe backups em ⚙"
-                  : "Progresso salvo também em progresso/progresso.json (HSK) e progresso/hskk.json (HSKK), com backup diário em progresso/backups"
-              }
-            >
-              {disco === "ok" ? "✓ salvo no disco" : disco === "salvando" ? "salvando…" : disco === "erro" ? "⚠ erro ao salvar" : disco === "sem-servidor" ? "só no navegador" : ""}
-            </span>
+            {MODO_PUBLICO ? (
+              <StatusPublico disco={disco} logado={!!conta} naConta={partes[0] === "conta"} />
+            ) : (
+              <span
+                className={`status-disco ${disco === "ok" ? "ok" : disco === "erro" ? "erro" : ""}`}
+                title={
+                  disco === "sem-servidor"
+                    ? "Sem o servidor local: o progresso fica só neste navegador — baixe backups em ⚙"
+                    : "Progresso salvo também em progresso/progresso.json (HSK) e progresso/hskk.json (HSKK), com backup diário em progresso/backups"
+                }
+              >
+                {disco === "ok" ? "✓ salvo no disco" : disco === "salvando" ? "salvando…" : disco === "erro" ? "⚠ erro ao salvar" : disco === "sem-servidor" ? "só no navegador" : ""}
+              </span>
+            )}
           </nav>
         </header>
       )}
       {/* só monta a página depois que o progresso do disco chegou: senão uma tentativa criada antes
           (ex.: recarregar dentro de #/estudo/…) seria descartada quando o arquivo substitui o estado */}
       <main className={emProva ? "principal tela-cheia" : "principal"}>{disco === "verificando" ? <div className="carregando">carregando o seu progresso…</div> : pagina}</main>
+      {MODO_PUBLICO && !emProva && (
+        <footer className="rodape">
+          Provas do Hanban / Chinese Testing International, reunidas só para estudo · site gratuito e não comercial · <a href="#/sobre">Sobre</a>
+        </footer>
+      )}
     </div>
   );
 }

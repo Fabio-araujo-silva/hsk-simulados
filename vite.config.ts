@@ -1,4 +1,4 @@
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
@@ -100,26 +100,91 @@ function progressoEmDisco({ nome, rota, arquivo, prefixo }: ArquivoProgresso): P
   };
 
   return {
-    name: nome,
-    configureServer(server) {
-      server.middlewares.use(handler);
+      name: nome,
+      configureServer(server) {
+        server.middlewares.use(handler);
+      },
+      configurePreviewServer(server) {
+        server.middlewares.use(handler);
+      },
+  };
+}
+
+/** Pastas de public/ que no build público ficam no bucket de mídia (VITE_MIDIA_URL; ver src/dados.ts → urlMidia). */
+const PASTAS_MIDIA = ["audio", "img", "hskk/audio", "hskk/img"];
+
+/**
+ * Build do site público: o áudio original e as figuras (~550 MB) não vão para dist/ — a Vercel não comporta e eles
+ * são servidos do bucket (scripts/publica_midia.mjs). O Vite copiaria public/ inteiro; aqui a cópia é feita à mão,
+ * pulando essas pastas. Sem VITE_MIDIA_URL o plugin não faz nada e o build é o de sempre.
+ */
+function midiaForaDoBuild(midiaUrl: string | undefined): Plugin {
+  const ativo = !!midiaUrl?.trim();
+  const publico = path.resolve(__dirname, "public");
+  const fora = new Set(PASTAS_MIDIA.map((p) => path.join(publico, p)));
+  let saida = path.resolve(__dirname, "dist");
+  return {
+    name: "midia-fora-do-build",
+    apply: "build",
+    config: () => (ativo ? { build: { copyPublicDir: false } } : undefined),
+    configResolved(c) {
+      saida = path.resolve(c.root, c.build.outDir);
     },
-    configurePreviewServer(server) {
-      server.middlewares.use(handler);
+    writeBundle() {
+      if (!ativo) return;
+      fs.cpSync(publico, saida, { recursive: true, filter: (origem) => !fora.has(path.resolve(origem)) });
+      console.log(`[midia-fora-do-build] public/ copiado sem ${PASTAS_MIDIA.join(", ")} (servidos de ${midiaUrl})`);
+    },
+  };
+}
+
+/**
+ * A biblioteca do Supabase entra no app pelo módulo virtual "virtual:supabase" (src/nuvem.ts):
+ *  - build/dev público (VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY definidas): é a biblioteca de verdade;
+ *  - modo local: um substituto vazio. Assim o modo local não depende do pacote estar instalado — uma cópia do
+ *    projeto que puxou estas mudanças sem rodar `npm install` continua abrindo no `npm run dev` — e o build local
+ *    não carrega os ~230 KB da biblioteca em dist/assets.
+ * Também barra o build público sem VITE_MIDIA_URL: sem ela o site sairia sem áudio nem figuras e sem nenhum erro
+ * (o .vercelignore não manda public/audio e public/img para a Vercel).
+ */
+function nuvemDoBuild(env: Record<string, string>): Plugin {
+  const publico = !!(env.VITE_SUPABASE_URL?.trim() && env.VITE_SUPABASE_ANON_KEY?.trim());
+  const ID = "virtual:supabase";
+  return {
+    name: "nuvem-do-build",
+    enforce: "pre",
+    config(_c, { command }) {
+      if (publico && command === "build" && !env.VITE_MIDIA_URL?.trim())
+        throw new Error(
+          "build público (VITE_SUPABASE_*) sem VITE_MIDIA_URL: o site sairia sem áudio e sem figuras. Defina VITE_MIDIA_URL (docs/deploy.md, passo 4).",
+        );
+    },
+    resolveId: (id) => (id === ID ? "\0" + ID : undefined),
+    load(id) {
+      if (id !== "\0" + ID) return;
+      return publico
+        ? 'export * from "@supabase/supabase-js";'
+        : 'export function createClient() { throw new Error("a nuvem só existe no site público"); }';
     },
   };
 }
 
 // base relativa: o build funciona aberto de qualquer pasta/servidor estático
-export default defineConfig({
-  plugins: [
-    react(),
-    progressoEmDisco({ nome: "progresso-em-disco", rota: "/api/progresso", arquivo: "progresso.json", prefixo: "" }),
-    progressoEmDisco({ nome: "progresso-hskk-em-disco", rota: "/api/hskk/progresso", arquivo: "hskk.json", prefixo: "hskk-" }),
-    vozSintetica(__dirname),
-    gravacoes(__dirname),
-  ],
-  base: "./",
-  server: { port: 5180, watch: { ignored: ["**/progresso/**", "**/fontes/**", "**/data/**", "**/public/tts/**"] } },
-  preview: { port: 5180 },
+export default defineConfig(({ mode }) => {
+  // loadEnv junta .env* e as variáveis do ambiente (é assim que a Vercel passa as VITE_*)
+  const env = loadEnv(mode, __dirname, "VITE_");
+  return {
+    plugins: [
+      nuvemDoBuild(env),
+      midiaForaDoBuild(env.VITE_MIDIA_URL),
+      react(),
+      progressoEmDisco({ nome: "progresso-em-disco", rota: "/api/progresso", arquivo: "progresso.json", prefixo: "" }),
+      progressoEmDisco({ nome: "progresso-hskk-em-disco", rota: "/api/hskk/progresso", arquivo: "hskk.json", prefixo: "hskk-" }),
+      vozSintetica(__dirname),
+      gravacoes(__dirname),
+    ],
+    base: "./",
+    server: { port: 5180, watch: { ignored: ["**/progresso/**", "**/fontes/**", "**/data/**", "**/public/tts/**"] } },
+    preview: { port: 5180 },
+  };
 });

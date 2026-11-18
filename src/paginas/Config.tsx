@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { exportaBackup, formataTudo, importaBackup, mudaConfig, useConfig, useEstado } from "../armazenamento";
 import { ConfigHskk } from "../hskk/componentes/ConfigHskk";
+import { MODO_PUBLICO } from "../publico";
 
 export function PaginaConfig() {
   const cfg = useConfig();
@@ -49,8 +50,10 @@ export function PaginaConfig() {
       <section>
         <h2>Backup (HSK 1–3)</h2>
         <p>
-          Seu progresso do HSK (provas, respostas, cartões e marcações do vocabulário) fica salvo neste navegador. Baixe um backup de vez em
-          quando — e para levar para outro computador. O HSKK tem backup próprio, na seção dele mais abaixo.
+          {MODO_PUBLICO
+            ? "Seu progresso do HSK (provas, respostas, cartões e marcações do vocabulário) fica salvo na nuvem quando você entra na conta — sem conta, só neste navegador. O backup é uma cópia extra, que você guarda onde quiser."
+            : "Seu progresso do HSK (provas, respostas, cartões e marcações do vocabulário) fica salvo neste navegador. Baixe um backup de vez em quando — e para levar para outro computador."}{" "}
+          O HSKK tem backup próprio, na seção dele mais abaixo.
         </p>
         <div className="acoes">
           <button className="pri" onClick={baixa}>
@@ -82,8 +85,14 @@ export function PaginaConfig() {
         <h2>Formatar todo o progresso do HSK</h2>
         <p>
           Apaga <b>tudo do HSK 1–3</b>: {Object.keys(nTent).length} tentativas (estudo e provas, com as notas), {Object.keys(nCart).length} cartões de
-          revisão espaçada e {Object.keys(nMarcas).length} marcações do vocabulário. O HSKK não é afetado. As configurações ficam. Por segurança o
-          servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
+          revisão espaçada e {Object.keys(nMarcas).length} marcações do vocabulário. O HSKK não é afetado. As configurações ficam.{" "}
+          {MODO_PUBLICO ? (
+            <>Por segurança a nuvem guarda uma cópia do estado anterior (em Conta → cópias de segurança).</>
+          ) : (
+            <>
+              Por segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
+            </>
+          )}
         </p>
         <div className="acoes">
           <input className="entrada" placeholder='digite FORMATAR' value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />
