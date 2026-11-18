@@ -3,19 +3,36 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
 import type { IncomingMessage, ServerResponse } from "node:http";
+import { gravacoes } from "./servidor/gravacoes";
 import { vozSintetica } from "./servidor/vozSintetica";
 
+interface ArquivoProgresso {
+  /** nome do plugin */
+  nome: string;
+  /** caminho EXATO da API (só a querystring é ignorada) */
+  rota: string;
+  /** arquivo em progresso/ */
+  arquivo: string;
+  /** prefixo dos backups em progresso/backups/ */
+  prefixo: string;
+}
+
 /**
- * Guarda o progresso (provas, respostas, cartões, marcações do vocabulário) num arquivo do projeto:
- *   progresso/progresso.json            — estado atual
- *   progresso/backups/AAAA-MM-DD.json   — uma cópia por dia (últimos 60 dias)
- *   progresso/backups/antes-*.json      — cópia de segurança se um salvamento encolher muito os dados
+ * Guarda o progresso num arquivo do projeto — um por parte do app, sem misturar:
+ *   HSK 1–3:  /api/progresso       → progresso/progresso.json   (provas, respostas, cartões, marcações do vocabulário)
+ *   HSKK:     /api/hskk/progresso  → progresso/hskk.json        (provas orais, gravações feitas, frases da revisão)
+ * e, para cada um,
+ *   progresso/backups/<prefixo>AAAA-MM-DD.json   — uma cópia por dia (últimos 60 dias)
+ *   progresso/backups/<prefixo>antes-*.json      — cópia de segurança se um salvamento encolher muito os dados
  * Assim nada se perde se o navegador limpar o localStorage ou se a porta mudar.
+ * Cada plugin só atende o seu caminho exato: nenhuma outra rota consegue ler ou gravar o arquivo dele.
  */
-function progressoEmDisco(): Plugin {
+function progressoEmDisco({ nome, rota, arquivo, prefixo }: ArquivoProgresso): Plugin {
   const dir = path.resolve(__dirname, "progresso");
-  const arq = path.join(dir, "progresso.json");
+  const arq = path.join(dir, arquivo);
   const backups = path.join(dir, "backups");
+  const prefixoRe = prefixo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const diario = new RegExp(`^${prefixoRe}\\d{4}-\\d{2}-\\d{2}\\.json$`);
 
   const tamanho = (txt: string) => {
     try {
@@ -34,23 +51,23 @@ function progressoEmDisco(): Plugin {
       const nAntigo = tamanho(antigo);
       // proteção: se o novo estado tiver bem menos itens, guarda o anterior à parte
       if (nAntigo > 5 && tamanho(txt) < nAntigo * 0.6) {
-        fs.writeFileSync(path.join(backups, `antes-${Date.now()}.json`), antigo);
+        fs.writeFileSync(path.join(backups, `${prefixo}antes-${Date.now()}.json`), antigo);
       }
     }
     const tmp = arq + ".tmp";
     fs.writeFileSync(tmp, txt);
     fs.renameSync(tmp, arq);
     const hoje = new Date().toISOString().slice(0, 10);
-    fs.writeFileSync(path.join(backups, `${hoje}.json`), txt);
+    fs.writeFileSync(path.join(backups, `${prefixo}${hoje}.json`), txt);
     const diarios = fs
       .readdirSync(backups)
-      .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .filter((f) => diario.test(f))
       .sort();
     for (const f of diarios.slice(0, Math.max(0, diarios.length - 60))) fs.unlinkSync(path.join(backups, f));
   };
 
   const handler = (req: IncomingMessage, res: ServerResponse, next: () => void) => {
-    if (!req.url?.startsWith("/api/progresso")) return next();
+    if ((req.url ?? "").split("?")[0] !== rota) return next();
     if (req.method === "GET") {
       if (!fs.existsSync(arq)) {
         res.statusCode = 204;
@@ -81,7 +98,7 @@ function progressoEmDisco(): Plugin {
   };
 
   return {
-    name: "progresso-em-disco",
+    name: nome,
     configureServer(server) {
       server.middlewares.use(handler);
     },
@@ -93,7 +110,13 @@ function progressoEmDisco(): Plugin {
 
 // base relativa: o build funciona aberto de qualquer pasta/servidor estático
 export default defineConfig({
-  plugins: [react(), progressoEmDisco(), vozSintetica(__dirname)],
+  plugins: [
+    react(),
+    progressoEmDisco({ nome: "progresso-em-disco", rota: "/api/progresso", arquivo: "progresso.json", prefixo: "" }),
+    progressoEmDisco({ nome: "progresso-hskk-em-disco", rota: "/api/hskk/progresso", arquivo: "hskk.json", prefixo: "hskk-" }),
+    vozSintetica(__dirname),
+    gravacoes(__dirname),
+  ],
   base: "./",
   server: { port: 5180, watch: { ignored: ["**/progresso/**", "**/fontes/**", "**/data/**", "**/public/tts/**"] } },
   preview: { port: 5180 },

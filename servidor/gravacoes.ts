@@ -4,12 +4,12 @@ import type { Plugin } from "vite";
 import type { IncomingMessage, ServerResponse } from "node:http";
 
 /**
- * Gravações da sua voz, guardadas no disco (nunca no git):
- *   PUT  /api/gravacoes/<nome>   corpo = o áudio (webm/ogg/mp4 do MediaRecorder) → progresso/gravacoes/<nome>
- *   GET  /api/gravacoes/<nome>   devolve o arquivo (com suporte a Range, para o <audio> poder pular)
- *   POST /api/transcreve {arquivo} → manda a gravação ao ElevenLabs Scribe e devolve {texto, palavras}
- *                                   (resultado em cache: progresso/gravacoes/<nome>.scribe.json — não paga duas vezes)
- * A chave (ELEVENLABS_API_KEY) fica no .env e nunca vai para o navegador.
+ * HSKK (prova oral) — gravações da sua voz, guardadas no disco (nunca no git):
+ *   PUT  /api/hskk/gravacoes/<nome>   corpo = o áudio (webm/ogg/mp4 do MediaRecorder) → progresso/gravacoes/<nome>
+ *   GET  /api/hskk/gravacoes/<nome>   devolve o arquivo (com suporte a Range, para o <audio> poder pular)
+ *   POST /api/hskk/transcreve {arquivo} → manda a gravação ao ElevenLabs Scribe e devolve {texto, palavras}
+ *                                        (resultado em cache: progresso/gravacoes/<nome>.scribe.json — não paga duas vezes)
+ * A chave (ELEVENLABS_API_KEY) fica no .env da raiz e nunca vai para o navegador.
  */
 export function gravacoes(raiz: string): Plugin {
   const dir = path.join(raiz, "progresso", "gravacoes");
@@ -72,9 +72,12 @@ export function gravacoes(raiz: string): Plugin {
     return { status: 200, corpo };
   }
 
+  const ROTA_GRAVACOES = "/api/hskk/gravacoes/";
+  const ROTA_TRANSCREVE = "/api/hskk/transcreve";
+
   const handler = (req: IncomingMessage, res: ServerResponse, next: () => void) => {
-    const url = req.url ?? "";
-    if (url.startsWith("/api/transcreve")) {
+    const caminho = (req.url ?? "").split("?")[0];
+    if (caminho === ROTA_TRANSCREVE) {
       if (req.method !== "POST") return json(res, 405, { erro: "use POST" });
       let corpo = "";
       req.setEncoding("utf8");
@@ -92,8 +95,13 @@ export function gravacoes(raiz: string): Plugin {
       });
       return;
     }
-    if (!url.startsWith("/api/gravacoes/")) return next();
-    const nome = decodeURIComponent(url.slice("/api/gravacoes/".length).split("?")[0]);
+    if (!caminho.startsWith(ROTA_GRAVACOES)) return next();
+    let nome = "";
+    try {
+      nome = decodeURIComponent(caminho.slice(ROTA_GRAVACOES.length));
+    } catch {
+      return json(res, 400, { erro: "nome inválido" });
+    }
     const arq = arquivoDe(nome);
     if (!arq || !TIPOS[path.extname(arq)]) return json(res, 400, { erro: "nome inválido" });
 

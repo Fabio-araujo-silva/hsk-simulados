@@ -1,10 +1,10 @@
 import { useSyncExternalStore } from "react";
 import type { Cartao, Config, Gravacao, Tentativa } from "./tipos";
 
-// Estado do usuário. Fica em DOIS lugares, sempre sincronizados:
+// Estado do usuário no HSKK — separado do progresso do HSK (src/armazenamento.ts). Fica em DOIS lugares, sempre sincronizados:
 //  1. localStorage do navegador (instantâneo);
-//  2. progresso/progresso.json na pasta do projeto, via /api/progresso do servidor local
-//     (com backup diário em progresso/backups/). Se o navegador limpar os dados, nada se perde.
+//  2. progresso/hskk.json na pasta do projeto, via /api/hskk/progresso do servidor local
+//     (com backup diário em progresso/backups/hskk-AAAA-MM-DD.json). Se o navegador limpar os dados, nada se perde.
 // Resetar uma prova nunca apaga nada: a tentativa antiga é arquivada e continua no histórico.
 
 interface Estado {
@@ -116,7 +116,7 @@ export function useStatusDisco() {
   );
 }
 
-const API = `${import.meta.env.BASE_URL}api/progresso`;
+const API = `${import.meta.env.BASE_URL}api/hskk/progresso`;
 
 async function enviaDisco() {
   if (statusDisco === "sem-servidor" || !carregado || !sujo) return;
@@ -173,16 +173,24 @@ function grava() {
   gravacaoDisco = window.setTimeout(() => void enviaDisco(), 800);
 }
 
-window.addEventListener("beforeunload", () => {
+/** grava já o que está pendente (sem esperar o atraso de 0,8 s) — para quando a aba some */
+function gravaAgora() {
   if (!carregado || !sujo) return;
   if (statusDisco === "sem-servidor") gravaLocal();
   else {
+    window.clearTimeout(gravacaoDisco);
+    sujo = false;
     try {
       navigator.sendBeacon(API, new Blob([JSON.stringify(estado)], { type: "application/json" }));
     } catch {
-      /* ignora */
+      sujo = true;
     }
   }
+}
+window.addEventListener("beforeunload", gravaAgora);
+// trocar de aba, minimizar ou bloquear o celular: o beforeunload nem sempre chega a disparar depois disso
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") gravaAgora();
 });
 
 function muda(f: (e: Estado) => Estado) {
@@ -307,8 +315,8 @@ export function contaNovoHoje() {
 // --------------------------------------------------------------- formatar
 
 /**
- * Apaga TODO o progresso (tentativas, notas, cartões, revisões). Mantém só as configurações.
- * O servidor guarda uma cópia do estado anterior em progresso/backups/antes-*.json.
+ * Apaga TODO o progresso do HSKK (tentativas, cartões, revisões). Mantém só as configurações.
+ * O servidor guarda uma cópia do estado anterior em progresso/backups/hskk-antes-*.json.
  */
 export function formataTudo() {
   muda((e) => ({ ...vazio(), config: e.config }));

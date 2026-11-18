@@ -47,7 +47,7 @@ export function PaginaConfig() {
       </section>
       <section>
         <h2>Backup</h2>
-        <p>Com o servidor local (<code>npm run dev</code>) o progresso fica em <code>progresso/progresso.json</code> e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não os áudios).</p>
+        <p>Com o servidor local (<code>npm run dev</code>) o progresso do HSKK fica em <code>progresso/hskk.json</code> e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não os áudios).</p>
         <div className="acoes">
           <button className="pri" onClick={baixa}>
             baixar backup (.json)
