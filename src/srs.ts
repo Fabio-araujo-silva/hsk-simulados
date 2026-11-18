@@ -77,3 +77,10 @@ export function intervalo(ms: number) {
 
 export const ehNovo = (c: ComSrs) => c.srs.state === 0;
 export const vencido = (c: ComSrs, agora = Date.now()) => c.srs.due <= agora;
+
+/** Quantos cartões dá para revisar agora: os vencidos + os novos que ainda cabem no limite do dia (o número do badge). */
+export function pendentesAgora(cartoes: ComSrs[], novosHoje: number, novosPorDia: number, agora = Date.now()) {
+  const revisoes = cartoes.filter((c) => !ehNovo(c) && vencido(c, agora)).length;
+  const novos = Math.min(cartoes.filter(ehNovo).length, Math.max(0, novosPorDia - novosHoje));
+  return revisoes + novos;
+}

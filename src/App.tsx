@@ -1,6 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import { useEstado, useStatusDisco } from "./armazenamento";
-import { vencido } from "./srs";
+import { useEffect, useState } from "react";
+import { useEstado, useStatusDisco, type StatusDisco } from "./armazenamento";
+import { useStatusDisco as useStatusDiscoHskk } from "./hskk/armazenamento";
+import { ehProvaHskk, PaginaHskk } from "./hskk/Rotas";
+import { usePendentes } from "./pendentes";
 import type { Nivel } from "./tipos";
 import { EscolhaNivel, Inicio } from "./paginas/Inicio";
 import { PaginaEstudo } from "./paginas/Estudo";
@@ -29,25 +31,24 @@ export const vaiPara = (rota: string) => {
   window.location.hash = rota;
 };
 
+/** O HSK e o HSKK salvam cada um no seu arquivo: o aviso do cabeçalho mostra o pior dos dois. */
+function juntaStatus(a: StatusDisco, b: StatusDisco): StatusDisco {
+  for (const s of ["verificando", "erro", "salvando", "sem-servidor"] as const) if (a === s || b === s) return s;
+  return "ok";
+}
+
 export default function App() {
   const rota = useRota();
-  const disco = useStatusDisco();
+  const disco = juntaStatus(useStatusDisco(), useStatusDiscoHskk());
   const partes = rota.split("/").filter(Boolean);
-  const cartoes = useEstado((e) => e.cartoes);
-  const novosHoje = useEstado((e) => e.novosHoje);
   const cfg = useEstado((e) => e.config);
-  const pendentes = useMemo(() => {
-    const agora = Date.now();
-    const lista = Object.values(cartoes);
-    const revisoes = lista.filter((c) => c.srs.state !== 0 && vencido(c, agora)).length;
-    const hoje = new Date();
-    const k = `${hoje.getFullYear()}-${String(hoje.getMonth() + 1).padStart(2, "0")}-${String(hoje.getDate()).padStart(2, "0")}`;
-    const novos = Math.min(lista.filter((c) => c.srs.state === 0).length, Math.max(0, cfg.novosPorDia - (novosHoje[k] ?? 0)));
-    return revisoes + novos;
-  }, [cartoes, novosHoje, cfg.novosPorDia]);
+  const pendentes = usePendentes();
 
-  // prova em andamento ocupa a tela toda (sem distrações)
-  const emProva = partes[0] === "prova" && partes.length >= 2;
+  // prova em andamento ocupa a tela toda (sem distrações) — a do HSK e a do HSKK
+  const emProva = (partes[0] === "prova" && partes.length >= 2) || ehProvaHskk(partes);
+  // dentro do HSKK (menos revisão e cartões, que são as páginas do app na aba oral)
+  const noHskk = partes[0] === "hskk" && partes[1] !== "revisao" && partes[1] !== "cartoes";
+  const em = (pagina: string) => partes[0] === pagina || (partes[0] === "hskk" && partes[1] === pagina);
 
   let pagina: JSX.Element;
   switch (partes[0]) {
@@ -61,10 +62,15 @@ export default function App() {
       pagina = <PaginaResultado key={partes[1]} tentativaId={partes[1]} />;
       break;
     case "revisao":
-      pagina = <PaginaRevisao />;
+      pagina = <PaginaRevisao key="hsk" />;
       break;
     case "cartoes":
-      pagina = <PaginaCartoes />;
+      pagina = <PaginaCartoes key="hsk" />;
+      break;
+    case "hskk":
+      if (partes[1] === "revisao") pagina = <PaginaRevisao key="hskk" aba="hskk" />;
+      else if (partes[1] === "cartoes") pagina = <PaginaCartoes key="hskk" aba="hskk" />;
+      else pagina = <PaginaHskk partes={partes.slice(1)} rota={rota} />;
       break;
     case "vocabulario":
       pagina = <PaginaVocabulario />;
@@ -90,13 +96,20 @@ export default function App() {
             <span className="zh">汉语水平考试</span> <b>HSK</b> <span className="marca-sub">simulados reais</span>
           </a>
           <nav>
-            <a href={cfg.nivel ? `#/nivel/${cfg.nivel}` : "#/"} className={partes.length === 0 || partes[0] === "nivel" ? "on" : ""}>
-              Simulados{cfg.nivel ? ` · HSK ${cfg.nivel}` : ""}
+            <a
+              href={noHskk ? "#/hskk" : cfg.nivel ? `#/nivel/${cfg.nivel}` : "#/"}
+              className={partes.length === 0 || partes[0] === "nivel" || noHskk ? "on" : ""}
+            >
+              Simulados{noHskk ? " · HSKK" : cfg.nivel ? ` · HSK ${cfg.nivel}` : ""}
             </a>
-            <a href="#/revisao" className={partes[0] === "revisao" ? "on" : ""}>
-              Revisão {pendentes > 0 && <span className="badge">{pendentes}</span>}
+            <a
+              href="#/revisao"
+              className={em("revisao") ? "on" : ""}
+              title={pendentes.total > 0 ? `para revisar agora: ${pendentes.hsk} do HSK (leitura e escrita) e ${pendentes.hskk} do HSKK (oral)` : undefined}
+            >
+              Revisão {pendentes.total > 0 && <span className="badge">{pendentes.total}</span>}
             </a>
-            <a href="#/cartoes" className={partes[0] === "cartoes" ? "on" : ""}>
+            <a href="#/cartoes" className={em("cartoes") ? "on" : ""}>
               Cartões
             </a>
             <a href="#/vocabulario" className={partes[0] === "vocabulario" ? "on" : ""}>
@@ -113,7 +126,7 @@ export default function App() {
               title={
                 disco === "sem-servidor"
                   ? "Sem o servidor local: o progresso fica só neste navegador — baixe backups em ⚙"
-                  : "Progresso salvo também em progresso/progresso.json (backup diário em progresso/backups)"
+                  : "Progresso salvo também em progresso/progresso.json (HSK) e progresso/hskk.json (HSKK), com backup diário em progresso/backups"
               }
             >
               {disco === "ok" ? "✓ salvo no disco" : disco === "salvando" ? "salvando…" : disco === "erro" ? "⚠ erro ao salvar" : disco === "sem-servidor" ? "só no navegador" : ""}

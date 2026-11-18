@@ -2,11 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 import { useEstado } from "../armazenamento";
 import { resumoTentativa } from "../correcao";
 import { carregaIndice, carregaProva, nomeParte, regras } from "../dados";
-import type { Prova } from "../tipos";
+import type { Prova, Tentativa } from "../tipos";
+import { useEstado as useEstadoHskk } from "../hskk/armazenamento";
+import { DesempenhoHskk } from "../hskk/componentes/DesempenhoHskk";
 
 /** Notas de todas as provas feitas + aproveitamento por tipo de questão. */
 export function PaginaDesempenho() {
   const tentativas = useEstado((e) => e.tentativas);
+  const temHskk = useEstadoHskk((e) => Object.keys(e.tentativas).length > 0);
   const [provas, setProvas] = useState<Record<string, Prova>>({});
 
   const ids = useMemo(() => Array.from(new Set(Object.values(tentativas).map((t) => t.prova))), [tentativas]);
@@ -44,7 +47,8 @@ export function PaginaDesempenho() {
     return Object.entries(acc).sort((a, b) => a[1].certas / a[1].total - b[1].certas / b[1].total);
   }, [tentativas, provas]);
 
-  if (!Object.keys(tentativas).length) {
+  const temHsk = Object.keys(tentativas).length > 0;
+  if (!temHsk && !temHskk) {
     return (
       <div className="vazio">
         <h1>Desempenho</h1>
@@ -56,6 +60,30 @@ export function PaginaDesempenho() {
   return (
     <div className="desempenho">
       <h1>Desempenho</h1>
+      {temHsk && <DesempenhoHsk exames={exames} porParte={porParte} provas={provas} />}
+      {temHskk && (
+        <>
+          <h2>HSKK (prova oral)</h2>
+          <div className="hskk">
+            <DesempenhoHskk />
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+function DesempenhoHsk({
+  exames,
+  porParte,
+  provas,
+}: {
+  exames: { t: Tentativa; r: ReturnType<typeof resumoTentativa> }[];
+  porParte: [string, { certas: number; total: number }][];
+  provas: Record<string, Prova>;
+}) {
+  return (
+    <>
       <h2>Notas no modo prova</h2>
       {exames.length === 0 ? (
         <p>Nenhuma prova completa ainda.</p>
@@ -119,6 +147,6 @@ export function PaginaDesempenho() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }

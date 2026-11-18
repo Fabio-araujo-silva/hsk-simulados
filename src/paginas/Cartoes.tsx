@@ -2,10 +2,33 @@ import { useMemo, useState } from "react";
 import { apagaCartao, useEstado } from "../armazenamento";
 import { intervalo } from "../srs";
 import type { Cartao } from "../tipos";
+import { AbasRevisao, type Aba } from "../componentes/AbasRevisao";
+import { useEstado as useEstadoHskk } from "../hskk/armazenamento";
+import { CartoesOrais } from "../hskk/paginas/Cartoes";
 
 const ESTADOS = ["novo", "aprendendo", "revisão", "reaprendendo"];
 
-export function PaginaCartoes() {
+/** Cartões do HSK e, quando houver, as frases orais do HSKK (escolha no topo). Sem `aba`, abre na que tem cartões. */
+export function PaginaCartoes({ aba: pedida }: { aba?: Aba }) {
+  const nHsk = useEstado((e) => Object.keys(e.cartoes).length);
+  const nOral = useEstadoHskk((e) => Object.keys(e.cartoes).length);
+  const [aba, setAba] = useState<Aba>(() => pedida ?? (nHsk === 0 && nOral > 0 ? "hskk" : "hsk"));
+  return (
+    <div className="pagina-cartoes">
+      <h1>Cartões de revisão</h1>
+      {(nOral > 0 || aba === "hskk") && <AbasRevisao aba={aba} muda={setAba} hsk={nHsk} hskk={nOral} titulo="cartões" />}
+      {aba === "hskk" ? (
+        <div className="hskk">
+          <CartoesOrais />
+        </div>
+      ) : (
+        <CartoesHsk />
+      )}
+    </div>
+  );
+}
+
+function CartoesHsk() {
   const cartoes = useEstado((e) => e.cartoes);
   const [filtro, setFiltro] = useState<"todos" | Cartao["tipo"]>("todos");
   const [busca, setBusca] = useState("");
@@ -28,8 +51,7 @@ export function PaginaCartoes() {
   }, [cartoes]);
 
   return (
-    <div className="pagina-cartoes">
-      <h1>Cartões de revisão</h1>
+    <>
       <p>
         {Object.keys(cartoes).length} cartões · {contagem.questao} questões · {contagem.frase} frases · {contagem.palavra} palavras · {contagem.novos} novos ·{" "}
         {contagem.vencidos} vencidos
@@ -89,6 +111,6 @@ export function PaginaCartoes() {
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 }

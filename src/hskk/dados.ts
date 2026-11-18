@@ -1,5 +1,5 @@
 import { busca } from "../dados";
-import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, ResumoProva, TipoFonte } from "./tipos";
+import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, ResumoProva, Tentativa, TipoFonte } from "./tipos";
 
 export { formataTempo, urlPublica } from "../dados";
 
@@ -25,6 +25,19 @@ export const TEMPO_FALA = 120;
 export const TEMPO_PREPARO_ESTUDO = 150;
 /** Limite de uma gravação do 第一部分 no estudo. */
 export const TEMPO_REPETIR = 15;
+
+/** Média do % da parte 1 (última gravação corrigida de cada frase), ou null se nenhuma foi corrigida. */
+export function mediaParte1(t: Tentativa) {
+  const ps: number[] = [];
+  for (let n = 1; n <= 10; n++) {
+    const p = t.gravacoes[n]?.at(-1)?.pct;
+    if (p !== undefined) ps.push(p);
+  }
+  return ps.length ? Math.round(ps.reduce((a, b) => a + b, 0) / ps.length) : null;
+}
+
+/** Provas terminadas no modo prova (sem as abandonadas), da mais recente para a mais antiga. */
+export const provasFeitas = (ts: Tentativa[]) => ts.filter((t) => t.modo === "prova" && t.fim && !t.abandonada).sort((a, b) => (b.fim ?? 0) - (a.fim ?? 0));
 
 export const ROTULO_FONTE: Record<TipoFonte, string> = {
   oficial: "oficial",

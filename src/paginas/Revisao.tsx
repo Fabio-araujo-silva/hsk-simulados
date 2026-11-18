@@ -7,10 +7,40 @@ import { Frase, ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
 import { NOTAS, previas, revisa, ehNovo } from "../srs";
 import type { Cartao, Lexico, Prova } from "../tipos";
+import { AbasRevisao, type Aba } from "../componentes/AbasRevisao";
+import { usePendentes } from "../pendentes";
+import { useEstado as useEstadoHskk } from "../hskk/armazenamento";
+import { RevisaoOral } from "../hskk/paginas/Revisao";
 
 const ANTECIPA_MS = 20 * 60 * 1000; // aprendendo: pode antecipar até 20 min se não houver mais nada
 
-export function PaginaRevisao() {
+/**
+ * Revisão espaçada do app: a do HSK (leitura e escrita) e, quando houver frases orais do HSKK, uma escolha no topo.
+ * Cada parte tem os seus cartões e o seu limite de novos por dia. Sem `aba`, abre na que tem o que revisar.
+ */
+export function PaginaRevisao({ aba: pedida }: { aba?: Aba }) {
+  const pend = usePendentes();
+  const temOral = useEstadoHskk((e) => Object.keys(e.cartoes).length > 0);
+  const [aba, setAba] = useState<Aba>(() => pedida ?? (pend.hsk === 0 && pend.hskk > 0 ? "hskk" : "hsk"));
+  return (
+    <>
+      {(temOral || aba === "hskk") && (
+        <div className="revisao">
+          <AbasRevisao aba={aba} muda={setAba} hsk={pend.hsk} hskk={pend.hskk} titulo="para revisar agora" />
+        </div>
+      )}
+      {aba === "hskk" ? (
+        <div className="hskk">
+          <RevisaoOral />
+        </div>
+      ) : (
+        <RevisaoHsk />
+      )}
+    </>
+  );
+}
+
+function RevisaoHsk() {
   const cartoes = useEstado((e) => e.cartoes);
   const novosHoje = useEstado((e) => e.novosHoje[hojeChave()] ?? 0);
   const cfg = useConfig();

@@ -34,7 +34,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
   }, [n, audio]);
 
   const vai = useCallback((k: number) => {
-    if (k >= 1 && k <= 14) window.location.hash = `/estudo/${id}/${k}`;
+    if (k >= 1 && k <= 14) window.location.hash = `/hskk/estudo/${id}/${k}`;
   }, [id]);
 
   useEffect(() => {
@@ -87,10 +87,10 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
             </div>
           ))}
           <div className="nav-acoes">
-            <a className="botao sec" href={`#/prova/${prova.id}`}>
+            <a className="botao sec" href={`#/hskk/prova/${prova.id}`}>
               fazer no modo prova
             </a>
-            <a className="link" href="#/regras">
+            <a className="link" href="#/hskk/regras">
               regras do HSKK
             </a>
           </div>
@@ -256,7 +256,7 @@ function EstudoRepetir({ prova, q, tent, audio, naRevisao }: { prova: Prova; q: 
       <div className="linha-revisao">
         {naRevisao ? (
           <>
-            ✓ esta frase está na <a href="#/revisao">revisão espaçada</a>.{" "}
+            ✓ esta frase está na <a href="#/hskk/revisao">revisão espaçada</a>.{" "}
             <button className="link" onClick={() => removeRevisao(prova.id, q.n)}>
               tirar
             </button>

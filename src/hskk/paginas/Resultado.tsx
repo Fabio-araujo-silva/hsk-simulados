@@ -85,7 +85,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
             <small>nota oficial</small>
             <span>
               Não dá para calcular: o HSKK é corrigido por avaliadores ouvindo a gravação (nota de 0 a 100, aprovação com 60) e os critérios por faixa não
-              são publicados. O % acima só mede quantos caracteres o reconhecimento de voz entendeu. Veja <a href="#/regras">as regras</a>.
+              são publicados. O % acima só mede quantos caracteres o reconhecimento de voz entendeu. Veja <a href="#/hskk/regras">as regras</a>.
             </span>
           </div>
         </div>
@@ -109,12 +109,12 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
             <input type="checkbox" checked={cfg.pinyin} onChange={(e) => mudaConfig({ pinyin: e.target.checked })} />
             pinyin <kbd>P</kbd>
           </label>
-          <a className="botao sec" href={`#/estudo/${prova.id}`}>
+          <a className="botao sec" href={`#/hskk/estudo/${prova.id}`}>
             estudar esta prova
           </a>
         </div>
         <p className="aviso">
-          Frases do 第一部分 abaixo de {cfg.limiarRevisao}% vão sozinhas para a <a href="#/revisao">revisão espaçada</a> quando são corrigidas.
+          Frases do 第一部分 abaixo de {cfg.limiarRevisao}% vão sozinhas para a <a href="#/hskk/revisao">revisão espaçada</a> quando são corrigidas.
         </p>
 
         {tent.notas?.[0] && (
@@ -168,7 +168,7 @@ function ItemRevisao({ prova, q, tentId, audio, mostraTexto }: { prova: Prova; q
         ) : q.parte === 2 ? (
           <>
             {q.img && <img className="miniatura" src={urlPublica(q.img)} alt={`figura ${q.n}`} />}
-            <a href={`#/estudo/${prova.id}/${q.n}`}>respostas-modelo e vocabulário →</a>
+            <a href={`#/hskk/estudo/${prova.id}/${q.n}`}>respostas-modelo e vocabulário →</a>
           </>
         ) : (
           <>
@@ -177,7 +177,7 @@ function ItemRevisao({ prova, q, tentId, audio, mostraTexto }: { prova: Prova; q
                 <Frase f={q.pergunta} />
               </span>
             )}
-            <a href={`#/estudo/${prova.id}/${q.n}`}>respostas-modelo →</a>
+            <a href={`#/hskk/estudo/${prova.id}/${q.n}`}>respostas-modelo →</a>
           </>
         )}
       </div>

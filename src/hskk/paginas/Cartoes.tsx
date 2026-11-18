@@ -5,7 +5,8 @@ import "../hskk.css";
 
 const ESTADOS = ["novo", "aprendendo", "revisão", "reaprendendo"];
 
-export function PaginaCartoes() {
+/** Frases orais na revisão espaçada — aparece na página Cartões do app, aba "Oral (HSKK)". */
+export function CartoesOrais() {
   const cartoes = useEstado((e) => e.cartoes);
   const [busca, setBusca] = useState("");
   const lista = useMemo(
@@ -27,8 +28,7 @@ export function PaginaCartoes() {
   }, [cartoes]);
 
   return (
-    <div className="pagina-cartoes">
-      <h1>Frases na revisão espaçada</h1>
+    <>
       <p>
         {Object.keys(cartoes).length} frases do 第一部分 · {contagem.novos} novas · {contagem.vencidos} vencidas. Elas entram aqui quando você fica abaixo do
         limiar de acerto (⚙) ou quando você manda na mão.
@@ -55,7 +55,7 @@ export function PaginaCartoes() {
                 {c.frase.pt && <small className="sub-pt">{c.frase.pt}</small>}
               </td>
               <td>
-                <a href={`#/estudo/${c.origem.prova}/${c.origem.n}`}>
+                <a href={`#/hskk/estudo/${c.origem.prova}/${c.origem.n}`}>
                   {c.origem.prova} nº {c.origem.n}
                 </a>
               </td>
@@ -76,6 +76,6 @@ export function PaginaCartoes() {
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 }

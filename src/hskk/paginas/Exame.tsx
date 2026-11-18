@@ -132,7 +132,7 @@ function Preparativos({ prova, emAndamento, onComeca }: { prova: Prova; emAndame
             fazer sem gravar
           </button>
         )}
-        <a className="link" href={`#/estudo/${prova.id}`}>
+        <a className="link" href={`#/hskk/estudo/${prova.id}`}>
           voltar ao estudo
         </a>
       </div>
@@ -190,7 +190,7 @@ function ProvaRodando({ prova, tentId }: { prova: Prova; tentId: string }) {
     }
     await Promise.allSettled(salvando.current);
     mudaTentativa(tentId, (t) => ({ ...t, fim: Date.now(), notas: { ...(t.notas ?? {}), 0: notasRef.current } }));
-    window.location.hash = `/resultado/${tentId}`;
+    window.location.hash = `/hskk/resultado/${tentId}`;
   };
 
   // liga/desliga a gravação conforme a janela de resposta do áudio
@@ -253,7 +253,7 @@ function ProvaRodando({ prova, tentId }: { prova: Prova; tentId: string }) {
       salva(rec.current);
       rec.current = null;
     }
-    window.location.hash = "/";
+    window.location.hash = "/hskk";
   };
 
   const total = prova.audio!.duracao;

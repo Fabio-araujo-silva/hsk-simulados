@@ -3,6 +3,7 @@ import { mudaConfig, resetaSimulado, useEstado } from "../armazenamento";
 import { carregaIndice, formataTempo, pontuacao, REGRAS, regras, secaoDe } from "../dados";
 import type { Nivel, ResumoProva, Tentativa } from "../tipos";
 import { notaDoEstudo } from "../correcao";
+import { CartaoHskk } from "../hskk/componentes/CartaoHskk";
 
 const nivelDe = (id: string): Nivel => (Number(id[1]) || 3) as Nivel;
 
@@ -52,7 +53,7 @@ export function EscolhaNivel() {
         <p>
           Provas reais já aplicadas (formato HSK 2.0), com o áudio original. No <b>modo prova</b> o tempo corre como no dia do exame; no{" "}
           <b>modo estudo</b> você confere cada questão, ouve o áudio palavra por palavra, traduz passando o mouse e manda o que errou para a
-          revisão espaçada. Escolha o nível:
+          revisão espaçada. Escolha o nível — ou o <b>HSKK</b>, a prova oral:
         </p>
       </section>
       <div className="niveis">
@@ -99,6 +100,7 @@ export function EscolhaNivel() {
             </a>
           );
         })}
+        <CartaoHskk />
       </div>
       <p className="nota-rodape">
         Regras gerais do HSK 2.0 (níveis 1–6): provas escritas, cada seção vale 100 pontos e a aprovação é com 60% do total. O áudio de cada

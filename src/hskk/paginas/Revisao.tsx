@@ -12,7 +12,8 @@ import "../hskk.css";
 
 const ANTECIPA_MS = 20 * 60 * 1000; // aprendendo: pode antecipar até 20 min se não houver mais nada
 
-export function PaginaRevisao() {
+/** Revisão espaçada das frases orais (第一部分) — aparece na página Revisão do app, aba "Oral (HSKK)". */
+export function RevisaoOral() {
   const cartoes = useEstado((e) => e.cartoes);
   const novosHoje = useEstado((e) => e.novosHoje[hojeChave()] ?? 0);
   const cfg = useConfig();
@@ -57,8 +58,8 @@ export function PaginaRevisao() {
           Ainda não há frases na revisão. Elas entram aqui sozinhas quando você repete uma frase do 第一部分 com menos de {cfg.limiarRevisao}% de acerto
           (no modo estudo ou na revisão de uma prova) — ou quando você manda na mão.
         </p>
-        <a className="botao pri" href="#/">
-          ir para as provas
+        <a className="botao pri" href="#/hskk">
+          ir para as provas do HSKK
         </a>
       </div>
     );
@@ -87,7 +88,7 @@ export function PaginaRevisao() {
         <span>
           {fila.length} na fila · {fila.filter(ehNovo).length} novas
         </span>
-        <a href="#/cartoes">ver todas as frases</a>
+        <a href="#/hskk/cartoes">ver todas as frases</a>
       </div>
       <SessaoCartao key={atual.id + atual.srs.reps + atual.srs.due} cartao={atual} />
     </div>

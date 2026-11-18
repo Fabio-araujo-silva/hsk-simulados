@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { exportaBackup, formataTudo, importaBackup, mudaConfig, useConfig, useEstado } from "../armazenamento";
+import { ConfigHskk } from "../hskk/componentes/ConfigHskk";
 
 export function PaginaConfig() {
   const cfg = useConfig();
@@ -23,7 +24,7 @@ export function PaginaConfig() {
     <div className="config">
       <h1>Configurações</h1>
       <section>
-        <h2>Estudo</h2>
+        <h2>Estudo (HSK 1–3)</h2>
         <label className="linha-cfg">
           <input type="checkbox" checked={cfg.transcricaoAntes} onChange={(e) => mudaConfig({ transcricaoAntes: e.target.checked })} />
           Mostrar a transcrição do áudio antes de responder (listening)
@@ -46,8 +47,11 @@ export function PaginaConfig() {
         </label>
       </section>
       <section>
-        <h2>Backup</h2>
-        <p>Seu progresso (provas, respostas, cartões e marcações do vocabulário) fica salvo neste navegador. Baixe um backup de vez em quando — e para levar para outro computador.</p>
+        <h2>Backup (HSK 1–3)</h2>
+        <p>
+          Seu progresso do HSK (provas, respostas, cartões e marcações do vocabulário) fica salvo neste navegador. Baixe um backup de vez em
+          quando — e para levar para outro computador. O HSKK tem backup próprio, na seção dele mais abaixo.
+        </p>
         <div className="acoes">
           <button className="pri" onClick={baixa}>
             baixar backup (.json)
@@ -67,7 +71,7 @@ export function PaginaConfig() {
                 importaBackup(await f.text());
                 setMsg("Backup restaurado (mesclado com o que já existia; nas marcações do vocabulário fica a versão alterada por último).");
               } catch (err) {
-                setMsg(`Erro: ${String(err)}`);
+                setMsg(`Erro: ${err instanceof Error ? err.message : String(err)}`);
               }
             }}
           />
@@ -75,10 +79,11 @@ export function PaginaConfig() {
         {msg && <p className="aviso">{msg}</p>}
       </section>
       <section className="zona-perigo">
-        <h2>Formatar todo o progresso</h2>
+        <h2>Formatar todo o progresso do HSK</h2>
         <p>
-          Apaga <b>tudo</b>: {Object.keys(nTent).length} tentativas (estudo e provas, com as notas), {Object.keys(nCart).length} cartões de revisão
-          espaçada e {Object.keys(nMarcas).length} marcações do vocabulário. As configurações ficam. Por segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
+          Apaga <b>tudo do HSK 1–3</b>: {Object.keys(nTent).length} tentativas (estudo e provas, com as notas), {Object.keys(nCart).length} cartões de
+          revisão espaçada e {Object.keys(nMarcas).length} marcações do vocabulário. O HSKK não é afetado. As configurações ficam. Por segurança o
+          servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
         </p>
         <div className="acoes">
           <input className="entrada" placeholder='digite FORMATAR' value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />
@@ -103,6 +108,9 @@ export function PaginaConfig() {
           revisores. Use só para estudo pessoal.
         </p>
       </section>
+      <div className="hskk">
+        <ConfigHskk />
+      </div>
     </div>
   );
 }

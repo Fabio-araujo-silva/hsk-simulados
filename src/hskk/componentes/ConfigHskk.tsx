@@ -2,10 +2,12 @@ import { useRef, useState } from "react";
 import { exportaBackup, formataTudo, importaBackup, mudaConfig, useConfig, useEstado } from "../armazenamento";
 import "../hskk.css";
 
-export function PaginaConfig() {
+/** Opções, backup e formatação do HSKK (prova oral), na página ⚙ do app. O progresso do HSKK é separado do HSK. */
+export function ConfigHskk() {
   const cfg = useConfig();
   const arquivo = useRef<HTMLInputElement>(null);
   const [msg, setMsg] = useState<string | null>(null);
+  const [msgFormata, setMsgFormata] = useState<string | null>(null);
   const [confirmacao, setConfirmacao] = useState("");
   const nTent = useEstado((e) => e.tentativas);
   const nCart = useEstado((e) => e.cartoes);
@@ -20,10 +22,10 @@ export function PaginaConfig() {
   };
 
   return (
-    <div className="config">
-      <h1>Configurações</h1>
+    <>
       <section>
-        <h2>Estudo</h2>
+        <h2>HSKK (prova oral)</h2>
+        <p>O HSKK tem progresso, opções e revisão próprios: nada nesta seção mexe no HSK.</p>
         <label className="linha-cfg">
           <input type="checkbox" checked={cfg.textoAntes} onChange={(e) => mudaConfig({ textoAntes: e.target.checked })} />
           Parte 1: mostrar o texto da frase antes de eu tentar repetir (sem isso, o texto aparece depois da 1ª gravação)
@@ -34,27 +36,37 @@ export function PaginaConfig() {
         </label>
         <label className="linha-cfg">
           <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
-          Permitir pausar o modo prova (no exame real não pode)
+          Permitir pausar o modo prova do HSKK (no exame real não pode)
         </label>
         <label className="linha-cfg">
           Parte 1: abaixo de
-          <input className="entrada curta" type="number" min={0} max={100} value={cfg.limiarRevisao} onChange={(e) => mudaConfig({ limiarRevisao: Math.max(0, Math.min(100, Number(e.target.value) || 0)) })} />
+          <input
+            className="entrada curta"
+            type="number"
+            min={0}
+            max={100}
+            value={cfg.limiarRevisao}
+            onChange={(e) => mudaConfig({ limiarRevisao: Math.max(0, Math.min(100, Number(e.target.value) || 0)) })}
+          />
           % de acerto a frase vai para a revisão espaçada
         </label>
         <label className="linha-cfg">
-          Frases novas por dia na revisão
+          Frases orais novas por dia na revisão
           <input className="entrada curta" type="number" min={0} max={500} value={cfg.novosPorDia} onChange={(e) => mudaConfig({ novosPorDia: Number(e.target.value) || 0 })} />
         </label>
-      </section>
-      <section>
-        <h2>Backup</h2>
-        <p>Com o servidor local (<code>npm run dev</code>) o progresso do HSKK fica em <code>progresso/hskk.json</code> e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não os áudios).</p>
+
+        <h3>Backup do HSKK</h3>
+        <p>
+          Com o servidor local (<code>npm run dev</code>) o progresso do HSKK fica em <code>progresso/hskk.json</code> (backup diário em{" "}
+          <code>progresso/backups/hskk-*.json</code>) e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não os
+          áudios).
+        </p>
         <div className="acoes">
           <button className="pri" onClick={baixa}>
-            baixar backup (.json)
+            baixar backup do HSKK (.json)
           </button>
           <button className="sec" onClick={() => arquivo.current?.click()}>
-            restaurar backup…
+            restaurar backup do HSKK…
           </button>
           <input
             ref={arquivo}
@@ -66,7 +78,7 @@ export function PaginaConfig() {
               if (!f) return;
               try {
                 importaBackup(await f.text());
-                setMsg("Backup restaurado (mesclado com o que já existia).");
+                setMsg("Backup do HSKK restaurado (mesclado com o que já existia).");
               } catch (err) {
                 setMsg(`Erro: ${String(err)}`);
               }
@@ -74,36 +86,37 @@ export function PaginaConfig() {
           />
         </div>
         {msg && <p className="aviso">{msg}</p>}
+
+        <h3>Sobre o material</h3>
+        <p>
+          Provas reais e amostras oficiais do HSKK 中级. Cada prova mostra no início do HSKK de onde veio o caderno, o texto das frases e o áudio
+          (oficial, redigitado por terceiros, transcrito do áudio ou tirado de frames de vídeo) — detalhes em <code>docs/hskk.md</code>. Traduções,
+          respostas-modelo e vocabulário foram escritos para estudo e <b>não são oficiais</b>. Use só para estudo pessoal.
+        </p>
       </section>
       <section className="zona-perigo">
-        <h2>Formatar todo o progresso</h2>
+        <h2>Formatar o progresso do HSKK</h2>
         <p>
-          Apaga <b>tudo</b>: {Object.keys(nTent).length} tentativas (estudo e provas) e {Object.keys(nCart).length} frases da revisão espaçada. Os
-          arquivos de áudio em <code>progresso/gravacoes/</code> não são apagados. As configurações ficam. Por segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
+          Apaga <b>tudo do HSKK</b>: {Object.keys(nTent).length} tentativas (estudo e provas) e {Object.keys(nCart).length} frases da revisão
+          espaçada. O HSK não é afetado. Os arquivos de áudio em <code>progresso/gravacoes/</code> não são apagados e as configurações ficam. Por
+          segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/hskk-antes-*.json</code>.
         </p>
         <div className="acoes">
-          <input className="entrada" placeholder='digite FORMATAR' value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />
+          <input className="entrada" placeholder="digite FORMATAR" value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />
           <button
             className="perigo"
             disabled={confirmacao.trim().toUpperCase() !== "FORMATAR"}
             onClick={() => {
               formataTudo();
               setConfirmacao("");
-              setMsg("Progresso formatado: tudo começa do zero.");
+              setMsgFormata("Progresso do HSKK formatado: tudo começa do zero.");
             }}
           >
-            formatar todo o progresso
+            formatar o progresso do HSKK
           </button>
         </div>
+        {msgFormata && <p className="aviso">{msgFormata}</p>}
       </section>
-      <section>
-        <h2>Sobre o material</h2>
-        <p>
-          Provas reais e amostras oficiais do HSKK 中级. Cada prova mostra na página inicial de onde veio o caderno, o texto das frases e o áudio
-          (oficial, redigitado por terceiros, transcrito do áudio ou tirado de frames de vídeo) — detalhes no README. Traduções, respostas-modelo e
-          vocabulário foram escritos para estudo e <b>não são oficiais</b>. Use só para estudo pessoal.
-        </p>
-      </section>
-    </div>
+    </>
   );
 }

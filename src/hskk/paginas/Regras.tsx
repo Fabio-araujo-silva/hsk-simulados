@@ -138,7 +138,7 @@ export function PaginaRegras() {
       </ul>
       <p className="fonte-regras">
         Fontes: capas dos cadernos (样题 de 2023 do 教育部中外语言交流合作中心; H81001, H81002 e H81003 do 国家汉办), folheto HSK口试 e folha do
-        Confucius Institute UK (nota 100 / aprovação 60). Detalhes de cada prova no README.
+        Confucius Institute UK (nota 100 / aprovação 60). Detalhes de cada prova em docs/hskk.md.
       </p>
     </div>
   );
