@@ -1,0 +1,695 @@
+{
+ "id": "H81312",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "这个电梯只到七层。",
+   "pt": "Este elevador só vai até o sétimo andar."
+  },
+  {
+   "n": 2,
+   "zh": "健康比什么都重要。",
+   "pt": "A saúde é mais importante do que qualquer coisa."
+  },
+  {
+   "n": 3,
+   "zh": "我们打算明年结婚。",
+   "pt": "A gente pretende se casar no ano que vem."
+  },
+  {
+   "n": 4,
+   "zh": "你发的电子邮件我看到了。",
+   "pt": "Vi o e-mail que você mandou."
+  },
+  {
+   "n": 5,
+   "zh": "越着急越容易出错。",
+   "pt": "Quanto mais afobado você fica, mais fácil é errar."
+  },
+  {
+   "n": 6,
+   "zh": "他专门研究中国经济史。",
+   "pt": "Ele se dedica a pesquisar a história econômica da China."
+  },
+  {
+   "n": 7,
+   "zh": "那条路平时很少堵车。",
+   "pt": "Normalmente aquela rua quase não tem engarrafamento."
+  },
+  {
+   "n": 8,
+   "zh": "计划进行得不太顺利。",
+   "pt": "O plano não está indo muito bem."
+  },
+  {
+   "n": 9,
+   "zh": "知识是需要慢慢积累的。",
+   "pt": "Conhecimento é algo que se acumula aos poucos."
+  },
+  {
+   "n": 10,
+   "zh": "一会儿我们再继续讨论。",
+   "pt": "Daqui a pouco a gente continua a discussão."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/H81312/11.jpg",
+   "cena": "Família (pai, mãe, filha e filho) com malas, chapéus, cesta e bola de praia, saindo de férias.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上是一家四口，有爸爸、妈妈、女儿和儿子。",
+       "pt": "Na foto há uma família de quatro pessoas: pai, mãe, filha e filho."
+      },
+      {
+       "zh": "他们拿着很多行李，看起来要去旅游。",
+       "pt": "Eles estão com muita bagagem; parece que vão viajar."
+      },
+      {
+       "zh": "妈妈和女儿都戴着帽子，爸爸妈妈还戴着太阳镜。",
+       "pt": "A mãe e a filha estão de chapéu, e o pai e a mãe ainda usam óculos de sol."
+      },
+      {
+       "zh": "儿子手里拿着一个很大的球。",
+       "pt": "O filho está segurando uma bola bem grande."
+      },
+      {
+       "zh": "我想他们可能要去海边玩儿。",
+       "pt": "Acho que eles devem estar indo para a praia."
+      },
+      {
+       "zh": "现在是夏天，孩子们放暑假了。",
+       "pt": "Agora é verão, e as crianças estão de férias."
+      },
+      {
+       "zh": "他们每个人都笑得很开心。",
+       "pt": "Todos estão sorrindo, bem felizes."
+      },
+      {
+       "zh": "我觉得和家人一起去旅游是最快乐的事情。",
+       "pt": "Acho que viajar com a família é a coisa mais gostosa que existe."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上是幸福的一家四口：爸爸、妈妈、一个女儿和一个儿子。",
+       "pt": "Nesta imagem há uma família feliz de quatro pessoas: pai, mãe, uma filha e um filho."
+      },
+      {
+       "zh": "他们带着好几个行李箱和包，看样子是准备出发去旅行。",
+       "pt": "Eles levam várias malas e bolsas; pelo jeito estão prestes a sair de viagem."
+      },
+      {
+       "zh": "爸爸和妈妈都戴着太阳镜，妈妈和女儿还戴着漂亮的帽子。",
+       "pt": "O pai e a mãe estão de óculos de sol, e a mãe e a filha ainda usam chapéus bonitos."
+      },
+      {
+       "zh": "从这些东西来看，他们应该是要去海边度假。",
+       "pt": "A julgar por essas coisas, devem estar indo passar as férias na praia."
+      },
+      {
+       "zh": "我猜孩子们刚放暑假，父母也请了几天假。",
+       "pt": "Imagino que as crianças acabaram de entrar de férias e os pais também tiraram uns dias de folga."
+      },
+      {
+       "zh": "我觉得一家人一起旅行有很多好处。",
+       "pt": "Acho que viajar em família tem muitas vantagens."
+      },
+      {
+       "zh": "平时父母工作忙，孩子学习也忙，大家在一起的时间很少。",
+       "pt": "No dia a dia, os pais estão ocupados com o trabalho e os filhos com os estudos, e sobra pouco tempo juntos."
+      },
+      {
+       "zh": "旅行的时候，大家可以一起游泳、晒太阳、聊天，感情会变得更好。",
+       "pt": "Na viagem, todos podem nadar, pegar sol e conversar juntos, e a relação fica mais próxima."
+      },
+      {
+       "zh": "另外，孩子们还能看到新的地方，学到很多书本上学不到的东西。",
+       "pt": "Além disso, as crianças conhecem lugares novos e aprendem muita coisa que os livros não ensinam."
+      },
+      {
+       "zh": "所以我希望以后也能经常和家人一起去旅行。",
+       "pt": "Por isso espero, no futuro, também viajar bastante com a minha família."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "一家四口",
+     "py": "yì jiā sì kǒu",
+     "pt": "família de quatro pessoas"
+    },
+    {
+     "w": "行李",
+     "py": "xíngli",
+     "pt": "bagagem"
+    },
+    {
+     "w": "帽子",
+     "py": "màozi",
+     "pt": "chapéu; boné"
+    },
+    {
+     "w": "太阳镜",
+     "py": "tàiyángjìng",
+     "pt": "óculos de sol"
+    },
+    {
+     "w": "出发",
+     "py": "chūfā",
+     "pt": "partir; sair (de viagem)"
+    },
+    {
+     "w": "海边",
+     "py": "hǎibiān",
+     "pt": "praia; beira-mar"
+    },
+    {
+     "w": "度假",
+     "py": "dùjià",
+     "pt": "passar as férias"
+    },
+    {
+     "w": "放暑假",
+     "py": "fàng shǔjià",
+     "pt": "entrar de férias de verão"
+    },
+    {
+     "w": "请假",
+     "py": "qǐngjià",
+     "pt": "pedir folga; tirar licença"
+    },
+    {
+     "w": "感情",
+     "py": "gǎnqíng",
+     "pt": "laço afetivo; sentimento"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "戴着……／带着……",
+     "pt": "戴 (dài) = usar no corpo (chapéu, óculos); 带 (dài) = levar consigo — mesmo som, sentidos diferentes",
+     "ex": "爸爸戴着太阳镜，带着两个行李箱。",
+     "exPt": "O pai está de óculos de sol e leva duas malas."
+    },
+    {
+     "zh": "……上学不到的东西",
+     "pt": "coisas que não se aprendem em… (complemento potencial 学不到)",
+     "ex": "孩子们能学到很多书本上学不到的东西。",
+     "exPt": "As crianças aprendem muita coisa que não se aprende nos livros."
+    },
+    {
+     "zh": "准备……",
+     "pt": "estar prestes a / se preparando para…",
+     "ex": "他们准备出发去旅行。",
+     "exPt": "Eles estão prestes a sair de viagem."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/H81312/12.jpg",
+   "cena": "Cinco pessoas em traje social brindando com taças de vinho tinto (comemoração no trabalho).",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上有五个人，三个男的，两个女的。",
+       "pt": "Na foto há cinco pessoas: três homens e duas mulheres."
+      },
+      {
+       "zh": "他们都穿得很正式，可能是同事。",
+       "pt": "Todos estão vestidos de maneira formal; devem ser colegas de trabalho."
+      },
+      {
+       "zh": "他们手里都拿着酒杯，正在一起干杯。",
+       "pt": "Todos seguram taças e estão brindando juntos."
+      },
+      {
+       "zh": "每个人都笑得很开心。",
+       "pt": "Todo mundo está sorrindo, muito feliz."
+      },
+      {
+       "zh": "我想他们的公司可能有好消息。",
+       "pt": "Acho que a empresa deles deve ter recebido uma boa notícia."
+      },
+      {
+       "zh": "比如他们完成了一个很重要的任务，或者公司今年赚了很多钱。",
+       "pt": "Por exemplo, eles concluíram uma tarefa muito importante, ou a empresa lucrou muito este ano."
+      },
+      {
+       "zh": "所以大家一起吃饭，一起庆祝。",
+       "pt": "Por isso todos estão jantando e comemorando juntos."
+      },
+      {
+       "zh": "我觉得大家一起努力，成功以后一起庆祝，这样的感觉很好。",
+       "pt": "Acho ótimo quando todos se esforçam juntos e depois comemoram juntos o resultado."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "图片上有五个穿得很正式的人，有男有女，他们正举着酒杯干杯。",
+       "pt": "Na foto há cinco pessoas vestidas formalmente, homens e mulheres, erguendo as taças num brinde."
+      },
+      {
+       "zh": "从他们的衣服来看，这应该是一个很正式的场合。",
+       "pt": "Pelas roupas, deve ser uma ocasião bem formal."
+      },
+      {
+       "zh": "我猜他们是同一个公司的同事，今天公司在举行晚会。",
+       "pt": "Imagino que sejam colegas da mesma empresa e que hoje a empresa esteja dando uma festa."
+      },
+      {
+       "zh": "那位年纪比较大的男士可能是他们的经理。",
+       "pt": "O homem mais velho deve ser o gerente deles."
+      },
+      {
+       "zh": "经理可能刚刚说完一段话，感谢大家这一年的努力。",
+       "pt": "O gerente talvez tenha acabado de fazer um discurso agradecendo o esforço de todos ao longo do ano."
+      },
+      {
+       "zh": "大家听了都很激动，于是一起举杯庆祝。",
+       "pt": "Todos ficaram emocionados e então ergueram as taças para comemorar."
+      },
+      {
+       "zh": "我认为，公司偶尔举办这样的活动是很有必要的。",
+       "pt": "Acho que é muito importante a empresa fazer esse tipo de evento de vez em quando."
+      },
+      {
+       "zh": "一方面，它能让员工放松一下，减轻工作压力。",
+       "pt": "Por um lado, os funcionários conseguem relaxar e aliviar a pressão do trabalho."
+      },
+      {
+       "zh": "另一方面，大家在轻松的气氛中聊天，同事之间的关系也会更好。",
+       "pt": "Por outro, conversando num clima descontraído, a relação entre os colegas também melhora."
+      },
+      {
+       "zh": "总之，这样的活动对公司和员工都有好处。",
+       "pt": "Enfim, esse tipo de evento é bom tanto para a empresa quanto para os funcionários."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "干杯",
+     "py": "gānbēi",
+     "pt": "brindar; saúde!"
+    },
+    {
+     "w": "酒杯",
+     "py": "jiǔbēi",
+     "pt": "taça; copo de bebida"
+    },
+    {
+     "w": "举",
+     "py": "jǔ",
+     "pt": "erguer; levantar"
+    },
+    {
+     "w": "正式",
+     "py": "zhèngshì",
+     "pt": "formal"
+    },
+    {
+     "w": "举行",
+     "py": "jǔxíng",
+     "pt": "realizar (um evento)"
+    },
+    {
+     "w": "晚会",
+     "py": "wǎnhuì",
+     "pt": "festa (à noite); confraternização"
+    },
+    {
+     "w": "庆祝",
+     "py": "qìngzhù",
+     "pt": "comemorar"
+    },
+    {
+     "w": "员工",
+     "py": "yuángōng",
+     "pt": "funcionário"
+    },
+    {
+     "w": "气氛",
+     "py": "qìfēn",
+     "pt": "clima; ambiente"
+    },
+    {
+     "w": "偶尔",
+     "py": "ǒu'ěr",
+     "pt": "de vez em quando"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "有男有女",
+     "pt": "tem homens e mulheres (有……有…… = tem de tudo um pouco)",
+     "ex": "图片上有五个人，有男有女。",
+     "exPt": "Na foto há cinco pessoas, homens e mulheres."
+    },
+    {
+     "zh": "一方面……，另一方面……",
+     "pt": "por um lado…, por outro…",
+     "ex": "一方面能放松一下，另一方面能和同事多聊聊。",
+     "exPt": "Por um lado dá para relaxar; por outro, dá para conversar mais com os colegas."
+    },
+    {
+     "zh": "于是……",
+     "pt": "então / aí (o que aconteceu em seguida, como consequência)",
+     "ex": "大家听了很激动，于是一起举杯庆祝。",
+     "exPt": "Todos ficaram emocionados e então ergueram as taças para comemorar."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "请简单介绍一下，跟一年前比，你有哪些变化？",
+   "pt": "Conte brevemente: em comparação com um ano atrás, o que mudou em você?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "跟一年前比，我有很多变化。",
+       "pt": "Em comparação com um ano atrás, mudei bastante."
+      },
+      {
+       "zh": "第一，我的汉语比以前好多了。",
+       "pt": "Primeiro, meu chinês está muito melhor do que antes."
+      },
+      {
+       "zh": "一年前我只会说“你好”和“谢谢”，现在我能跟中国朋友简单地聊天了。",
+       "pt": "Um ano atrás eu só sabia dizer “olá” e “obrigado”; agora já consigo bater um papo simples com amigos chineses."
+      },
+      {
+       "zh": "第二，我开始每天早上跑步，身体比以前健康了。",
+       "pt": "Segundo, comecei a correr toda manhã e estou mais saudável do que antes."
+      },
+      {
+       "zh": "第三，我搬家了，现在住的地方离公司很近。",
+       "pt": "Terceiro, eu me mudei, e agora moro bem perto da empresa."
+      },
+      {
+       "zh": "以前我每天要坐一个小时的公共汽车上班，现在走路十分钟就到了。",
+       "pt": "Antes eu levava uma hora de ônibus para chegar ao trabalho; agora chego em dez minutos a pé."
+      },
+      {
+       "zh": "我觉得这一年我过得很好，我对这些变化很满意。",
+       "pt": "Acho que este ano foi muito bom, e estou satisfeito com essas mudanças."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "跟一年前比，我的生活发生了不少变化，我想简单地说三个方面。",
+       "pt": "Em comparação com um ano atrás, minha vida mudou bastante; quero falar rapidamente de três aspectos."
+      },
+      {
+       "zh": "首先是学习方面，一年前我刚开始学汉语，连拼音都读不准。",
+       "pt": "Primeiro, nos estudos: um ano atrás eu tinha acabado de começar a estudar chinês e não conseguia nem ler o pinyin direito."
+      },
+      {
+       "zh": "经过一年的努力，我不但能听懂简单的对话，而且已经准备参加口语考试了。",
+       "pt": "Depois de um ano de esforço, não só entendo diálogos simples, como já estou me preparando para o exame oral."
+      },
+      {
+       "zh": "其次是生活习惯方面，以前我很少运动，经常熬夜，身体也不太好。",
+       "pt": "Segundo, nos hábitos: antes eu quase não fazia exercício, vivia dormindo tarde e minha saúde não era muito boa."
+      },
+      {
+       "zh": "现在我养成了早睡早起的习惯，每个周末还和朋友去爬山。",
+       "pt": "Agora criei o hábito de dormir e acordar cedo, e todo fim de semana ainda faço trilha com os amigos."
+      },
+      {
+       "zh": "最后是性格方面，以前我比较害羞，不敢跟陌生人说话。",
+       "pt": "Por último, na personalidade: antes eu era meio tímido e não tinha coragem de falar com desconhecidos."
+      },
+      {
+       "zh": "后来我参加了学校的汉语角，认识了很多新朋友，慢慢变得开朗了。",
+       "pt": "Depois comecei a frequentar o grupo de conversação em chinês da faculdade, fiz muitos amigos novos e aos poucos fiquei mais extrovertido."
+      },
+      {
+       "zh": "总的来说，我对这一年的变化很满意。",
+       "pt": "De modo geral, estou muito satisfeito com as mudanças deste ano."
+      },
+      {
+       "zh": "我希望明年的我会比今天的我更好。",
+       "pt": "Espero que o eu do ano que vem seja ainda melhor do que o de hoje."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "变化",
+     "py": "biànhuà",
+     "pt": "mudança; mudar"
+    },
+    {
+     "w": "方面",
+     "py": "fāngmiàn",
+     "pt": "aspecto; área"
+    },
+    {
+     "w": "习惯",
+     "py": "xíguàn",
+     "pt": "hábito"
+    },
+    {
+     "w": "养成",
+     "py": "yǎngchéng",
+     "pt": "criar (um hábito)"
+    },
+    {
+     "w": "性格",
+     "py": "xìnggé",
+     "pt": "personalidade"
+    },
+    {
+     "w": "害羞",
+     "py": "hàixiū",
+     "pt": "tímido"
+    },
+    {
+     "w": "陌生人",
+     "py": "mòshēngrén",
+     "pt": "desconhecido; estranho"
+    },
+    {
+     "w": "开朗",
+     "py": "kāilǎng",
+     "pt": "extrovertido; alegre"
+    },
+    {
+     "w": "熬夜",
+     "py": "áoyè",
+     "pt": "virar a noite; dormir muito tarde"
+    },
+    {
+     "w": "搬家",
+     "py": "bānjiā",
+     "pt": "mudar de casa"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "跟……比，……",
+     "pt": "em comparação com…, … (responde direto à pergunta)",
+     "ex": "跟一年前比，我的汉语好多了。",
+     "exPt": "Em comparação com um ano atrás, meu chinês está muito melhor."
+    },
+    {
+     "zh": "首先是……方面，其次是……方面，最后是……方面",
+     "pt": "organizar a resposta por aspectos (estudos, hábitos, personalidade…)",
+     "ex": "首先是学习方面，其次是生活方面，最后是性格方面。",
+     "exPt": "Primeiro nos estudos, depois na rotina e, por último, na personalidade."
+    },
+    {
+     "zh": "变得……",
+     "pt": "ficar / tornar-se… (mudança de estado)",
+     "ex": "我慢慢变得开朗了。",
+     "exPt": "Aos poucos fiquei mais extrovertido."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "你对“失败是成功之母”这句话是怎么理解的？",
+   "pt": "Como você entende a frase “o fracasso é a mãe do sucesso”?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我觉得这句话的意思是，失败了不要难过，要从失败中学习。",
+       "pt": "Acho que essa frase quer dizer que, quando a gente fracassa, não deve ficar triste, e sim aprender com o fracasso."
+      },
+      {
+       "zh": "每个人都会失败，失败不是坏事。",
+       "pt": "Todo mundo fracassa às vezes, e fracassar não é ruim."
+      },
+      {
+       "zh": "失败以后，我们可以知道自己哪里做得不好。",
+       "pt": "Depois de um fracasso, a gente descobre onde errou."
+      },
+      {
+       "zh": "下次再做的时候，就会做得更好。",
+       "pt": "Na próxima vez, a gente faz melhor."
+      },
+      {
+       "zh": "比如我第一次参加汉语考试的时候，没有通过。",
+       "pt": "Por exemplo, na primeira vez que fiz uma prova de chinês, não passei."
+      },
+      {
+       "zh": "我很难过，但是我没有放弃。",
+       "pt": "Fiquei muito triste, mas não desisti."
+      },
+      {
+       "zh": "后来我每天多练习一个小时，第二次就通过了。",
+       "pt": "Depois passei a praticar uma hora a mais por dia e, na segunda vez, passei."
+      },
+      {
+       "zh": "所以我同意这句话，失败真的是成功之母。",
+       "pt": "Por isso concordo com essa frase: o fracasso é mesmo a mãe do sucesso."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "“失败是成功之母”是一句很有名的话，我非常同意。",
+       "pt": "“O fracasso é a mãe do sucesso” é um ditado muito famoso, e concordo totalmente com ele."
+      },
+      {
+       "zh": "我理解的意思是，失败并不可怕，它可以帮助我们找到成功的方法。",
+       "pt": "Do jeito que eu entendo, o fracasso não é algo a temer; ele pode nos ajudar a encontrar o caminho do sucesso."
+      },
+      {
+       "zh": "首先，失败能让我们发现自己的问题。",
+       "pt": "Primeiro, o fracasso nos faz descobrir nossos próprios problemas."
+      },
+      {
+       "zh": "如果一直很顺利，我们可能不会注意到自己的缺点。",
+       "pt": "Se tudo sempre der certo, talvez a gente nem perceba os próprios defeitos."
+      },
+      {
+       "zh": "其次，失败能让我们变得更坚强。",
+       "pt": "Segundo, o fracasso nos torna mais fortes."
+      },
+      {
+       "zh": "经历过失败的人，以后遇到困难的时候，会更冷静，也更有信心。",
+       "pt": "Quem já passou por um fracasso encara as dificuldades seguintes com mais calma e mais confiança."
+      },
+      {
+       "zh": "我学开车的时候就是这样。",
+       "pt": "Foi exatamente o que aconteceu quando aprendi a dirigir."
+      },
+      {
+       "zh": "第一次考驾照的时候，我因为太紧张，没有通过。",
+       "pt": "Na primeira vez que fiz a prova de direção, fiquei nervoso demais e não passei."
+      },
+      {
+       "zh": "后来我认真总结了原因，又练习了一个月，第二次考试顺利通过了。",
+       "pt": "Depois analisei com calma o que deu errado, treinei mais um mês e, na segunda tentativa, passei sem problemas."
+      },
+      {
+       "zh": "总之，只要我们能从失败中学习，失败就会变成成功的开始。",
+       "pt": "Enfim, desde que a gente aprenda com o fracasso, ele vira o começo do sucesso."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "失败",
+     "py": "shībài",
+     "pt": "fracassar; fracasso"
+    },
+    {
+     "w": "成功",
+     "py": "chénggōng",
+     "pt": "sucesso; ter sucesso"
+    },
+    {
+     "w": "理解",
+     "py": "lǐjiě",
+     "pt": "entender; interpretar"
+    },
+    {
+     "w": "可怕",
+     "py": "kěpà",
+     "pt": "assustador; terrível"
+    },
+    {
+     "w": "缺点",
+     "py": "quēdiǎn",
+     "pt": "defeito; ponto fraco"
+    },
+    {
+     "w": "坚强",
+     "py": "jiānqiáng",
+     "pt": "forte (emocionalmente)"
+    },
+    {
+     "w": "冷静",
+     "py": "lěngjìng",
+     "pt": "calmo; sereno"
+    },
+    {
+     "w": "总结",
+     "py": "zǒngjié",
+     "pt": "fazer um balanço; tirar lições"
+    },
+    {
+     "w": "驾照",
+     "py": "jiàzhào",
+     "pt": "carteira de motorista"
+    },
+    {
+     "w": "通过",
+     "py": "tōngguò",
+     "pt": "passar (numa prova)"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "这句话的意思是……／我理解的意思是……",
+     "pt": "explicar o ditado antes de dar a opinião",
+     "ex": "这句话的意思是，失败了不要难过。",
+     "exPt": "Essa frase quer dizer que, quando a gente fracassa, não deve ficar triste."
+    },
+    {
+     "zh": "从……中学习",
+     "pt": "aprender com…",
+     "ex": "我们要从失败中学习。",
+     "exPt": "Precisamos aprender com o fracasso."
+    },
+    {
+     "zh": "因为……，（所以）……",
+     "pt": "porque…, (então)… — conta a causa e o resultado",
+     "ex": "我因为太紧张，没有通过考试。",
+     "exPt": "Fiquei nervoso demais e por isso não passei na prova."
+    }
+   ]
+  }
+ ]
+}

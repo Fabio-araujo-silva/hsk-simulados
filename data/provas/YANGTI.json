@@ -1,0 +1,711 @@
+{
+ "id": "YANGTI",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "你好，我想办张信用卡。",
+   "pt": "Olá, eu queria fazer um cartão de crédito."
+  },
+  {
+   "n": 2,
+   "zh": "别害怕，去试试看。",
+   "pt": "Não tenha medo, vai lá e tenta."
+  },
+  {
+   "n": 3,
+   "zh": "他对那儿的环境非常满意。",
+   "pt": "Ele está muito satisfeito com o ambiente de lá."
+  },
+  {
+   "n": 4,
+   "zh": "这个游戏一点儿也不难。",
+   "pt": "Esse jogo não é nem um pouco difícil."
+  },
+  {
+   "n": 5,
+   "zh": "把电视声音关小些。",
+   "pt": "Abaixa um pouco o volume da TV."
+  },
+  {
+   "n": 6,
+   "zh": "厨房的垃圾桶满了。",
+   "pt": "A lixeira da cozinha está cheia."
+  },
+  {
+   "n": 7,
+   "zh": "那家餐厅的生意一直挺好的。",
+   "pt": "Aquele restaurante sempre teve bastante movimento."
+  },
+  {
+   "n": 8,
+   "zh": "请填一下您的联系电话。",
+   "pt": "Por favor, preencha o seu telefone de contato."
+  },
+  {
+   "n": 9,
+   "zh": "机会永远留给有准备的人。",
+   "pt": "A oportunidade sempre fica para quem está preparado."
+  },
+  {
+   "n": 10,
+   "zh": "大部分人都支持这个计划。",
+   "pt": "A maioria das pessoas apoia esse plano."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/YANGTI/11.jpg",
+   "cena": "Mãe e filha pequena lavando a louça juntas na pia da cozinha, sorrindo; a mãe ajuda a menina a segurar o prato.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "这张图片里有一个妈妈和她的女儿。",
+       "pt": "Nesta foto há uma mãe e a filha dela."
+      },
+      {
+       "zh": "她们在厨房里一起洗碗。",
+       "pt": "Elas estão lavando a louça juntas na cozinha."
+      },
+      {
+       "zh": "女儿还很小，可是她洗得很认真。",
+       "pt": "A filha ainda é bem pequena, mas está lavando com muito capricho."
+      },
+      {
+       "zh": "妈妈站在女儿后面，帮她拿着盘子。",
+       "pt": "A mãe está atrás da filha, ajudando a segurar o prato."
+      },
+      {
+       "zh": "她们两个人都笑得很开心。",
+       "pt": "As duas estão sorrindo, bem felizes."
+      },
+      {
+       "zh": "我觉得这个妈妈很会教孩子。",
+       "pt": "Acho que essa mãe sabe educar bem a filha."
+      },
+      {
+       "zh": "孩子从小帮父母做家务，是一件好事。",
+       "pt": "É muito bom a criança ajudar os pais nas tarefas de casa desde pequena."
+      },
+      {
+       "zh": "我小时候也常常帮妈妈洗碗。",
+       "pt": "Quando eu era criança, também ajudava muito minha mãe a lavar a louça."
+      },
+      {
+       "zh": "现在想起来，我还觉得很幸福。",
+       "pt": "Lembrando disso hoje, ainda me sinto muito feliz."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上是一位年轻的妈妈和她的小女儿，她们正在厨房里洗碗。",
+       "pt": "Nesta imagem estão uma mãe jovem e a filhinha dela; as duas estão lavando a louça na cozinha."
+      },
+      {
+       "zh": "女儿大概五六岁，她站在水池旁边，两只手拿着一个白色的盘子。",
+       "pt": "A menina deve ter uns cinco ou seis anos; está ao lado da pia, segurando um prato branco com as duas mãos."
+      },
+      {
+       "zh": "妈妈站在她后面，一边帮她扶着盘子，一边耐心地教她怎么洗。",
+       "pt": "A mãe está atrás dela, segurando o prato junto e ensinando com paciência como lavar."
+      },
+      {
+       "zh": "虽然洗碗是很普通的家务，但是她们看起来都非常开心。",
+       "pt": "Embora lavar a louça seja uma tarefa bem comum, as duas parecem muito felizes."
+      },
+      {
+       "zh": "我猜她们刚吃完晚饭，女儿主动说要帮妈妈的忙。",
+       "pt": "Imagino que elas acabaram de jantar e a menina se ofereceu para ajudar a mãe."
+      },
+      {
+       "zh": "我认为让孩子从小做家务有很多好处。",
+       "pt": "Acho que fazer as crianças ajudarem em casa desde pequenas traz muitas vantagens."
+      },
+      {
+       "zh": "首先，孩子可以学会照顾自己。",
+       "pt": "Primeiro, elas aprendem a cuidar de si mesmas."
+      },
+      {
+       "zh": "其次，孩子能明白父母的辛苦，更懂得感谢别人。",
+       "pt": "Segundo, elas entendem o quanto os pais trabalham duro e aprendem a ser mais gratas."
+      },
+      {
+       "zh": "另外，一家人一起做家务，感情会越来越好。",
+       "pt": "Além disso, quando a família faz as tarefas junta, a relação fica cada vez mais próxima."
+      },
+      {
+       "zh": "总之，这是一张让人觉得很温暖的图片。",
+       "pt": "Enfim, é uma imagem que passa uma sensação muito acolhedora."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "厨房",
+     "py": "chúfáng",
+     "pt": "cozinha"
+    },
+    {
+     "w": "洗碗",
+     "py": "xǐ wǎn",
+     "pt": "lavar a louça"
+    },
+    {
+     "w": "盘子",
+     "py": "pánzi",
+     "pt": "prato"
+    },
+    {
+     "w": "水池",
+     "py": "shuǐchí",
+     "pt": "pia (da cozinha)"
+    },
+    {
+     "w": "家务",
+     "py": "jiāwù",
+     "pt": "tarefas domésticas"
+    },
+    {
+     "w": "帮忙",
+     "py": "bāngmáng",
+     "pt": "ajudar; dar uma mão"
+    },
+    {
+     "w": "耐心",
+     "py": "nàixīn",
+     "pt": "paciente; paciência"
+    },
+    {
+     "w": "主动",
+     "py": "zhǔdòng",
+     "pt": "por iniciativa própria"
+    },
+    {
+     "w": "照顾",
+     "py": "zhàogù",
+     "pt": "cuidar de"
+    },
+    {
+     "w": "温暖",
+     "py": "wēnnuǎn",
+     "pt": "acolhedor; caloroso"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "一边……一边……",
+     "pt": "fazer duas coisas ao mesmo tempo",
+     "ex": "妈妈一边洗碗，一边跟女儿聊天。",
+     "exPt": "A mãe lava a louça enquanto conversa com a filha."
+    },
+    {
+     "zh": "看起来……",
+     "pt": "parecer (pelo que se vê) — ótimo para descrever a foto",
+     "ex": "她们看起来非常开心。",
+     "exPt": "Elas parecem muito felizes."
+    },
+    {
+     "zh": "我猜……",
+     "pt": "arriscar um palpite sobre o que aconteceu antes ou vai acontecer depois",
+     "ex": "我猜她们刚吃完晚饭。",
+     "exPt": "Imagino que elas acabaram de jantar."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/YANGTI/12.jpg",
+   "cena": "Três colegas (duas mulheres e um homem de terno, gravata e óculos) comemorando com os punhos erguidos diante de um notebook.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上有三个人，两个女的，一个男的。",
+       "pt": "Na foto há três pessoas: duas mulheres e um homem."
+      },
+      {
+       "zh": "他们都在看一台电脑。",
+       "pt": "Todos estão olhando para um computador."
+      },
+      {
+       "zh": "那个男的戴着眼镜，穿着西服。",
+       "pt": "O homem está de óculos e de terno."
+      },
+      {
+       "zh": "他们看起来非常高兴，都举起了手。",
+       "pt": "Eles parecem muito felizes e todos ergueram os braços."
+      },
+      {
+       "zh": "我想他们可能是同事。",
+       "pt": "Acho que eles devem ser colegas de trabalho."
+      },
+      {
+       "zh": "他们可能刚在电脑上看到了一个好消息。",
+       "pt": "Talvez tenham acabado de ver uma boa notícia no computador."
+      },
+      {
+       "zh": "比如他们的计划成功了，或者老板给他们发了奖金。",
+       "pt": "Por exemplo, o projeto deles deu certo ou o chefe deu um bônus para eles."
+      },
+      {
+       "zh": "和同事一起成功的感觉特别好。",
+       "pt": "A sensação de conseguir algo junto com os colegas é ótima."
+      },
+      {
+       "zh": "我也希望以后能有这样的好同事。",
+       "pt": "Eu também espero ter colegas assim no futuro."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片里有三个年轻人，一个男的和两个女的，他们正在一起看一台笔记本电脑。",
+       "pt": "Nesta imagem há três jovens, um homem e duas mulheres, olhando juntos para um notebook."
+      },
+      {
+       "zh": "男的穿着西服，打着领带，还戴着一副眼镜。",
+       "pt": "O homem está de terno e gravata e usa óculos."
+      },
+      {
+       "zh": "从他们的衣服来看，他们应该是同一个公司的同事。",
+       "pt": "Pelas roupas, eles devem ser colegas da mesma empresa."
+      },
+      {
+       "zh": "他们三个人都举着手，张着嘴大声地喊，看起来特别激动。",
+       "pt": "Os três estão com os braços erguidos, gritando de boca aberta, e parecem muito empolgados."
+      },
+      {
+       "zh": "我猜他们一定是收到了一个好消息。",
+       "pt": "Imagino que eles receberam uma ótima notícia."
+      },
+      {
+       "zh": "比如说，他们准备了很久的计划终于成功了。",
+       "pt": "Por exemplo, o projeto que eles levaram muito tempo preparando finalmente deu certo."
+      },
+      {
+       "zh": "我觉得，在工作中，不仅要努力，而且要和同事好好合作。",
+       "pt": "Acho que, no trabalho, não basta se esforçar: também é preciso colaborar bem com os colegas."
+      },
+      {
+       "zh": "因为一个人能做的事情很少，大家一起努力，才更容易成功。",
+       "pt": "Porque sozinho a gente consegue fazer pouca coisa; quando todos se esforçam juntos, fica mais fácil ter sucesso."
+      },
+      {
+       "zh": "成功以后和同事一起高兴，这种感觉是最好的。",
+       "pt": "Comemorar com os colegas depois de uma conquista é a melhor sensação que existe."
+      },
+      {
+       "zh": "总之，这张图片让我感受到了大家一起合作的快乐。",
+       "pt": "Enfim, essa imagem me passa a alegria de trabalhar em equipe."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "同事",
+     "py": "tóngshì",
+     "pt": "colega de trabalho"
+    },
+    {
+     "w": "笔记本电脑",
+     "py": "bǐjìběn diànnǎo",
+     "pt": "notebook"
+    },
+    {
+     "w": "西服",
+     "py": "xīfú",
+     "pt": "terno"
+    },
+    {
+     "w": "领带",
+     "py": "lǐngdài",
+     "pt": "gravata"
+    },
+    {
+     "w": "眼镜",
+     "py": "yǎnjìng",
+     "pt": "óculos"
+    },
+    {
+     "w": "激动",
+     "py": "jīdòng",
+     "pt": "empolgado; emocionado"
+    },
+    {
+     "w": "消息",
+     "py": "xiāoxi",
+     "pt": "notícia"
+    },
+    {
+     "w": "奖金",
+     "py": "jiǎngjīn",
+     "pt": "bônus; prêmio em dinheiro"
+    },
+    {
+     "w": "合作",
+     "py": "hézuò",
+     "pt": "colaborar; trabalhar junto"
+    },
+    {
+     "w": "庆祝",
+     "py": "qìngzhù",
+     "pt": "comemorar"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "从……来看",
+     "pt": "a julgar por…",
+     "ex": "从他们的衣服来看，他们应该是同事。",
+     "exPt": "A julgar pelas roupas, eles devem ser colegas de trabalho."
+    },
+    {
+     "zh": "不仅……而且……",
+     "pt": "não só… mas também…",
+     "ex": "工作不仅要努力，而且要和同事好好合作。",
+     "exPt": "No trabalho, não basta se esforçar: também é preciso colaborar bem com os colegas."
+    },
+    {
+     "zh": "穿着……，戴着……",
+     "pt": "descrever roupas e acessórios (着 = estado que continua); 穿 para roupa, 戴 para óculos, chapéu, relógio",
+     "ex": "那个男的穿着西服，戴着眼镜。",
+     "exPt": "O homem está de terno e de óculos."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "你认为自己最吸引别人的地方是什么？",
+   "pt": "Na sua opinião, o que em você mais atrai as outras pessoas?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我认为自己最吸引别人的地方是我很热情。",
+       "pt": "Acho que o que mais atrai as pessoas em mim é que sou muito caloroso."
+      },
+      {
+       "zh": "我是巴西人，巴西人一般都很热情。",
+       "pt": "Sou brasileiro, e os brasileiros costumam ser muito calorosos."
+      },
+      {
+       "zh": "我喜欢认识新朋友，也喜欢跟别人聊天。",
+       "pt": "Gosto de conhecer gente nova e de conversar com as pessoas."
+      },
+      {
+       "zh": "朋友有问题的时候，我总是愿意帮助他们。",
+       "pt": "Quando um amigo tem algum problema, estou sempre disposto a ajudar."
+      },
+      {
+       "zh": "另外，我常常笑，大家说跟我在一起很快乐。",
+       "pt": "Além disso, eu sorrio muito, e o pessoal diz que é divertido estar comigo."
+      },
+      {
+       "zh": "我学习汉语以后，认识了很多中国朋友。",
+       "pt": "Depois que comecei a estudar chinês, conheci muitos amigos chineses."
+      },
+      {
+       "zh": "他们也常常帮我练习口语。",
+       "pt": "Eles também me ajudam bastante a praticar a conversação."
+      },
+      {
+       "zh": "我觉得热情是我最大的优点。",
+       "pt": "Acho que ser caloroso é a minha maior qualidade."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我觉得自己最吸引别人的地方有两个：一个是热情，另一个是幽默。",
+       "pt": "Acho que tenho duas coisas que atraem as pessoas: uma é ser caloroso, a outra é o bom humor."
+      },
+      {
+       "zh": "首先，我是一个很热情的人。",
+       "pt": "Primeiro, sou uma pessoa muito calorosa."
+      },
+      {
+       "zh": "不管是老朋友还是刚认识的人，我都愿意主动跟他们聊天。",
+       "pt": "Seja um amigo antigo, seja alguém que acabei de conhecer, sempre tomo a iniciativa de puxar conversa."
+      },
+      {
+       "zh": "如果朋友遇到困难，我也会想办法帮助他们。",
+       "pt": "Se um amigo passa por alguma dificuldade, também dou um jeito de ajudar."
+      },
+      {
+       "zh": "其次，我比较幽默，常常能让大家笑起来。",
+       "pt": "Segundo, sou bem-humorado e muitas vezes consigo fazer todo mundo rir."
+      },
+      {
+       "zh": "有一次，我的同学考试没考好，心情很差。",
+       "pt": "Uma vez, um colega foi mal numa prova e ficou muito pra baixo."
+      },
+      {
+       "zh": "我给他讲了几个笑话，他很快就开心起来了。",
+       "pt": "Contei umas piadas para ele, e logo ele se animou."
+      },
+      {
+       "zh": "我认为，热情和幽默不仅能让别人喜欢你，而且能让自己的生活更愉快。",
+       "pt": "Acho que ser caloroso e bem-humorado não só faz os outros gostarem de você, como também deixa a sua própria vida mais alegre."
+      },
+      {
+       "zh": "当然，我也有很多缺点，比如有时候太着急。",
+       "pt": "Claro que também tenho muitos defeitos; por exemplo, às vezes sou impaciente demais."
+      },
+      {
+       "zh": "总之，我会继续保持这些优点，也努力改掉自己的缺点。",
+       "pt": "Enfim, vou continuar cultivando essas qualidades e me esforçar para corrigir meus defeitos."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "吸引",
+     "py": "xīyǐn",
+     "pt": "atrair"
+    },
+    {
+     "w": "热情",
+     "py": "rèqíng",
+     "pt": "caloroso; acolhedor"
+    },
+    {
+     "w": "幽默",
+     "py": "yōumò",
+     "pt": "bem-humorado; humor"
+    },
+    {
+     "w": "优点",
+     "py": "yōudiǎn",
+     "pt": "qualidade; ponto forte"
+    },
+    {
+     "w": "缺点",
+     "py": "quēdiǎn",
+     "pt": "defeito; ponto fraco"
+    },
+    {
+     "w": "性格",
+     "py": "xìnggé",
+     "pt": "personalidade; temperamento"
+    },
+    {
+     "w": "主动",
+     "py": "zhǔdòng",
+     "pt": "tomar a iniciativa"
+    },
+    {
+     "w": "愿意",
+     "py": "yuànyì",
+     "pt": "estar disposto a"
+    },
+    {
+     "w": "笑话",
+     "py": "xiàohua",
+     "pt": "piada"
+    },
+    {
+     "w": "保持",
+     "py": "bǎochí",
+     "pt": "manter"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "我认为自己最……的地方是……",
+     "pt": "responder direto à pergunta, repetindo as palavras dela",
+     "ex": "我认为自己最吸引别人的地方是热情。",
+     "exPt": "Acho que o que mais atrai as pessoas em mim é ser caloroso."
+    },
+    {
+     "zh": "不管……都……",
+     "pt": "não importa…, sempre…",
+     "ex": "不管是老朋友还是新朋友，我都愿意跟他们聊天。",
+     "exPt": "Seja amigo antigo ou novo, sempre gosto de conversar com eles."
+    },
+    {
+     "zh": "首先……其次……总之……",
+     "pt": "organizar a resposta em partes: primeiro, segundo, para concluir",
+     "ex": "首先，我很热情；其次，我很幽默。总之，大家都喜欢跟我在一起。",
+     "exPt": "Primeiro, sou caloroso; segundo, sou bem-humorado. Enfim, todo mundo gosta de estar comigo."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "有没有什么事情让你觉得后悔？如果再给你一次机会，你会怎么做？",
+   "pt": "Tem alguma coisa de que você se arrependa? Se tivesse mais uma chance, o que você faria?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "有一件事让我觉得很后悔。",
+       "pt": "Tem uma coisa de que eu me arrependo muito."
+      },
+      {
+       "zh": "上高中的时候，我的爷爷住在别的城市。",
+       "pt": "Quando eu estava no ensino médio, meu avô morava em outra cidade."
+      },
+      {
+       "zh": "他常常给我打电话，希望我去看他。",
+       "pt": "Ele me ligava sempre, querendo que eu fosse visitá-lo."
+      },
+      {
+       "zh": "但是我觉得学习太忙了，很少去看他。",
+       "pt": "Mas eu achava que estava ocupado demais com os estudos e quase nunca ia."
+      },
+      {
+       "zh": "后来爷爷生病了，很快就离开了我们。",
+       "pt": "Depois meu avô ficou doente e logo nos deixou."
+      },
+      {
+       "zh": "如果再给我一次机会，我一定会常常去看他。",
+       "pt": "Se eu tivesse mais uma chance, com certeza iria visitá-lo sempre."
+      },
+      {
+       "zh": "我会多陪他聊天，听他讲以前的故事。",
+       "pt": "Passaria mais tempo conversando com ele, ouvindo as histórias de antigamente."
+      },
+      {
+       "zh": "所以现在我常常回家看父母。",
+       "pt": "Por isso, hoje em dia eu sempre vou visitar meus pais."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我觉得每个人都有后悔的事，我也一样。",
+       "pt": "Acho que todo mundo tem algum arrependimento, e comigo não é diferente."
+      },
+      {
+       "zh": "我最后悔的是三年前放弃了一个去中国留学的机会。",
+       "pt": "Meu maior arrependimento é ter aberto mão, três anos atrás, de uma chance de fazer intercâmbio na China."
+      },
+      {
+       "zh": "那时候学校给了我一个奖学金，可以去北京学习一年。",
+       "pt": "Naquela época a faculdade me ofereceu uma bolsa para estudar um ano em Pequim."
+      },
+      {
+       "zh": "但是我担心自己的汉语不好，又害怕一个人在国外生活，所以最后没有去。",
+       "pt": "Mas eu tinha medo de o meu chinês não ser bom o bastante e de morar sozinho no exterior, então no fim não fui."
+      },
+      {
+       "zh": "后来我的一个同学去了，他回来以后汉语说得非常流利。",
+       "pt": "Depois um colega meu foi e, quando voltou, falava chinês com muita fluência."
+      },
+      {
+       "zh": "看到他的进步，我真的很后悔。",
+       "pt": "Vendo o progresso dele, eu me arrependi de verdade."
+      },
+      {
+       "zh": "如果再给我一次机会，我一定会勇敢地去试一试。",
+       "pt": "Se eu tivesse outra chance, com certeza teria coragem de tentar."
+      },
+      {
+       "zh": "我会提前好好准备，多跟中国人练习口语，到了中国以后也会积极地认识新朋友。",
+       "pt": "Eu me prepararia com antecedência, praticaria muita conversação com chineses e, chegando lá, faria questão de conhecer gente nova."
+      },
+      {
+       "zh": "这件事让我明白了，机会来的时候，不要因为害怕就放弃。",
+       "pt": "Isso me ensinou que, quando a oportunidade aparece, a gente não deve desistir só por medo."
+      },
+      {
+       "zh": "现在我每天都认真学习汉语，希望以后还能有去中国的机会。",
+       "pt": "Hoje estudo chinês com dedicação todos os dias e espero ainda ter uma chance de ir para a China."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "后悔",
+     "py": "hòuhuǐ",
+     "pt": "arrepender-se"
+    },
+    {
+     "w": "机会",
+     "py": "jīhuì",
+     "pt": "oportunidade; chance"
+    },
+    {
+     "w": "放弃",
+     "py": "fàngqì",
+     "pt": "desistir; abrir mão de"
+    },
+    {
+     "w": "留学",
+     "py": "liúxué",
+     "pt": "estudar no exterior"
+    },
+    {
+     "w": "奖学金",
+     "py": "jiǎngxuéjīn",
+     "pt": "bolsa de estudos"
+    },
+    {
+     "w": "担心",
+     "py": "dānxīn",
+     "pt": "preocupar-se; ter medo de que"
+    },
+    {
+     "w": "勇敢",
+     "py": "yǒnggǎn",
+     "pt": "corajoso"
+    },
+    {
+     "w": "流利",
+     "py": "liúlì",
+     "pt": "fluente"
+    },
+    {
+     "w": "陪",
+     "py": "péi",
+     "pt": "fazer companhia"
+    },
+    {
+     "w": "提前",
+     "py": "tíqián",
+     "pt": "com antecedência"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "如果再给我一次机会，我会……",
+     "pt": "frase pronta para a 2ª parte da pergunta (o que você faria)",
+     "ex": "如果再给我一次机会，我一定会去试一试。",
+     "exPt": "Se eu tivesse outra chance, com certeza tentaria."
+    },
+    {
+     "zh": "……让我明白了……",
+     "pt": "… me fez entender / me ensinou…",
+     "ex": "这件事让我明白了机会很重要。",
+     "exPt": "Isso me fez entender que as oportunidades são importantes."
+    },
+    {
+     "zh": "不要因为……就……",
+     "pt": "não (fazer algo) só por causa de…",
+     "ex": "不要因为害怕就放弃。",
+     "exPt": "Não desista só porque está com medo."
+    }
+   ]
+  }
+ ]
+}

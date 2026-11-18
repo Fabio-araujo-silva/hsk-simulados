@@ -1,0 +1,699 @@
+{
+ "id": "H81003",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "你听，这是什么声音？",
+   "pt": "Escuta só, que barulho é esse?"
+  },
+  {
+   "n": 2,
+   "zh": "我每天骑自行车去学校。",
+   "pt": "Eu vou de bicicleta para a escola todo dia."
+  },
+  {
+   "n": 3,
+   "zh": "汉字的历史很长。",
+   "pt": "Os caracteres chineses têm uma história muito longa."
+  },
+  {
+   "n": 4,
+   "zh": "老师，祝您节日快乐！",
+   "pt": "Professor, feliz dia para o senhor!"
+  },
+  {
+   "n": 5,
+   "zh": "他对自己的工作不太满意。",
+   "pt": "Ele não está muito satisfeito com o próprio trabalho."
+  },
+  {
+   "n": 6,
+   "zh": "告诉你一个好消息，我要结婚了。",
+   "pt": "Tenho uma boa notícia: vou me casar!"
+  },
+  {
+   "n": 7,
+   "zh": "真抱歉，让你久等了。",
+   "pt": "Desculpa mesmo por te fazer esperar tanto."
+  },
+  {
+   "n": 8,
+   "zh": "我的签证已经办好了。",
+   "pt": "Meu visto já está pronto."
+  },
+  {
+   "n": 9,
+   "zh": "请把这个材料复印五份。",
+   "pt": "Por favor, tire cinco cópias deste documento."
+  },
+  {
+   "n": 10,
+   "zh": "王校长是个非常幽默的人。",
+   "pt": "O diretor Wang é uma pessoa muito bem-humorada."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/H81003/11.jpg",
+   "cena": "Mulher elegante com uma bolsa de notebook no ombro, puxando uma mala de rodinhas e olhando para trás (viagem a trabalho).",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上是一个年轻的女人。",
+       "pt": "Na foto há uma mulher jovem."
+      },
+      {
+       "zh": "她穿得很漂亮，头发是黑色的。",
+       "pt": "Ela está bem vestida e tem cabelo preto."
+      },
+      {
+       "zh": "她的肩上背着一个电脑包，手里拉着一个行李箱。",
+       "pt": "No ombro ela leva uma bolsa de notebook, e com a mão puxa uma mala."
+      },
+      {
+       "zh": "我想她可能要去机场坐飞机。",
+       "pt": "Acho que ela deve estar indo para o aeroporto pegar um avião."
+      },
+      {
+       "zh": "她可能是去别的城市出差。",
+       "pt": "Talvez esteja viajando a trabalho para outra cidade."
+      },
+      {
+       "zh": "她一边走，一边回头看，好像有人在叫她。",
+       "pt": "Ela vai andando e olhando para trás, como se alguém a estivesse chamando."
+      },
+      {
+       "zh": "我觉得出差很累，但是也能去很多地方。",
+       "pt": "Acho que viajar a trabalho cansa, mas também dá para conhecer muitos lugares."
+      },
+      {
+       "zh": "我希望以后也有机会去中国出差。",
+       "pt": "Espero um dia também ter a chance de ir à China a trabalho."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上是一位穿得很正式的年轻女士。",
+       "pt": "Nesta imagem há uma moça vestida de forma bem formal."
+      },
+      {
+       "zh": "她肩上背着一个大大的电脑包，手里拉着一个黑色的行李箱。",
+       "pt": "Ela carrega no ombro uma bolsa de notebook grandona e puxa uma mala preta."
+      },
+      {
+       "zh": "从她的样子来看，她应该是要去外地出差。",
+       "pt": "Pelo jeito dela, deve estar indo viajar a trabalho para outra cidade."
+      },
+      {
+       "zh": "她正在往前走，可是突然回过头去，好像听见有人在叫她。",
+       "pt": "Ela está andando para a frente, mas de repente virou a cabeça para trás, como se tivesse ouvido alguém chamá-la."
+      },
+      {
+       "zh": "我猜可能是她的同事追过来，提醒她有东西忘带了。",
+       "pt": "Imagino que talvez seja um colega correndo atrás dela para avisar que ela esqueceu alguma coisa."
+      },
+      {
+       "zh": "现在很多人的工作都需要经常出差。",
+       "pt": "Hoje em dia, muita gente precisa viajar a trabalho com frequência."
+      },
+      {
+       "zh": "出差有好处，也有坏处。",
+       "pt": "Viajar a trabalho tem lados bons e ruins."
+      },
+      {
+       "zh": "好处是可以去不同的城市，认识很多新朋友，还能积累经验。",
+       "pt": "O lado bom é conhecer cidades diferentes, fazer novos amigos e ainda ganhar experiência."
+      },
+      {
+       "zh": "坏处是常常很累，而且没有时间陪家人。",
+       "pt": "O lado ruim é que cansa muito e sobra pouco tempo para a família."
+      },
+      {
+       "zh": "所以我觉得出差以前一定要好好准备，把需要的东西都检查一遍。",
+       "pt": "Por isso, acho que antes de viajar a trabalho é preciso se preparar bem e conferir tudo o que vai levar."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "行李箱",
+     "py": "xínglixiāng",
+     "pt": "mala (de viagem)"
+    },
+    {
+     "w": "拉",
+     "py": "lā",
+     "pt": "puxar"
+    },
+    {
+     "w": "背",
+     "py": "bēi",
+     "pt": "carregar (nas costas ou no ombro)"
+    },
+    {
+     "w": "电脑包",
+     "py": "diànnǎobāo",
+     "pt": "bolsa de notebook"
+    },
+    {
+     "w": "出差",
+     "py": "chūchāi",
+     "pt": "viajar a trabalho"
+    },
+    {
+     "w": "机场",
+     "py": "jīchǎng",
+     "pt": "aeroporto"
+    },
+    {
+     "w": "回头",
+     "py": "huítóu",
+     "pt": "olhar para trás; virar a cabeça"
+    },
+    {
+     "w": "正式",
+     "py": "zhèngshì",
+     "pt": "formal"
+    },
+    {
+     "w": "提醒",
+     "py": "tíxǐng",
+     "pt": "lembrar (alguém de algo); avisar"
+    },
+    {
+     "w": "积累",
+     "py": "jīlěi",
+     "pt": "acumular (experiência, conhecimento)"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "好像……",
+     "pt": "parece que… / como se…",
+     "ex": "她回头看，好像有人在叫她。",
+     "exPt": "Ela olha para trás, como se alguém a estivesse chamando."
+    },
+    {
+     "zh": "……有好处，也有坏处",
+     "pt": "apresentar os dois lados de um assunto",
+     "ex": "出差有好处，也有坏处。",
+     "exPt": "Viajar a trabalho tem lados bons e ruins."
+    },
+    {
+     "zh": "背着……，拉着……",
+     "pt": "descrever o que a pessoa carrega (verbo + 着)",
+     "ex": "她肩上背着电脑包，手里拉着行李箱。",
+     "exPt": "Ela leva a bolsa do notebook no ombro e puxa a mala com a mão."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/H81003/12.jpg",
+   "cena": "Rapaz em pé entre as estantes de uma biblioteca, olhando para cima à procura de um livro; ao fundo, outro rapaz lê sentado no chão.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "这是一个图书馆，里面有很多书。",
+       "pt": "Isto é uma biblioteca, cheia de livros."
+      },
+      {
+       "zh": "一个男孩子站在书架前面。",
+       "pt": "Um rapaz está em pé na frente da estante."
+      },
+      {
+       "zh": "他抬着头看书架上面的书。",
+       "pt": "Ele olha para cima, para os livros no alto da estante."
+      },
+      {
+       "zh": "我想他在找一本他需要的书。",
+       "pt": "Acho que ele está procurando um livro de que precisa."
+      },
+      {
+       "zh": "可能是老师让他写一篇文章，他需要找一些材料。",
+       "pt": "Talvez o professor tenha pedido uma redação e ele precise de material."
+      },
+      {
+       "zh": "他后面还有一个男孩子坐在地上看书。",
+       "pt": "Atrás dele, outro rapaz está sentado no chão lendo."
+      },
+      {
+       "zh": "图书馆里很安静，是学习的好地方。",
+       "pt": "A biblioteca é bem silenciosa, um ótimo lugar para estudar."
+      },
+      {
+       "zh": "我上大学的时候，也常常去图书馆借书和学习。",
+       "pt": "Na faculdade, eu também ia muito à biblioteca pegar livros emprestados e estudar."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "图片上是一个很大的图书馆，书架上放满了各种各样的书。",
+       "pt": "A foto mostra uma biblioteca grande, com as estantes cheias de livros de todo tipo."
+      },
+      {
+       "zh": "一个穿灰色上衣的男生站在书架中间，正抬着头找书。",
+       "pt": "Um rapaz de camiseta cinza está entre as estantes, olhando para cima à procura de um livro."
+      },
+      {
+       "zh": "他看起来有点儿着急，可能找了很久都没找到。",
+       "pt": "Ele parece um pouco aflito; talvez esteja procurando há muito tempo e ainda não tenha achado."
+      },
+      {
+       "zh": "我猜他明天就要考试了，所以想找一本复习用的书。",
+       "pt": "Imagino que ele tenha prova amanhã e queira achar um livro para revisar a matéria."
+      },
+      {
+       "zh": "在他后面，还有一个男生坐在地上认真地看书，远处的两个人好像也在找书。",
+       "pt": "Atrás dele, outro rapaz está sentado no chão lendo com atenção e, mais ao fundo, duas pessoas parecem também procurar livros."
+      },
+      {
+       "zh": "我觉得图书馆是学习最好的地方。",
+       "pt": "Acho que a biblioteca é o melhor lugar para estudar."
+      },
+      {
+       "zh": "首先，那里非常安静，没有人打扰你。",
+       "pt": "Primeiro, lá é bem silencioso e ninguém te atrapalha."
+      },
+      {
+       "zh": "其次，图书馆的书很多，而且借书是免费的。",
+       "pt": "Segundo, a biblioteca tem muitos livros e o empréstimo é de graça."
+      },
+      {
+       "zh": "另外，看到别人都在认真学习，自己也不好意思玩儿手机了。",
+       "pt": "Além disso, vendo todo mundo estudando a sério, a gente fica até sem graça de mexer no celular."
+      },
+      {
+       "zh": "所以，我上大学的时候，几乎每个周末都去图书馆。",
+       "pt": "Por isso, na faculdade eu ia à biblioteca quase todo fim de semana."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "图书馆",
+     "py": "túshūguǎn",
+     "pt": "biblioteca"
+    },
+    {
+     "w": "书架",
+     "py": "shūjià",
+     "pt": "estante de livros"
+    },
+    {
+     "w": "借",
+     "py": "jiè",
+     "pt": "pegar emprestado; emprestar"
+    },
+    {
+     "w": "安静",
+     "py": "ānjìng",
+     "pt": "silencioso; tranquilo"
+    },
+    {
+     "w": "复习",
+     "py": "fùxí",
+     "pt": "revisar (a matéria)"
+    },
+    {
+     "w": "抬头",
+     "py": "táitóu",
+     "pt": "levantar a cabeça; olhar para cima"
+    },
+    {
+     "w": "打扰",
+     "py": "dǎrǎo",
+     "pt": "incomodar; atrapalhar"
+    },
+    {
+     "w": "免费",
+     "py": "miǎnfèi",
+     "pt": "gratuito; de graça"
+    },
+    {
+     "w": "几乎",
+     "py": "jīhū",
+     "pt": "quase"
+    },
+    {
+     "w": "各种各样",
+     "py": "gèzhǒng-gèyàng",
+     "pt": "de todo tipo"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "……上放满了……",
+     "pt": "estar cheio de… (满 = cheio, como resultado da ação)",
+     "ex": "书架上放满了书。",
+     "exPt": "As estantes estão cheias de livros."
+    },
+    {
+     "zh": "……了很久都没……到",
+     "pt": "tentar por muito tempo sem conseguir (V了很久都没V到)",
+     "ex": "他找了很久都没找到。",
+     "exPt": "Ele procurou por muito tempo e não achou."
+    },
+    {
+     "zh": "首先……其次……另外……",
+     "pt": "enumerar argumentos: primeiro, segundo, além disso",
+     "ex": "首先，那里很安静；其次，书很多；另外，借书是免费的。",
+     "exPt": "Primeiro, lá é silencioso; segundo, tem muitos livros; além disso, o empréstimo é de graça."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "你喜欢和什么样的人交朋友？为什么？",
+   "pt": "Com que tipo de pessoa você gosta de fazer amizade? Por quê?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我喜欢和诚实、热情的人交朋友。",
+       "pt": "Gosto de fazer amizade com pessoas honestas e calorosas."
+      },
+      {
+       "zh": "我觉得朋友之间最重要的是诚实。",
+       "pt": "Acho que o mais importante entre amigos é a honestidade."
+      },
+      {
+       "zh": "如果朋友常常说假话，我就不能相信他。",
+       "pt": "Se um amigo vive mentindo, não tenho como confiar nele."
+      },
+      {
+       "zh": "我也喜欢热情的人，因为跟他们在一起很快乐。",
+       "pt": "Também gosto de gente calorosa, porque é muito bom estar com elas."
+      },
+      {
+       "zh": "我有一个好朋友，他就是这样的人。",
+       "pt": "Tenho um grande amigo que é exatamente assim."
+      },
+      {
+       "zh": "我遇到问题的时候，他总是第一个来帮我。",
+       "pt": "Quando tenho algum problema, ele é sempre o primeiro a vir me ajudar."
+      },
+      {
+       "zh": "我们认识十年了，现在还常常一起吃饭、聊天。",
+       "pt": "A gente se conhece há dez anos e até hoje sai junto para comer e conversar."
+      },
+      {
+       "zh": "所以我觉得有这样的朋友很幸福。",
+       "pt": "Por isso acho que ter um amigo assim é uma felicidade."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我喜欢和两种人交朋友：一种是诚实的人，另一种是乐观的人。",
+       "pt": "Gosto de fazer amizade com dois tipos de pessoa: as honestas e as otimistas."
+      },
+      {
+       "zh": "首先，诚实是交朋友最重要的条件。",
+       "pt": "Primeiro, a honestidade é a condição mais importante para uma amizade."
+      },
+      {
+       "zh": "如果一个人经常说假话，那么不管他多聪明，我都不想跟他做朋友。",
+       "pt": "Se uma pessoa mente com frequência, por mais inteligente que seja, não quero ser amigo dela."
+      },
+      {
+       "zh": "因为朋友之间最需要的就是互相信任。",
+       "pt": "Porque o mais necessário numa amizade é a confiança mútua."
+      },
+      {
+       "zh": "其次，我喜欢乐观的人。",
+       "pt": "Segundo, gosto de gente otimista."
+      },
+      {
+       "zh": "生活中总会遇到各种各样的问题，比如考试没考好、工作压力大。",
+       "pt": "Na vida sempre aparecem problemas de todo tipo, como ir mal numa prova ou ter muita pressão no trabalho."
+      },
+      {
+       "zh": "和乐观的朋友在一起，我的心情也会变好，遇到困难的时候也更有信心。",
+       "pt": "Quando estou com amigos otimistas, meu humor melhora e eu encaro as dificuldades com mais confiança."
+      },
+      {
+       "zh": "我最好的朋友就是这样一个人，不管遇到什么事，他都不会放弃。",
+       "pt": "Meu melhor amigo é exatamente assim: aconteça o que acontecer, ele nunca desiste."
+      },
+      {
+       "zh": "总之，我觉得朋友不需要很多，有几个真心的朋友就够了。",
+       "pt": "Enfim, acho que não é preciso ter muitos amigos; alguns amigos de verdade já bastam."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "交朋友",
+     "py": "jiāo péngyou",
+     "pt": "fazer amizade"
+    },
+    {
+     "w": "诚实",
+     "py": "chéngshí",
+     "pt": "honesto; sincero"
+    },
+    {
+     "w": "乐观",
+     "py": "lèguān",
+     "pt": "otimista"
+    },
+    {
+     "w": "信任",
+     "py": "xìnrèn",
+     "pt": "confiar; confiança"
+    },
+    {
+     "w": "互相",
+     "py": "hùxiāng",
+     "pt": "mutuamente; um ao outro"
+    },
+    {
+     "w": "条件",
+     "py": "tiáojiàn",
+     "pt": "condição; requisito"
+    },
+    {
+     "w": "压力",
+     "py": "yālì",
+     "pt": "pressão; estresse"
+    },
+    {
+     "w": "信心",
+     "py": "xìnxīn",
+     "pt": "confiança (em si mesmo)"
+    },
+    {
+     "w": "真心",
+     "py": "zhēnxīn",
+     "pt": "sincero; de coração"
+    },
+    {
+     "w": "聪明",
+     "py": "cōngming",
+     "pt": "inteligente"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "我喜欢和……的人交朋友，因为……",
+     "pt": "resposta direta + motivo",
+     "ex": "我喜欢和诚实的人交朋友，因为我可以相信他们。",
+     "exPt": "Gosto de fazer amizade com pessoas honestas, porque posso confiar nelas."
+    },
+    {
+     "zh": "一种是……，另一种是……",
+     "pt": "um tipo é…, o outro é…",
+     "ex": "我喜欢两种人：一种是诚实的人，另一种是乐观的人。",
+     "exPt": "Gosto de dois tipos de pessoa: um é o honesto, o outro é o otimista."
+    },
+    {
+     "zh": "和……在一起，……",
+     "pt": "quando estou com…, …",
+     "ex": "和乐观的朋友在一起，我的心情也会变好。",
+     "exPt": "Quando estou com amigos otimistas, meu humor também melhora."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "你对减肥是什么态度？为什么？",
+   "pt": "Qual é a sua opinião sobre fazer dieta para emagrecer? Por quê?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我觉得减肥是可以的，但是要用健康的方法。",
+       "pt": "Acho que emagrecer tudo bem, mas tem que ser de um jeito saudável."
+      },
+      {
+       "zh": "现在很多年轻人为了漂亮，不吃饭减肥。",
+       "pt": "Hoje muitos jovens param de comer para emagrecer e ficar bonitos."
+      },
+      {
+       "zh": "我觉得这样对身体很不好。",
+       "pt": "Acho que isso faz muito mal à saúde."
+      },
+      {
+       "zh": "如果太瘦了，人会没有力气，也容易生病。",
+       "pt": "Quem fica magro demais perde as forças e adoece com facilidade."
+      },
+      {
+       "zh": "我认为最好的方法是多运动、少吃甜的东西。",
+       "pt": "Acho que o melhor jeito é fazer mais exercício e comer menos doce."
+      },
+      {
+       "zh": "以前我也有点儿胖，后来我每天跑步半个小时。",
+       "pt": "Antes eu também estava um pouco acima do peso; aí comecei a correr meia hora por dia."
+      },
+      {
+       "zh": "三个月以后，我瘦了五公斤，身体也更好了。",
+       "pt": "Três meses depois, eu tinha perdido cinco quilos e estava com a saúde melhor."
+      },
+      {
+       "zh": "所以我觉得，健康比漂亮更重要。",
+       "pt": "Por isso acho que a saúde é mais importante do que a aparência."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "对于减肥，我的态度是支持，但是反对用不健康的方法减肥。",
+       "pt": "Sobre emagrecer, sou a favor, mas sou contra usar métodos que não são saudáveis."
+      },
+      {
+       "zh": "首先，太胖确实对身体不好，容易得各种病。",
+       "pt": "Primeiro, estar muito acima do peso realmente faz mal à saúde e aumenta o risco de várias doenças."
+      },
+      {
+       "zh": "所以如果一个人真的太胖了，就应该减肥。",
+       "pt": "Então, se a pessoa está mesmo muito acima do peso, ela deve emagrecer."
+      },
+      {
+       "zh": "但是，现在有很多人其实一点儿也不胖，却还是每天都在减肥。",
+       "pt": "Mas hoje tem muita gente que não está nem um pouco acima do peso e, mesmo assim, vive de dieta."
+      },
+      {
+       "zh": "有的人为了瘦得快，不吃早饭和晚饭，或者吃减肥药。",
+       "pt": "Tem gente que, para emagrecer rápido, pula o café da manhã e o jantar ou toma remédio para emagrecer."
+      },
+      {
+       "zh": "这样做不但对身体不好，而且一停下来就会马上胖回去。",
+       "pt": "Isso não só faz mal à saúde, como, assim que a pessoa para, engorda tudo de novo."
+      },
+      {
+       "zh": "我认为，减肥最好的办法是改变生活习惯。",
+       "pt": "Acho que o melhor jeito de emagrecer é mudar os hábitos."
+      },
+      {
+       "zh": "比如说，每天按时吃饭，多吃蔬菜和水果，少喝饮料，每周运动三四次。",
+       "pt": "Por exemplo: fazer as refeições na hora certa, comer mais verduras e frutas, tomar menos refrigerante e se exercitar três ou quatro vezes por semana."
+      },
+      {
+       "zh": "虽然这样减得比较慢，但是效果能保持很长时间。",
+       "pt": "Embora assim se emagreça mais devagar, o resultado dura bem mais tempo."
+      },
+      {
+       "zh": "总之，减肥的目的应该是让自己更健康，而不只是为了好看。",
+       "pt": "Enfim, o objetivo de emagrecer deveria ser ficar mais saudável, e não só ficar bonito."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "减肥",
+     "py": "jiǎnféi",
+     "pt": "emagrecer; fazer dieta"
+    },
+    {
+     "w": "态度",
+     "py": "tàidu",
+     "pt": "atitude; posição"
+    },
+    {
+     "w": "支持",
+     "py": "zhīchí",
+     "pt": "apoiar; ser a favor"
+    },
+    {
+     "w": "反对",
+     "py": "fǎnduì",
+     "pt": "ser contra"
+    },
+    {
+     "w": "健康",
+     "py": "jiànkāng",
+     "pt": "saudável; saúde"
+    },
+    {
+     "w": "瘦",
+     "py": "shòu",
+     "pt": "magro; emagrecer"
+    },
+    {
+     "w": "胖",
+     "py": "pàng",
+     "pt": "gordo; acima do peso"
+    },
+    {
+     "w": "习惯",
+     "py": "xíguàn",
+     "pt": "hábito"
+    },
+    {
+     "w": "效果",
+     "py": "xiàoguǒ",
+     "pt": "efeito; resultado"
+    },
+    {
+     "w": "按时",
+     "py": "ànshí",
+     "pt": "na hora certa"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "对于……，我的态度是……",
+     "pt": "quanto a…, minha posição é… (responde direto à pergunta)",
+     "ex": "对于减肥，我的态度是支持。",
+     "exPt": "Quanto a emagrecer, sou a favor."
+    },
+    {
+     "zh": "不但……而且……",
+     "pt": "não só… como também…",
+     "ex": "这样做不但对身体不好，而且没有用。",
+     "exPt": "Fazer isso não só faz mal à saúde, como não adianta."
+    },
+    {
+     "zh": "为了……",
+     "pt": "para… (indica a finalidade)",
+     "ex": "有的人为了瘦得快，不吃晚饭。",
+     "exPt": "Tem gente que, para emagrecer rápido, não janta."
+    }
+   ]
+  }
+ ]
+}

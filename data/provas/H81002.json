@@ -1,0 +1,707 @@
+{
+ "id": "H81002",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "上周五的会议我参加了。",
+   "pt": "Eu participei da reunião da sexta-feira passada."
+  },
+  {
+   "n": 2,
+   "zh": "他们学校有三百年的历史。",
+   "pt": "A escola deles tem trezentos anos de história."
+  },
+  {
+   "n": 3,
+   "zh": "春节是中国最重要的节日。",
+   "pt": "O Ano-Novo Chinês é a festa mais importante da China."
+  },
+  {
+   "n": 4,
+   "zh": "你女儿越来越漂亮了。",
+   "pt": "Sua filha está cada vez mais bonita."
+  },
+  {
+   "n": 5,
+   "zh": "她对附近的环境很满意。",
+   "pt": "Ela está muito satisfeita com o ambiente da vizinhança."
+  },
+  {
+   "n": 6,
+   "zh": "我收到您的电子邮件了。",
+   "pt": "Recebi o seu e-mail."
+  },
+  {
+   "n": 7,
+   "zh": "我相信你这次一定会成功。",
+   "pt": "Tenho certeza de que desta vez você vai conseguir."
+  },
+  {
+   "n": 8,
+   "zh": "昨天晚上的演出非常精彩。",
+   "pt": "A apresentação de ontem à noite foi incrível."
+  },
+  {
+   "n": 9,
+   "zh": "这个办法值得试一试。",
+   "pt": "Vale a pena testar esse método."
+  },
+  {
+   "n": 10,
+   "zh": "我们的生活每天都在发生变化。",
+   "pt": "Nossa vida está mudando todos os dias."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/H81002/11.jpg",
+   "cena": "Rapaz sorridente, sentado em casa, falando ao celular.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上有一个年轻的男人。",
+       "pt": "Na foto há um homem jovem."
+      },
+      {
+       "zh": "他坐在家里，正在打电话。",
+       "pt": "Ele está sentado em casa, falando ao telefone."
+      },
+      {
+       "zh": "他一边打电话，一边笑，看起来非常高兴。",
+       "pt": "Ele fala ao telefone sorrindo e parece muito feliz."
+      },
+      {
+       "zh": "我想他可能在跟女朋友聊天。",
+       "pt": "Acho que ele pode estar conversando com a namorada."
+      },
+      {
+       "zh": "也可能是他的朋友告诉了他一个好消息。",
+       "pt": "Ou talvez um amigo tenha contado uma boa notícia para ele."
+      },
+      {
+       "zh": "比如他的朋友找到了新工作，或者要结婚了。",
+       "pt": "Por exemplo, o amigo arrumou um emprego novo ou vai se casar."
+      },
+      {
+       "zh": "我也很喜欢给朋友和家人打电话。",
+       "pt": "Eu também gosto muito de ligar para os amigos e a família."
+      },
+      {
+       "zh": "我的家人住在别的城市，所以我每个星期都给他们打电话。",
+       "pt": "Minha família mora em outra cidade, então ligo para eles toda semana."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上是一个二十多岁的小伙子，他穿着一件咖啡色的衬衫。",
+       "pt": "Nesta imagem há um rapaz de vinte e poucos anos, com uma camisa marrom."
+      },
+      {
+       "zh": "他坐在房间里，正在用手机打电话。",
+       "pt": "Ele está sentado dentro de casa, falando ao celular."
+      },
+      {
+       "zh": "从他的表情来看，他心情特别好，一直在笑。",
+       "pt": "Pela expressão dele, está de ótimo humor e não para de sorrir."
+      },
+      {
+       "zh": "我猜电话那边可能是他的女朋友。",
+       "pt": "Imagino que do outro lado da linha seja a namorada dele."
+      },
+      {
+       "zh": "他们可能正在商量周末去哪儿约会，看电影还是去吃饭。",
+       "pt": "Eles devem estar combinando o programa do fim de semana: cinema ou jantar fora."
+      },
+      {
+       "zh": "也有可能是公司给他打电话，通知他面试通过了，下个星期就可以上班。",
+       "pt": "Também pode ser uma empresa ligando para avisar que ele passou na entrevista e já pode começar na semana que vem."
+      },
+      {
+       "zh": "现在手机已经成了我们生活中不可缺少的东西。",
+       "pt": "Hoje o celular virou algo indispensável na nossa vida."
+      },
+      {
+       "zh": "不管离得多远，我们都可以通过手机跟家人和朋友联系。",
+       "pt": "Não importa a distância, dá para falar com a família e os amigos pelo celular."
+      },
+      {
+       "zh": "我的很多朋友住在别的城市，但是我们常常打视频电话，聊聊最近的生活。",
+       "pt": "Muitos amigos meus moram em outras cidades, mas a gente sempre faz chamada de vídeo para pôr a conversa em dia."
+      },
+      {
+       "zh": "总之，手机让人和人之间的距离变近了。",
+       "pt": "Enfim, o celular aproximou as pessoas."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "打电话",
+     "py": "dǎ diànhuà",
+     "pt": "telefonar; ligar"
+    },
+    {
+     "w": "手机",
+     "py": "shǒujī",
+     "pt": "celular"
+    },
+    {
+     "w": "小伙子",
+     "py": "xiǎohuǒzi",
+     "pt": "rapaz; moço"
+    },
+    {
+     "w": "表情",
+     "py": "biǎoqíng",
+     "pt": "expressão (do rosto)"
+    },
+    {
+     "w": "商量",
+     "py": "shāngliang",
+     "pt": "combinar; discutir juntos"
+    },
+    {
+     "w": "约会",
+     "py": "yuēhuì",
+     "pt": "encontro (romântico); sair com alguém"
+    },
+    {
+     "w": "通知",
+     "py": "tōngzhī",
+     "pt": "avisar; notificar"
+    },
+    {
+     "w": "面试",
+     "py": "miànshì",
+     "pt": "entrevista (de emprego)"
+    },
+    {
+     "w": "联系",
+     "py": "liánxì",
+     "pt": "contatar; manter contato"
+    },
+    {
+     "w": "距离",
+     "py": "jùlí",
+     "pt": "distância"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "正在……",
+     "pt": "estar fazendo algo neste momento",
+     "ex": "他正在用手机打电话。",
+     "exPt": "Ele está falando ao celular."
+    },
+    {
+     "zh": "我猜……，也有可能是……",
+     "pt": "levantar duas hipóteses sobre a cena",
+     "ex": "我猜他在跟女朋友聊天，也有可能是公司给他打电话。",
+     "exPt": "Imagino que ele esteja conversando com a namorada; também pode ser uma empresa ligando para ele."
+    },
+    {
+     "zh": "……还是……",
+     "pt": "… ou …? (escolha entre opções)",
+     "ex": "他们在商量看电影还是去吃饭。",
+     "exPt": "Eles estão decidindo se vão ao cinema ou se vão jantar fora."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/H81002/12.jpg",
+   "cena": "Escritório: uma mulher de terninho, em pé, com a mão no ombro da colega sentada ao computador; as duas sorriem.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "这是一个办公室，里面有两个女的。",
+       "pt": "Isto é um escritório, e nele há duas mulheres."
+      },
+      {
+       "zh": "一个女的坐在电脑前面工作。",
+       "pt": "Uma está sentada trabalhando no computador."
+      },
+      {
+       "zh": "另一个女的站在她旁边，手放在她的肩上。",
+       "pt": "A outra está em pé ao lado dela, com a mão no ombro dela."
+      },
+      {
+       "zh": "她们看起来都很高兴。",
+       "pt": "As duas parecem muito contentes."
+      },
+      {
+       "zh": "我想站着的人可能是经理。",
+       "pt": "Acho que a que está em pé deve ser a gerente."
+      },
+      {
+       "zh": "她可能在告诉同事，她的工作做得很好。",
+       "pt": "Talvez esteja dizendo à colega que ela fez um ótimo trabalho."
+      },
+      {
+       "zh": "也可能坐着的人是新来的同事，经理在帮助她。",
+       "pt": "Ou talvez a que está sentada seja uma funcionária nova e a gerente esteja ajudando."
+      },
+      {
+       "zh": "我觉得有这样的同事和经理，工作会很愉快。",
+       "pt": "Acho que, com colegas e chefes assim, o trabalho fica muito mais agradável."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片的地点是一个办公室，图片上有两位女士。",
+       "pt": "A cena se passa num escritório, e há duas mulheres na imagem."
+      },
+      {
+       "zh": "一位穿着黑色西服，站在后面，另一位坐在电脑前，正在用鼠标工作。",
+       "pt": "Uma, de terninho preto, está em pé atrás; a outra está sentada ao computador, trabalhando com o mouse."
+      },
+      {
+       "zh": "站着的那位女士把手放在同事的肩上，两个人都笑得很开心。",
+       "pt": "A que está em pé pôs a mão no ombro da colega, e as duas sorriem bem contentes."
+      },
+      {
+       "zh": "从她们的样子来看，站着的人可能是经理，坐着的人是新来的同事。",
+       "pt": "Pelo jeito delas, a que está em pé deve ser a gerente, e a que está sentada, uma funcionária nova."
+      },
+      {
+       "zh": "我猜经理正在表扬她，说她的报告写得非常好。",
+       "pt": "Imagino que a gerente esteja elogiando a moça, dizendo que o relatório dela ficou ótimo."
+      },
+      {
+       "zh": "我认为，一个好的经理不仅要能力强，而且要关心自己的同事。",
+       "pt": "Acho que um bom gerente não só precisa ser competente, como também precisa se importar com a equipe."
+      },
+      {
+       "zh": "如果经理经常鼓励大家，大家工作起来就会更有热情。",
+       "pt": "Se o gerente incentiva todo mundo com frequência, as pessoas trabalham com muito mais vontade."
+      },
+      {
+       "zh": "我以前实习的时候，就遇到过一位这样的经理。",
+       "pt": "Quando fiz estágio, tive uma gerente assim."
+      },
+      {
+       "zh": "她对我非常耐心，我从她那里学到了很多东西。",
+       "pt": "Ela tinha muita paciência comigo, e aprendi muita coisa com ela."
+      },
+      {
+       "zh": "总之，好的工作环境能让人每天都开开心心地上班。",
+       "pt": "Enfim, um bom ambiente de trabalho faz a gente ir trabalhar feliz todos os dias."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "办公室",
+     "py": "bàngōngshì",
+     "pt": "escritório"
+    },
+    {
+     "w": "同事",
+     "py": "tóngshì",
+     "pt": "colega de trabalho"
+    },
+    {
+     "w": "经理",
+     "py": "jīnglǐ",
+     "pt": "gerente"
+    },
+    {
+     "w": "肩",
+     "py": "jiān",
+     "pt": "ombro"
+    },
+    {
+     "w": "鼠标",
+     "py": "shǔbiāo",
+     "pt": "mouse"
+    },
+    {
+     "w": "表扬",
+     "py": "biǎoyáng",
+     "pt": "elogiar"
+    },
+    {
+     "w": "鼓励",
+     "py": "gǔlì",
+     "pt": "encorajar; incentivar"
+    },
+    {
+     "w": "关心",
+     "py": "guānxīn",
+     "pt": "importar-se com; dar atenção a"
+    },
+    {
+     "w": "能力",
+     "py": "nénglì",
+     "pt": "capacidade; competência"
+    },
+    {
+     "w": "实习",
+     "py": "shíxí",
+     "pt": "fazer estágio"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "站着的人／坐着的人",
+     "pt": "a pessoa que está em pé / sentada (verbo + 着的 + substantivo) — ótimo para diferenciar as pessoas da foto",
+     "ex": "站着的人可能是经理。",
+     "exPt": "A pessoa em pé deve ser a gerente."
+    },
+    {
+     "zh": "把手放在……上",
+     "pt": "pôr a mão em… (estrutura com 把)",
+     "ex": "她把手放在同事的肩上。",
+     "exPt": "Ela pôs a mão no ombro da colega."
+    },
+    {
+     "zh": "……起来",
+     "pt": "quando se põe a fazer… (verbo + 起来)",
+     "ex": "大家工作起来就会更有热情。",
+     "exPt": "Na hora de trabalhar, as pessoas ficam com mais vontade."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "请介绍你的一次旅游经历。",
+   "pt": "Conte sobre uma viagem que você fez.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "前年夏天，我和朋友一起去北京旅游了。",
+       "pt": "Dois anos atrás, no verão, viajei para Pequim com uns amigos."
+      },
+      {
+       "zh": "我们在北京玩儿了一个星期。",
+       "pt": "Passamos uma semana passeando em Pequim."
+      },
+      {
+       "zh": "我们去了长城、故宫，还吃了北京烤鸭。",
+       "pt": "Fomos à Grande Muralha e à Cidade Proibida, e ainda comemos o pato laqueado de Pequim."
+      },
+      {
+       "zh": "长城非常高，爬上去很累，但是风景特别美。",
+       "pt": "A Grande Muralha é muito alta e subir cansa bastante, mas a paisagem é lindíssima."
+      },
+      {
+       "zh": "北京烤鸭也非常好吃，我一个人吃了半只。",
+       "pt": "O pato laqueado também é uma delícia; comi meio pato sozinho."
+      },
+      {
+       "zh": "那时候我的汉语不太好，常常听不懂别人说话。",
+       "pt": "Naquela época meu chinês não era muito bom, e muitas vezes eu não entendia o que as pessoas diziam."
+      },
+      {
+       "zh": "但是北京人很热情，总是很耐心地帮助我们。",
+       "pt": "Mas o pessoal de Pequim é muito acolhedor e sempre ajudava a gente com paciência."
+      },
+      {
+       "zh": "这次旅游让我更喜欢中国了，我希望以后还能再去。",
+       "pt": "Essa viagem me fez gostar ainda mais da China, e espero voltar lá um dia."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我想介绍一次让我印象很深的旅游经历。",
+       "pt": "Quero contar sobre uma viagem que me marcou muito."
+      },
+      {
+       "zh": "那是去年一月，我和两个好朋友去了巴西东北部的一个海边城市。",
+       "pt": "Foi em janeiro do ano passado: fui com dois grandes amigos para uma cidade de praia no Nordeste do Brasil."
+      },
+      {
+       "zh": "我们本来计划每天去海边游泳、晒太阳。",
+       "pt": "A gente tinha planejado ir à praia todo dia para nadar e pegar sol."
+      },
+      {
+       "zh": "没想到到了那儿的第二天就开始下大雨，一连下了三天。",
+       "pt": "Só que, logo no segundo dia, começou a chover forte, e choveu três dias seguidos."
+      },
+      {
+       "zh": "我们只好待在酒店里，心情差极了。",
+       "pt": "Não tivemos outro jeito senão ficar no hotel, e ficamos de péssimo humor."
+      },
+      {
+       "zh": "后来，酒店的服务员建议我们去附近的一个小村子看看。",
+       "pt": "Aí um funcionário do hotel sugeriu que a gente fosse conhecer um vilarejo ali perto."
+      },
+      {
+       "zh": "在那里，我们认识了很多热情的当地人，还跟他们学会了做一种传统的小吃。",
+       "pt": "Lá conhecemos muitos moradores simpáticos e ainda aprendemos com eles a fazer um petisco típico."
+      },
+      {
+       "zh": "第四天，天终于晴了，我们在海边玩儿得非常开心。",
+       "pt": "No quarto dia, o tempo finalmente abriu e a gente se divertiu muito na praia."
+      },
+      {
+       "zh": "这次旅游虽然不太顺利，但是让我明白了：旅游的时候，好心情比好天气更重要。",
+       "pt": "Embora a viagem não tenha saído como planejado, ela me ensinou que, quando se viaja, o bom humor importa mais do que o tempo bom."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "旅游",
+     "py": "lǚyóu",
+     "pt": "viajar (a passeio); turismo"
+    },
+    {
+     "w": "经历",
+     "py": "jīnglì",
+     "pt": "experiência (vivida)"
+    },
+    {
+     "w": "印象",
+     "py": "yìnxiàng",
+     "pt": "impressão"
+    },
+    {
+     "w": "风景",
+     "py": "fēngjǐng",
+     "pt": "paisagem"
+    },
+    {
+     "w": "计划",
+     "py": "jìhuà",
+     "pt": "plano; planejar"
+    },
+    {
+     "w": "只好",
+     "py": "zhǐhǎo",
+     "pt": "não ter outro jeito senão"
+    },
+    {
+     "w": "建议",
+     "py": "jiànyì",
+     "pt": "sugerir; sugestão"
+    },
+    {
+     "w": "当地",
+     "py": "dāngdì",
+     "pt": "local; do lugar"
+    },
+    {
+     "w": "顺利",
+     "py": "shùnlì",
+     "pt": "tranquilo; sem contratempos"
+    },
+    {
+     "w": "晒太阳",
+     "py": "shài tàiyáng",
+     "pt": "pegar sol"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "让我印象很深的是……",
+     "pt": "o que mais me marcou foi… (印象最深 = a impressão mais forte)",
+     "ex": "让我印象最深的是长城的风景。",
+     "exPt": "O que mais me marcou foi a paisagem da Grande Muralha."
+    },
+    {
+     "zh": "只好……",
+     "pt": "não ter outro jeito senão…",
+     "ex": "下大雨了，我们只好待在酒店里。",
+     "exPt": "Começou a chover forte, e não tivemos outro jeito senão ficar no hotel."
+    },
+    {
+     "zh": "……得非常开心",
+     "pt": "avaliar como algo foi feito (verbo + 得 + avaliação)",
+     "ex": "我们在海边玩儿得非常开心。",
+     "exPt": "A gente se divertiu muito na praia."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "有人说“办法总比问题多”，你怎么看这句话？",
+   "pt": "Tem gente que diz que “sempre existem mais soluções do que problemas”. O que você acha dessa frase?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我同意这句话。",
+       "pt": "Concordo com essa frase."
+      },
+      {
+       "zh": "我觉得遇到问题的时候，不要着急。",
+       "pt": "Acho que, quando aparece um problema, a gente não deve se afobar."
+      },
+      {
+       "zh": "只要我们认真想一想，总会有办法的。",
+       "pt": "Se a gente pensar com calma, sempre aparece uma saída."
+      },
+      {
+       "zh": "也可以问问朋友和家人，他们会帮助我们。",
+       "pt": "Também dá para pedir ajuda aos amigos e à família."
+      },
+      {
+       "zh": "比如我刚开始学汉语的时候，听不懂老师说的话。",
+       "pt": "Por exemplo, quando comecei a estudar chinês, eu não entendia o que o professor dizia."
+      },
+      {
+       "zh": "我很着急，觉得汉语太难了。",
+       "pt": "Fiquei aflito e achei que o chinês era difícil demais."
+      },
+      {
+       "zh": "后来我每天听中文歌，还找了一个中国朋友练习。",
+       "pt": "Depois comecei a ouvir músicas em chinês todo dia e arrumei um amigo chinês para praticar."
+      },
+      {
+       "zh": "半年以后，我能听懂很多了。",
+       "pt": "Seis meses depois, eu já entendia muita coisa."
+      },
+      {
+       "zh": "所以我相信，办法总比问题多。",
+       "pt": "Por isso acredito que sempre existem mais soluções do que problemas."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我非常同意“办法总比问题多”这句话。",
+       "pt": "Concordo totalmente com a frase “sempre existem mais soluções do que problemas”."
+      },
+      {
+       "zh": "在生活和工作中，每个人都会遇到各种各样的问题。",
+       "pt": "Na vida e no trabalho, todo mundo enfrenta problemas de todo tipo."
+      },
+      {
+       "zh": "有的人一遇到问题就紧张，甚至想放弃。",
+       "pt": "Tem gente que fica nervosa assim que surge um problema e até pensa em desistir."
+      },
+      {
+       "zh": "但是我认为，问题出现的时候，最重要的是保持冷静。",
+       "pt": "Mas acho que, quando um problema aparece, o mais importante é manter a calma."
+      },
+      {
+       "zh": "首先，我们应该想清楚问题的原因是什么。",
+       "pt": "Primeiro, devemos entender bem qual é a causa do problema."
+      },
+      {
+       "zh": "其次，可以多试几种不同的方法，这个不行就换一个。",
+       "pt": "Segundo, vale tentar vários caminhos diferentes: se um não funciona, troca por outro."
+      },
+      {
+       "zh": "另外，如果自己解决不了，也可以请朋友或者有经验的人帮忙。",
+       "pt": "Além disso, se não der para resolver sozinho, dá para pedir ajuda a amigos ou a pessoas com mais experiência."
+      },
+      {
+       "zh": "我自己就有这样的经历。",
+       "pt": "Eu mesmo já passei por isso."
+      },
+      {
+       "zh": "去年找工作的时候，我发了二十多份简历，都没有消息。",
+       "pt": "No ano passado, quando estava procurando emprego, mandei mais de vinte currículos e não tive nenhuma resposta."
+      },
+      {
+       "zh": "后来我请老师帮我修改了简历，最后终于找到了满意的工作。",
+       "pt": "Depois pedi a um professor que me ajudasse a melhorar o currículo e, no fim, consegui um emprego de que gosto."
+      },
+      {
+       "zh": "所以，只要不放弃，就一定能找到解决问题的办法。",
+       "pt": "Por isso, desde que a gente não desista, sempre dá para achar uma solução."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "办法",
+     "py": "bànfǎ",
+     "pt": "jeito; solução; método"
+    },
+    {
+     "w": "同意",
+     "py": "tóngyì",
+     "pt": "concordar"
+    },
+    {
+     "w": "遇到",
+     "py": "yùdào",
+     "pt": "deparar-se com; enfrentar"
+    },
+    {
+     "w": "放弃",
+     "py": "fàngqì",
+     "pt": "desistir"
+    },
+    {
+     "w": "紧张",
+     "py": "jǐnzhāng",
+     "pt": "nervoso; tenso"
+    },
+    {
+     "w": "冷静",
+     "py": "lěngjìng",
+     "pt": "calmo; manter a calma"
+    },
+    {
+     "w": "原因",
+     "py": "yuányīn",
+     "pt": "causa; motivo"
+    },
+    {
+     "w": "解决",
+     "py": "jiějué",
+     "pt": "resolver"
+    },
+    {
+     "w": "甚至",
+     "py": "shènzhì",
+     "pt": "até mesmo"
+    },
+    {
+     "w": "简历",
+     "py": "jiǎnlì",
+     "pt": "currículo"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "一……就……",
+     "pt": "assim que…, logo…",
+     "ex": "有的人一遇到问题就紧张。",
+     "exPt": "Tem gente que fica nervosa assim que surge um problema."
+    },
+    {
+     "zh": "只要……就……",
+     "pt": "desde que… (condição suficiente)",
+     "ex": "只要不放弃，就一定能找到办法。",
+     "exPt": "Desde que você não desista, com certeza vai achar uma solução."
+    },
+    {
+     "zh": "我同意这句话，因为……",
+     "pt": "posicionar-se sobre um ditado logo na primeira frase",
+     "ex": "我同意这句话，因为问题总有解决的办法。",
+     "exPt": "Concordo com essa frase, porque todo problema tem solução."
+    }
+   ]
+  }
+ ]
+}
