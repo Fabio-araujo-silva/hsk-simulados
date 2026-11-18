@@ -83,6 +83,16 @@ export function vozSintetica(raiz: string): Plugin {
   }
 
   const handler = (req: IncomingMessage, res: ServerResponse, next: () => void) => {
+    // arquivos gerados depois que o servidor subiu: o Vite só conhece os de public/ que existiam na partida
+    // (e public/tts fica fora do watcher), então devolveria o index.html no lugar do áudio
+    const arq = req.method === "GET" ? req.url?.match(/^\/tts\/([0-9a-f]{20})\.(mp3|json)(\?|$)/) : null;
+    if (arq) {
+      const caminho = path.join(dir, `${arq[1]}.${arq[2]}`);
+      if (!fs.existsSync(caminho)) return next();
+      res.setHeader("Content-Type", arq[2] === "mp3" ? "audio/mpeg" : "application/json; charset=utf-8");
+      res.setHeader("Cache-Control", "no-cache");
+      return res.end(fs.readFileSync(caminho));
+    }
     if (!req.url?.startsWith("/api/tts") || req.method !== "POST") return next();
     let corpo = "";
     req.setEncoding("utf8");
