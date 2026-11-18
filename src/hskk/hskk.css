@@ -1,0 +1,577 @@
+/*
+ * Estilos próprios do HSKK (prova oral). Tudo aqui vale só dentro de <div className="hskk">…</div>:
+ * as páginas do HSK não mudam nada. As regras base (cores, botões, cartões, tabelas, leitura…) são as de src/estilo.css.
+ *
+ * Este arquivo é importado pelas páginas do HSKK, que o App carrega antes de src/estilo.css (veja src/main.tsx):
+ * cada regra ganha uma classe de especificidade (.hskk) e por isso vence as regras base de mesmo peso e perde para
+ * as mais específicas — a mesma cascata de quando o HSKK era um app separado, com estas regras no fim do estilo.css.
+ */
+
+.hskk .falta {
+  color: var(--tinta-3);
+}
+.hskk .infos .neutro {
+  color: var(--tinta-2);
+  border: 1px solid var(--linha);
+  border-radius: 99px;
+  padding: 0 0.6em;
+}
+.hskk .historico {
+  font-size: 0.82rem;
+  color: var(--tinta-2);
+}
+.hskk .erro-inline {
+  color: var(--erro);
+}
+
+/* gravador */
+.hskk .gravador {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.hskk .btn-gravar {
+  background: var(--tinta);
+  color: var(--fundo);
+  font-weight: 600;
+  padding: 0.65em 1.2em;
+}
+.hskk .btn-gravar.gravando {
+  background: var(--erro);
+  color: #fff;
+  animation: hskk-pulsa 1.2s ease-in-out infinite;
+}
+@keyframes hskk-pulsa {
+  50% {
+    filter: brightness(1.18);
+  }
+}
+.hskk .relogio-grav {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--erro);
+  display: inline-flex;
+  gap: 0.6em;
+  align-items: center;
+}
+.hskk .relogio-grav.urgente {
+  animation: hskk-pulsa 0.6s ease-in-out infinite;
+}
+.hskk .nota-mic {
+  color: var(--tinta-3);
+}
+.hskk .medidor {
+  display: inline-block;
+  width: 90px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--linha);
+  overflow: hidden;
+  vertical-align: middle;
+}
+.hskk .medidor span {
+  display: block;
+  height: 100%;
+  background: var(--ok);
+  transition: width 0.08s linear;
+}
+.hskk .aviso-mic {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--aviso-fundo);
+  border-radius: 9px;
+  padding: 0.6em 0.9em;
+  margin: 0.6em 0;
+  flex-basis: 100%;
+}
+.hskk .aviso-mic.ruim {
+  background: var(--erro-fundo);
+}
+.hskk .teste-mic {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  margin: 0.6em 0;
+}
+
+/* gravações e correção */
+.hskk .tentativas {
+  margin-top: 1.2em;
+}
+.hskk .tentativas h3,
+.hskk .modelos h3,
+.hskk .vocab h3,
+.hskk .estruturas h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5em;
+}
+.hskk .item-gravacao {
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 0.7em 0.9em;
+  margin-bottom: 0.6em;
+  background: var(--papel-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.hskk .item-gravacao-topo {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+}
+.hskk .item-gravacao-topo small {
+  color: var(--tinta-3);
+}
+.hskk .item-gravacao audio {
+  height: 34px;
+  max-width: 100%;
+}
+.hskk .comparacao-topo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+}
+.hskk .pct {
+  font-size: 1.4rem;
+}
+.hskk .pct.bom {
+  color: var(--ok);
+}
+.hskk .pct.medio {
+  color: #c98a00;
+}
+.hskk .pct.ruim {
+  color: var(--erro);
+}
+.hskk .diff {
+  font-size: 1.5rem;
+  line-height: 2.2;
+  letter-spacing: 0.04em;
+}
+.hskk .diff span,
+.hskk .legenda span {
+  border-radius: 4px;
+  padding: 0 1px;
+}
+.hskk .d-ok {
+  color: var(--ok);
+}
+.hskk .d-falta {
+  color: var(--erro);
+  background: var(--erro-fundo);
+  text-decoration: underline dotted;
+}
+.hskk .d-troca {
+  color: #b06d00;
+  background: var(--aviso-fundo);
+}
+.hskk .d-troca sub {
+  font-size: 0.55em;
+  color: var(--tinta-3);
+  margin-left: 1px;
+}
+.hskk .d-sobra {
+  color: var(--tinta-3);
+  text-decoration: line-through;
+  font-size: 0.85em;
+}
+.hskk .legenda {
+  font-size: 0.75rem;
+  color: var(--tinta-3);
+  display: flex;
+  gap: 0.6em;
+}
+.hskk .ouvido small,
+.hskk .transcricao-fala small {
+  color: var(--tinta-3);
+}
+.hskk .transcricao-fala p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0.2em 0;
+}
+.hskk .estat {
+  display: block;
+}
+
+/* estudo */
+.hskk .estudo-questao {
+  display: flex;
+  flex-direction: column;
+}
+.hskk .player-linha {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  background: var(--papel-2);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 0.7em 0.9em;
+  margin: 0.4em 0 1em;
+}
+.hskk .bloco-texto {
+  min-height: 3em;
+}
+.hskk .frase-alvo {
+  font-size: 1.7rem;
+  line-height: 2.1;
+  margin: 0.2em 0;
+}
+.hskk .linha-revisao {
+  margin-top: 1em;
+  font-size: 0.88rem;
+  color: var(--tinta-2);
+}
+.hskk .figura {
+  margin: 0.4em 0 1em;
+  text-align: center;
+}
+.hskk .figura img {
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: 10px;
+  border: 1px solid var(--linha);
+  background: #fff;
+}
+.hskk .figura figcaption {
+  color: var(--tinta-3);
+  font-size: 0.85rem;
+  margin-top: 0.3em;
+}
+.hskk .pergunta-caderno {
+  background: var(--papel-2);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 0.6em 1em;
+  margin-bottom: 1em;
+}
+.hskk .pergunta-caderno .frase-alvo {
+  font-size: 1.45rem;
+}
+.hskk .preparo-estudo {
+  border: 1px dashed var(--linha);
+  border-radius: 10px;
+  padding: 0.7em 0.9em;
+}
+.hskk .preparo-topo {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+.hskk .preparo-topo small {
+  color: var(--tinta-3);
+}
+.hskk .notas-preparo,
+.hskk .notas-prova textarea {
+  width: 100%;
+  font: inherit;
+  font-family: var(--zh);
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  padding: 0.5em 0.7em;
+  background: var(--papel);
+  color: var(--tinta);
+  resize: vertical;
+}
+.hskk .dica-fala {
+  font-size: 0.88rem;
+  color: var(--tinta-2);
+}
+.hskk .modelos {
+  margin-top: 1.6em;
+  border-top: 1px solid var(--linha);
+  padding-top: 1em;
+}
+.hskk .modelos-topo {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  margin-bottom: 0.6em;
+}
+.hskk .modelos-topo h3 {
+  margin: 0;
+}
+.hskk .selo-gerado {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #8a5a00;
+  background: var(--aviso-fundo);
+  border: 1px solid #e0c060;
+  border-radius: 99px;
+  padding: 0.1em 0.7em;
+}
+.hskk .modelo {
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 0.7em 1em;
+  margin-bottom: 0.8em;
+}
+.hskk .modelo-cabeca {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  margin-bottom: 0.3em;
+}
+.hskk .modelo-cabeca small {
+  color: var(--tinta-3);
+}
+.hskk .modelo-texto {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.hskk .modelo-texto:not(.com-trad) .modelo-frase {
+  display: inline;
+}
+.hskk .modelo-texto.com-trad .modelo-frase {
+  margin-bottom: 0.35em;
+}
+.hskk .modelo-pt {
+  font-family: var(--ui);
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--tinta-2);
+}
+.hskk .dica-hover {
+  color: var(--tinta-3);
+}
+.hskk .vocab,
+.hskk .estruturas {
+  margin-top: 1.2em;
+}
+.hskk .grande-zh {
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+.hskk td.py {
+  color: var(--tinta-2);
+  white-space: nowrap;
+}
+.hskk .estrutura {
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--linha);
+}
+.hskk .estrutura-ex {
+  font-size: 1.1rem;
+  margin-top: 0.2em;
+}
+.hskk .estrutura-ex small {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--tinta-2);
+}
+
+/* prova */
+.hskk .exame {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.hskk .rec {
+  color: var(--erro);
+  font-weight: 700;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.hskk .exame-fase {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: 1em 1.3em;
+  margin-bottom: 1em;
+  font-size: 1.05rem;
+}
+.hskk .titulo-parte {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.6em;
+}
+.hskk .janela {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  padding: 0.6em 0;
+  font-size: 1.15rem;
+}
+.hskk .janela .barra {
+  flex-basis: 100%;
+}
+.hskk .janela.falando b {
+  color: var(--erro);
+}
+.hskk .janela.falando .barra-cheia {
+  background: var(--erro);
+}
+.hskk .progresso-p1 {
+  display: flex;
+  gap: 0.35em;
+  flex-wrap: wrap;
+}
+.hskk .bolinha {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1.5px solid var(--linha);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--tinta-3);
+}
+.hskk .bolinha.feita {
+  background: var(--ok-fundo);
+  border-color: var(--ok);
+  color: var(--ok);
+}
+.hskk .bolinha.atual {
+  outline: 2px solid var(--tinta);
+  outline-offset: 1px;
+}
+.hskk .caderno {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: 1.2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.hskk .caderno-figuras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.hskk .caderno-figuras figure {
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0.4em;
+}
+.hskk .caderno-figuras img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+}
+.hskk .caderno-figuras figure.atual,
+.hskk .caderno-pergunta.atual {
+  border-color: var(--erro);
+  background: var(--erro-fundo);
+}
+.hskk .caderno-pergunta {
+  font-size: 1.3rem;
+  line-height: 2.3;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0.2em 0.6em;
+}
+.hskk .notas-prova {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  color: var(--tinta-3);
+  font-size: 0.85rem;
+}
+
+/* resultado */
+.hskk .resultado {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.hskk .placar .placar-largo {
+  grid-column: span 2;
+  font-size: 0.85rem;
+  color: var(--tinta-2);
+}
+.hskk .resultado .acoes {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.hskk .resultado .bloco {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: 1em 1.3em;
+  margin-bottom: 1em;
+}
+.hskk .resultado .bloco h3 {
+  margin: 0 0 0.6em;
+  font-size: 1rem;
+}
+.hskk .resultado .bloco h3 small {
+  color: var(--tinta-3);
+  font-weight: 400;
+}
+.hskk .notas-salvas {
+  white-space: pre-wrap;
+  margin: 0;
+}
+.hskk .item-revisao-prova {
+  border-top: 1px solid var(--linha);
+  padding: 0.8em 0;
+}
+.hskk .item-revisao-prova .item-cabeca {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+.hskk .frase-media {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+.hskk .frase-media .traducao {
+  font-size: 0.85rem;
+}
+.hskk .miniatura {
+  height: 90px;
+  border-radius: 8px;
+  border: 1px solid var(--linha);
+  background: #fff;
+}
+.hskk .sub-pt {
+  display: block;
+  color: var(--tinta-3);
+}
+
+/* regras */
+.hskk .regras-pagina {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.hskk .regras-pagina li {
+  margin-bottom: 0.45em;
+}
+.hskk .regras-tabela td {
+  vertical-align: top;
+}
+.hskk .fonte-regras {
+  font-size: 0.82rem;
+  color: var(--tinta-3);
+  margin-top: 2em;
+}
+
+@media (max-width: 860px) {
+  .hskk .caderno-figuras {
+    grid-template-columns: 1fr;
+  }
+  .hskk .frase-alvo {
+    font-size: 1.4rem;
+  }
+}

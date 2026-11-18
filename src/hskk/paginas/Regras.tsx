@@ -1,3 +1,4 @@
+import "../hskk.css";
 /** As regras do HSKK 中级, em português, conferidas com os cadernos oficiais (样题 2023 e provas H81001–H81003). */
 export function PaginaRegras() {
   return (

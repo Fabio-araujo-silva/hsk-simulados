@@ -8,6 +8,7 @@ import { carregaProva, ehFalar, formataTempo, urlPublica } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import { Gravacao, pedeMicrofone, useMicrofone } from "../microfone";
 import type { Prova, QuestaoFalar, Tentativa } from "../tipos";
+import "../hskk.css";
 
 // Modo prova: o áudio ORIGINAL corre do começo ao fim, como no dia (instruções, frases, 嘀, os 10 min de preparação
 // e os 2 min de cada resposta). O app grava sua voz em cada janela de resposta, sem texto, pinyin nem tradução.

@@ -8,6 +8,7 @@ import { carregaLexico, carregaProva, TEMPO_REPETIR, urlPublica } from "../dados
 import { salvaGravacao, transcreve } from "../gravacoes";
 import { NOTAS, previas, revisa, ehNovo } from "../../srs";
 import type { Cartao, Lexico, Prova } from "../tipos";
+import "../hskk.css";
 
 const ANTECIPA_MS = 20 * 60 * 1000; // aprendendo: pode antecipar até 20 min se não houver mais nada
 

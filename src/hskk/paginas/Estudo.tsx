@@ -9,6 +9,7 @@ import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, TEMPO_FALA, TEMPO_PREPARO_ESTUDO, TEMPO_REPETIR, urlPublica } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, Tentativa } from "../tipos";
+import "../hskk.css";
 
 export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }) {
   const [prova, setProva] = useState<Prova | null>(null);

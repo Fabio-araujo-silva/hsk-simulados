@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { apagaCartao, useEstado } from "../armazenamento";
 import { intervalo } from "../../srs";
+import "../hskk.css";
 
 const ESTADOS = ["novo", "aprendendo", "revisão", "reaprendendo"];
 

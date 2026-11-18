@@ -7,6 +7,7 @@ import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, urlPublica } from "../dados";
 import { transcreveGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao } from "../tipos";
+import "../hskk.css";
 
 export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
   const tent = useEstado((e) => e.tentativas[tentativaId]);

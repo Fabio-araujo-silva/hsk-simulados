@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { resetaSimulado, useConfig, useEstado } from "../armazenamento";
 import { carregaIndice, formataTempo, ROTULO_FONTE } from "../dados";
 import type { ResumoProva, Tentativa } from "../tipos";
+import "../hskk.css";
 
 /** média do % da parte 1 (última gravação corrigida de cada frase) */
 function mediaP1(t: Tentativa) {

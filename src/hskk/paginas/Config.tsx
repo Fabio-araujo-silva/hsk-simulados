@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { exportaBackup, formataTudo, importaBackup, mudaConfig, useConfig, useEstado } from "../armazenamento";
+import "../hskk.css";
 
 export function PaginaConfig() {
   const cfg = useConfig();
