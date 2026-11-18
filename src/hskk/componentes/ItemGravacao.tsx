@@ -1,8 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import { useConfig } from "../armazenamento";
+import { atualizaGravacao, useConfig } from "../armazenamento";
+import { adicionaRevisao } from "../cartoes";
 import { formataTempo } from "../dados";
-import { transcreveGravacao, urlGravacao } from "../gravacoes";
-import type { Gravacao, Prova, Questao } from "../tipos";
+import { SEM_TRANSCRICAO, transcreveGravacao, urlGravacao } from "../gravacoes";
+import type { Autoavaliacao, Gravacao, Prova, Questao } from "../tipos";
+import { MODO_PUBLICO } from "../../publico";
+
+/** Sem transcrição, quem avalia a repetição do 第一部分 é você: "quase" e "longe" mandam a frase para a revisão. */
+const AUTOAVALIACOES: { v: Autoavaliacao; rotulo: string }[] = [
+  { v: "tudo", rotulo: "repeti tudo" },
+  { v: "quase", rotulo: "faltou um pouco" },
+  { v: "longe", rotulo: "faltou bastante" },
+];
 import { Comparacao } from "./Comparacao";
 
 interface Props {
@@ -53,7 +62,11 @@ export function ItemGravacao({ tentId, prova, q, g, auto, titulo, onRevisao }: P
         <small>
           {new Date(g.em).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })} · {formataTempo(g.dur)}
         </small>
-        {url ? <audio controls preload="none" src={url} /> : <small className="falta">áudio indisponível (gravado sem o servidor local)</small>}
+        {url ? (
+          <audio controls preload="none" src={url} />
+        ) : (
+          <small className="falta">{MODO_PUBLICO ? "áudio indisponível (a gravação fica só enquanto a aba está aberta)" : "áudio indisponível (gravado sem o servidor local)"}</small>
+        )}
       </div>
       {g.texto !== undefined ? (
         q.parte === 1 ? (
@@ -73,8 +86,31 @@ export function ItemGravacao({ tentId, prova, q, g, auto, titulo, onRevisao }: P
             </small>
           </div>
         )
+      ) : g.soNaSessao && !MODO_PUBLICO ? (
+        // versão local sem o servidor (site estático, ou o envio da gravação falhou): como sempre foi
+        <small className="falta">{SEM_TRANSCRICAO}</small>
       ) : g.soNaSessao ? (
-        <small className="falta">sem o servidor local não dá para transcrever</small>
+        // site público: sem transcrição automática, a pessoa compara de ouvido e diz como foi (parte 1 → revisão)
+        <div className="autoavaliacao">
+          <small className="falta">{SEM_TRANSCRICAO}</small>
+          {q.parte === 1 && (
+            <div className="acoes">
+              <small>como foi?</small>
+              {AUTOAVALIACOES.map((a) => (
+                <button
+                  key={a.v}
+                  className={`chip ${g.autoavaliacao === a.v ? "on" : ""}`}
+                  onClick={() => {
+                    atualizaGravacao(tentId, q.n, g.arquivo, { autoavaliacao: a.v });
+                    if (a.v !== "tudo" && adicionaRevisao(prova, q)) onRevisao?.();
+                  }}
+                >
+                  {a.rotulo}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       ) : estado === "transcrevendo" ? (
         <small className="carregando">transcrevendo com o ElevenLabs Scribe…</small>
       ) : (

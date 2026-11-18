@@ -5,7 +5,8 @@ import { Comparacao } from "../componentes/Comparacao";
 import { BotaoGravar } from "../componentes/Gravador";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, TEMPO_REPETIR, urlMidia } from "../dados";
-import { salvaGravacao, transcreve } from "../gravacoes";
+import { salvaGravacao, SEM_TRANSCRICAO, transcreve } from "../gravacoes";
+import { MODO_PUBLICO } from "../../publico";
 import { NOTAS, previas, revisa, ehNovo } from "../../srs";
 import type { Cartao, Lexico, Prova } from "../tipos";
 import "../hskk.css";
@@ -170,8 +171,10 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
 
   const gravou = async (blob: Blob, ext: string) => {
     setUrlMinha(URL.createObjectURL(blob));
-    setEstadoTr("transcrevendo");
     setVirado(true);
+    // site público: sem transcrição — você ouve a sua gravação e o original e dá a nota
+    if (MODO_PUBLICO) return setEstadoTr("erro");
+    setEstadoTr("transcrevendo");
     try {
       const arquivo = `revisao-${cartao.origem.prova}-q${cartao.origem.n}-${Date.now().toString(36)}.${ext}`;
       const { soNaSessao } = await salvaGravacao(arquivo, blob);
@@ -209,7 +212,9 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
               <p className="traducao">{cartao.frase.pt}</p>
               {urlMinha && <audio controls src={urlMinha} />}
               {estadoTr === "transcrevendo" && <small className="carregando">transcrevendo…</small>}
-              {estadoTr === "erro" && <small className="falta">não deu para transcrever agora (precisa do servidor local e da chave no .env)</small>}
+              {estadoTr === "erro" && (
+                <small className="falta">{MODO_PUBLICO ? `${SEM_TRANSCRICAO}.` : "não deu para transcrever agora (precisa do servidor local e da chave no .env)"}</small>
+              )}
               {dito !== null && <Comparacao alvo={cartao.frase.zh} dito={dito} limiar={cfg.limiarRevisao} />}
             </>
           )}

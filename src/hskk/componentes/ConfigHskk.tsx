@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { exportaBackup, formataTudo, importaBackup, mudaConfig, useConfig, useEstado } from "../armazenamento";
 import "../hskk.css";
+import { MODO_PUBLICO } from "../../publico";
 
 /** Opções, backup e formatação do HSKK (prova oral), na página ⚙ do app. O progresso do HSKK é separado do HSK. */
 export function ConfigHskk() {
@@ -30,10 +31,19 @@ export function ConfigHskk() {
           <input type="checkbox" checked={cfg.textoAntes} onChange={(e) => mudaConfig({ textoAntes: e.target.checked })} />
           Parte 1: mostrar o texto da frase antes de eu tentar repetir (sem isso, o texto aparece depois da 1ª gravação)
         </label>
-        <label className="linha-cfg">
-          <input type="checkbox" checked={cfg.autoTranscrever} onChange={(e) => mudaConfig({ autoTranscrever: e.target.checked })} />
-          Transcrever e corrigir sozinho cada gravação do modo estudo (ElevenLabs Scribe, pelo servidor local)
-        </label>
+        {MODO_PUBLICO ? (
+          <p className="linha-cfg">
+            <small>
+              A transcrição automática das gravações (ElevenLabs Scribe) só existe na versão local do app. Aqui você grava, ouve a sua voz ao
+              lado do original e avalia: na parte 1, “faltou um pouco” ou “faltou bastante” manda a frase para a revisão espaçada.
+            </small>
+          </p>
+        ) : (
+          <label className="linha-cfg">
+            <input type="checkbox" checked={cfg.autoTranscrever} onChange={(e) => mudaConfig({ autoTranscrever: e.target.checked })} />
+            Transcrever e corrigir sozinho cada gravação do modo estudo (ElevenLabs Scribe, pelo servidor local)
+          </label>
+        )}
         <label className="linha-cfg">
           <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
           Permitir pausar o modo prova do HSKK (no exame real não pode)
@@ -56,11 +66,18 @@ export function ConfigHskk() {
         </label>
 
         <h3>Backup do HSKK</h3>
-        <p>
-          Com o servidor local (<code>npm run dev</code>) o progresso do HSKK fica em <code>progresso/hskk.json</code> (backup diário em{" "}
-          <code>progresso/backups/hskk-*.json</code>) e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não os
-          áudios).
-        </p>
+        {MODO_PUBLICO ? (
+          <p>
+            Com a conta conectada, o progresso do HSKK fica salvo na nuvem (sem conta, só neste navegador). As gravações da sua voz não são
+            guardadas: ficam só enquanto a aba está aberta. O backup abaixo leva só o progresso.
+          </p>
+        ) : (
+          <p>
+            Com o servidor local (<code>npm run dev</code>) o progresso do HSKK fica em <code>progresso/hskk.json</code> (backup diário em{" "}
+            <code>progresso/backups/hskk-*.json</code>) e as gravações em <code>progresso/gravacoes/</code>. O backup abaixo leva só o progresso (não
+            os áudios).
+          </p>
+        )}
         <div className="acoes">
           <button className="pri" onClick={baixa}>
             baixar backup do HSKK (.json)
@@ -98,8 +115,15 @@ export function ConfigHskk() {
         <h2>Formatar o progresso do HSKK</h2>
         <p>
           Apaga <b>tudo do HSKK</b>: {Object.keys(nTent).length} tentativas (estudo e provas) e {Object.keys(nCart).length} frases da revisão
-          espaçada. O HSK não é afetado. Os arquivos de áudio em <code>progresso/gravacoes/</code> não são apagados e as configurações ficam. Por
-          segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/hskk-antes-*.json</code>.
+          espaçada. O HSK não é afetado.{" "}
+          {MODO_PUBLICO ? (
+            <>As configurações ficam. Por segurança a nuvem guarda uma cópia do estado anterior (em Conta → cópias de segurança).</>
+          ) : (
+            <>
+              Os arquivos de áudio em <code>progresso/gravacoes/</code> não são apagados e as configurações ficam. Por segurança o servidor guarda
+              uma cópia do estado anterior em <code>progresso/backups/hskk-antes-*.json</code>.
+            </>
+          )}
         </p>
         <div className="acoes">
           <input className="entrada" placeholder="digite FORMATAR" value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />

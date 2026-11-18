@@ -116,7 +116,11 @@ export interface Gravacao {
   pct?: number;
   /** a gravação só existe nesta aba (sem o servidor local) */
   soNaSessao?: boolean;
+  /** 第一部分 sem transcrição (site público): como você mesmo avaliou a repetição ao ouvir */
+  autoavaliacao?: Autoavaliacao;
 }
+
+export type Autoavaliacao = "tudo" | "quase" | "longe";
 
 export interface Tentativa {
   id: string;

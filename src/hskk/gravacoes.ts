@@ -2,26 +2,36 @@ import { atualizaGravacao, leEstado } from "./armazenamento";
 import { compara } from "./comparacao";
 import { adicionaRevisao } from "./cartoes";
 import type { Gravacao, Prova, Questao } from "./tipos";
+import { MODO_PUBLICO } from "../publico";
 
 // Gravações e transcrição, sempre pelo servidor local (vite.config.ts → servidor/gravacoes.ts, rotas /api/hskk/…).
 // A chave da ElevenLabs fica no servidor; o navegador só manda o nome do arquivo.
-// Sem servidor (site estático), a gravação fica só nesta aba (URL temporária) e não dá para transcrever.
+// Sem servidor (site estático) e no site público, a gravação fica só nesta aba (URL temporária) e não dá para
+// transcrever: no público não existe função com a chave (cada transcrição custa créditos de quem paga a conta).
+
+/** Mensagem para quando a transcrição não existe aqui. */
+export const SEM_TRANSCRICAO = MODO_PUBLICO
+  ? "a transcrição automática só existe na versão local do app — ouça a sua gravação ao lado do original e avalie você mesmo"
+  : "sem o servidor local não dá para transcrever";
 
 const BASE = import.meta.env.BASE_URL;
 const locais = new Map<string, string>();
 
 export async function salvaGravacao(nome: string, blob: Blob): Promise<{ soNaSessao: boolean }> {
-  try {
-    const r = await fetch(`${BASE}api/hskk/gravacoes/${encodeURIComponent(nome)}`, { method: "PUT", body: blob, headers: { "Content-Type": blob.type || "audio/webm" } });
-    const tipo = r.headers.get("content-type") ?? "";
-    if (r.ok && tipo.includes("json")) {
-      const antigo = locais.get(nome);
-      if (antigo) URL.revokeObjectURL(antigo);
-      locais.delete(nome);
-      return { soNaSessao: false };
+  // no site público nem tenta: não há servidor para guardar a gravação
+  if (!MODO_PUBLICO) {
+    try {
+      const r = await fetch(`${BASE}api/hskk/gravacoes/${encodeURIComponent(nome)}`, { method: "PUT", body: blob, headers: { "Content-Type": blob.type || "audio/webm" } });
+      const tipo = r.headers.get("content-type") ?? "";
+      if (r.ok && tipo.includes("json")) {
+        const antigo = locais.get(nome);
+        if (antigo) URL.revokeObjectURL(antigo);
+        locais.delete(nome);
+        return { soNaSessao: false };
+      }
+    } catch {
+      /* sem servidor */
     }
-  } catch {
-    /* sem servidor */
   }
   locais.set(nome, URL.createObjectURL(blob));
   return { soNaSessao: true };
@@ -39,6 +49,7 @@ export interface Transcricao {
 const pendentes = new Map<string, Promise<Transcricao>>();
 
 export async function transcreve(arquivo: string): Promise<Transcricao> {
+  if (MODO_PUBLICO) throw new Error(SEM_TRANSCRICAO);
   if (!pendentes.has(arquivo)) {
     const p = (async () => {
       const r = await fetch(`${BASE}api/hskk/transcreve`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ arquivo }) });
