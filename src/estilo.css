@@ -1719,3 +1719,307 @@ button:disabled {
   display: block;
   color: var(--tinta-3);
 }
+
+/* ------------------------------------------------------------- vocabulário */
+.vocab-intro {
+  color: var(--tinta-2);
+  max-width: 760px;
+  margin-top: -0.2em;
+}
+.vocab-niveis,
+.vocab-filtros,
+.vocab-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 0.6em;
+}
+.vocab-niveis button small {
+  font-size: 0.8em;
+  opacity: 0.75;
+}
+.vocab-filtros input[type="search"] {
+  flex: 1 1 240px;
+  max-width: 420px;
+}
+.vocab-acoes > button {
+  font-size: 0.88rem;
+  padding: 0.35em 0.8em;
+}
+.vocab-acoes > .sec.on {
+  background: var(--acento-fundo);
+  border-color: var(--acento);
+  color: var(--acento);
+}
+.vocab-velocidade {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-left: auto;
+  color: var(--tinta-3);
+  font-size: 0.88rem;
+}
+.vocab-velocidade select {
+  font-size: 0.85rem;
+  padding: 0.25em 0.4em;
+}
+.vocab-placar {
+  position: sticky;
+  top: var(--altura-topo, 0px);
+  z-index: 10;
+  padding: 0.5em 0 0.6em;
+  margin-bottom: 0.4em;
+  background: color-mix(in srgb, var(--fundo) 90%, transparent);
+  backdrop-filter: blur(8px);
+}
+.vocab-placar p {
+  margin: 0 0 0.4em;
+  font-size: 0.9rem;
+  color: var(--tinta-2);
+}
+.vocab-placar b {
+  color: var(--tinta);
+}
+.vocab-placar b.aprovado {
+  color: var(--ok);
+}
+.vocab-placar b.reprovado {
+  color: var(--erro);
+}
+.vocab-mostrando {
+  color: var(--tinta-3);
+}
+.vocab-progresso {
+  display: flex;
+  height: 6px;
+  background: var(--linha);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.vocab-progresso i {
+  display: block;
+  height: 100%;
+  transition: width 0.2s;
+}
+.vocab-progresso .certas {
+  background: var(--ok);
+}
+.vocab-progresso .erradas {
+  background: var(--erro);
+}
+
+.vocab-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+.vocab-cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 10px 14px 10px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.vocab-cartao.certa {
+  border-color: var(--ok);
+  background: var(--ok-fundo);
+}
+.vocab-cartao.errada {
+  border-color: var(--erro);
+  background: var(--erro-fundo);
+}
+.vocab-topo {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  min-height: 1.1em;
+  margin-bottom: -4px;
+}
+.vocab-num {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--tinta-3);
+  white-space: nowrap;
+}
+.vocab-leituras {
+  font-size: 0.66rem;
+  color: var(--tinta-3);
+  border: 1px solid var(--linha);
+  border-radius: 99px;
+  padding: 0 0.45em;
+  cursor: help;
+}
+.vocab-hz {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  text-align: left;
+  overflow-wrap: anywhere;
+  color: var(--tinta);
+  user-select: none;
+}
+.vocab-hz:hover,
+.vocab-hz.tocando {
+  color: var(--acento);
+}
+.vocab-hz.tocando {
+  animation: vocab-pulso 0.8s ease-in-out infinite alternate;
+}
+@keyframes vocab-pulso {
+  to {
+    opacity: 0.55;
+  }
+}
+.vocab-py {
+  min-height: 1.4em;
+  color: var(--acento);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+.vocab-py.tampado {
+  color: var(--tinta-3);
+  filter: blur(3px);
+  opacity: 0.5;
+  cursor: pointer;
+  user-select: none;
+}
+.vocab-sig {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  border-top: 1px dashed var(--linha);
+  padding-top: 8px;
+}
+.vocab-olho {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--linha);
+  border-radius: 50%;
+  background: var(--papel-2);
+}
+.vocab-olho:hover {
+  border-color: var(--tinta-3);
+}
+.vocab-olho svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--tinta);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.vocab-pt {
+  min-width: 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.vocab-pt.tampado {
+  filter: blur(6px);
+  opacity: 0.5;
+  cursor: pointer;
+  user-select: none;
+}
+.vocab-marcas {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+.vocab-marcas button {
+  flex: 1;
+  justify-content: center;
+  padding: 4px 0;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--tinta-3);
+}
+.vocab-marcas button:hover {
+  border-color: var(--tinta-3);
+  color: var(--tinta-2);
+}
+/* texto na cor do papel: contraste bom no claro e no escuro */
+.vocab-marcas .certa.on {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: var(--papel);
+}
+.vocab-marcas .errada.on {
+  background: var(--erro);
+  border-color: var(--erro);
+  color: var(--papel);
+}
+.vocab-vazio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--tinta-3);
+  padding: 2.5em 0;
+}
+.vocab-aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: max-content;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 0.5em 0.5em 0.5em 0.9em;
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+  color: var(--tinta-2);
+  font-size: 0.85rem;
+}
+.vocab-aviso .link {
+  padding: 0 0.3em;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--tinta-3);
+}
+@media (hover: none) {
+  .vocab-atalhos {
+    display: none;
+  }
+}
+@media (max-width: 520px) {
+  .vocab-niveis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .vocab-niveis button {
+    justify-content: center;
+  }
+  .vocab-velocidade {
+    margin-left: 0;
+  }
+  .vocab-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .vocab-cartao {
+    padding: 8px 10px;
+  }
+  .vocab-hz {
+    font-size: 1.65rem;
+  }
+}
