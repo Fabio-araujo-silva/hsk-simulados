@@ -1701,6 +1701,11 @@ button:disabled {
   width: 100%;
   color: var(--tinta-3);
 }
+.ouvir-sintetico .velocidade-voz {
+  margin-left: auto;
+  font-size: 0.8rem;
+  padding: 0.1em 0.3em;
+}
 
 /* ------------------------------------------------------------- nota do modo estudo */
 .nota-estudo {

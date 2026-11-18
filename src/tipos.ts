@@ -231,4 +231,6 @@ export interface Config {
   pinyinHsk1?: boolean;
   /** modo estudo: questões que dividem as mesmas alternativas (ex.: 41–45) são corrigidas juntas, no fim do bloco */
   porBlocos?: boolean;
+  /** velocidade de reprodução da voz sintética (ElevenLabs), independente da do áudio original */
+  velocidadeVoz?: number;
 }

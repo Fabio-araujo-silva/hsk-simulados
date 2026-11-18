@@ -54,8 +54,11 @@ export function obtemTts(texto: string): Promise<Tts> {
 
 export const urlTts = (t: Tts) => BASE + t.arquivo;
 
+/** O navegador tem alguma voz chinesa instalada? (no Windows, muitas vezes não — aí a voz do navegador fica muda) */
+export const temVozChinesaNoNavegador = () => !!window.speechSynthesis?.getVoices().some((v) => v.lang.toLowerCase().startsWith("zh"));
+
 /** Alternativa gratuita: a voz chinesa do próprio navegador (sem cache, qualidade variável). */
-export function falaNavegador(texto: string, aoTerminar: () => void) {
+export function falaNavegador(texto: string, aoTerminar: () => void, velocidade = 1) {
   const s = window.speechSynthesis;
   if (!s) {
     aoTerminar();
@@ -63,7 +66,7 @@ export function falaNavegador(texto: string, aoTerminar: () => void) {
   }
   const u = new SpeechSynthesisUtterance(textoParaFala(texto));
   u.lang = "zh-CN";
-  u.rate = 0.85;
+  u.rate = 0.85 * velocidade;
   const voz = s.getVoices().find((v) => v.lang.toLowerCase().startsWith("zh"));
   if (voz) u.voice = voz;
   u.onend = aoTerminar;
