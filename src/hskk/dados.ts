@@ -3,9 +3,10 @@ import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, ResumoProva,
 
 export { formataTempo, urlPublica } from "../dados";
 
-export const carregaIndice = () => busca<ResumoProva[]>("conteudo/provas/index.json");
-export const carregaProva = (id: string) => busca<Prova>(`conteudo/provas/${id}.json`);
-export const carregaLexico = () => busca<Lexico>("conteudo/lexico.json");
+// o conteúdo do HSKK fica em public/hskk/ (os caminhos de áudio e figuras dentro dos JSON já começam com hskk/)
+export const carregaIndice = () => busca<ResumoProva[]>("hskk/conteudo/provas/index.json");
+export const carregaProva = (id: string) => busca<Prova>(`hskk/conteudo/provas/${id}.json`);
+export const carregaLexico = () => busca<Lexico>("hskk/conteudo/lexico.json");
 
 export const ehRepetir = (q: Questao): q is QuestaoRepetir => q.parte === 1;
 export const ehFalar = (q: Questao): q is QuestaoFalar => q.parte !== 1;

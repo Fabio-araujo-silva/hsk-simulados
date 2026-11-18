@@ -1,6 +1,7 @@
 """Segmentação de palavras, pinyin e dicionário (CC-CEDICT + listas HSK).
 
-Usado por monta.py. Regras pensadas para quem estuda HSK 3–4:
+Usado por scripts/hskk/monta.py (variante do scripts/textos.py do HSK, com o tom neutro do CC-CEDICT).
+Regras pensadas para quem estuda HSK 3–4:
 - prefere quebrar em palavras das listas HSK (很快 → 很 + 快; 去过 → 去 + 过);
 - pinyin com contexto (pypinyin), partículas neutras (的/地/得/着/了/过 → de/zhe/le/guo),
   sandhi de 一 e 不 (como nos livros didáticos) e 儿化 (一点儿 → yìdiǎnr).
@@ -19,7 +20,8 @@ import jieba.posseg as pseg  # noqa: E402
 from pypinyin import Style, pinyin  # noqa: E402
 
 jieba.setLogLevel(60)
-RAIZ = Path(__file__).resolve().parents[1]
+RAIZ = Path(__file__).resolve().parents[2]
+# dicionários: os mesmos do app principal (fontes/dic/)
 DIC = RAIZ / "fontes" / "dic"
 
 HAN = re.compile(r"[㐀-鿿]")
@@ -172,7 +174,7 @@ def _repara(toks: list[tuple[str, str]]) -> list[tuple[str, str]]:
 
 @lru_cache(None)
 def _correcoes() -> dict[str, list[str]]:
-    arq = RAIZ / "data" / "segmentacao.json"
+    arq = RAIZ / "data" / "hskk" / "segmentacao.json"
     if not arq.exists():
         return {}
     return {k: v for k, v in json.loads(arq.read_text(encoding="utf-8")).items() if not k.startswith("_")}

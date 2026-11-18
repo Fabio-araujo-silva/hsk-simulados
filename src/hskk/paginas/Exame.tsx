@@ -60,7 +60,7 @@ export function PaginaExame({ id }: { id: string }) {
 
   if (erro) return <div className="erro">Não consegui carregar a prova {id}: {erro}</div>;
   if (!prova) return <div className="carregando">carregando…</div>;
-  if (!prova.audio || !prova.preparo) return <div className="erro">Esta prova está sem áudio ou sem os tempos — rode scripts/tempos.py e scripts/monta.py.</div>;
+  if (!prova.audio || !prova.preparo) return <div className="erro">Esta prova está sem áudio ou sem os tempos — rode scripts/hskk/tempos.py e scripts/hskk/monta.py.</div>;
   if (tentId) return <ProvaRodando prova={prova} tentId={tentId} />;
   return <Preparativos prova={prova} emAndamento={emAndamento} onComeca={setTentId} />;
 }

@@ -1,13 +1,15 @@
-"""Monta os JSONs que o app lê, a partir das fontes editáveis:
+"""HSKK — monta os JSONs que o app lê, a partir das fontes editáveis:
 
-  data/provas/<ID>.json   — frases do 第一部分 (+ PT), figuras e perguntas, respostas-modelo, vocabulário
-  data/meta.json          — título, formato e procedência de cada prova
-  data/tempos/<ID>.json   — tempos no áudio original (scripts/tempos.py)
-  data/lexico_base.json   — glossário PT herdado do app do HSK 3
-  data/lexico_pt.json     — glosas PT das palavras novas
+  data/hskk/provas/<ID>.json   — frases do 第一部分 (+ PT), figuras e perguntas, respostas-modelo, vocabulário
+  data/hskk/meta.json          — título, formato e procedência de cada prova
+  data/hskk/tempos/<ID>.json   — tempos no áudio original (scripts/hskk/tempos.py)
+  data/hskk/lexico_base.json   — glossário PT herdado do app do HSK 3
+  data/hskk/lexico_pt.json     — glosas PT das palavras novas
 
-    python scripts/monta.py          → public/conteudo/provas/<ID>.json, index.json, public/conteudo/lexico.json
-                                       + data/trabalho/lexico-pendente.json (palavras ainda sem glosa PT)
+    python scripts/hskk/monta.py     → public/hskk/conteudo/provas/<ID>.json, index.json, public/hskk/conteudo/lexico.json
+                                       + data/hskk/trabalho/lexico-pendente.json (palavras ainda sem glosa PT)
+
+Os caminhos gravados nos JSON (áudio e figuras) são relativos a public/, por isso começam com hskk/.
 """
 from __future__ import annotations
 
@@ -20,9 +22,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import textos  # noqa: E402
 
-RAIZ = Path(__file__).resolve().parents[1]
-DATA = RAIZ / "data"
-PUB = RAIZ / "public" / "conteudo"
+RAIZ = Path(__file__).resolve().parents[2]
+DATA = RAIZ / "data" / "hskk"
+PUBLICO = RAIZ / "public" / "hskk"
+PUB = PUBLICO / "conteudo"
+# o app serve public/ na raiz do site: o que é do HSKK fica em public/hskk/
+URL = "hskk/"
 CITACAO = {"不": "bù", "一": "yī"}
 
 
@@ -82,7 +87,7 @@ def monta(pid: str, meta: dict) -> dict:
     p = le(DATA / "provas" / f"{pid}.json")
     t = le(DATA / "tempos" / f"{pid}.json")
     if not t:
-        raise SystemExit(f"{pid}: falta data/tempos/{pid}.json (rode scripts/tempos.py)")
+        raise SystemExit(f"{pid}: falta data/hskk/tempos/{pid}.json (rode scripts/hskk/tempos.py)")
     tq = t["q"]
     qs = []
     for it in p["parte1"]:
@@ -104,19 +109,19 @@ def monta(pid: str, meta: dict) -> dict:
                 ],
             }
             if parte == 2:
-                q["img"] = it.get("img") or f"img/{pid}/{n}.jpg"
+                q["img"] = URL + (it.get("img") or f"img/{pid}/{n}.jpg")
                 q["cena"] = it.get("cena", "")
             else:
                 q["pergunta"] = F(it["zh"], it.get("pt"))
             qs.append(q)
-    audio = RAIZ / "public" / "audio" / f"{pid}.mp3"
+    audio = PUBLICO / "audio" / f"{pid}.mp3"
     return {
         "id": pid,
         "titulo": meta.get("titulo", pid),
         "formato": meta.get("formato"),
         "cabecalho": meta.get("cabecalho"),
         "fontes": {k: meta.get(k) for k in ("caderno", "roteiro", "audio", "notas")},
-        "audio": {"src": f"audio/{pid}.mp3", "duracao": duracao(audio)} if audio.exists() else None,
+        "audio": {"src": f"{URL}audio/{pid}.mp3", "duracao": duracao(audio)} if audio.exists() else None,
         "aquecimento": [{**a, "frase": F(a["zh"])} for a in t.get("aquecimento", [])],
         "preparo": t.get("preparo"),
         "fim": t.get("fim"),

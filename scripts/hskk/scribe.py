@@ -1,10 +1,10 @@
-"""Transcreve o áudio original de cada prova com o ElevenLabs Scribe (uma passada por arquivo).
+"""HSKK — transcreve o áudio original de cada prova com o ElevenLabs Scribe (uma passada por arquivo).
 
-    python scripts/scribe.py <ID> [<ID> ...]      (sem IDs = todas as de fontes/audio/)
+    python scripts/hskk/scribe.py <ID> [<ID> ...]      (sem IDs = todas as de fontes/audio/hskk/)
 
-Saída: fontes/scribe/<ID>.json (tempo por palavra; cache — não chama a API de novo se já existe).
-A chave ELEVENLABS_API_KEY fica no .env (não versionado) e nunca é impressa.
-Os tempos são usados por scripts/tempos.py para achar onde começa/termina cada frase do 第一部分
+Saída: fontes/scribe/hskk/<ID>.json (tempo por palavra; cache — não chama a API de novo se já existe).
+A chave ELEVENLABS_API_KEY fica no .env da raiz (não versionado) e nunca é impressa.
+Os tempos são usados por scripts/hskk/tempos.py para achar onde começa/termina cada frase do 第一部分
 e cada janela de resposta.
 """
 from __future__ import annotations
@@ -16,7 +16,9 @@ import uuid
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parents[1]
+RAIZ = Path(__file__).resolve().parents[2]
+AUDIO = RAIZ / "fontes" / "audio" / "hskk"
+SCRIBE = RAIZ / "fontes" / "scribe" / "hskk"
 
 
 def chave() -> str:
@@ -27,10 +29,10 @@ def chave() -> str:
 
 
 def transcreve(pid: str) -> str:
-    cache = RAIZ / "fontes" / "scribe" / f"{pid}.json"
+    cache = SCRIBE / f"{pid}.json"
     if cache.exists():
         return f"{pid}: já em cache"
-    audio = (RAIZ / "fontes" / "audio" / f"{pid}.mp3").read_bytes()
+    audio = (AUDIO / f"{pid}.mp3").read_bytes()
     fronteira = uuid.uuid4().hex
     partes = []
     campos = (("model_id", "scribe_v1"), ("language_code", "zho"), ("tag_audio_events", "true"), ("timestamps_granularity", "word"))
@@ -57,7 +59,7 @@ def transcreve(pid: str) -> str:
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    ids = sys.argv[1:] or sorted(p.stem for p in (RAIZ / "fontes" / "audio").glob("*.mp3"))
+    ids = sys.argv[1:] or sorted(p.stem for p in AUDIO.glob("*.mp3"))
 
     def roda(pid: str) -> str:
         try:

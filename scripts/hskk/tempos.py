@@ -1,13 +1,13 @@
-"""Acha no áudio original de cada prova onde fica cada frase e cada janela de resposta.
+"""HSKK — acha no áudio original de cada prova onde fica cada frase e cada janela de resposta.
 
-    python scripts/tempos.py <ID> [<ID> ...]      (sem IDs = todas de data/provas/)
+    python scripts/hskk/tempos.py <ID> [<ID> ...]      (sem IDs = todas de data/hskk/provas/)
 
 Entradas:
-  data/provas/<ID>.json     — as 10 frases do 第一部分 (texto de referência)
-  fontes/scribe/<ID>.json   — transcrição do ElevenLabs Scribe com tempo por caractere (scripts/scribe.py)
-  fontes/audio/<ID>.mp3     — áudio original (o ffmpeg silencedetect acha os blocos de som/silêncio)
+  data/hskk/provas/<ID>.json     — as 10 frases do 第一部分 (texto de referência)
+  fontes/scribe/hskk/<ID>.json   — transcrição do ElevenLabs Scribe com tempo por caractere (scripts/hskk/scribe.py)
+  fontes/audio/hskk/<ID>.mp3     — áudio original (o ffmpeg silencedetect acha os blocos de som/silêncio)
 
-Saída: data/tempos/<ID>.json
+Saída: data/hskk/tempos/<ID>.json
   aquecimento: [{zh, s, e, rs, re}]    perguntas iniciais (nome, país, nº de inscrição) — não valem nota
   q: {n: {p, s, e, bip, rs, re, chars}} p = início do número falado, [s,e] = a frase, bip = fim do "嘀",
                                         [rs,re] = janela em que o candidato responde (gravação),
@@ -28,7 +28,10 @@ import sys
 import unicodedata
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parents[1]
+RAIZ = Path(__file__).resolve().parents[2]
+DATA = RAIZ / "data" / "hskk"
+AUDIO = RAIZ / "fontes" / "audio" / "hskk"
+SCRIBE = RAIZ / "fontes" / "scribe" / "hskk"
 HAN = re.compile(r"[㐀-鿿]")
 DIG = {"0": "零", "1": "一", "2": "二", "3": "三", "4": "四", "5": "五", "6": "六", "7": "七", "8": "八", "9": "九"}
 
@@ -39,11 +42,11 @@ def le(p: Path):
 
 def blocos_de_som(pid: str) -> list[tuple[float, float]]:
     """Intervalos com som (o complemento do silencedetect)."""
-    cache = RAIZ / "fontes" / "scribe" / f"{pid}-blocos.json"
+    cache = SCRIBE / f"{pid}-blocos.json"
     if cache.exists():
         return [tuple(b) for b in le(cache)]
     r = subprocess.run(
-        ["ffmpeg", "-hide_banner", "-i", str(RAIZ / "fontes" / "audio" / f"{pid}.mp3"), "-af", "silencedetect=noise=-35dB:d=0.35", "-f", "null", "-"],
+        ["ffmpeg", "-hide_banner", "-i", str(AUDIO / f"{pid}.mp3"), "-af", "silencedetect=noise=-35dB:d=0.35", "-f", "null", "-"],
         capture_output=True, text=True, encoding="utf-8", errors="replace",
     )
     ss = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
@@ -60,7 +63,7 @@ def blocos_de_som(pid: str) -> list[tuple[float, float]]:
 
 def chars_scribe(pid: str) -> list[tuple[str, float, float]]:
     """Caracteres chineses ouvidos pelo Scribe, cada um com [início, fim]. Algarismos viram 一二三…"""
-    d = le(RAIZ / "fontes" / "scribe" / f"{pid}.json")
+    d = le(SCRIBE / f"{pid}.json")
     out = []
     for w in d["words"]:
         if w["type"] != "word":
@@ -102,7 +105,7 @@ def bloco_em(blocos, t: float, folga=0.25):
 
 
 def processa(pid: str):
-    prova = le(RAIZ / "data" / "provas" / f"{pid}.json")
+    prova = le(DATA / "provas" / f"{pid}.json")
     blocos = blocos_de_som(pid)
     cs = chars_scribe(pid)
     S = "".join(c for c, _, _ in cs)
@@ -202,7 +205,7 @@ def processa(pid: str):
         out_fim = instr[4][-1][1]
     preparo = {"s": prep_s, "e": round(instr[0][0][0] - 0.1, 2)} if len(instr) >= 5 else None
     res = {"aquecimento": aquec, "q": q, "preparo": preparo, "fim": round(out_fim + 0.5, 2) if len(instr) >= 5 else None}
-    dest = RAIZ / "data" / "tempos" / f"{pid}.json"
+    dest = DATA / "tempos" / f"{pid}.json"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     jan = " ".join(f"{n}:{q[str(n)]['re'] - q[str(n)]['rs']:.0f}s" for n in range(1, 15) if str(n) in q and "re" in q[str(n)])
@@ -213,6 +216,6 @@ def processa(pid: str):
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    ids = sys.argv[1:] or sorted(p.stem for p in (RAIZ / "data" / "provas").glob("*.json"))
+    ids = sys.argv[1:] or sorted(p.stem for p in (DATA / "provas").glob("*.json"))
     for pid in ids:
         processa(pid)

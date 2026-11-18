@@ -1,4 +1,4 @@
-// Tipos dos dados gerados por scripts/monta.py (public/conteudo/...)
+// Tipos dos dados gerados por scripts/hskk/monta.py (public/hskk/conteudo/...)
 // Frase, Lexico e o estado FSRS são os mesmos do HSK (src/tipos.ts).
 import type { CartaoSrs, Frase } from "../tipos";
 export type { CartaoSrs, Frase, Lexico, Verbete } from "../tipos";

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 # material bruto baixado (PDFs originais, dicionários, áudios brutos, transcrições do whisper)
+# (o do HSKK fica nas subpastas hskk/: fontes/raw/hskk, fontes/audio/hskk, fontes/scribe/hskk)
 fontes/raw/
 fontes/audio/
 fontes/dic/
@@ -9,10 +10,13 @@ fontes/whisper/
 .DS_Store
 
 # progresso pessoal (fica no disco; backups diários em progresso/backups)
+# inclui o do HSKK (progresso/hskk.json) e as gravações da sua voz (progresso/gravacoes/)
 progresso/
 
 # chaves
 .env
 fontes/scribe/
+# HSKK: lista de palavras ainda sem glosa PT, gerada por scripts/hskk/monta.py
+data/hskk/trabalho/
 __pycache__/
 *.tsbuildinfo
