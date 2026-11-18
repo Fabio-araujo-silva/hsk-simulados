@@ -1,8 +1,18 @@
+import { MODO_PUBLICO } from "./publico";
 import { chaveCacheTts, textoParaFala } from "./vozConfig";
 
 // Voz sintética (ElevenLabs) para as questões sem áudio original (leitura e escrita).
 // O servidor local gera cada texto UMA vez e guarda em public/tts/; depois disso o arquivo é reaproveitado
 // (inclusive por quem abrir o site sem servidor, se o arquivo já existir).
+// No site público não existe /api/tts (a chave não sai do computador): só toca o que já está em public/tts,
+// que vai junto no deploy — scripts/gera_tts.mjs mostra quantas falas faltam gerar antes de publicar.
+
+/** O trecho ainda não foi gerado e aqui não há como gerar (site público ou estático). */
+export class SemVozNoCache extends Error {
+  constructor() {
+    super(MODO_PUBLICO ? "este trecho ainda não tem voz sintética no site" : "voz sintética indisponível (sem servidor local / sem chave)");
+  }
+}
 
 export interface Tts {
   arquivo: string;
@@ -23,23 +33,28 @@ async function sha1(t: string) {
 }
 
 async function busca(texto: string): Promise<Tts> {
-  // 1) servidor local: devolve do cache ou gera agora
-  try {
-    const r = await fetch(`${BASE}api/tts`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ texto }) });
-    const tipo = r.headers.get("content-type") ?? "";
-    if (tipo.includes("json")) {
-      const d = await r.json();
-      if (r.ok) return d as Tts;
-      if (r.status !== 404) throw new Error(d.erro ?? `HTTP ${r.status}`);
+  // 1) servidor local: devolve do cache ou gera agora (no site público nem tenta)
+  if (!MODO_PUBLICO) {
+    try {
+      const r = await fetch(`${BASE}api/tts`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ texto }) });
+      const tipo = r.headers.get("content-type") ?? "";
+      if (tipo.includes("json")) {
+        const d = await r.json();
+        if (r.ok) return d as Tts;
+        if (r.status !== 404) throw new Error(d.erro ?? `HTTP ${r.status}`);
+      }
+    } catch (e) {
+      if (e instanceof Error && !/Failed to fetch|NetworkError|404/.test(e.message)) throw e;
     }
-  } catch (e) {
-    if (e instanceof Error && !/Failed to fetch|NetworkError|404/.test(e.message)) throw e;
   }
-  // 2) sem servidor: tenta o arquivo que já foi gerado antes
+  // 2) sem servidor: tenta o arquivo que já foi gerado antes (o mesmo hash do servidor: servidor/vozSintetica.ts)
   const h = await sha1(chaveCacheTts(texto));
   const r = await fetch(`${BASE}tts/${h}.json`);
-  if (!r.ok) throw new Error("voz sintética indisponível (sem servidor local / sem chave)");
-  return { arquivo: `tts/${h}.mp3`, ...(await r.json()) } as Tts;
+  if (!r.ok) throw new SemVozNoCache();
+  // servidores estáticos com "fallback" de SPA devolvem o index.html (200) no lugar de um arquivo que não existe
+  const info = await r.json().catch(() => null);
+  if (!info) throw new SemVozNoCache();
+  return { arquivo: `tts/${h}.mp3`, ...info } as Tts;
 }
 
 export function obtemTts(texto: string): Promise<Tts> {

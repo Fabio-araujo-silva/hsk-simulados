@@ -1,11 +1,12 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import type { ControleAudio } from "../audio";
 import { confere, textoResposta } from "../correcao";
-import { urlPublica } from "../dados";
+import { urlMidia } from "../dados";
 import type { Fala, Frase as TFrase, Grupo, Prova, Questao } from "../tipos";
 import { AudioQuestao } from "./AudioQuestao";
 import { Frase } from "./Leitura";
-import { OuvirSintetico, type UnidadeFala } from "./OuvirSintetico";
+import { OuvirSintetico } from "./OuvirSintetico";
+import { unidadesFala } from "../falaQuestao";
 import { useRiscadas } from "../riscadas";
 
 /** chave do rascunho (alternativas riscadas) da questão em exibição */
@@ -92,7 +93,7 @@ export function VisaoQuestao(p: Props) {
 
       {q.tipo === "imagem-vf" && (
         <div className="figura-vf">
-          {q.imagem && <img src={urlPublica(q.imagem)} alt="figura da questão" />}
+          {q.imagem && <img src={urlMidia(q.imagem)} alt="figura da questão" />}
           {q.palavra && (
             <p className="enunciado grande">
               <Frase f={q.palavra} inerte={inerte} />
@@ -115,7 +116,7 @@ export function VisaoQuestao(p: Props) {
             return (
               <BotaoFigura key={l} letra={l} className={cls} onClick={() => !(revelado && modo !== "prova") && p.onResponde?.(l)}>
                 <span className="letra">{l}</span>
-                {q.imagens?.[l] ? <img src={urlPublica(q.imagens[l])} alt={`figura ${l}`} loading="lazy" /> : <span>sem figura</span>}
+                {q.imagens?.[l] ? <img src={urlMidia(q.imagens[l])} alt={`figura ${l}`} loading="lazy" /> : <span>sem figura</span>}
               </BotaoFigura>
             );
           })}
@@ -290,7 +291,7 @@ function Imagens({ grupo, q, valor, revelado, onResponde }: { grupo: Grupo; q: Q
             title="botão direito: riscar / desriscar (rascunho)"
           >
             <span className="letra">{l}</span>
-            {src ? <img src={urlPublica(src)} alt={`figura ${l}`} loading="lazy" /> : <span>sem figura</span>}
+            {src ? <img src={urlMidia(src)} alt={`figura ${l}`} loading="lazy" /> : <span>sem figura</span>}
             {doExemplo && <span className="tag">exemplo</span>}
           </button>
         );
@@ -484,45 +485,4 @@ function BotaoFigura({ letra, className, onClick, children }: { letra: string; c
       {children}
     </button>
   );
-}
-
-/** Trechos que a voz sintética lê numa questão sem áudio original (enunciado + alternativas). */
-function unidadesFala(q: Questao, grupo: Grupo | undefined, revelado: boolean): UnidadeFala[] {
-  const u: UnidadeFala[] = [];
-  const add = (rotulo: string, texto?: string | null) => {
-    if (texto && /[㐀-鿿]/.test(texto)) u.push({ rotulo, texto });
-  };
-  const respostaGrupo = q.grupo ? grupo?.opcoes?.[String(q.resposta)]?.zh : undefined;
-  switch (q.tipo) {
-    case "pareamento":
-      add("frase", q.texto?.zh);
-      Object.entries(grupo?.opcoes ?? {}).forEach(([l, f]) => add(l, f.zh));
-      break;
-    case "lacuna":
-      q.linhas?.forEach((l, i) => add(q.linhas!.length > 1 ? `frase ${i + 1}` : "frase", revelado && respostaGrupo ? l.zh.replace("（＿＿）", respostaGrupo) : l.zh));
-      Object.entries(grupo?.opcoes ?? {}).forEach(([l, f]) => add(l, f.zh));
-      break;
-    case "abc":
-      add("texto", q.texto?.zh);
-      add("pergunta", q.pergunta?.zh);
-      Object.entries(q.opcoes ?? {}).forEach(([l, f]) => add(l, f.zh));
-      break;
-    case "ordenar":
-      q.pecas?.forEach((pc, i) => add(`peça ${i + 1}`, pc.zh));
-      if (revelado) add("frase certa", q.frase?.zh);
-      break;
-    case "hanzi":
-      add("frase", q.frase?.zh);
-      break;
-    case "imagem":
-      add("frase", q.texto?.zh);
-      break;
-    case "imagem-vf":
-      add("palavra", q.palavra?.zh);
-      break;
-    case "vf":
-      add("★", q.afirmacao?.zh);
-      break;
-  }
-  return u;
 }

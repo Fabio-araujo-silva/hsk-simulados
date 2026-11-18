@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { mudaConfig, useConfig } from "../armazenamento";
+import { MODO_PUBLICO } from "../publico";
 import { falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
-
-export interface UnidadeFala {
-  rotulo: string;
-  texto: string;
-}
+import type { UnidadeFala } from "../falaQuestao";
+export type { UnidadeFala } from "../falaQuestao";
 
 /** velocidades oferecidas para a voz sintética (abaixo de 1× para treinar o ouvido) */
 export const VELOCIDADES = [0.5, 0.6, 0.75, 0.9, 1];
@@ -80,7 +78,19 @@ export function OuvirSintetico({ unidades }: { unidades: UnidadeFala[] }) {
           if (minhaSessao !== sessao.current) return fim();
           setGerando(null);
           const motivo = String(e?.message ?? e).slice(0, 140);
-          if (temVozChinesaNoNavegador()) {
+          if (MODO_PUBLICO) {
+            // no site público não há como gerar voz nova: ou está em public/tts, ou fica a voz do navegador
+            const temVoz = temVozChinesaNoNavegador();
+            setAviso(
+              temVoz
+                ? `Este trecho ainda não tem voz sintética no site: foi lido com a voz do navegador.`
+                : `Este trecho ainda não tem voz sintética no site, e o navegador não tem voz chinesa instalada (no Windows: Configurações → Hora e idioma → Fala).`,
+            );
+            if (temVoz) {
+              setTocando(i);
+              cancela.current = falaNavegador(u.texto, () => fim(), velocidade);
+            } else fim();
+          } else if (temVozChinesaNoNavegador()) {
             setAviso(`Voz ElevenLabs indisponível agora (${motivo}). Este trecho foi lido com a voz do navegador — clique de novo para tentar a ElevenLabs.`);
             setTocando(i);
             cancela.current = falaNavegador(u.texto, () => fim(), velocidade);

@@ -3,6 +3,7 @@ import { marcaVocab, mudaConfig, mudaPinyinSempre, useConfig, useEstado, zeraVoc
 import { VELOCIDADES } from "../componentes/OuvirSintetico";
 import { carregaVocabulario } from "../dados";
 import { falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
+import { MODO_PUBLICO } from "../publico";
 import type { MarcaVocab, PalavraVocab } from "../tipos";
 
 type FiltroNivel = 0 | 1 | 2 | 3;
@@ -448,7 +449,16 @@ function useVoz() {
       .catch((e) => {
         if (minha !== sessao.current) return;
         const motivo = String(e?.message ?? e).slice(0, 120);
-        if (temVozChinesaNoNavegador()) {
+        if (MODO_PUBLICO) {
+          // no site público só toca a voz que já foi gerada (public/tts); o resto fica com a voz do navegador
+          if (temVozChinesaNoNavegador()) {
+            setAviso("Esta palavra ainda não tem voz sintética no site: usei a voz do navegador.");
+            cancela.current = falaNavegador(p.hz, fim, vel.current);
+          } else {
+            setAviso("Esta palavra ainda não tem voz sintética no site, e o navegador não tem voz chinesa instalada.");
+            fim();
+          }
+        } else if (temVozChinesaNoNavegador()) {
           setAviso(`Voz sintética indisponível agora (${motivo}): usei a voz do navegador.`);
           cancela.current = falaNavegador(p.hz, fim, vel.current);
         } else {
