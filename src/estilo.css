@@ -2075,3 +2075,134 @@ button:disabled {
 .turnstile {
   min-height: 65px;
 }
+
+/* exemplo (例如) do início de cada parte — componentes/Exemplo.tsx */
+.exemplo-hsk {
+  border: 1px dashed var(--linha);
+  border-radius: 10px;
+  background: var(--papel-2);
+  padding: 0.6em 0.9em;
+  margin: 0.4em 0 0.9em;
+}
+.exemplo-cab {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+.exemplo-titulo {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: var(--tinta-2);
+  cursor: pointer;
+}
+.exemplo-seta {
+  margin-left: 0.4em;
+  color: var(--tinta-3);
+}
+.exemplo-nota {
+  font-size: 0.75rem;
+  color: var(--tinta-3);
+}
+.exemplo-hsk .player {
+  margin: 0.5em 0;
+}
+.exemplo-item {
+  display: flex;
+  gap: 0.9em;
+  align-items: flex-start;
+  padding: 0.5em 0;
+}
+.exemplo-item + .exemplo-item {
+  border-top: 1px dotted var(--linha);
+}
+.exemplo-figura .imagem {
+  min-height: 0;
+  width: 110px;
+  cursor: default;
+}
+.exemplo-figura .imagem img {
+  max-height: 90px;
+}
+.exemplo-corpo {
+  flex: 1;
+  min-width: 0;
+}
+.exemplo-hsk .fala {
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+.exemplo-texto {
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+.exemplo-pt {
+  font-family: var(--ui);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--tinta-3);
+}
+.exemplo-opcoes,
+.exemplo-pecas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.2em;
+  margin: 0.3em 0;
+  font-size: 1.1rem;
+}
+.exemplo-opcao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.1em 0.5em 0.1em 0.2em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.exemplo-opcao.certa {
+  border-color: var(--ok);
+  background: var(--ok-fundo);
+}
+.exemplo-check,
+.exemplo-vf.ok {
+  color: var(--ok);
+}
+.exemplo-vf.erro {
+  color: var(--erro);
+}
+.exemplo-vf {
+  font-family: var(--zh);
+  font-weight: 700;
+  margin-left: 0.2em;
+}
+.exemplo-peca {
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+  padding: 0 0.4em;
+  background: var(--papel);
+}
+.exemplo-hanzi {
+  color: var(--ok);
+  font-weight: 700;
+  border-bottom: 2px solid var(--ok);
+  margin: 0 0.15em;
+}
+.exemplo-resposta {
+  font-family: var(--ui);
+  color: var(--tinta-2);
+}
+.exemplo-resposta b {
+  color: var(--ok);
+  font-family: var(--zh);
+}
+.exemplo-resposta b.erro {
+  color: var(--erro);
+}
+.exemplo-explica {
+  font-family: var(--ui);
+  font-size: 0.85rem;
+  color: var(--tinta-2);
+  margin-top: 0.3em;
+}

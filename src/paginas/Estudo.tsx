@@ -4,6 +4,7 @@ import { leEstado, mudaConfig, mudaTentativa, novaTentativa, resetaSimulado, use
 import { confere, notaDoEstudo } from "../correcao";
 import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
 import { CaixaRevisao } from "../componentes/CaixaRevisao";
+import { BlocoExemplo, chaveBloco } from "../componentes/Exemplo";
 import { ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
 import { RoteiroCompleto } from "../componentes/RoteiroCompleto";
@@ -218,6 +219,9 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
   const errou = revelado && !(resposta!.certa || resposta!.manual);
   const mostraCaixa = revelado && ((errou && !caixaFechada[n]) || caixaAberta[n]);
   const consultas = tentativa.consultas?.[n] ?? [];
+  // exemplo (例如) do bloco: aberto na 1ª questão do bloco, recolhido nas outras
+  const chaveExemplo = chaveBloco(q);
+  const inicioDoBloco = prova.questoes.find((x) => chaveBloco(x) === chaveExemplo)?.n === q.n;
 
   return (
     <ProvedorLeitura lexico={lexico} traducao={cfg.traducao} pinyin={cfg.pinyin || (regras(prova.nivel).pinyinNaProva && cfg.pinyinHsk1 !== false)} audio={audio} consultou={consultou}>
@@ -325,6 +329,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
             <RoteiroCompleto prova={prova} audio={audio} />
           ) : (
             <>
+              <BlocoExemplo key={chaveExemplo} prova={prova} bloco={chaveExemplo} modo="estudo" audio={audio} recolhido={!inicioDoBloco} />
               <div className="cabecalho-questao">
                 <span className="numero">{q.n}</span>
                 <span className="instrucao">{instrucao(q, prova.nivel)}</span>

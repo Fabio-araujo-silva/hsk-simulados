@@ -1,4 +1,4 @@
-import type { Lexico, Nivel, PalavraVocab, Prova, ResumoProva, Secao } from "./tipos";
+import type { Exemplos, Lexico, Nivel, PalavraVocab, Prova, ResumoProva, Secao } from "./tipos";
 import { MIDIA_URL } from "./publico";
 
 const BASE = import.meta.env.BASE_URL;
@@ -20,6 +20,8 @@ export function busca<T>(caminho: string): Promise<T> {
 export const carregaIndice = () => busca<ResumoProva[]>("conteudo/provas/index.json");
 export const carregaProva = (id: string) => busca<Prova>(`conteudo/provas/${id}.json`);
 export const carregaLexico = () => busca<Lexico>("conteudo/lexico.json");
+/** exemplos (例如) do início de cada parte, por nível (scripts/exemplos.py) */
+export const carregaExemplos = () => busca<Exemplos>("conteudo/exemplos.json");
 /** palavras do HSK 1 a 3 da aba Vocabulário (scripts/vocabulario.py) */
 export const carregaVocabulario = () => busca<PalavraVocab[]>("conteudo/vocabulario.json");
 

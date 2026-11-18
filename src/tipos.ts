@@ -112,6 +112,46 @@ export interface Prova {
   questoes: Questao[];
 }
 
+/** Um item de um exemplo (例如) do caderno — ver scripts/exemplos.py. */
+export interface ItemExemplo {
+  /** índices das falas do segmento "exemplo" do roteiro que pertencem a este item */
+  falas?: number[];
+  /** letra da figura do grupo do bloco (prova.grupos[bloco].imagens) */
+  figura?: string;
+  texto?: Frase;
+  /** ★ afirmação (certo/errado) */
+  afirmacao?: Frase;
+  pergunta?: Frase;
+  opcoes?: Record<string, Frase>;
+  /** escrita: peças para ordenar, frase completa, partes da frase com o caractere */
+  pecas?: Frase[];
+  frase?: Frase;
+  antes?: string;
+  depois?: string;
+  pinyin?: string;
+  /** letra, certo/errado ou o caractere/frase da escrita (sem resposta: só a explicação) */
+  resposta?: string | boolean;
+  /** palavra realçada no texto (a lacuna já preenchida) */
+  destaque?: string;
+  explica: string;
+  /** dado = tirado das provas · deduzido = a resposta sai do texto · conferir = texto do caderno padrão que não está nos dados */
+  origem: "dado" | "deduzido" | "conferir";
+  conferir?: boolean;
+}
+
+/** Exemplo do início de um bloco da folha (public/conteudo/exemplos.json, gerado por scripts/exemplos.py). */
+export interface Exemplo {
+  parte: string;
+  /** chave do bloco na folha: o grupo ("L1a", "R2b") ou a parte ("L2") */
+  bloco: string;
+  /** índice do segmento "exemplo" no roteiro da prova (falas e trecho do áudio vêm de lá) */
+  roteiro?: number;
+  itens: ItemExemplo[];
+}
+
+/** nível ("1", "2", "3") → exemplos */
+export type Exemplos = Record<string, Exemplo[]>;
+
 export interface ResumoProva {
   id: string;
   nivel: Nivel;

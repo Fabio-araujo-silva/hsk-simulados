@@ -5,6 +5,7 @@ import { confere } from "../correcao";
 import { formataTempo, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
 import { ProvedorLeitura, Frase } from "../componentes/Leitura";
 import { VisaoQuestao } from "../componentes/Questao";
+import { BlocoExemplo } from "../componentes/Exemplo";
 import type { Prova, Questao, Tentativa } from "../tipos";
 import { useAudioDaProva, useProvaELexico } from "./Estudo";
 import { vaiPara } from "../App";
@@ -264,6 +265,7 @@ function FolhaProva({ prova, questoes, t, responde, tocandoN }: { prova: Prova; 
             <h3>
               {nomeParte(prova.nivel, b.parte)} <small>({b.qs[0].n}–{b.qs[b.qs.length - 1].n})</small>
             </h3>
+            <BlocoExemplo prova={prova} bloco={b.chave} modo="prova" />
             {agrupado && grupo && <CabecalhoGrupo grupo={grupo} tipo={b.qs[0].tipo} chave={`${prova.id}:${b.grupo}`} />}
             {b.qs.map((q) => (
               <div key={q.n} ref={(el) => (refs.current[q.n] = el)} className={`item-folha ${tocandoN === q.n ? "tocando" : ""}`}>
@@ -308,11 +310,6 @@ function CabecalhoGrupo({ grupo, tipo, chave }: { grupo: NonNullable<Prova["grup
           <span className="letra">{l}</span> <Frase f={f} inerte />
         </div>
       ))}
-      {grupo.exemplo && (
-        <div className="exemplo-grupo">
-          exemplo: <Frase f={grupo.exemplo.texto} inerte /> → {grupo.exemplo.resposta}
-        </div>
-      )}
     </div>
   );
 }
