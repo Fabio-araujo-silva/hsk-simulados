@@ -134,6 +134,8 @@ def figuras(pdf: Path, pid: str, paginas: tuple[int, int] | None):
         if rot:
             letras = [(t, r) for t, r in palavras(pg) if t in ("A", "B", "C")]
             for n, rq in rot.items():
+                if len(abc.get(n, {})) == 3:  # já recortada (o "7．" da página de 答案 não é questão)
+                    continue
                 linha = [(t, r) for t, r in letras if r.y0 > rq.y0 - 5]
                 if not linha:
                     continue
@@ -307,6 +309,26 @@ def parse_caderno(linhas: list[str]):
     return q, grupos
 
 
+# ------------------------------------------------------------------ roteiro
+
+
+def separa_exemplo_l1(segmentos: list[dict] | None, linhas: list[str]):
+    """O exemplo da 1ª parte são duas frases soltas, sem pontuação, uma por linha ("例如：很高兴" / "看电影",
+    uma √ e uma ×); parse_falas cola as duas numa só. Separa de novo seguindo as linhas do 听力材料."""
+    ex = next((s for s in segmentos or [] if s.get("tipo") == "exemplo"), None)
+    i = next((i for i, l in enumerate(linhas or []) if "例如" in l), None)
+    if ex is None or i is None or len(ex["falas"]) != 1 or ex["falas"][0]["fal"] is not None:
+        return
+    partes = [re.sub(r"^例如[：:]", "", base.normaliza(linhas[i]))]
+    for l in linhas[i + 1 :]:
+        l2 = base.normaliza(l)
+        if not l2 or l2.startswith("现在开始"):
+            break
+        partes.append(l2)
+    if len(partes) > 1 and "".join(partes) == ex["falas"][0]["txt"]:
+        ex["falas"] = [{"fal": None, "txt": x} for x in partes]
+
+
 def aplica_recortes(pid: str, pdfs: list[Path]) -> int:
     """Figuras que o extrator errou, recortadas à mão: data/ajustes/<ID>.json → "recortes"
     [{"pagina": nº da página no PDF (1 = primeira), "rect": [x0, y0, x1, y1], "nome": "q24.png", "arquivo": 0}].
@@ -337,6 +359,7 @@ def main():
     caderno, roteiro_l, gabarito_l = base.divide(paginas_txt, pid)
     q, grupos = parse_caderno(caderno)
     segmentos, falas_q = base.parse_roteiro(roteiro_l)
+    separa_exemplo_l1(segmentos, roteiro_l)
     gab = base.parse_gabarito(gabarito_l)
     # página de gabarito com cabeçalho corrompido (não é reconhecida como 卷答案): lê a última página direto
     ultima = fitz.open(pdfs[0])[-1].get_text()

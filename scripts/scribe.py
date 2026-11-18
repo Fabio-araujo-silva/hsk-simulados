@@ -113,8 +113,53 @@ def compara(pid: str):
     print(f"{pid}: {difs} questões com alguma diferença → data/trabalho/{pid}-scribe.md")
 
 
+def rascunho(pid: str):
+    """Para provas SEM 听力材料: rascunho do texto do áudio a partir do Scribe (turnos por falante/pausa)."""
+    d = transcreve(pid)
+    ws = [w for w in d.get("words", []) if w.get("type") == "word"]
+    turnos = []
+    for w in ws:
+        t = turnos[-1] if turnos else None
+        if t and w.get("speaker_id") == t["sp"] and w["start"] - t["e"] < 0.7:
+            t["txt"] += w["text"]
+            t["e"] = w["end"]
+        else:
+            turnos.append({"s": w["start"], "e": w["end"], "sp": w.get("speaker_id", "?"), "txt": w["text"]})
+    prova = json.loads((RAIZ / "data" / "provas" / f"{pid}.json").read_text(encoding="utf-8"))
+    q = {x["n"]: x for x in prova["questoes"]}
+    L = [f"# {pid} — texto do áudio reconhecido pelo ElevenLabs Scribe (para montar a transcrição)\n",
+         "Cada linha: [início–fim em s] [falante separado pelo Scribe: ids consistentes na prova toda] texto.",
+         "O HSK lê cada questão DUAS VEZES; instruções e exemplos são os mesmos de todas as provas do nível.\n",
+         "## Caderno (o que está impresso)\n"]
+    for n in sorted(q):
+        it = q[n]
+        if it["secao"] != "L":
+            continue
+        extra = ""
+        if it.get("opcoes"):
+            extra = " | ".join(f"{k} {v}" for k, v in it["opcoes"].items())
+        elif it.get("afirmacao"):
+            extra = "★ " + it["afirmacao"]
+        elif it["tipo"] in ("imagem-vf", "imagem-abc", "imagem"):
+            extra = f"(figura(s): {it.get('imagem') or ', '.join((it.get('imagens') or {}).values()) or 'grupo ' + str(it.get('grupo'))})"
+        resp = it.get("resposta")
+        L.append(f"{n}. {extra}  (gabarito: {'√' if resp is True else '×' if resp is False else resp})")
+    L.append("\n## Reconhecimento (Scribe), em ordem\n")
+    for t in turnos:
+        L.append(f"[{t['s']:7.2f}–{t['e']:7.2f}] [{t['sp'].replace('speaker_', 'voz ')}] {t['txt'].strip()}")
+    (RAIZ / "data" / "trabalho" / f"{pid}-asr.md").write_text("\n".join(L), encoding="utf-8")
+    print(f"{pid}: {len(turnos)} turnos → data/trabalho/{pid}-asr.md")
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
+    if sys.argv[1] == "--rascunho":
+        for pid in sys.argv[2:]:
+            try:
+                rascunho(pid)
+            except Exception as e:
+                print(f"{pid}: ERRO {e}")
+        sys.exit(0)
     for pid in sys.argv[1:]:
         try:
             compara(pid)
