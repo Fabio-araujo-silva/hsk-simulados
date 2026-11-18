@@ -58,6 +58,14 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
   const q = prova?.questoes.find((x) => x.n === n);
   const resposta = tentativa?.respostas[n];
 
+  // número que não existe na prova (ex.: todas respondidas → "a próxima" seria a 81; ou um /n inválido na URL):
+  // vai para a primeira não respondida, ou para a 1ª questão se a prova já foi toda feita
+  useEffect(() => {
+    if (!prova || q || !prova.questoes.length) return;
+    const t = leEstado().tentativas[tid];
+    setN((prova.questoes.find((x) => !t?.respostas[x.n]) ?? prova.questoes[0]).n);
+  }, [prova, q, tid]);
+
   // ---- correção por blocos: questões que dividem as mesmas alternativas (um grupo, ex.: 41–45)
   // só mostram certo/errado quando o bloco inteiro foi respondido e você manda corrigir.
   const porBlocos = cfg.porBlocos !== false;
