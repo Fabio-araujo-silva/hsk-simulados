@@ -113,7 +113,9 @@ export default function App() {
           </nav>
         </header>
       )}
-      <main className={emProva ? "principal tela-cheia" : "principal"}>{pagina}</main>
+      {/* só monta a página depois que o progresso do disco chegou: senão uma tentativa criada antes
+          (ex.: recarregar dentro de #/estudo/…) seria descartada quando o arquivo substitui o estado */}
+      <main className={emProva ? "principal tela-cheia" : "principal"}>{disco === "verificando" ? <div className="carregando">carregando o seu progresso…</div> : pagina}</main>
     </div>
   );
 }
