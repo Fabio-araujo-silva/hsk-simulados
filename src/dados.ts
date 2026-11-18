@@ -53,6 +53,20 @@ export const REGRAS: Record<number, RegrasNivel> = {
       "Vocabulário: 150 palavras.",
     ],
   },
+  2: {
+    nome: "HSK 2",
+    questoes: { L: 35, R: 25, W: 0 },
+    tempos: { folha: 3 * 60, R: 22 * 60, W: 0 },
+    maximo: 200,
+    aprovacao: 120,
+    pinyinNaProva: true,
+    resumo: [
+      "60 questões em ~50 min: 听力 35 (≈25 min de áudio, cada item lido duas vezes) + 阅读 25 (22 min).",
+      "O caderno traz pinyin sobre os caracteres.",
+      "Cada seção vale 100 pontos: total 200, aprovação com 120.",
+      "Vocabulário: 300 palavras.",
+    ],
+  },
   3: {
     nome: "HSK 3",
     questoes: { L: 40, R: 30, W: 10 },
@@ -106,6 +120,16 @@ const PARTES: Record<number, Record<string, string>> = {
     R2: "Frase ↔ figura",
     R3: "Pergunta ↔ resposta",
     R4: "Lacunas (banco de palavras)",
+  },
+  2: {
+    L1: "Figura: certo ou errado",
+    L2: "Diálogo ↔ figura",
+    L3: "Diálogo curto (A/B/C)",
+    L4: "Diálogo longo (A/B/C)",
+    R1: "Frase ↔ figura",
+    R2: "Lacunas (banco de palavras)",
+    R3: "Frase e ★: certo ou errado",
+    R4: "Pergunta ↔ resposta",
   },
   3: {
     L1: "Diálogo ↔ figura",

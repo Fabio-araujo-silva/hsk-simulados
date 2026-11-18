@@ -40,6 +40,17 @@ const INSTRUCOES_1: Record<string, string> = {
   R4: "Escolha a palavra que completa a lacuna.",
 };
 
+const INSTRUCOES_2: Record<string, string> = {
+  L1: "Ouça e diga se a figura corresponde ao que foi dito (certo ou errado).",
+  L2: "Ouça o diálogo e escolha a figura correspondente.",
+  L3: "Ouça o diálogo e a pergunta; escolha a resposta.",
+  L4: "Ouça o diálogo e a pergunta; escolha a resposta.",
+  R1: "Escolha a figura que combina com a frase.",
+  R2: "Escolha a palavra que completa a lacuna.",
+  R3: "Leia a frase e diga se a afirmação marcada com ★ está certa ou errada.",
+  R4: "Escolha a frase que combina com esta (resposta / continuação).",
+};
+
 const INSTRUCOES: Record<string, string> = {
   L1: "Ouça o diálogo e escolha a figura correspondente.",
   L2: "Ouça e diga se a frase marcada com ★ está certa ou errada.",
@@ -53,7 +64,7 @@ const INSTRUCOES: Record<string, string> = {
 };
 
 export function instrucao(q: Questao, nivel: number = 3) {
-  const tabela = nivel === 1 ? INSTRUCOES_1 : INSTRUCOES;
+  const tabela = nivel === 1 ? INSTRUCOES_1 : nivel === 2 ? INSTRUCOES_2 : INSTRUCOES;
   return tabela[`${q.secao}${q.parte}`] ?? "";
 }
 
@@ -113,6 +124,12 @@ export function VisaoQuestao(p: Props) {
 
       {q.tipo === "vf" && (
         <>
+          {/* HSK 2, leitura 46–50: uma frase impressa e, embaixo, a afirmação ★ sobre ela */}
+          {q.secao === "R" && q.texto && (
+            <p className="texto-leitura">
+              <Frase f={q.texto} inerte={inerte} destaque={revelado ? q.trecho : undefined} />
+            </p>
+          )}
           <p className="enunciado">
             <span className="estrela">★</span> <Frase f={q.afirmacao} inerte={inerte} />
           </p>

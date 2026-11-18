@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useEstado, useStatusDisco } from "./armazenamento";
 import { vencido } from "./srs";
+import type { Nivel } from "./tipos";
 import { EscolhaNivel, Inicio } from "./paginas/Inicio";
 import { PaginaEstudo } from "./paginas/Estudo";
 import { PaginaExame } from "./paginas/Exame";
@@ -71,7 +72,7 @@ export default function App() {
       pagina = <PaginaConfig />;
       break;
     case "nivel":
-      pagina = <Inicio key={partes[1]} nivel={(Number(partes[1]) || 3) as 1 | 3} />;
+      pagina = <Inicio key={partes[1]} nivel={(Number(partes[1]) || 3) as Nivel} />;
       break;
     default:
       pagina = <EscolhaNivel />;
