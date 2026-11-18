@@ -29,6 +29,8 @@ export function CaixaRevisao({ prova, q, lexico, consultas, errou, aoFechar }: {
     salvaCartoes(escolhidos);
     setFeito(escolhidos.length);
   };
+  const nMarcados = novas.filter((s) => estaMarcado(s.cartao.id, s.marcado)).length;
+  const marcaTodos = (v: boolean) => setMarcados(Object.fromEntries(novas.map((s) => [s.cartao.id, v])));
 
   return (
     <div className="caixa-revisao">
@@ -46,9 +48,18 @@ export function CaixaRevisao({ prova, q, lexico, consultas, errou, aoFechar }: {
         ))}
       </ul>
       <div className="caixa-botoes">
-        <button className="pri" onClick={() => adiciona()}>
-          Adicionar selecionados
+        <button className="pri" onClick={() => adiciona()} disabled={nMarcados === 0}>
+          Adicionar selecionados{nMarcados ? ` (${nMarcados})` : ""}
         </button>
+        {nMarcados > 0 ? (
+          <button className="sec" onClick={() => marcaTodos(false)}>
+            Desmarcar tudo
+          </button>
+        ) : (
+          <button className="sec" onClick={() => marcaTodos(true)}>
+            Marcar tudo
+          </button>
+        )}
         {aoFechar && (
           <button className="sec" onClick={aoFechar}>
             Agora não
