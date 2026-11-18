@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from "react";
 import type { Cartao, Config, EstadoVocab, MarcaVocab, Tentativa } from "./tipos";
+import { leBackup } from "./backup";
 
 // Estado do usuário. Fica em DOIS lugares, sempre sincronizados:
 //  1. localStorage do navegador (instantâneo);
@@ -356,11 +357,11 @@ export function formataTudo() {
 // ------------------------------------------------------------------- backup
 
 export function exportaBackup(): string {
-  return JSON.stringify(estado, null, 1);
+  return JSON.stringify({ parte: "hsk", ...estado }, null, 1);
 }
 
 export function importaBackup(json: string) {
-  const novo = normaliza(JSON.parse(json));
+  const novo = normaliza(leBackup(json, "hsk") as Partial<Estado>);
   if (novo.versao !== 1) throw new Error("arquivo de backup inválido");
   // restaurar sempre MESCLA (nunca joga fora o que já existe)
   muda((e) => mescla(e, novo));

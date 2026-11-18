@@ -80,7 +80,7 @@ export function ConfigHskk() {
                 importaBackup(await f.text());
                 setMsg("Backup do HSKK restaurado (mesclado com o que já existia).");
               } catch (err) {
-                setMsg(`Erro: ${String(err)}`);
+                setMsg(`Erro: ${err instanceof Error ? err.message : String(err)}`);
               }
             }}
           />
