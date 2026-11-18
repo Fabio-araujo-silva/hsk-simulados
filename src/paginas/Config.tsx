@@ -32,6 +32,10 @@ export function PaginaConfig() {
           Tocar o áudio sozinho ao abrir uma questão de listening (modo estudo)
         </label>
         <label className="linha-cfg">
+          <input type="checkbox" checked={cfg.porBlocos !== false} onChange={(e) => mudaConfig({ porBlocos: e.target.checked })} />
+          Corrigir por blocos: questões que dividem as mesmas alternativas (ex.: 41–45) só mostram o resultado no fim do bloco
+        </label>
+        <label className="linha-cfg">
           <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
           Permitir pausar o áudio no modo prova (no exame real não pode)
         </label>

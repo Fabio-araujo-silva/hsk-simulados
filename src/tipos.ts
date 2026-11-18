@@ -142,6 +142,8 @@ export interface Resposta {
   /** usuário marcou manualmente como correta (ex.: outra ordem válida no "ordenar") */
   manual?: boolean;
   em: number;
+  /** modo estudo por blocos: respondida, mas o bloco ainda não foi corrigido (não entra em nota nenhuma) */
+  pendente?: boolean;
 }
 
 export interface Tentativa {
@@ -169,6 +171,8 @@ export interface Tentativa {
   semListening?: boolean;
   /** palavras consultadas no hover por questão (sugestões de cartões) */
   consultas?: Record<number, string[]>;
+  /** modo estudo por blocos: grupos (ex.: "R1a") já corrigidos — antes disso as respostas do bloco ficam ocultas */
+  blocosCorrigidos?: Record<string, boolean>;
 }
 
 /**
@@ -225,4 +229,6 @@ export interface Config {
   nivel?: Nivel;
   /** HSK 1: mostrar pinyin (como no caderno real); false = esconder */
   pinyinHsk1?: boolean;
+  /** modo estudo: questões que dividem as mesmas alternativas (ex.: 41–45) são corrigidas juntas, no fim do bloco */
+  porBlocos?: boolean;
 }

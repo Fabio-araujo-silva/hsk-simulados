@@ -382,6 +382,41 @@ button:disabled {
   border-color: var(--erro);
   color: var(--erro);
 }
+.nav-n.pendente {
+  background: var(--acento-fundo);
+  border-color: var(--acento-2);
+}
+.barra-bloco {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0.2em 0 0.9em;
+  padding: 0.5em 0.7em;
+  border: 1px dashed var(--linha);
+  border-radius: 8px;
+  background: var(--papel-2);
+  font-size: 0.85rem;
+}
+.barra-bloco.corrigido {
+  border-style: solid;
+}
+.barra-bloco .bloco-nome {
+  font-weight: 600;
+}
+.barra-bloco .bloco-itens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.barra-bloco .bloco-itens .nav-n {
+  padding: 0.2em 0.55em;
+}
+.barra-bloco .bloco-placar,
+.barra-bloco > button.pri {
+  margin-left: auto;
+  font-weight: 600;
+}
 .nav-n.atual {
   outline: 2px solid var(--tinta);
   outline-offset: 1px;

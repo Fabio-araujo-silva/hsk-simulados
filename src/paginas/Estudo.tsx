@@ -7,7 +7,7 @@ import { CaixaRevisao } from "../componentes/CaixaRevisao";
 import { ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
 import { RoteiroCompleto } from "../componentes/RoteiroCompleto";
-import type { Lexico, Prova, Tentativa } from "../tipos";
+import type { Lexico, Prova, Questao, Tentativa } from "../tipos";
 
 export function useProvaELexico(id: string) {
   const [prova, setProva] = useState<Prova | null>(null);
@@ -57,15 +57,66 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
 
   const q = prova?.questoes.find((x) => x.n === n);
   const resposta = tentativa?.respostas[n];
-  const revelado = !!resposta;
+
+  // ---- correção por blocos: questões que dividem as mesmas alternativas (um grupo, ex.: 41–45)
+  // só mostram certo/errado quando o bloco inteiro foi respondido e você manda corrigir.
+  const porBlocos = cfg.porBlocos !== false;
+  const blocoDe = useCallback(
+    (x: Questao | undefined) => (porBlocos && x?.grupo && prova?.grupos[x.grupo] ? x.grupo : null),
+    [porBlocos, prova],
+  );
+  const visivel = useCallback(
+    (x: Questao) => {
+      const g = blocoDe(x);
+      return !g || !!tentativa?.blocosCorrigidos?.[g];
+    },
+    [blocoDe, tentativa],
+  );
+  const bloco = blocoDe(q);
+  const nsBloco = bloco && prova ? prova.grupos[bloco].questoes : [];
+  const blocoCorrigido = !!bloco && !!tentativa?.blocosCorrigidos?.[bloco];
+  const faltamBloco = nsBloco.filter((m) => !tentativa?.respostas[m]).length;
+  const revelado = !!resposta && (!q || visivel(q));
+
+  // tentativas de antes do modo por blocos: blocos que já tinham respostas contam como corrigidos
+  useEffect(() => {
+    if (!prova || !tentativa || tentativa.blocosCorrigidos) return;
+    const corr: Record<string, boolean> = {};
+    for (const [g, gr] of Object.entries(prova.grupos)) if (gr.questoes.some((m) => tentativa.respostas[m])) corr[g] = true;
+    mudaTentativa(tid, (t) => ({ ...t, blocosCorrigidos: { ...corr, ...(t.blocosCorrigidos ?? {}) } }));
+  }, [prova, tentativa, tid]);
+
+  // correção por blocos desligada em ⚙: nada fica pendente
+  useEffect(() => {
+    if (porBlocos || !tentativa || !Object.values(tentativa.respostas).some((r) => r.pendente)) return;
+    mudaTentativa(tid, (t) => ({
+      ...t,
+      respostas: Object.fromEntries(Object.entries(t.respostas).map(([k, r]) => [k, r.pendente ? { ...r, pendente: undefined } : r])),
+    }));
+  }, [porBlocos, tentativa, tid]);
+
+  const corrigeBloco = useCallback(() => {
+    if (!bloco) return;
+    mudaTentativa(tid, (t) => {
+      const respostas = { ...t.respostas };
+      for (const m of nsBloco) if (respostas[m]?.pendente) respostas[m] = { ...respostas[m], pendente: undefined };
+      return { ...t, respostas, blocosCorrigidos: { ...(t.blocosCorrigidos ?? {}), [bloco]: true } };
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bloco, tid, nsBloco.join(",")]);
 
   const responde = useCallback(
     (v: string | boolean) => {
       if (!q) return;
       const certa = confere(q, v);
-      mudaTentativa(tid, (t) => ({ ...t, respostas: { ...t.respostas, [q.n]: { valor: v, certa, em: Date.now() } } }));
+      // bloco ainda aberto: a resposta fica "pendente" (fora das notas) até o bloco ser corrigido
+      const g = porBlocos && q.grupo && prova?.grupos[q.grupo] ? q.grupo : null;
+      mudaTentativa(tid, (t) => {
+        const pendente = !!g && !t.blocosCorrigidos?.[g];
+        return { ...t, respostas: { ...t.respostas, [q.n]: { valor: v, certa, em: Date.now(), ...(pendente ? { pendente: true } : {}) } } };
+      });
     },
-    [q, tid],
+    [q, tid, porBlocos, prova],
   );
 
   const marcaCerta = useCallback(() => {
@@ -75,11 +126,17 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
 
   const refaz = () => {
     if (!q) return;
+    // num bloco, refazer recomeça o bloco inteiro (senão as outras respostas entregariam a que sobrou)
+    const ns = bloco ? nsBloco : [q.n];
     mudaTentativa(tid, (t) => {
-      const { [q.n]: _, ...resto } = t.respostas;
-      return { ...t, respostas: resto };
+      const resto = { ...t.respostas };
+      for (const m of ns) delete resto[m];
+      const corr = { ...(t.blocosCorrigidos ?? {}) };
+      if (bloco) delete corr[bloco];
+      return { ...t, respostas: resto, blocosCorrigidos: corr };
     });
-    setCaixaFechada((c) => ({ ...c, [q.n]: false }));
+    setCaixaFechada((c) => ({ ...c, ...Object.fromEntries(ns.map((m) => [m, false])) }));
+    if (bloco && nsBloco[0] !== q.n) vai(nsBloco[0]);
   };
 
   const consultou = useCallback(
@@ -114,7 +171,8 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
       if (e.ctrlKey || e.metaKey || e.altKey) return;
       if (e.key === "ArrowRight") vai(n + 1);
       else if (e.key === "ArrowLeft") vai(n - 1);
-      else if (e.key === "Enter" && revelado) vai(n + 1);
+      else if (e.key === "Enter" && bloco && !blocoCorrigido && faltamBloco === 0) corrigeBloco();
+      else if (e.key === "Enter" && resposta) vai(n + 1);
       else if (e.key.toLowerCase() === "t") mudaConfig({ traducao: !cfg.traducao });
       else if (e.key.toLowerCase() === "p") mudaConfig({ pinyin: !cfg.pinyin });
       else if (e.key === " " && audio && q?.audio) {
@@ -137,13 +195,13 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     };
     window.addEventListener("keydown", f);
     return () => window.removeEventListener("keydown", f);
-  }, [n, revelado, cfg.traducao, cfg.pinyin, audio, q, responde, vai, prova]);
+  }, [n, revelado, resposta, bloco, blocoCorrigido, faltamBloco, corrigeBloco, cfg.traducao, cfg.pinyin, audio, q, responde, vai, prova]);
 
   const resumo = useMemo(() => {
     if (!prova || !tentativa) return null;
-    const r = Object.values(tentativa.respostas);
-    return { feitas: r.length, certas: r.filter((x) => x.certa || x.manual).length };
-  }, [prova, tentativa]);
+    const r = prova.questoes.filter((x) => tentativa.respostas[x.n] && visivel(x)).map((x) => tentativa.respostas[x.n]);
+    return { feitas: Object.keys(tentativa.respostas).length, certas: r.filter((x) => x.certa || x.manual).length };
+  }, [prova, tentativa, visivel]);
 
   if (erro) return <div className="erro">Não consegui abrir {id}: {erro}</div>;
   if (!prova || !tentativa || !q) return <div className="carregando">carregando {id}…</div>;
@@ -172,7 +230,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                   .filter((x) => x.secao === s)
                   .map((x) => {
                     const r = tentativa.respostas[x.n];
-                    const st = !r ? "" : r.certa || r.manual ? "certa" : "errada";
+                    const st = !r ? "" : !visivel(x) ? "pendente" : r.certa || r.manual ? "certa" : "errada";
                     return (
                       <button key={x.n} className={`nav-n ${st} ${x.n === n ? "atual" : ""}`} onClick={() => vai(x.n)} title={nomeParte(prova.nivel, `${x.secao}${x.parte}`)}>
                         {x.n}
@@ -240,6 +298,35 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                 <span className="numero">{q.n}</span>
                 <span className="instrucao">{instrucao(q, prova.nivel)}</span>
               </div>
+              {bloco && (
+                <div className={`barra-bloco ${blocoCorrigido ? "corrigido" : ""}`}>
+                  <span className="bloco-nome">
+                    bloco {nsBloco[0]}–{nsBloco[nsBloco.length - 1]}
+                  </span>
+                  <span className="bloco-itens">
+                    {nsBloco.map((m) => {
+                      const r = tentativa.respostas[m];
+                      const st = !r ? "" : !blocoCorrigido ? "pendente" : r.certa || r.manual ? "certa" : "errada";
+                      const marca = !r ? "" : r.valor === true ? "✓" : r.valor === false ? "✗" : String(r.valor);
+                      return (
+                        <button key={m} className={`nav-n ${st} ${m === n ? "atual" : ""}`} onClick={() => vai(m)}>
+                          {m}
+                          {marca && <small> {marca}</small>}
+                        </button>
+                      );
+                    })}
+                  </span>
+                  {blocoCorrigido ? (
+                    <span className="bloco-placar">
+                      {nsBloco.filter((m) => tentativa.respostas[m]?.certa || tentativa.respostas[m]?.manual).length}/{nsBloco.length} certas
+                    </span>
+                  ) : (
+                    <button className="pri" disabled={faltamBloco > 0} onClick={corrigeBloco} title="atalho: Enter (com o bloco todo respondido)">
+                      {faltamBloco > 0 ? `faltam ${faltamBloco} para corrigir` : "corrigir bloco"}
+                    </button>
+                  )}
+                </div>
+              )}
               <VisaoQuestao
                 key={q.n}
                 prova={prova}
@@ -273,7 +360,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                 {revelado && (
                   <>
                     <button className="link" onClick={refaz}>
-                      refazer
+                      {bloco ? "refazer bloco" : "refazer"}
                     </button>
                     {!mostraCaixa && (
                       <button className="link" onClick={() => setCaixaAberta((c) => ({ ...c, [n]: true }))}>
@@ -282,7 +369,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                     )}
                   </>
                 )}
-                <button className={revelado ? "pri" : "sec"} onClick={() => vai(n + 1)} disabled={n >= ultima}>
+                <button className={resposta ? "pri" : "sec"} onClick={() => vai(n + 1)} disabled={n >= ultima}>
                   próxima →
                 </button>
               </div>

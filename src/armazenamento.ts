@@ -30,6 +30,7 @@ export const CONFIG_PADRAO: Config = {
   pausarProva: false,
   novosPorDia: 30,
   tocarSozinho: true,
+  porBlocos: true,
 };
 
 function vazio(): Estado {
