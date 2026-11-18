@@ -1,19 +1,7 @@
 // Tipos dos dados gerados por scripts/monta.py (public/conteudo/...)
-
-/** Um trecho em chinês já segmentado em palavras. */
-export interface Frase {
-  zh: string;
-  /** palavras (tokens) — concatenadas dão `zh` */
-  tk: string[];
-  /** pinyin de cada token ("" para pontuação) */
-  py: string[];
-  /** tradução em português da frase inteira */
-  pt?: string;
-  /** tempos [início, fim] de cada token no áudio original (null = sem tempo) */
-  a?: ([number, number] | null)[];
-  /** (não usado no HSKK; mantido para o componente de leitura) */
-  a2?: ([number, number] | null)[];
-}
+// Frase, Lexico e o estado FSRS são os mesmos do HSK (src/tipos.ts).
+import type { CartaoSrs, Frase } from "../tipos";
+export type { CartaoSrs, Frase, Lexico, Verbete } from "../tipos";
 
 /** Tempos (s) de uma questão no áudio original. */
 export interface TempoQuestao {
@@ -112,15 +100,6 @@ export interface ResumoProva {
   completa: boolean;
 }
 
-export interface Verbete {
-  py: string;
-  pt?: string;
-  en?: string;
-  hsk?: number;
-}
-
-export type Lexico = Record<string, Verbete>;
-
 // ------------------------------------------------------------ estado do usuário
 
 export type Modo = "prova" | "estudo";
@@ -174,18 +153,6 @@ export interface Cartao {
   /** % da tentativa que gerou o cartão */
   pct?: number;
   srs: CartaoSrs;
-}
-
-export interface CartaoSrs {
-  due: number;
-  stability: number;
-  difficulty: number;
-  elapsed_days: number;
-  scheduled_days: number;
-  reps: number;
-  lapses: number;
-  state: number;
-  last_review?: number;
 }
 
 export interface Config {

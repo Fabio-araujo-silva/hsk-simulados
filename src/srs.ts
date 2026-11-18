@@ -1,5 +1,8 @@
 import { createEmptyCard, fsrs, generatorParameters, Rating, type Card, type Grade } from "ts-fsrs";
-import type { Cartao, CartaoSrs } from "./tipos";
+import type { CartaoSrs } from "./tipos";
+
+/** Qualquer cartão com estado FSRS (os do HSK e as frases orais do HSKK). */
+type ComSrs = { srs: CartaoSrs };
 
 // Revisão espaçada com FSRS (o algoritmo do Anki moderno).
 const agendador = fsrs(generatorParameters({ request_retention: 0.9, maximum_interval: 365, enable_fuzz: true }));
@@ -44,13 +47,13 @@ export function srsNovo(): CartaoSrs {
   return deCard(createEmptyCard(new Date()));
 }
 
-export function revisa(c: Cartao, nota: Grade, agora = new Date()): Cartao {
+export function revisa<T extends ComSrs>(c: T, nota: Grade, agora = new Date()): T {
   const r = agendador.next(paraCard(c.srs), agora, nota);
   return { ...c, srs: deCard(r.card) };
 }
 
 /** Prévia do próximo intervalo de cada nota ("10 min", "3 d"…). */
-export function previas(c: Cartao, agora = new Date()): Record<number, string> {
+export function previas(c: ComSrs, agora = new Date()): Record<number, string> {
   const log = agendador.repeat(paraCard(c.srs), agora);
   const out: Record<number, string> = {};
   for (const { nota } of NOTAS) {
@@ -72,5 +75,5 @@ export function intervalo(ms: number) {
   return `${(d / 365).toFixed(1)} a`;
 }
 
-export const ehNovo = (c: Cartao) => c.srs.state === 0;
-export const vencido = (c: Cartao, agora = Date.now()) => c.srs.due <= agora;
+export const ehNovo = (c: ComSrs) => c.srs.state === 0;
+export const vencido = (c: ComSrs, agora = Date.now()) => c.srs.due <= agora;

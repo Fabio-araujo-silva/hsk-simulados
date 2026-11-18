@@ -1,5 +1,5 @@
 import { apagaCartao, leEstado, salvaCartoes } from "./armazenamento";
-import { srsNovo } from "./srs";
+import { srsNovo } from "../srs";
 import type { Cartao, Prova, QuestaoRepetir } from "./tipos";
 
 export const idCartao = (prova: string, n: number) => `f:${prova}:${n}`;

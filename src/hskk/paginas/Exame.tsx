@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { useControleAudio, useTempo } from "../audio";
+import { useTempo } from "../../audio";
+import { useControleAudio } from "../audio";
 import { adicionaGravacao, arquivaTentativa, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
 import { AvisoMicrofone, Medidor } from "../componentes/Gravador";
-import { Frase, ProvedorLeitura } from "../componentes/Leitura";
+import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaProva, ehFalar, formataTempo, urlPublica } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import { Gravacao, pedeMicrofone, useMicrofone } from "../microfone";

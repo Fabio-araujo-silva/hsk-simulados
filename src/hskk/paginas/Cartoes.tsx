@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { apagaCartao, useEstado } from "../armazenamento";
-import { intervalo } from "../srs";
+import { intervalo } from "../../srs";
 
 const ESTADOS = ["novo", "aprendendo", "revisão", "reaprendendo"];
 

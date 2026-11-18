@@ -127,10 +127,12 @@ interface PropsFrase {
   className?: string;
   /** sem tradução/hover (ex.: modo prova) */
   inerte?: boolean;
+  /** pinyin sempre visível (ex.: perguntas do caderno do HSKK, que vêm com pinyin impresso) */
+  comPinyin?: boolean;
 }
 
 /** Renderiza uma frase chinesa palavra por palavra. */
-export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }: PropsFrase) {
+export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, comPinyin }: PropsFrase) {
   const ctx = useLeitura();
   const temTempo = !!(f?.a?.some(Boolean) || f?.a2?.some(Boolean));
   const { tempo, tocando } = useTempo(temTempo && !inerte ? ctx.audio : null);
@@ -154,7 +156,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
   }, [f, destaque]);
 
   if (!f) return null;
-  const comPinyin = (ctx.pinyin && !inerte) || !!ctx.pinyinFixo;
+  const mostraPy = !!comPinyin || (ctx.pinyin && !inerte) || !!ctx.pinyinFixo;
   const traduzFrase = semSpoiler ? f.ptL ?? undefined : f.pt;
 
   const aoEntrar = (i: number, ev: React.MouseEvent) => {
@@ -210,7 +212,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
   };
 
   return (
-    <span className={`frase ${comPinyin ? "com-pinyin" : ""} ${className ?? ""}`} ref={refSpan} onMouseUp={aoSoltar}>
+    <span className={`frase ${mostraPy ? "com-pinyin" : ""} ${className ?? ""}`} ref={refSpan} onMouseUp={aoSoltar}>
       {f.tk.map((w, i) => {
         const pont = ehPontuacao(w);
         const t1 = f.a?.[i];
@@ -226,7 +228,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte }
           destacados.has(i) ? "destacado" : "",
         ].join(" ");
         const conteudo =
-          comPinyin && !pont && f.py[i] ? (
+          mostraPy && !pont && f.py[i] ? (
             <ruby>
               {w}
               <rt>{f.py[i]}</rt>

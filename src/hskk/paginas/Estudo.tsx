@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
-import { ControleAudio, useControleAudio, useTempo } from "../audio";
+import { ControleAudio, useTempo } from "../../audio";
+import { useControleAudio } from "../audio";
 import { adicionaGravacao, mudaConfig, mudaTentativa, tentativaEstudo, useConfig, useEstado } from "../armazenamento";
 import { adicionaRevisao, idCartao, removeRevisao } from "../cartoes";
 import { BotaoGravar } from "../componentes/Gravador";
 import { ItemGravacao } from "../componentes/ItemGravacao";
-import { Frase, ProvedorLeitura } from "../componentes/Leitura";
+import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, TEMPO_FALA, TEMPO_PREPARO_ESTUDO, TEMPO_REPETIR, urlPublica } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, Tentativa } from "../tipos";

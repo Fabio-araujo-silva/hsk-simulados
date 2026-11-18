@@ -3,7 +3,8 @@ import type { Lexico, Nivel, PalavraVocab, Prova, ResumoProva, Secao } from "./t
 const BASE = import.meta.env.BASE_URL;
 const cache = new Map<string, Promise<unknown>>();
 
-function busca<T>(caminho: string): Promise<T> {
+/** Busca um JSON de public/ (uma vez só por caminho; também usado pelo HSKK). */
+export function busca<T>(caminho: string): Promise<T> {
   if (!cache.has(caminho)) {
     const p = fetch(BASE + caminho, { cache: "no-cache" }).then((r) => {
       if (!r.ok) throw new Error(`${caminho}: HTTP ${r.status}`);

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { ControleAudio, useControleAudio, useTempo } from "../audio";
+import { ControleAudio, useTempo } from "../../audio";
+import { useControleAudio } from "../audio";
 import { mudaConfig, useConfig, useEstado } from "../armazenamento";
 import { ItemGravacao } from "../componentes/ItemGravacao";
-import { Frase, ProvedorLeitura } from "../componentes/Leitura";
+import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, urlPublica } from "../dados";
 import { transcreveGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao } from "../tipos";

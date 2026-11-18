@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useEstado, useStatusDisco } from "./armazenamento";
-import { vencido } from "./srs";
+import { vencido } from "../srs";
 import { Inicio } from "./paginas/Inicio";
 import { PaginaEstudo } from "./paginas/Estudo";
 import { PaginaExame } from "./paginas/Exame";

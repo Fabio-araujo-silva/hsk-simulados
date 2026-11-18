@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { ControleAudio, useTempo } from "../audio";
+import { ControleAudio, useTempo } from "../../audio";
 import { contaNovoHoje, hojeChave, salvaCartoes, useConfig, useEstado } from "../armazenamento";
 import { Comparacao } from "../componentes/Comparacao";
 import { BotaoGravar } from "../componentes/Gravador";
-import { Frase, ProvedorLeitura } from "../componentes/Leitura";
+import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
 import { carregaLexico, carregaProva, TEMPO_REPETIR, urlPublica } from "../dados";
 import { salvaGravacao, transcreve } from "../gravacoes";
-import { NOTAS, previas, revisa, ehNovo } from "../srs";
+import { NOTAS, previas, revisa, ehNovo } from "../../srs";
 import type { Cartao, Lexico, Prova } from "../tipos";
 
 const ANTECIPA_MS = 20 * 60 * 1000; // aprendendo: pode antecipar até 20 min se não houver mais nada
