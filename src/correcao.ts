@@ -1,5 +1,5 @@
 import type { Frase, Grupo, Prova, Questao, Tentativa } from "./tipos";
-import { pontuacao } from "./dados";
+import { pontuacao, regras, secaoDe } from "./dados";
 
 /** Normaliza uma frase escrita para comparação (ignora espaços e pontuação final). */
 export function normalizaEscrita(s: string) {
@@ -52,6 +52,43 @@ export function resumoTentativa(prova: Prova, t: Tentativa) {
     if (ok) porParte[k].certas++;
   }
   return { certas, porParte, ...pontuacao(certas, prova.nivel) };
+}
+
+/**
+ * Nota de uma tentativa do MODO ESTUDO, na escala da prova (HSK 3: x/300; HSK 1 e 2: x/200).
+ * - `proporcional`: cada seção vale 100 pelo seu aproveitamento nas questões que você JÁ FEZ dela
+ *   (seções ainda não começadas recebem a média das começadas) — "se continuar nesse ritmo";
+ * - `absoluta`: como se entregasse agora (o que não foi feito conta como erro).
+ * Respostas de blocos ainda não corrigidos ficam de fora (senão a nota entregaria o resultado do bloco).
+ */
+export function notaDoEstudo(t: Tentativa, nivel: number) {
+  const rg = regras(nivel);
+  const certas = { L: 0, R: 0, W: 0 };
+  const feitas = { L: 0, R: 0, W: 0 };
+  for (const [n, r] of Object.entries(t.respostas)) {
+    if (r.pendente) continue;
+    const s = secaoDe(nivel, Number(n));
+    feitas[s]++;
+    if (r.certa || r.manual) certas[s]++;
+  }
+  const secoes = (["L", "R", "W"] as const).filter((s) => rg.questoes[s] > 0);
+  const comecadas = secoes.filter((s) => feitas[s] > 0);
+  const pct = (s: "L" | "R" | "W") => (certas[s] / feitas[s]) * 100;
+  const media = comecadas.length ? comecadas.reduce((a, s) => a + pct(s), 0) / comecadas.length : 0;
+  const proporcional = Math.round(secoes.reduce((a, s) => a + (feitas[s] ? pct(s) : media), 0));
+  const totalFeitas = feitas.L + feitas.R + feitas.W;
+  const totalQuestoes = secoes.reduce((a, s) => a + rg.questoes[s], 0);
+  return {
+    proporcional,
+    absoluta: pontuacao(certas, nivel).total,
+    maximo: rg.maximo,
+    aprovacao: rg.aprovacao,
+    feitas: totalFeitas,
+    total: totalQuestoes,
+    completa: totalFeitas >= totalQuestoes,
+    vazia: totalFeitas === 0,
+    porSecao: Object.fromEntries(secoes.map((s) => [s, feitas[s] ? Math.round(pct(s)) : null])) as Record<string, number | null>,
+  };
 }
 
 /** Todas as frases de uma questão (para achar frase-chave, palavras etc.). */

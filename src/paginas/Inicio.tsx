@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { mudaConfig, resetaSimulado, useEstado } from "../armazenamento";
 import { carregaIndice, formataTempo, pontuacao, REGRAS, regras, secaoDe } from "../dados";
 import type { Nivel, ResumoProva, Tentativa } from "../tipos";
+import { notaDoEstudo } from "../correcao";
 
 const nivelDe = (id: string): Nivel => (Number(id[1]) || 3) as Nivel;
 
@@ -147,10 +148,11 @@ export function Inicio({ nivel }: { nivel: Nivel }) {
           const melhor = exames.reduce<number | null>((m, t) => Math.max(m ?? 0, notaDe(t).total), null);
           const ultimo = exames[0] ? notaDe(exames[0]) : null;
           const estudo = ts.find((t) => t.modo === "estudo" && !t.arquivada);
-          const feitas = estudo ? Object.keys(estudo.respostas).length : 0;
-          const acertos = estudo ? Object.values(estudo.respostas).filter((r) => r.certa || r.manual).length : 0;
+          const notaEstudo = estudo ? notaDoEstudo(estudo, nivel) : null;
+          const feitas = notaEstudo?.feitas ?? 0;
+          const acertos = estudo ? Object.values(estudo.respostas).filter((r) => !r.pendente && (r.certa || r.manual)).length : 0;
           const emAndamento = ts.find((t) => t.modo === "prova" && !t.fim && !t.arquivada);
-          const podeResetar = feitas > 0 || !!emAndamento;
+          const podeResetar = Object.keys(estudo?.respostas ?? {}).length > 0 || !!emAndamento;
           const total = rg.questoes.L + rg.questoes.R + rg.questoes.W;
           return (
             <article key={p.id} className="cartao-prova">
@@ -176,12 +178,29 @@ export function Inicio({ nivel }: { nivel: Nivel }) {
                   <small>última</small>
                   <b>{ultimo ? ultimo.total : "—"}</b>
                 </div>
-                <div>
+                <div
+                  title={
+                    notaEstudo && !notaEstudo.vazia
+                      ? `Nota do modo estudo, proporcional ao que você já fez (cada seção vale 100 pelo aproveitamento nas questões feitas dela). ` +
+                        `${feitas}/${total} feitas, ${acertos} certas` +
+                        (notaEstudo.completa ? "." : `; contando as não feitas como erro: ${notaEstudo.absoluta}/${notaEstudo.maximo}.`)
+                      : "Ainda sem questões feitas no modo estudo"
+                  }
+                >
                   <small>estudo</small>
-                  <b>
-                    {feitas}/{total}
-                    {feitas > 0 && <small> · {Math.round((acertos / feitas) * 100)}%</small>}
-                  </b>
+                  {notaEstudo && !notaEstudo.vazia ? (
+                    <b className={notaEstudo.proporcional >= rg.aprovacao ? "aprovado" : "reprovado"}>
+                      {notaEstudo.completa ? "" : "≈"}
+                      {notaEstudo.proporcional}
+                      <small>
+                        /{rg.maximo} · {feitas}/{total}
+                      </small>
+                    </b>
+                  ) : (
+                    <b>
+                      0<small>/{total}</small>
+                    </b>
+                  )}
                 </div>
               </div>
               <div className="acoes">

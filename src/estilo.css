@@ -1701,3 +1701,16 @@ button:disabled {
   width: 100%;
   color: var(--tinta-3);
 }
+
+/* ------------------------------------------------------------- nota do modo estudo */
+.nota-estudo {
+  margin-top: 0.45em;
+  font-size: 0.85rem;
+}
+.nota-estudo b {
+  font-size: 1.05rem;
+}
+.nota-estudo small {
+  display: block;
+  color: var(--tinta-3);
+}

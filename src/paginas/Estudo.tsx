@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ControleAudio } from "../audio";
 import { leEstado, mudaConfig, mudaTentativa, novaTentativa, resetaSimulado, useConfig, useEstado } from "../armazenamento";
-import { confere } from "../correcao";
+import { confere, notaDoEstudo } from "../correcao";
 import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlPublica } from "../dados";
 import { CaixaRevisao } from "../componentes/CaixaRevisao";
 import { ProvedorLeitura } from "../componentes/Leitura";
@@ -202,6 +202,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     const r = prova.questoes.filter((x) => tentativa.respostas[x.n] && visivel(x)).map((x) => tentativa.respostas[x.n]);
     return { feitas: Object.keys(tentativa.respostas).length, certas: r.filter((x) => x.certa || x.manual).length };
   }, [prova, tentativa, visivel]);
+  const nota = useMemo(() => (prova && tentativa ? notaDoEstudo(tentativa, prova.nivel ?? 3) : null), [prova, tentativa]);
 
   if (erro) return <div className="erro">Não consegui abrir {id}: {erro}</div>;
   if (!prova || !tentativa || !q) return <div className="carregando">carregando {id}…</div>;
@@ -220,6 +221,28 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
               <small>
                 {resumo.feitas}/{prova.questoes.length} feitas · {resumo.certas} certas
               </small>
+            )}
+            {nota && !nota.vazia && (
+              <div
+                className="nota-estudo"
+                title={
+                  `Nota proporcional: cada seção vale 100 pelo seu aproveitamento nas questões que você já fez dela` +
+                  (nota.completa ? "." : ` (seções ainda não começadas entram com a média das outras). Contando as não feitas como erro: ${nota.absoluta}/${nota.maximo}.`) +
+                  ` Aprovação: ${nota.aprovacao}.`
+                }
+              >
+                <b className={nota.proporcional >= nota.aprovacao ? "aprovado" : "reprovado"}>
+                  {nota.completa ? "" : "≈"}
+                  {nota.proporcional}/{nota.maximo}
+                </b>{" "}
+                <span>pontos{nota.completa ? "" : " no ritmo atual"}</span>
+                <small>
+                  {(["L", "R", "W"] as const)
+                    .filter((s) => s in nota.porSecao)
+                    .map((s) => `${NOMES_SECAO[s].split(" ")[0]} ${nota.porSecao[s] ?? "—"}`)
+                    .join(" · ")}
+                </small>
+              </div>
             )}
           </div>
           {(["L", "R", "W"] as const).filter((s) => regras(prova.nivel).questoes[s] > 0).map((s) => (
