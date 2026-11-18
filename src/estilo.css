@@ -2205,4 +2205,99 @@ button:disabled {
   font-size: 0.85rem;
   color: var(--tinta-2);
   margin-top: 0.3em;
+
+/* ------------------------------------------------------------------ conta: Google e e-mail */
+.conta .ou-email {
+  margin: 1em 0 0.4em;
+  color: var(--tinta-2);
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------------------------------------ admin (site público) */
+.admin h1 {
+  margin-bottom: 0.6em;
+}
+.admin section {
+  margin: 1.6em 0;
+}
+.admin-totais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.6em;
+}
+.admin-totais > div {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  padding: 0.7em 0.9em;
+  color: var(--tinta-2);
+  font-size: 0.85rem;
+}
+.admin-totais b {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--tinta);
+}
+.admin-grafico {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 140px;
+  padding: 0.5em;
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+}
+.admin-dia {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+}
+.admin-dia .barra {
+  flex: 1;
+  min-height: 1px;
+  border-radius: 2px 2px 0 0;
+}
+.admin .acessos {
+  background: var(--acento);
+}
+.admin .novos {
+  background: var(--ok);
+}
+.admin-legenda {
+  font-size: 0.85rem;
+  color: var(--tinta-2);
+}
+.admin-legenda .ponto {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 2px;
+  margin: 0 0.2em 0 0.6em;
+}
+.admin-tabela {
+  overflow-x: auto;
+}
+.admin-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.admin-tabela th,
+.admin-tabela td {
+  text-align: left;
+  padding: 0.35em 0.5em;
+  border-bottom: 1px solid var(--linha);
+  white-space: nowrap;
+}
+.admin-tabela .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.admin-tabela th .link {
+  padding: 0;
+  font-weight: 600;
+  color: var(--tinta);
 }

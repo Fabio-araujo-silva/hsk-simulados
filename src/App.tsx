@@ -15,7 +15,8 @@ import { PaginaDesempenho } from "./paginas/Desempenho";
 import { PaginaConfig } from "./paginas/Config";
 import { PaginaConta } from "./paginas/Conta";
 import { PaginaSobre } from "./paginas/Sobre";
-import { useConta } from "./nuvem";
+import { PaginaAdmin } from "./paginas/Admin";
+import { useAdmin, useConta } from "./nuvem";
 import { MODO_PUBLICO } from "./publico";
 
 function useRota() {
@@ -86,6 +87,7 @@ export default function App() {
   const cfg = useEstado((e) => e.config);
   const pendentes = usePendentes();
   const conta = useConta();
+  const admin = useAdmin();
 
   // prova em andamento ocupa a tela toda (sem distrações) — a do HSK e a do HSKK
   const emProva = (partes[0] === "prova" && partes.length >= 2) || ehProvaHskk(partes);
@@ -130,6 +132,10 @@ export default function App() {
     case "sobre":
       pagina = <PaginaSobre />;
       break;
+    case "admin":
+      // só existe no site público (e só mostra algo a quem é admin no banco)
+      pagina = MODO_PUBLICO ? <PaginaAdmin /> : <EscolhaNivel />;
+      break;
     case "nivel":
       pagina = <Inicio key={partes[1]} nivel={(Number(partes[1]) || 3) as Nivel} />;
       break;
@@ -170,6 +176,11 @@ export default function App() {
             <a href="#/config" className={partes[0] === "config" ? "on" : ""} title="Configurações e backup">
               ⚙
             </a>
+            {MODO_PUBLICO && admin && (
+              <a href="#/admin" className={partes[0] === "admin" ? "on" : ""} title="Quem está usando o site">
+                Admin
+              </a>
+            )}
             {MODO_PUBLICO ? (
               <StatusPublico disco={disco} logado={!!conta} naConta={partes[0] === "conta"} />
             ) : (

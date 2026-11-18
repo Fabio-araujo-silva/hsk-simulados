@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { importaBackup as importaHsk, useStatusDisco } from "../armazenamento";
 import { importaBackup as importaHskk, useStatusDisco as useStatusHskk } from "../hskk/armazenamento";
-import { AindaPendente, confirmaCodigo, erroDoLink, leCopia, listaCopias, pedeLink, sai, useConta, type CopiaNuvem } from "../nuvem";
+import { AindaPendente, confirmaCodigo, entraComGoogle, erroDoLink, leCopia, listaCopias, pedeLink, sai, useConta, type CopiaNuvem } from "../nuvem";
 import { MODO_PUBLICO, TURNSTILE_SITEKEY } from "../publico";
 import type { StatusDisco } from "../sincronia";
 
-// Página da conta (só no site público): entrar com o link mágico / código do e-mail, ver o e-mail logado, sair
+// Página da conta (só no site público): entrar com o Google ou com o link mágico / código do e-mail, ver o e-mail logado, sair
 // e recuperar as cópias de segurança que o banco guarda quando um salvamento encolhe muito o progresso.
 
 const ROTULO: Record<StatusDisco, string> = {
@@ -117,6 +117,18 @@ function Entrar() {
     }
   };
 
+  const google = async () => {
+    setOcupado(true);
+    setMsg(null);
+    try {
+      // a página vai para o Google e volta já logada (src/nuvem.ts → entraComGoogle)
+      await entraComGoogle();
+    } catch (e) {
+      setMsg(`Não deu para entrar com o Google: ${e instanceof Error ? e.message : String(e)}`);
+      setOcupado(false);
+    }
+  };
+
   const confirma = async () => {
     setOcupado(true);
     setMsg(null);
@@ -134,9 +146,15 @@ function Entrar() {
     <section>
       <h2>Entrar</h2>
       <p>
-        Sem senha: digite o seu e-mail e clique no link que chegar (a conta é criada no primeiro acesso). Sem conta, o progresso fica só neste
-        navegador; ao entrar, o que você já fez aqui é juntado ao da conta.
+        Sem senha: entre com a sua conta Google ou receba um link por e-mail (a conta é criada no primeiro acesso). Sem conta, o progresso fica
+        só neste navegador; ao entrar, o que você já fez aqui é juntado ao da conta.
       </p>
+      <div className="acoes">
+        <button className="pri entrar-google" onClick={() => void google()} disabled={ocupado}>
+          Entrar com Google
+        </button>
+      </div>
+      <p className="ou-email">ou receba um código por e-mail</p>
       <form
         className="acoes"
         onSubmit={(e) => {
@@ -146,7 +164,7 @@ function Entrar() {
       >
         <input className="entrada" type="email" autoComplete="email" placeholder="seu@email.com" value={email} onChange={(e) => setEmail(e.target.value)} />
         {TURNSTILE_SITEKEY && <div className="turnstile" ref={robo.ref} />}
-        <button className="pri" type="submit" disabled={ocupado}>
+        <button className="sec" type="submit" disabled={ocupado}>
           {enviado ? "enviar de novo" : "enviar link de acesso"}
         </button>
       </form>

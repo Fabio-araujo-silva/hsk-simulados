@@ -429,7 +429,7 @@ export function criaSincronia<E extends { salvoEm: number }>(o: Opcoes<E>) {
       if (!nuvemLida) return;
       if (fechando) {
         // keepalive: o navegador termina o envio mesmo com a página fechada (até 64 KB; acima, fica a cópia pendente)
-        nuvem.gravaProgressoJa(o.parte, JSON.stringify(paraNuvem()), versaoRemota);
+        nuvem.gravaProgressoJa(o.parte, paraNuvem(), versaoRemota);
       } else {
         // aba escondida: a página ainda vive alguns segundos, o envio normal (sem limite de tamanho) costuma terminar
         window.clearTimeout(gravacaoDisco);

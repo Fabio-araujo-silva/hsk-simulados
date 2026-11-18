@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from "react";
 import type { AuthError, Session, SupabaseClient } from "virtual:supabase";
 import type { Parte } from "./backup";
+import { desempacota, empacota, empacotaJa } from "./compacta";
 import { MODO_PUBLICO, SUPABASE_ANON_KEY, SUPABASE_URL } from "./publico";
 
 // Contas e progresso na nuvem (Supabase) — só no site público (src/publico.ts).
@@ -77,14 +78,18 @@ function defineSessao(s: Session | null) {
   conta = nova;
   avisa();
   // fora do callback do Supabase: chamar a API de dentro dele trava a biblioteca (ela espera o próprio callback)
-  window.setTimeout(() => aoTrocar.forEach((f) => f(nova, antes)), 0);
+  window.setTimeout(() => {
+    aoTrocar.forEach((f) => f(nova, antes));
+    void conferePapel();
+  }, 0);
 }
 
-/** Tira da barra de endereço o ?code=… (ou o erro) que o link do e-mail trouxe, mantendo a #/rota. */
+/** Tira da barra de endereço o ?code=… (ou o erro) que o link do e-mail ou o Google trouxe, mantendo a #/rota. */
 function limpaUrl() {
   const u = new URL(window.location.href);
   const desc = u.searchParams.get("error_description");
-  if (desc) erroLink = desc.includes("expired") || desc.includes("invalid") ? "o link expirou ou já foi usado — peça outro" : desc;
+  if (u.searchParams.get("error") === "access_denied" && !/expired|invalid/.test(desc ?? "")) erroLink = "o login com o Google foi cancelado";
+  else if (desc) erroLink = desc.includes("expired") || desc.includes("invalid") ? "o link expirou ou já foi usado — peça outro" : desc;
   if (["code", "error", "error_code", "error_description"].some((k) => u.searchParams.has(k))) {
     window.history.replaceState(null, "", u.pathname + u.hash);
   }
@@ -126,6 +131,7 @@ export function contaInicial(): Promise<Conta | null> {
       pronta = true;
       avisa();
     }
+    void conferePapel();
     return conta;
   })();
   return inicio;
@@ -177,6 +183,20 @@ export async function pedeLink(email: string, captchaToken?: string) {
     email: email.trim(),
     // volta para a raiz do site (sem a #/rota: o ?code= tem de vir antes do #)
     options: { emailRedirectTo: window.location.origin + window.location.pathname, shouldCreateUser: true, captchaToken },
+  });
+  if (error) throw new Error(traduz(error));
+}
+
+/**
+ * Entra com o Google: a página vai para o Google e volta para a raiz do site com ?code=… — o mesmo caminho do link
+ * mágico (PKCE): contaInicial troca o código pela sessão, limpa a barra de endereço e o progresso deste navegador é
+ * mesclado ao da conta. O provedor Google precisa estar ligado no Supabase (docs/deploy.md, passo 1.4).
+ */
+export async function entraComGoogle() {
+  const sb = await cliente();
+  const { error } = await sb.auth.signInWithOAuth({
+    provider: "google",
+    options: { redirectTo: window.location.origin + window.location.pathname },
   });
   if (error) throw new Error(traduz(error));
 }
@@ -247,13 +267,17 @@ async function comSessao(): Promise<{ sb: SupabaseClient; uid: string }> {
   return { sb, uid: conta.id };
 }
 
-/** Estado guardado na nuvem para esta parte (null se ainda não há nada). Lança erro se a nuvem não respondeu. */
+/**
+ * Estado guardado na nuvem para esta parte (null se ainda não há nada), já no formato normal: na nuvem ele fica
+ * compactado e comprimido (src/compacta.ts). Lança erro se a nuvem não respondeu ou se não deu para abrir o estado
+ * (ex.: sem rede para carregar as provas que os cartões citam) — quem chamou trata como "nuvem fora do ar".
+ */
 export async function leProgresso(parte: Parte): Promise<Remoto | null> {
   const { sb, uid } = await comSessao();
   const { data, error } = await sb.from("progresso").select("estado,versao").eq("user_id", uid).eq("parte", parte).limit(1);
   if (error) throw new Error(error.message);
   const l = data?.[0] as { estado?: unknown; versao?: number } | undefined;
-  return l ? { estado: l.estado ?? null, versao: Number(l.versao ?? 0) } : null;
+  return l ? { estado: await desempacota(parte, l.estado ?? null), versao: Number(l.versao ?? 0) } : null;
 }
 
 /**
@@ -264,8 +288,11 @@ export async function leProgresso(parte: Parte): Promise<Remoto | null> {
  */
 export async function gravaProgresso(parte: Parte, estado: unknown, versaoVista: number | null): Promise<number | null> {
   const { sb, uid } = await comSessao();
+  // compactado e comprimido; `itens` e `resumo` vão à parte porque o banco não enxerga dentro do estado comprimido
+  // (itens: cópias de segurança; resumo: página do admin)
+  const { estado: guardado, itens, resumo } = await empacota(parte, estado);
   if (versaoVista === null) {
-    const { data, error } = await sb.from("progresso").insert({ user_id: uid, parte, estado }).select("versao");
+    const { data, error } = await sb.from("progresso").insert({ user_id: uid, parte, estado: guardado, itens, resumo }).select("versao");
     if (error) {
       if (error.code === "23505") return null; // a linha já existe: outro aparelho criou antes
       throw new Error(error.message);
@@ -274,7 +301,7 @@ export async function gravaProgresso(parte: Parte, estado: unknown, versaoVista:
   }
   const { data, error } = await sb
     .from("progresso")
-    .update({ estado })
+    .update({ estado: guardado, itens, resumo })
     .eq("user_id", uid)
     .eq("parte", parte)
     .eq("versao", versaoVista)
@@ -288,12 +315,13 @@ export async function gravaProgresso(parte: Parte, estado: unknown, versaoVista:
  * Envio de última hora (aba fechando): fetch com keepalive, que o navegador termina mesmo depois de a página fechar.
  * Com a mesma conferência de versão de gravaProgresso (se outro aparelho gravou antes, não muda nada). O keepalive
  * aceita até 64 KB; acima disso não tenta. Nos dois casos a cópia deste navegador fica marcada como pendente e é
- * mesclada na próxima vez que o site abrir.
+ * mesclada na próxima vez que o site abrir. Aqui não dá para esperar a compressão (assíncrona): vai só compactado.
  */
-export function gravaProgressoJa(parte: Parte, estadoJson: string, versaoVista: number | null): boolean {
+export function gravaProgressoJa(parte: Parte, estado: unknown, versaoVista: number | null): boolean {
   if (!conta || !token) return false;
   const novo = versaoVista === null;
-  const corpo = novo ? `{"user_id":${JSON.stringify(conta.id)},"parte":${JSON.stringify(parte)},"estado":${estadoJson}}` : `{"estado":${estadoJson}}`;
+  const p = empacotaJa(parte, estado);
+  const corpo = JSON.stringify(novo ? { user_id: conta.id, parte, ...p } : p);
   if (new TextEncoder().encode(corpo).length > 63_000) return false;
   const filtro = novo ? "" : `?user_id=eq.${encodeURIComponent(conta.id)}&parte=eq.${parte}&versao=eq.${versaoVista}`;
   try {
@@ -337,5 +365,96 @@ export async function leCopia(id: number): Promise<{ parte: Parte; estado: unkno
   const { data, error } = await sb.from("progresso_copias").select("parte,estado").eq("id", id).limit(1);
   if (error) throw new Error(error.message);
   if (!data?.[0]) throw new Error("cópia não encontrada");
-  return data[0] as { parte: Parte; estado: unknown };
+  const { parte, estado } = data[0] as { parte: Parte; estado: unknown };
+  return { parte, estado: await desempacota(parte, estado) };
+}
+
+// ------------------------------------------------------- acessos e página do admin
+// Quantas vezes cada conta abre o site por dia (tabela acessos, supabase/schema.sql): uma vez ao abrir com login e,
+// com a aba aberta, de novo quando ela volta a aparecer depois de 30 min. E se a conta é de admin (página #/admin).
+
+let admin = false;
+const ouvintesAdmin = new Set<() => void>();
+const MEIA_HORA = 30 * 60 * 1000;
+let ultimoAcesso: { uid: string; em: number } | null = null;
+
+function registraAcesso(sb: SupabaseClient, uid: string) {
+  if (ultimoAcesso?.uid === uid && Date.now() - ultimoAcesso.em < MEIA_HORA) return;
+  ultimoAcesso = { uid, em: Date.now() };
+  void sb.rpc("registra_acesso").then(({ error }) => {
+    if (error) console.warn("não foi possível registrar o acesso", error.message);
+  });
+}
+
+/** Ao abrir (ou entrar): registra o acesso do dia e confere se a conta é de admin. */
+async function conferePapel() {
+  if (!conta) {
+    if (admin) {
+      admin = false;
+      ouvintesAdmin.forEach((o) => o());
+    }
+    return;
+  }
+  try {
+    const { sb, uid } = await comSessao();
+    registraAcesso(sb, uid);
+    const { data } = await sb.rpc("eh_admin");
+    const eh = conta?.id === uid && data === true;
+    if (eh !== admin) {
+      admin = eh;
+      ouvintesAdmin.forEach((o) => o());
+    }
+  } catch {
+    /* sem rede: tenta de novo quando a aba voltar a aparecer */
+  }
+}
+
+if (MODO_PUBLICO)
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && pronta) void conferePapel();
+  });
+
+/** A conta logada é de admin? (só no site público; a página #/admin aparece no menu) */
+export function useAdmin() {
+  return useSyncExternalStore(
+    (o) => {
+      ouvintesAdmin.add(o);
+      return () => ouvintesAdmin.delete(o);
+    },
+    () => admin,
+  );
+}
+
+export interface UsuarioAdmin {
+  email: string;
+  provedor: string;
+  criado_em: string;
+  ultimo_login: string | null;
+  ultimo_acesso: string | null;
+  dias_ativos_30d: number;
+  acessos_30d: number;
+  bytes_hsk: number | null;
+  bytes_hskk: number | null;
+  respostas: number;
+  provas: number;
+  terminadas: number;
+  cartoes: number;
+}
+
+export interface TotaisAdmin {
+  usuarios: number;
+  ativos_hoje: number;
+  ativos_7d: number;
+  ativos_30d: number;
+  por_dia: { dia: string; novos: number; usuarios: number; acessos: number }[];
+  bytes: { progresso: number; progresso_copias: number; acessos: number; banco: number };
+}
+
+/** Dados da página do admin (o banco recusa quem não é admin). */
+export async function dadosAdmin(): Promise<{ usuarios: UsuarioAdmin[]; totais: TotaisAdmin }> {
+  const { sb } = await comSessao();
+  const [u, t] = await Promise.all([sb.rpc("admin_usuarios"), sb.rpc("admin_totais")]);
+  if (u.error) throw new Error(u.error.message);
+  if (t.error) throw new Error(t.error.message);
+  return { usuarios: (u.data ?? []) as UsuarioAdmin[], totais: t.data as TotaisAdmin };
 }

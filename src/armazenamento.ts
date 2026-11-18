@@ -2,6 +2,8 @@ import { useSyncExternalStore } from "react";
 import type { Cartao, Config, EstadoVocab, MarcaVocab, Tentativa } from "./tipos";
 import { leBackup } from "./backup";
 import { criaSincronia } from "./sincronia";
+// na nuvem, as frases dos cartões vão como referência às provas (src/compacta.ts): diz de onde tirá-las
+import "./fonteNuvem";
 
 // Estado do usuário. Fica na memória e num destino que manda (src/sincronia.ts):
 //  - modo local: progresso/progresso.json na pasta do projeto, via /api/progresso do servidor local

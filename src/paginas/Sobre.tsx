@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { carregaIndice } from "../dados";
-import { CONTATO, MODO_PUBLICO } from "../publico";
+import { CONTATO, MIDIA_URL, MODO_PUBLICO } from "../publico";
 import type { ResumoProva } from "../tipos";
 
 // Origem do material, direitos autorais e privacidade — no site público é linkada no rodapé de todas as páginas.
@@ -71,9 +71,12 @@ export function PaginaSobre() {
         <section>
           <h2>Privacidade</h2>
           <p>
-            Guardamos o seu <b>e-mail</b> (para entrar) e o seu <b>progresso de estudo</b>. As gravações da sua voz no HSKK não saem do seu
-            navegador. Os serviços que fazem o site funcionar — Supabase (contas e banco), Vercel (o site), Cloudflare (áudio e figuras) e o serviço
-            que envia o e-mail de acesso — registram dados técnicos, como o endereço IP e o navegador, nos próprios registros.
+            Guardamos o seu <b>e-mail</b> (para entrar), o seu <b>progresso de estudo</b> e <b>quantas vezes por dia</b> a sua conta abre o site
+            (só a contagem, dos últimos 180 dias — para sabermos quanto o site é usado). Se você entrar com o Google, recebemos dele só o seu e-mail
+            e nome. As gravações da sua voz no HSKK não saem do seu navegador. Os serviços que fazem o site funcionar — Supabase (contas e banco),
+            Vercel (o site{MIDIA_URL ? "" : ", com o áudio e as figuras"}), Cloudflare (a verificação anti-robô{MIDIA_URL ? ", o áudio e as figuras" : ""}), Google (se
+            você entrar por ele) e o serviço que envia o e-mail de acesso — registram dados
+            técnicos, como o endereço IP e o navegador, nos próprios registros.
           </p>
           <p>
             Para apagar a sua conta e todo o seu progresso, escreva para <Contato /> com o e-mail da conta.
