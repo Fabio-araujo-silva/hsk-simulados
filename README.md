@@ -98,14 +98,17 @@ scripts/alinha.py           alinhamento global por caractere (programação din�
 scripts/textos.py           segmentação (jieba + listas HSK + correções em data/segmentacao.json), pinyin
 scripts/enriquece.py        junta tudo → public/conteudo/provas/<ID>.json, lexico.json, index.json
 scripts/valida_traducoes.py confere traduções/explicações contra a prova
+scripts/vocabulario.py      data/vocabulario/hsk1–3.txt → public/conteudo/vocabulario.json (aba Vocabulário)
 
 data/traducoes/<ID>.json    traduções PT, explicações, trecho e palavras-chave por questão
 data/transcricoes/<ID>.json texto do áudio reconstruído (provas sem 听力材料)
 data/lexico_pt/             glossário PT
 data/trabalho/              instruções e dossiês usados pelos agentes
+data/vocabulario/           listas do HSK 1, 2 e 3 (汉字|pinyin|significado, uma palavra por linha)
 ```
 
-Refazer tudo depois de mudar algo em `data/`: `python -W ignore scripts/enriquece.py tudo`.
+Refazer tudo depois de mudar algo em `data/`: `python -W ignore scripts/enriquece.py tudo`
+(e `python scripts/vocabulario.py` depois de mexer nas listas de vocabulário).
 O alinhamento precisa do áudio em `fontes/audio/` e de `faster-whisper`; o Scribe e a voz sintética precisam de
 `ELEVENLABS_API_KEY` no `.env` (não versionado; a chave precisa das permissões *Speech to Text* e *Text to Speech*).
 A voz é gerada pelo servidor local (`servidor/vozSintetica.ts`) — a chave nunca vai para o navegador.

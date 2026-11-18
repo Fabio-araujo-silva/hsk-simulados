@@ -1,0 +1,148 @@
+吧|ba|partícula de sugestão (vamos…!; …, né?)
+白|bái|branco
+百|bǎi|cem
+帮助|bāngzhù|ajudar; ajuda
+报纸|bàozhǐ|jornal (impresso)
+比|bǐ|comparado a (A 比 B 高 = A é mais alto que B)
+别|bié|não (imperativo: 别走 = não vá)
+宾馆|bīnguǎn|hotel
+长|cháng|longo, comprido
+唱歌|chànggē|cantar
+出|chū|sair
+穿|chuān|vestir, usar (roupa, sapato)
+次|cì|vez (classificador)
+从|cóng|de, desde, a partir de
+错|cuò|errado; erro
+打篮球|dǎ lánqiú|jogar basquete
+大家|dàjiā|todo mundo, pessoal
+到|dào|chegar; até
+得|de|partícula de complemento de grau (跑得快 = corre rápido)
+等|děng|esperar
+弟弟|dìdi|irmão mais novo
+第一|dì-yī|primeiro
+懂|dǒng|entender
+对|duì|certo, correto; para, em relação a
+房间|fángjiān|quarto, cômodo
+非常|fēicháng|extremamente, muito
+服务员|fúwùyuán|garçom, atendente
+高|gāo|alto
+告诉|gàosu|contar, dizer (a alguém)
+哥哥|gēge|irmão mais velho
+给|gěi|dar; para (alguém)
+公共汽车|gōnggòng qìchē|ônibus
+公司|gōngsī|empresa
+贵|guì|caro
+过|guo|partícula de experiência (去过 = já fui)
+还|hái|ainda; também
+孩子|háizi|criança, filho(s)
+好吃|hǎochī|gostoso
+黑|hēi|preto, escuro
+红|hóng|vermelho
+欢迎|huānyíng|bem-vindo; dar boas-vindas
+机场|jīchǎng|aeroporto
+鸡蛋|jīdàn|ovo (de galinha)
+件|jiàn|classificador p/ roupas e assuntos
+教室|jiàoshì|sala de aula
+姐姐|jiějie|irmã mais velha
+介绍|jièshào|apresentar
+进|jìn|entrar
+近|jìn|perto
+就|jiù|justamente, logo, já (ênfase)
+觉得|juéde|achar, sentir
+咖啡|kāfēi|café
+开始|kāishǐ|começar
+考试|kǎoshì|prova, exame; fazer prova
+可能|kěnéng|talvez; possível
+可以|kěyǐ|poder (ter permissão)
+课|kè|aula, lição
+快|kuài|rápido; logo
+快乐|kuàilè|feliz, alegre
+累|lèi|cansado
+离|lí|distante de (A 离 B 很远 = A fica longe de B)
+两|liǎng|dois (antes de classificador)
+零|líng|zero
+路|lù|caminho, estrada, rua
+旅游|lǚyóu|viajar (a passeio)
+卖|mài|vender
+慢|màn|devagar, lento
+忙|máng|ocupado
+每|měi|cada, todo
+妹妹|mèimei|irmã mais nova
+门|mén|porta
+面条|miàntiáo|macarrão (lámen)
+男|nán|homem, masculino
+您|nín|você (formal), o senhor/a senhora
+牛奶|niúnǎi|leite
+女|nǚ|mulher, feminino
+旁边|pángbiān|ao lado
+跑步|pǎobù|correr
+便宜|piányi|barato
+票|piào|bilhete, ingresso, passagem
+妻子|qīzi|esposa
+起床|qǐchuáng|levantar da cama
+千|qiān|mil
+晴|qíng|ensolarado, céu limpo
+去年|qùnián|ano passado
+让|ràng|deixar, fazer (alguém fazer algo)
+日|rì|dia; sol
+上班|shàngbān|ir trabalhar, estar no trabalho
+身体|shēntǐ|corpo; saúde
+生病|shēngbìng|ficar doente
+生日|shēngrì|aniversário
+时间|shíjiān|tempo
+事情|shìqing|assunto, coisa, negócio
+手表|shǒubiǎo|relógio de pulso
+手机|shǒujī|celular
+说|shuō|falar, dizer
+送|sòng|dar (presente); levar (alguém)
+虽然…但是|suīrán… dànshì|embora… (mas)
+它|tā|ele/ela (coisa ou animal)
+踢足球|tī zúqiú|jogar futebol
+题|tí|questão, exercício
+跳舞|tiàowǔ|dançar
+外|wài|fora
+完|wán|terminar, acabar
+玩|wán|brincar, se divertir, passear
+晚上|wǎnshang|noite
+往|wǎng|em direção a
+为什么|wèishénme|por quê
+问|wèn|perguntar
+问题|wèntí|pergunta; problema
+西瓜|xīguā|melancia
+希望|xīwàng|esperar, desejar; esperança
+洗|xǐ|lavar
+小时|xiǎoshí|hora (duração)
+笑|xiào|rir, sorrir
+新|xīn|novo
+姓|xìng|sobrenome; chamar-se (de sobrenome)
+休息|xiūxi|descansar
+雪|xuě|neve
+颜色|yánsè|cor
+眼睛|yǎnjing|olho
+羊肉|yángròu|carne de carneiro
+药|yào|remédio
+要|yào|querer; precisar; ir (futuro)
+也|yě|também
+一起|yìqǐ|juntos
+一下|yíxià|um pouco, rapidinho (看一下 = dá uma olhada)
+已经|yǐjīng|já
+意思|yìsi|significado; ideia
+因为…所以|yīnwèi… suǒyǐ|porque… por isso
+阴|yīn|nublado
+游泳|yóuyǒng|nadar
+右边|yòubian|direita, lado direito
+鱼|yú|peixe
+远|yuǎn|longe
+运动|yùndòng|esporte, exercício
+再|zài|de novo (no futuro)
+早上|zǎoshang|manhã (cedo)
+丈夫|zhàngfu|marido
+找|zhǎo|procurar
+着|zhe|partícula de estado contínuo (开着 = está aberto)
+真|zhēn|realmente, de verdade
+正在|zhèngzài|estar (fazendo) agora
+知道|zhīdào|saber
+准备|zhǔnbèi|preparar(-se)
+走|zǒu|andar; ir embora
+最|zuì|o mais
+左边|zuǒbian|esquerda, lado esquerdo
