@@ -1,4 +1,5 @@
 import type { Lexico, Nivel, PalavraVocab, Prova, ResumoProva, Secao } from "./tipos";
+import { MIDIA_URL } from "./publico";
 
 const BASE = import.meta.env.BASE_URL;
 const cache = new Map<string, Promise<unknown>>();
@@ -22,7 +23,17 @@ export const carregaLexico = () => busca<Lexico>("conteudo/lexico.json");
 /** palavras do HSK 1 a 3 da aba Vocabulário (scripts/vocabulario.py) */
 export const carregaVocabulario = () => busca<PalavraVocab[]>("conteudo/vocabulario.json");
 
+/** Arquivo de public/ servido junto com o site (JSON do conteúdo, voz sintética em tts/…). */
 export const urlPublica = (caminho: string) => BASE + caminho;
+
+/** Pastas pesadas (~550 MB) que no site público ficam no bucket de mídia — o deploy da Vercel não comporta. */
+const PASTAS_MIDIA = /^(audio|img|hskk\/audio|hskk\/img)\//;
+
+/**
+ * Áudio original e figuras das provas (os caminhos dos JSON: audio/…, img/…, hskk/audio/…, hskk/img/…).
+ * Com VITE_MIDIA_URL vêm do bucket (Cloudflare R2, enviado por scripts/publica_midia.mjs); sem ela, de public/.
+ */
+export const urlMidia = (caminho: string) => (MIDIA_URL && PASTAS_MIDIA.test(caminho) ? `${MIDIA_URL}/${caminho}` : BASE + caminho);
 
 // ------------------------------------------------------------------ regras por nível
 

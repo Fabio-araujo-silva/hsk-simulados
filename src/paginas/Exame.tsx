@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { arquivaTentativa, leEstado, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
 import { useTempo } from "../audio";
 import { confere } from "../correcao";
-import { formataTempo, nomeParte, NOMES_SECAO, regras, urlPublica } from "../dados";
+import { formataTempo, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
 import { ProvedorLeitura, Frase } from "../componentes/Leitura";
 import { VisaoQuestao } from "../componentes/Questao";
 import type { Prova, Questao, Tentativa } from "../tipos";
@@ -294,7 +294,7 @@ function CabecalhoGrupo({ grupo, tipo, chave }: { grupo: NonNullable<Prova["grup
         {(grupo.letras ?? []).map((l) => (
           <div key={l} className={`imagem ${grupo.exemploUsa === l ? "apagada" : ""} ${riscadas.has(l) ? "riscada" : ""}`} onContextMenu={risca(l)} title="botão direito: riscar (rascunho)">
             <span className="letra">{l}</span>
-            {grupo.imagens?.[l] && <img src={urlPublica(grupo.imagens[l])} alt={l} />}
+            {grupo.imagens?.[l] && <img src={urlMidia(grupo.imagens[l])} alt={l} />}
             {grupo.exemploUsa === l && <span className="tag">exemplo</span>}
           </div>
         ))}

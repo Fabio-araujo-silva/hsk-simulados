@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ControleAudio } from "../audio";
 import { leEstado, mudaConfig, mudaTentativa, novaTentativa, resetaSimulado, useConfig, useEstado } from "../armazenamento";
 import { confere, notaDoEstudo } from "../correcao";
-import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlPublica } from "../dados";
+import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
 import { CaixaRevisao } from "../componentes/CaixaRevisao";
 import { ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
@@ -24,7 +24,7 @@ export function useAudioDaProva(prova: Prova | null) {
   const [audio, setAudio] = useState<ControleAudio | null>(null);
   useEffect(() => {
     if (!prova?.audio) return;
-    const a = new ControleAudio(urlPublica(prova.audio.src));
+    const a = new ControleAudio(urlMidia(prova.audio.src));
     setAudio(a);
     return () => a.destroi();
   }, [prova]);

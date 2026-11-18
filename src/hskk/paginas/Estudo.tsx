@@ -6,7 +6,7 @@ import { adicionaRevisao, idCartao, removeRevisao } from "../cartoes";
 import { BotaoGravar } from "../componentes/Gravador";
 import { ItemGravacao } from "../componentes/ItemGravacao";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
-import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, TEMPO_FALA, TEMPO_PREPARO_ESTUDO, TEMPO_REPETIR, urlPublica } from "../dados";
+import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, TEMPO_FALA, TEMPO_PREPARO_ESTUDO, TEMPO_REPETIR, urlMidia } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, Tentativa } from "../tipos";
 import "../hskk.css";
@@ -25,7 +25,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     carregaLexico().then(setLexico).catch(() => setLexico({}));
   }, [id]);
 
-  const audio = useControleAudio(prova?.audio ? urlPublica(prova.audio.src) : null);
+  const audio = useControleAudio(prova?.audio ? urlMidia(prova.audio.src) : null);
   useEffect(() => {
     audio?.velocidade(cfg.velocidade);
   }, [audio, cfg.velocidade]);
@@ -316,7 +316,7 @@ function EstudoFalar({ prova, q, tent }: { prova: Prova; q: QuestaoFalar; tent?:
 
       {q.parte === 2 && q.img && (
         <figure className="figura">
-          <img src={urlPublica(q.img)} alt={q.cena ?? `figura da questão ${q.n}`} />
+          <img src={urlMidia(q.img)} alt={q.cena ?? `figura da questão ${q.n}`} />
           {q.cena && <figcaption>{q.cena}</figcaption>}
         </figure>
       )}

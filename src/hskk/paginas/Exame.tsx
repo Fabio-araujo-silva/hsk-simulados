@@ -4,7 +4,7 @@ import { useControleAudio } from "../audio";
 import { adicionaGravacao, arquivaTentativa, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
 import { AvisoMicrofone, Medidor } from "../componentes/Gravador";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
-import { carregaProva, ehFalar, formataTempo, urlPublica } from "../dados";
+import { carregaProva, ehFalar, formataTempo, urlMidia } from "../dados";
 import { nomeGravacao, salvaGravacao } from "../gravacoes";
 import { Gravacao, pedeMicrofone, useMicrofone } from "../microfone";
 import type { Prova, QuestaoFalar, Tentativa } from "../tipos";
@@ -143,7 +143,7 @@ function Preparativos({ prova, emAndamento, onComeca }: { prova: Prova; emAndame
 function ProvaRodando({ prova, tentId }: { prova: Prova; tentId: string }) {
   const cfg = useConfig();
   const tent = useEstado((e) => e.tentativas[tentId]);
-  const audio = useControleAudio(urlPublica(prova.audio!.src));
+  const audio = useControleAudio(urlMidia(prova.audio!.src));
   const { tempo, tocando } = useTempo(audio);
   const [pausado, setPausado] = useState(false);
   const [terminando, setTerminando] = useState(false);
@@ -360,7 +360,7 @@ function ProvaRodando({ prova, tentId }: { prova: Prova; tentId: string }) {
                     .map((q) => (
                       <figure key={q.n} className={fase.n === q.n ? "atual" : ""}>
                         <figcaption className="zh">{q.n}．（2 分钟）</figcaption>
-                        {q.img && <img src={urlPublica(q.img)} alt={`figura ${q.n}`} />}
+                        {q.img && <img src={urlMidia(q.img)} alt={`figura ${q.n}`} />}
                       </figure>
                     ))}
                 </div>

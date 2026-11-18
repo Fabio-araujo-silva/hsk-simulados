@@ -1,7 +1,7 @@
 import { busca } from "../dados";
 import type { Lexico, Prova, Questao, QuestaoFalar, QuestaoRepetir, ResumoProva, Tentativa, TipoFonte } from "./tipos";
 
-export { formataTempo, urlPublica } from "../dados";
+export { formataTempo, urlMidia } from "../dados";
 
 // o conteúdo do HSKK fica em public/hskk/ (os caminhos de áudio e figuras dentro dos JSON já começam com hskk/)
 export const carregaIndice = () => busca<ResumoProva[]>("hskk/conteudo/provas/index.json");

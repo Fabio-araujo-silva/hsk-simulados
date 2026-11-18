@@ -4,7 +4,7 @@ import { useControleAudio } from "../audio";
 import { mudaConfig, useConfig, useEstado } from "../armazenamento";
 import { ItemGravacao } from "../componentes/ItemGravacao";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
-import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, urlPublica } from "../dados";
+import { carregaLexico, carregaProva, ehRepetir, formataTempo, NOMES_PARTE, urlMidia } from "../dados";
 import { transcreveGravacao } from "../gravacoes";
 import type { Lexico, Prova, Questao } from "../tipos";
 import "../hskk.css";
@@ -22,7 +22,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
     carregaLexico().then(setLexico).catch(() => setLexico({}));
   }, [tent?.prova]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const audio = useControleAudio(prova?.audio ? urlPublica(prova.audio.src) : null);
+  const audio = useControleAudio(prova?.audio ? urlMidia(prova.audio.src) : null);
 
   useEffect(() => {
     const f = (e: KeyboardEvent) => {
@@ -167,7 +167,7 @@ function ItemRevisao({ prova, q, tentId, audio, mostraTexto }: { prova: Prova; q
           </>
         ) : q.parte === 2 ? (
           <>
-            {q.img && <img className="miniatura" src={urlPublica(q.img)} alt={`figura ${q.n}`} />}
+            {q.img && <img className="miniatura" src={urlMidia(q.img)} alt={`figura ${q.n}`} />}
             <a href={`#/hskk/estudo/${prova.id}/${q.n}`}>respostas-modelo e vocabulário →</a>
           </>
         ) : (

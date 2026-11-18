@@ -4,7 +4,7 @@ import { contaNovoHoje, hojeChave, salvaCartoes, useConfig, useEstado } from "..
 import { Comparacao } from "../componentes/Comparacao";
 import { BotaoGravar } from "../componentes/Gravador";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
-import { carregaLexico, carregaProva, TEMPO_REPETIR, urlPublica } from "../dados";
+import { carregaLexico, carregaProva, TEMPO_REPETIR, urlMidia } from "../dados";
 import { salvaGravacao, transcreve } from "../gravacoes";
 import { NOTAS, previas, revisa, ehNovo } from "../../srs";
 import type { Cartao, Lexico, Prova } from "../tipos";
@@ -100,7 +100,7 @@ function audioDe(prova: Prova | null) {
   if (!prova?.audio) return null;
   let a = audios.get(prova.id);
   if (!a) {
-    a = new ControleAudio(urlPublica(prova.audio.src));
+    a = new ControleAudio(urlMidia(prova.audio.src));
     audios.set(prova.id, a);
   }
   return a;
