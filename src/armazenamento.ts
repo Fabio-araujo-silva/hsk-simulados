@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from "react";
-import type { Cartao, Config, Tentativa } from "./tipos";
+import type { Cartao, Config, EstadoVocab, MarcaVocab, Tentativa } from "./tipos";
 
 // Estado do usuário. Fica em DOIS lugares, sempre sincronizados:
 //  1. localStorage do navegador (instantâneo);
@@ -16,6 +16,8 @@ interface Estado {
   novosHoje: Record<string, number>;
   /** itens apagados de propósito (id → quando), para a sincronização não ressuscitá-los */
   apagados: Record<string, number>;
+  /** aba Vocabulário: acertei/errei de cada palavra e a opção de pinyin sempre visível */
+  vocab: EstadoVocab;
   /** última alteração (ms) */
   salvoEm: number;
 }
@@ -33,8 +35,18 @@ export const CONFIG_PADRAO: Config = {
   porBlocos: true,
 };
 
+const vocabVazio = (): EstadoVocab => ({ marcas: {}, pinyinSempre: false, atualizado: 0 });
+
 function vazio(): Estado {
-  return { versao: 1, tentativas: {}, cartoes: {}, config: { ...CONFIG_PADRAO }, novosHoje: {}, apagados: {}, salvoEm: 0 };
+  return { versao: 1, tentativas: {}, cartoes: {}, config: { ...CONFIG_PADRAO }, novosHoje: {}, apagados: {}, vocab: vocabVazio(), salvoEm: 0 };
+}
+
+/** Progresso antigo (sem o campo) ou campo estragado: vocabulário vazio; marcações inválidas são ignoradas. */
+function normalizaVocab(v: Partial<EstadoVocab> | null | undefined): EstadoVocab {
+  if (!v || typeof v !== "object") return vocabVazio();
+  const marcas: Record<string, MarcaVocab> = {};
+  for (const [chave, m] of Object.entries(v.marcas ?? {})) if (m === "k" || m === "x") marcas[chave] = m;
+  return { ...v, marcas, pinyinSempre: v.pinyinSempre === true, atualizado: typeof v.atualizado === "number" ? v.atualizado : 0 };
 }
 
 function normaliza(e: Partial<Estado> | null | undefined): Estado {
@@ -48,6 +60,7 @@ function normaliza(e: Partial<Estado> | null | undefined): Estado {
     novosHoje: e.novosHoje ?? {},
     apagados: e.apagados ?? {},
     config: { ...CONFIG_PADRAO, ...(e.config ?? {}) },
+    vocab: normalizaVocab(e.vocab),
     salvoEm: e.salvoEm ?? 0,
   };
 }
@@ -85,6 +98,8 @@ export function mescla(a: Estado, b: Estado): Estado {
     config: maisNovo.config,
     novosHoje,
     apagados,
+    // as marcações não têm data uma a uma: fica o vocabulário inteiro que foi alterado por último
+    vocab: b.vocab.atualizado > a.vocab.atualizado ? b.vocab : a.vocab,
     salvoEm: Math.max(a.salvoEm, b.salvoEm),
   };
 }
@@ -296,14 +311,39 @@ export function contaNovoHoje() {
   muda((e) => ({ ...e, novosHoje: { ...e.novosHoje, [k]: (e.novosHoje[k] ?? 0) + 1 } }));
 }
 
+// ------------------------------------------------------------- vocabulário
+
+function mudaVocab(f: (v: EstadoVocab) => Partial<EstadoVocab>) {
+  muda((e) => ({ ...e, vocab: { ...e.vocab, ...f(e.vocab), atualizado: Date.now() } }));
+}
+
+/** Marca a palavra ("汉字|pinyin") como certa (k) ou errada (x); marcar de novo com o mesmo valor desmarca. */
+export function marcaVocab(chave: string, m: MarcaVocab) {
+  mudaVocab((v) => {
+    const { [chave]: atual, ...resto } = v.marcas;
+    return { marcas: atual === m ? resto : { ...resto, [chave]: m } };
+  });
+}
+
+export function mudaPinyinSempre(ligado: boolean) {
+  mudaVocab(() => ({ pinyinSempre: ligado }));
+}
+
+/** Apaga todas as marcações do vocabulário (a opção de pinyin continua como está). */
+export function zeraVocab() {
+  mudaVocab(() => ({ marcas: {} }));
+}
+
 // --------------------------------------------------------------- formatar
 
 /**
- * Apaga TODO o progresso (tentativas, notas, cartões, revisões). Mantém só as configurações.
+ * Apaga TODO o progresso (tentativas, notas, cartões, revisões, marcações do vocabulário).
+ * Mantém só as configurações (e a opção de pinyin do vocabulário).
  * O servidor guarda uma cópia do estado anterior em progresso/backups/antes-*.json.
  */
 export function formataTudo() {
-  muda((e) => ({ ...vazio(), config: e.config }));
+  // vocabulário com data 0, como o resto: restaurar um backup depois traz as marcações de volta
+  muda((e) => ({ ...vazio(), config: e.config, vocab: { ...vocabVazio(), pinyinSempre: e.vocab.pinyinSempre } }));
   try {
     localStorage.removeItem(CHAVE);
   } catch {

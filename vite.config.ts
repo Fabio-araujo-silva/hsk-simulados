@@ -6,7 +6,7 @@ import type { IncomingMessage, ServerResponse } from "node:http";
 import { vozSintetica } from "./servidor/vozSintetica";
 
 /**
- * Guarda o progresso (provas, respostas, cartões) num arquivo do projeto:
+ * Guarda o progresso (provas, respostas, cartões, marcações do vocabulário) num arquivo do projeto:
  *   progresso/progresso.json            — estado atual
  *   progresso/backups/AAAA-MM-DD.json   — uma cópia por dia (últimos 60 dias)
  *   progresso/backups/antes-*.json      — cópia de segurança se um salvamento encolher muito os dados
@@ -20,7 +20,7 @@ function progressoEmDisco(): Plugin {
   const tamanho = (txt: string) => {
     try {
       const e = JSON.parse(txt);
-      return Object.keys(e.tentativas ?? {}).length + Object.keys(e.cartoes ?? {}).length;
+      return Object.keys(e.tentativas ?? {}).length + Object.keys(e.cartoes ?? {}).length + Object.keys(e.vocab?.marcas ?? {}).length;
     } catch {
       return 0;
     }

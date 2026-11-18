@@ -8,6 +8,7 @@ export function PaginaConfig() {
   const [confirmacao, setConfirmacao] = useState("");
   const nTent = useEstado((e) => e.tentativas);
   const nCart = useEstado((e) => e.cartoes);
+  const nMarcas = useEstado((e) => e.vocab.marcas);
 
   const baixa = () => {
     const blob = new Blob([exportaBackup()], { type: "application/json" });
@@ -46,7 +47,7 @@ export function PaginaConfig() {
       </section>
       <section>
         <h2>Backup</h2>
-        <p>Seu progresso (provas, respostas e cartões) fica salvo neste navegador. Baixe um backup de vez em quando — e para levar para outro computador.</p>
+        <p>Seu progresso (provas, respostas, cartões e marcações do vocabulário) fica salvo neste navegador. Baixe um backup de vez em quando — e para levar para outro computador.</p>
         <div className="acoes">
           <button className="pri" onClick={baixa}>
             baixar backup (.json)
@@ -64,7 +65,7 @@ export function PaginaConfig() {
               if (!f) return;
               try {
                 importaBackup(await f.text());
-                setMsg("Backup restaurado (mesclado com o que já existia).");
+                setMsg("Backup restaurado (mesclado com o que já existia; nas marcações do vocabulário fica a versão alterada por último).");
               } catch (err) {
                 setMsg(`Erro: ${String(err)}`);
               }
@@ -76,8 +77,8 @@ export function PaginaConfig() {
       <section className="zona-perigo">
         <h2>Formatar todo o progresso</h2>
         <p>
-          Apaga <b>tudo</b>: {Object.keys(nTent).length} tentativas (estudo e provas, com as notas) e {Object.keys(nCart).length} cartões de revisão
-          espaçada. As configurações ficam. Por segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
+          Apaga <b>tudo</b>: {Object.keys(nTent).length} tentativas (estudo e provas, com as notas), {Object.keys(nCart).length} cartões de revisão
+          espaçada e {Object.keys(nMarcas).length} marcações do vocabulário. As configurações ficam. Por segurança o servidor guarda uma cópia do estado anterior em <code>progresso/backups/</code>.
         </p>
         <div className="acoes">
           <input className="entrada" placeholder='digite FORMATAR' value={confirmacao} onChange={(e) => setConfirmacao(e.target.value)} />

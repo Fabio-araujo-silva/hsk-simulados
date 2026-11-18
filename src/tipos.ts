@@ -132,6 +132,16 @@ export interface Verbete {
 
 export type Lexico = Record<string, Verbete>;
 
+/** Uma palavra da aba Vocabulário (public/conteudo/vocabulario.json, gerado por scripts/vocabulario.py). */
+export interface PalavraVocab {
+  hz: string;
+  py: string;
+  pt: string;
+  nivel: 1 | 2 | 3;
+  /** posição (1, 2, 3…) na lista do nível */
+  n: number;
+}
+
 // ------------------------------------------------------------ estado do usuário
 
 export type Modo = "prova" | "estudo";
@@ -213,6 +223,19 @@ export interface CartaoSrs {
   last_review?: number;
 }
 
+/** marcação de uma palavra na aba Vocabulário: k = acertei, x = errei */
+export type MarcaVocab = "k" | "x";
+
+/** Estado da aba Vocabulário (salvo junto com o resto do progresso). */
+export interface EstadoVocab {
+  /** "汉字|pinyin" → marcação (sem marcação = ainda não revisada) */
+  marcas: Record<string, MarcaVocab>;
+  /** pinyin visível em todos os cartões (o significado continua tampado) */
+  pinyinSempre: boolean;
+  /** última alteração (ms): ao mesclar dois progressos, fica o vocabulário alterado por último */
+  atualizado: number;
+}
+
 export interface Config {
   traducao: boolean;
   pinyin: boolean;
@@ -233,4 +256,6 @@ export interface Config {
   porBlocos?: boolean;
   /** velocidade de reprodução da voz sintética (ElevenLabs), independente da do áudio original */
   velocidadeVoz?: number;
+  /** aba Vocabulário: último filtro de nível (0 = HSK 1–3) */
+  vocabNivel?: 0 | 1 | 2 | 3;
 }
