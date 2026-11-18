@@ -28,6 +28,14 @@ A primeira tela é a **escolha de nível** (HSK 1, 2, 3 ou HSKK). Cada nível mo
 Use sempre pelo `npm run dev`: é o servidor local que grava o seu progresso em disco (ver abaixo).
 `npm run build` gera um site estático em `dist/` (nesse caso o progresso fica só no navegador).
 
+### Site público
+O mesmo app pode ir ao ar como site gratuito (Vercel + Supabase + Cloudflare R2): cada pessoa entra só com o e-mail e o
+progresso fica salvo na nuvem; áudio e figuras vêm de um bucket, a voz sintética só do que já foi gerado e o HSKK grava sem
+transcrição automática. É ligado no build por variáveis `VITE_` — sem elas, nada muda aqui. Passo a passo, custos e a
+nota de direitos autorais: **[docs/deploy.md](docs/deploy.md)**. Numa cópia que já existia, depois de puxar estas
+mudanças rode `npm install` uma vez (com o `npm run dev` parado): o `package.json` ganhou o `@supabase/supabase-js` e o
+`@aws-sdk/client-s3`.
+
 ### Modo prova
 Igual ao dia do exame: o listening toca do começo ao fim **sem pausa** (cada item é lido duas vezes), depois o tempo
 para passar as respostas para a folha e o tempo da leitura (e da escrita, no HSK 3), sem tradução.

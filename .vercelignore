@@ -1,0 +1,12 @@
+# O que a Vercel não precisa para o build do site público (menos coisa para enviar/clonar).
+# A mídia pesada vai para o Cloudflare R2 (scripts/publica_midia.mjs); ver docs/deploy.md.
+public/audio
+public/img
+public/hskk/audio
+public/hskk/img
+fontes
+progresso
+data
+# segredos locais (ELEVENLABS_API_KEY, R2_*): nunca vão para a Vercel, nem num `vercel deploy` feito da pasta
+.env
+.env.*
