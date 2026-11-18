@@ -35,23 +35,40 @@ export function vozSintetica(raiz: string): Plugin {
     const k = chave();
     if (!k) return { status: 503, corpo: { erro: "sem ELEVENLABS_API_KEY no .env" } };
     const url = `https://api.elevenlabs.io/v1/text-to-speech/${VOZ_TTS.vozId}/with-timestamps?output_format=${VOZ_TTS.formato}`;
-    const r = await fetch(url, {
-      method: "POST",
-      headers: { "xi-api-key": k, "Content-Type": "application/json" },
-      body: JSON.stringify({
-        text: textoParaFala(texto),
-        model_id: VOZ_TTS.modelo,
-        voice_settings: { stability: 0.6, similarity_boost: 0.75, speed: VOZ_TTS.velocidade },
-      }),
-    });
-    const d = (await r.json().catch(() => ({}))) as {
+    type Resposta = {
       audio_base64?: string;
       alignment?: { characters: string[]; character_start_times_seconds: number[]; character_end_times_seconds: number[] };
-      detail?: { message?: string } | string;
+      detail?: { message?: string; status?: string } | string;
     };
-    if (!r.ok || !d.audio_base64) {
-      const msg = typeof d.detail === "string" ? d.detail : d.detail?.message ?? `HTTP ${r.status}`;
-      return { status: r.status === 401 || r.status === 403 ? 403 : 502, corpo: { erro: msg } };
+    // a mesma chave é usada por outros processos (ex.: transcrição com o Scribe): limite de pedidos simultâneos (429)
+    // e falhas passageiras (5xx, rede) são comuns — tenta de novo antes de desistir
+    let r: Response | null = null;
+    let d: Resposta = {};
+    let falhaRede = "";
+    for (const espera of [0, 1500, 4000, 8000]) {
+      if (espera) await new Promise((ok) => setTimeout(ok, espera));
+      try {
+        r = await fetch(url, {
+          method: "POST",
+          headers: { "xi-api-key": k, "Content-Type": "application/json" },
+          body: JSON.stringify({
+            text: textoParaFala(texto),
+            model_id: VOZ_TTS.modelo,
+            voice_settings: { stability: 0.6, similarity_boost: 0.75, speed: VOZ_TTS.velocidade },
+          }),
+        });
+        d = (await r.json().catch(() => ({}))) as Resposta;
+        falhaRede = "";
+        if (r.ok && d.audio_base64) break;
+        if (r.status !== 429 && r.status < 500) break;
+      } catch (e) {
+        falhaRede = String(e);
+      }
+    }
+    if (!r || !r.ok || !d.audio_base64) {
+      const msg = falhaRede || (typeof d.detail === "string" ? d.detail : d.detail?.message ?? `HTTP ${r?.status}`);
+      console.warn(`[voz-sintetica] falhou para "${textoParaFala(texto).slice(0, 30)}": ${msg}`);
+      return { status: r && (r.status === 401 || r.status === 403) ? 403 : 502, corpo: { erro: msg } };
     }
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(mp3, Buffer.from(d.audio_base64, "base64"));
