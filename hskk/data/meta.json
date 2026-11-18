@@ -1,0 +1,98 @@
+{
+ "YANGTI": {
+  "ordem": 1,
+  "titulo": "样题 oficial atual (2023)",
+  "formato": "bip",
+  "caderno": "oficial",
+  "roteiro": "transcrito",
+  "audio": "oficial",
+  "notas": [
+   "Caderno (题本) e MP3 baixados do site oficial chinesetest.cn (教育部中外语言交流合作中心, PDF de 10/2023).",
+   "O site não publica o texto do áudio: as frases foram transcritas do áudio (Whisper + ElevenLabs Scribe) e revisadas.",
+   "Frase 3: 他 ou 她 (soam iguais, tā) — não dá para saber pelo áudio. Frase 5: 关小些 conferido só de ouvido."
+  ],
+  "cabecalho": {
+   "parte1Min": 5,
+   "totalMin": 23
+  }
+ },
+ "H81003": {
+  "ordem": 2,
+  "titulo": "样卷 antigo do Hanban (2013)",
+  "formato": "sem-bip",
+  "caderno": "oficial",
+  "roteiro": "transcrito",
+  "audio": "oficial",
+  "notas": [
+   "Caderno e MP3 do 样卷 do Hanban (国家汉办), espelhados por tuttocina.it e LSE (mesmo arquivo).",
+   "Não há texto oficial do áudio: frases transcritas do áudio (Whisper + Scribe) e revisadas."
+  ],
+  "cabecalho": {
+   "parte1Min": 3,
+   "totalMin": 21
+  }
+ },
+ "H81001": {
+  "ordem": 3,
+  "titulo": "Prova real H81001",
+  "formato": "sem-bip",
+  "caderno": "oficial",
+  "roteiro": "terceiro",
+  "audio": "youtube",
+  "notas": [
+   "Caderno com layout do Hanban (via pandachinese.online). O texto do áudio foi redigitado por terceiros (PDF de 2025) — as 10 frases foram conferidas com o áudio.",
+   "O PDF de terceiros diz \"第1到15题\" na instrução; no áudio é \"第1到10题，请听后重复\".",
+   "Áudio: canal \"Free HSK\" no YouTube."
+  ],
+  "cabecalho": {
+   "parte1Min": 3,
+   "totalMin": 21
+  }
+ },
+ "H81002": {
+  "ordem": 4,
+  "titulo": "Prova real H81002",
+  "formato": "sem-bip",
+  "caderno": "oficial",
+  "roteiro": "terceiro",
+  "audio": "youtube",
+  "notas": [
+   "Caderno com layout do Hanban (via pandachinese.online). Texto do áudio redigitado por terceiros, conferido com o áudio.",
+   "Frase 5: o PDF traz 她; no áudio 他/她 soam iguais.",
+   "Áudio: canal \"Free HSK\" no YouTube."
+  ],
+  "cabecalho": {
+   "parte1Min": 3,
+   "totalMin": 21
+  }
+ },
+ "H81311": {
+  "ordem": 5,
+  "titulo": "Prova real H81311",
+  "formato": "bip",
+  "caderno": "frames",
+  "roteiro": "frames",
+  "audio": "youtube",
+  "notas": [
+   "Sem o PDF do caderno: figuras e perguntas recortadas de frames do vídeo da Hancai Chinese (a marca d'água foi cortada fora).",
+   "Frases do 第一部分 tiradas dos frames do vídeo (\"with text material\") e conferidas com o áudio (10/10).",
+   "O áudio (canal \"Free HSK\") já segue o formato com \"嘀\" depois de cada frase.",
+   "O original existe em cii.ie (H81311试卷.pdf / H81311卷录音材料.pdf), mas o site bloqueia downloads automáticos."
+  ],
+  "cabecalho": null
+ },
+ "H81312": {
+  "ordem": 6,
+  "titulo": "Prova real H81312",
+  "formato": "bip",
+  "caderno": "frames",
+  "roteiro": "frames",
+  "audio": "youtube",
+  "notas": [
+   "Sem o PDF do caderno: figuras e perguntas recortadas de frames do vídeo da Hancai Chinese.",
+   "Frases do 第一部分 tiradas dos frames do vídeo e conferidas com o áudio (10/10).",
+   "Áudio: canal \"Free HSK\" no YouTube, com \"嘀\" depois de cada frase."
+  ],
+  "cabecalho": null
+ }
+}

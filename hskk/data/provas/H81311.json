@@ -1,0 +1,695 @@
+{
+ "id": "H81311",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "问题终于解决了。",
+   "pt": "O problema finalmente foi resolvido."
+  },
+  {
+   "n": 2,
+   "zh": "新搬来的邻居很热情。",
+   "pt": "Os vizinhos que acabaram de se mudar são muito simpáticos."
+  },
+  {
+   "n": 3,
+   "zh": "王经理在开会呢。",
+   "pt": "O gerente Wang está em reunião."
+  },
+  {
+   "n": 4,
+   "zh": "我打算坐地铁去那儿。",
+   "pt": "Pretendo ir até lá de metrô."
+  },
+  {
+   "n": 5,
+   "zh": "还有几位客人没到，再等等。",
+   "pt": "Ainda faltam chegar alguns convidados; vamos esperar mais um pouco."
+  },
+  {
+   "n": 6,
+   "zh": "昨天的演出真精彩！",
+   "pt": "A apresentação de ontem foi incrível!"
+  },
+  {
+   "n": 7,
+   "zh": "谢谢大家对我们工作的支持。",
+   "pt": "Obrigado a todos pelo apoio ao nosso trabalho."
+  },
+  {
+   "n": 8,
+   "zh": "他中文说得非常流利。",
+   "pt": "Ele fala chinês com muita fluência."
+  },
+  {
+   "n": 9,
+   "zh": "打折是商场吸引顾客的方法之一。",
+   "pt": "Dar desconto é uma das formas que as lojas usam para atrair clientes."
+  },
+  {
+   "n": 10,
+   "zh": "这次活动将推迟到下周举行。",
+   "pt": "O evento vai ser adiado para a semana que vem."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/H81311/11.jpg",
+   "cena": "Três amigas rindo; uma delas está diante de um bolo de aniversário com velas acesas.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上有三个女孩子，她们是好朋友。",
+       "pt": "Na foto há três moças, que são amigas."
+      },
+      {
+       "zh": "桌子上有一个生日蛋糕，上面有很多蜡烛。",
+       "pt": "Na mesa há um bolo de aniversário com muitas velas."
+      },
+      {
+       "zh": "今天是坐在蛋糕前面的女孩子的生日。",
+       "pt": "Hoje é o aniversário da moça sentada na frente do bolo."
+      },
+      {
+       "zh": "她的朋友们来给她过生日。",
+       "pt": "As amigas vieram comemorar o aniversário dela."
+      },
+      {
+       "zh": "她们都笑得很开心。",
+       "pt": "Todas estão rindo, muito felizes."
+      },
+      {
+       "zh": "我想她们一会儿会一起唱生日歌，然后吃蛋糕。",
+       "pt": "Acho que daqui a pouco elas vão cantar parabéns juntas e depois comer o bolo."
+      },
+      {
+       "zh": "过生日的时候，有朋友在身边，是一件很幸福的事。",
+       "pt": "Ter os amigos por perto no aniversário deixa a gente muito feliz."
+      },
+      {
+       "zh": "我过生日的时候，也喜欢请朋友来我家吃饭。",
+       "pt": "No meu aniversário, eu também gosto de chamar os amigos para comer em casa."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上有三个年轻的女孩子，看样子她们是很好的朋友。",
+       "pt": "Nesta imagem há três moças, e pelo jeito são grandes amigas."
+      },
+      {
+       "zh": "坐在前面的女孩子面前放着一个生日蛋糕，蛋糕上点着很多蜡烛。",
+       "pt": "Diante da moça sentada na frente há um bolo de aniversário com muitas velas acesas."
+      },
+      {
+       "zh": "我想今天一定是她的生日，另外两个朋友特意来给她庆祝。",
+       "pt": "Acho que hoje com certeza é o aniversário dela, e as outras duas amigas vieram especialmente para comemorar."
+      },
+      {
+       "zh": "她们三个人都笑得特别开心。",
+       "pt": "As três estão rindo, muito felizes."
+      },
+      {
+       "zh": "我猜她们马上就要一起唱生日歌了，唱完以后，过生日的女孩子会许一个愿，然后吹蜡烛。",
+       "pt": "Imagino que logo elas vão cantar parabéns; depois, a aniversariante vai fazer um pedido e soprar as velas."
+      },
+      {
+       "zh": "在很多国家，过生日的习惯都差不多。",
+       "pt": "Em muitos países, os costumes de aniversário são parecidos."
+      },
+      {
+       "zh": "在巴西，大家一般会一起唱生日歌，还会把第一块蛋糕送给最重要的人。",
+       "pt": "No Brasil, todo mundo costuma cantar parabéns junto, e o primeiro pedaço de bolo vai para a pessoa mais especial."
+      },
+      {
+       "zh": "我觉得，生日礼物贵不贵并不重要，重要的是有家人和朋友的祝福。",
+       "pt": "Acho que não importa se o presente é caro ou não; o que importa é ter o carinho da família e dos amigos."
+      },
+      {
+       "zh": "总之，这是一张非常温暖的图片，让我想起了和朋友们一起过生日的快乐时光。",
+       "pt": "Enfim, é uma imagem muito acolhedora, que me lembra os momentos felizes de aniversário com os amigos."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "过生日",
+     "py": "guò shēngrì",
+     "pt": "comemorar o aniversário"
+    },
+    {
+     "w": "蛋糕",
+     "py": "dàngāo",
+     "pt": "bolo"
+    },
+    {
+     "w": "蜡烛",
+     "py": "làzhú",
+     "pt": "vela"
+    },
+    {
+     "w": "点",
+     "py": "diǎn",
+     "pt": "acender"
+    },
+    {
+     "w": "吹",
+     "py": "chuī",
+     "pt": "soprar"
+    },
+    {
+     "w": "许愿",
+     "py": "xǔyuàn",
+     "pt": "fazer um pedido"
+    },
+    {
+     "w": "庆祝",
+     "py": "qìngzhù",
+     "pt": "comemorar"
+    },
+    {
+     "w": "礼物",
+     "py": "lǐwù",
+     "pt": "presente"
+    },
+    {
+     "w": "祝福",
+     "py": "zhùfú",
+     "pt": "votos; felicitações"
+    },
+    {
+     "w": "特意",
+     "py": "tèyì",
+     "pt": "especialmente; de propósito"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "……上放着……",
+     "pt": "dizer o que há num lugar (lugar + verbo + 着 + coisa)",
+     "ex": "桌子上放着一个蛋糕，蛋糕上点着很多蜡烛。",
+     "exPt": "Em cima da mesa há um bolo, e no bolo há muitas velas acesas."
+    },
+    {
+     "zh": "给……过生日",
+     "pt": "comemorar o aniversário de alguém",
+     "ex": "朋友们来给她过生日。",
+     "exPt": "As amigas vieram comemorar o aniversário dela."
+    },
+    {
+     "zh": "……并不重要，重要的是……",
+     "pt": "… não importa tanto; o que importa é…",
+     "ex": "礼物贵不贵并不重要，重要的是朋友的祝福。",
+     "exPt": "Não importa se o presente é caro; o que importa é o carinho dos amigos."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/H81311/12.jpg",
+   "cena": "Três jovens mochileiros ao ar livre: um rapaz segura um mapa e a moça aponta para longe.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上有三个年轻人，两个男的，一个女的。",
+       "pt": "Na foto há três jovens: dois rapazes e uma moça."
+      },
+      {
+       "zh": "他们都背着很大的包，可能在旅游。",
+       "pt": "Todos carregam mochilas grandes; devem estar viajando."
+      },
+      {
+       "zh": "左边的男孩子拿着一张地图。",
+       "pt": "O rapaz da esquerda está segurando um mapa."
+      },
+      {
+       "zh": "右边的女孩子用手指着远处，好像看到了什么。",
+       "pt": "A moça da direita aponta para longe, como se tivesse visto alguma coisa."
+      },
+      {
+       "zh": "我想他们可能迷路了，正在找路。",
+       "pt": "Acho que eles podem ter se perdido e estão procurando o caminho."
+      },
+      {
+       "zh": "也可能他们看到了一座很高的山，想去爬山。",
+       "pt": "Ou talvez tenham visto uma montanha bem alta e queiram subir."
+      },
+      {
+       "zh": "他们看起来都很开心，一点儿也不累。",
+       "pt": "Todos parecem felizes e nem um pouco cansados."
+      },
+      {
+       "zh": "我也很喜欢跟朋友一起去旅游，因为很有意思。",
+       "pt": "Eu também adoro viajar com os amigos, porque é muito divertido."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片上有三个年轻人，看样子是一起出去旅行的大学生。",
+       "pt": "Nesta imagem há três jovens; pelo jeito são universitários viajando juntos."
+      },
+      {
+       "zh": "他们每个人都背着一个大大的双肩包。",
+       "pt": "Cada um carrega uma mochila grandona nas costas."
+      },
+      {
+       "zh": "左边的男生手里拿着一张地图，另外两个人正往远处看。",
+       "pt": "O rapaz da esquerda segura um mapa, e os outros dois estão olhando ao longe."
+      },
+      {
+       "zh": "右边的女生一边笑，一边用手指着远处，好像发现了什么特别的东西。",
+       "pt": "A moça da direita sorri e aponta para longe, como se tivesse descoberto algo especial."
+      },
+      {
+       "zh": "我猜他们正在爬山，女生可能已经看到山顶了。",
+       "pt": "Imagino que eles estejam subindo uma montanha e que a moça talvez já tenha avistado o topo."
+      },
+      {
+       "zh": "我觉得年轻的时候应该多出去旅行。",
+       "pt": "Acho que, enquanto somos jovens, devemos viajar bastante."
+      },
+      {
+       "zh": "首先，旅行可以让我们看到不一样的风景，了解不同地方的文化。",
+       "pt": "Primeiro, viajar nos permite ver paisagens diferentes e conhecer a cultura de outros lugares."
+      },
+      {
+       "zh": "其次，和朋友一起旅行的时候，大家要互相帮助，关系也会变得更好。",
+       "pt": "Segundo, quando se viaja com amigos, todos precisam se ajudar, e a amizade fica mais forte."
+      },
+      {
+       "zh": "另外，在旅行中遇到问题，比如迷路了，我们也能学会自己想办法。",
+       "pt": "Além disso, quando surge um problema na viagem, como se perder, a gente aprende a se virar sozinho."
+      },
+      {
+       "zh": "总之，旅行不仅是一种放松的方式，也是一种学习的方式。",
+       "pt": "Enfim, viajar não é só uma forma de relaxar, mas também uma forma de aprender."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "双肩包",
+     "py": "shuāngjiānbāo",
+     "pt": "mochila"
+    },
+    {
+     "w": "地图",
+     "py": "dìtú",
+     "pt": "mapa"
+    },
+    {
+     "w": "指",
+     "py": "zhǐ",
+     "pt": "apontar"
+    },
+    {
+     "w": "远处",
+     "py": "yuǎnchù",
+     "pt": "ao longe; lugar distante"
+    },
+    {
+     "w": "迷路",
+     "py": "mílù",
+     "pt": "perder-se (no caminho)"
+    },
+    {
+     "w": "爬山",
+     "py": "páshān",
+     "pt": "subir a montanha; fazer trilha"
+    },
+    {
+     "w": "山顶",
+     "py": "shāndǐng",
+     "pt": "topo da montanha"
+    },
+    {
+     "w": "旅行",
+     "py": "lǚxíng",
+     "pt": "viajar; viagem"
+    },
+    {
+     "w": "放松",
+     "py": "fàngsōng",
+     "pt": "relaxar"
+    },
+    {
+     "w": "方式",
+     "py": "fāngshì",
+     "pt": "maneira; forma"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "左边的……，右边的……",
+     "pt": "situar as pessoas na foto (no meio = 中间的……)",
+     "ex": "左边的男生拿着地图，右边的女生指着远处。",
+     "exPt": "O rapaz da esquerda segura o mapa, e a moça da direita aponta para longe."
+    },
+    {
+     "zh": "往……看",
+     "pt": "olhar em direção a… (往 + direção + verbo)",
+     "ex": "另外两个人正往远处看。",
+     "exPt": "Os outros dois estão olhando ao longe."
+    },
+    {
+     "zh": "……不仅是……，也是……",
+     "pt": "não é só…, é também…",
+     "ex": "旅行不仅是一种放松的方式，也是一种学习的方式。",
+     "exPt": "Viajar não é só uma forma de relaxar, é também uma forma de aprender."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "你最想感谢的人是谁？为什么？",
+   "pt": "Quem é a pessoa a quem você mais quer agradecer? Por quê?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我最想感谢的人是我的妈妈。",
+       "pt": "A pessoa a quem eu mais quero agradecer é a minha mãe."
+      },
+      {
+       "zh": "我的妈妈是一个老师，她工作很忙。",
+       "pt": "Minha mãe é professora e trabalha muito."
+      },
+      {
+       "zh": "但是她每天都给我做饭，还帮我检查作业。",
+       "pt": "Mesmo assim, todo dia ela fazia comida para mim e ainda conferia minha lição de casa."
+      },
+      {
+       "zh": "我小时候身体不好，常常生病。",
+       "pt": "Quando eu era pequeno, tinha a saúde fraca e ficava doente com frequência."
+      },
+      {
+       "zh": "每次我生病，妈妈都会一晚上不睡觉，照顾我。",
+       "pt": "Toda vez que eu ficava doente, minha mãe passava a noite em claro cuidando de mim."
+      },
+      {
+       "zh": "她还告诉我，做事情一定要认真，不要放弃。",
+       "pt": "Ela também me ensinou que é preciso fazer as coisas com dedicação e não desistir."
+      },
+      {
+       "zh": "现在我长大了，我知道妈妈为我做了很多。",
+       "pt": "Agora que cresci, sei o quanto minha mãe fez por mim."
+      },
+      {
+       "zh": "我真的很想对她说一声谢谢。",
+       "pt": "Eu queria muito dizer um obrigado a ela."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我最想感谢的人是我的第一位汉语老师，王老师。",
+       "pt": "A pessoa a quem eu mais quero agradecer é a minha primeira professora de chinês, a professora Wang."
+      },
+      {
+       "zh": "我是三年前开始学汉语的，那时候我觉得汉字太难了，几乎想放弃。",
+       "pt": "Comecei a estudar chinês há três anos; na época eu achava os caracteres difíceis demais e cheguei a pensar em desistir."
+      },
+      {
+       "zh": "王老师发现以后，不但没有批评我，反而在下课以后专门帮我练习。",
+       "pt": "Quando a professora Wang percebeu, em vez de me dar bronca, ela passou a ficar depois da aula só para me ajudar a praticar."
+      },
+      {
+       "zh": "她告诉我，学习语言就像爬山，不能着急，每天往上走一点儿就好。",
+       "pt": "Ela me disse que aprender uma língua é como subir uma montanha: não dá para ter pressa, basta subir um pouquinho a cada dia."
+      },
+      {
+       "zh": "她还给我介绍了很多中国电影，让我对中国文化越来越感兴趣。",
+       "pt": "Ela também me apresentou muitos filmes chineses, e fui me interessando cada vez mais pela cultura chinesa."
+      },
+      {
+       "zh": "在她的鼓励下，我坚持了下来，现在我的汉语水平提高了很多。",
+       "pt": "Com o incentivo dela, eu persisti, e hoje meu chinês melhorou muito."
+      },
+      {
+       "zh": "如果没有王老师，我可能早就不学汉语了。",
+       "pt": "Se não fosse a professora Wang, eu provavelmente já teria parado de estudar chinês há muito tempo."
+      },
+      {
+       "zh": "我觉得一个好老师不仅能教给学生知识，而且能改变学生的人生。",
+       "pt": "Acho que um bom professor não só ensina conteúdo, como também pode mudar a vida dos alunos."
+      },
+      {
+       "zh": "所以我真的非常感谢她，希望以后能用流利的汉语跟她聊天。",
+       "pt": "Por isso sou muito grato a ela e espero um dia conversar com ela em chinês fluente."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "感谢",
+     "py": "gǎnxiè",
+     "pt": "agradecer"
+    },
+    {
+     "w": "鼓励",
+     "py": "gǔlì",
+     "pt": "encorajar; incentivo"
+    },
+    {
+     "w": "坚持",
+     "py": "jiānchí",
+     "pt": "persistir; não desistir"
+    },
+    {
+     "w": "批评",
+     "py": "pīpíng",
+     "pt": "criticar; dar bronca"
+    },
+    {
+     "w": "照顾",
+     "py": "zhàogù",
+     "pt": "cuidar de"
+    },
+    {
+     "w": "专门",
+     "py": "zhuānmén",
+     "pt": "especialmente; só para isso"
+    },
+    {
+     "w": "水平",
+     "py": "shuǐpíng",
+     "pt": "nível"
+    },
+    {
+     "w": "知识",
+     "py": "zhīshi",
+     "pt": "conhecimento"
+    },
+    {
+     "w": "放弃",
+     "py": "fàngqì",
+     "pt": "desistir"
+    },
+    {
+     "w": "感兴趣",
+     "py": "gǎn xìngqù",
+     "pt": "interessar-se"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "我最想感谢的人是……，因为……",
+     "pt": "resposta direta: quem + por quê",
+     "ex": "我最想感谢的人是我的妈妈，因为她一直照顾我。",
+     "exPt": "A pessoa a quem mais quero agradecer é minha mãe, porque ela sempre cuidou de mim."
+    },
+    {
+     "zh": "不但没……，反而……",
+     "pt": "não só não…, como, ao contrário…",
+     "ex": "老师不但没有批评我，反而帮我练习。",
+     "exPt": "A professora não só não me deu bronca, como ainda me ajudou a praticar."
+    },
+    {
+     "zh": "在……的鼓励下",
+     "pt": "com o incentivo de… (também: 在……的帮助下, com a ajuda de…)",
+     "ex": "在老师的鼓励下，我坚持了下来。",
+     "exPt": "Com o incentivo da professora, eu persisti."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "你对自己现在的生活满意吗？为什么？",
+   "pt": "Você está satisfeito com a sua vida atual? Por quê?",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我对自己现在的生活比较满意。",
+       "pt": "Estou relativamente satisfeito com a minha vida atual."
+      },
+      {
+       "zh": "我有一份自己喜欢的工作，同事们对我都很好。",
+       "pt": "Tenho um trabalho de que gosto, e meus colegas me tratam muito bem."
+      },
+      {
+       "zh": "下班以后，我常常去运动或者学习汉语。",
+       "pt": "Depois do trabalho, costumo fazer exercício ou estudar chinês."
+      },
+      {
+       "zh": "周末的时候，我会和家人、朋友一起吃饭、聊天。",
+       "pt": "Nos fins de semana, saio para comer e conversar com a família e os amigos."
+      },
+      {
+       "zh": "我的身体也很健康，很少生病。",
+       "pt": "Também estou com a saúde boa e quase não fico doente."
+      },
+      {
+       "zh": "当然，我的生活也有不满意的地方。",
+       "pt": "Claro que também tem coisas na minha vida com que não estou satisfeito."
+      },
+      {
+       "zh": "比如我的汉语还说得不太好，我需要多练习。",
+       "pt": "Por exemplo, ainda não falo chinês muito bem e preciso praticar mais."
+      },
+      {
+       "zh": "我希望明年能通过汉语考试，去中国看看。",
+       "pt": "Espero passar no exame de chinês no ano que vem e conhecer a China."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "总的来说，我对现在的生活还是挺满意的。",
+       "pt": "De modo geral, estou bem satisfeito com a minha vida atual."
+      },
+      {
+       "zh": "首先，我的工作比较稳定，而且我能从工作中学到很多东西。",
+       "pt": "Primeiro, meu trabalho é relativamente estável, e aprendo muita coisa com ele."
+      },
+      {
+       "zh": "其次，我有一个很幸福的家庭，还有几个可以说心里话的好朋友。",
+       "pt": "Segundo, tenho uma família muito feliz e alguns bons amigos com quem posso me abrir."
+      },
+      {
+       "zh": "遇到困难的时候，他们总是会支持我、鼓励我。",
+       "pt": "Quando passo por dificuldades, eles sempre me apoiam e me dão força."
+      },
+      {
+       "zh": "另外，这两年我开始学习汉语，每天都能感觉到自己在进步，这让我非常开心。",
+       "pt": "Além disso, nesses dois últimos anos comecei a estudar chinês e sinto que estou progredindo todo dia, o que me deixa muito feliz."
+      },
+      {
+       "zh": "不过，我对自己也有不满意的地方。",
+       "pt": "Mas também tem coisas em mim com que não estou satisfeito."
+      },
+      {
+       "zh": "比如说，我常常玩儿手机玩儿到很晚，睡觉的时间太少。",
+       "pt": "Por exemplo, muitas vezes fico no celular até tarde e durmo muito pouco."
+      },
+      {
+       "zh": "而且，我锻炼身体的时间也不够，最近胖了不少。",
+       "pt": "E também não faço exercício o suficiente e engordei bastante ultimamente."
+      },
+      {
+       "zh": "所以我打算以后好好安排时间，早睡早起，每个星期至少运动三次。",
+       "pt": "Por isso pretendo organizar melhor o meu tempo, dormir e acordar cedo e me exercitar pelo menos três vezes por semana."
+      },
+      {
+       "zh": "我相信，只要我继续努力，我的生活会变得越来越好。",
+       "pt": "Acredito que, se eu continuar me esforçando, minha vida vai ficar cada vez melhor."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "满意",
+     "py": "mǎnyì",
+     "pt": "satisfeito"
+    },
+    {
+     "w": "生活",
+     "py": "shēnghuó",
+     "pt": "vida; viver"
+    },
+    {
+     "w": "稳定",
+     "py": "wěndìng",
+     "pt": "estável"
+    },
+    {
+     "w": "家庭",
+     "py": "jiātíng",
+     "pt": "família; lar"
+    },
+    {
+     "w": "支持",
+     "py": "zhīchí",
+     "pt": "apoiar; apoio"
+    },
+    {
+     "w": "进步",
+     "py": "jìnbù",
+     "pt": "progredir; progresso"
+    },
+    {
+     "w": "锻炼",
+     "py": "duànliàn",
+     "pt": "exercitar-se; treinar"
+    },
+    {
+     "w": "至少",
+     "py": "zhìshǎo",
+     "pt": "pelo menos"
+    },
+    {
+     "w": "打算",
+     "py": "dǎsuàn",
+     "pt": "pretender; planejar"
+    },
+    {
+     "w": "心里话",
+     "py": "xīnlǐhuà",
+     "pt": "o que se sente de verdade; desabafo"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "总的来说，……",
+     "pt": "de modo geral… — bom para abrir ou fechar a resposta",
+     "ex": "总的来说，我对现在的生活很满意。",
+     "exPt": "De modo geral, estou muito satisfeito com a minha vida atual."
+    },
+    {
+     "zh": "我对……（不）满意",
+     "pt": "estar (in)satisfeito com…",
+     "ex": "我对自己现在的工作很满意。",
+     "exPt": "Estou muito satisfeito com o meu trabalho atual."
+    },
+    {
+     "zh": "玩儿……玩儿到很晚",
+     "pt": "repetir o verbo quando há objeto + complemento (verbo + objeto + verbo + 到…)",
+     "ex": "我常常玩儿手机玩儿到很晚。",
+     "exPt": "Muitas vezes fico no celular até tarde."
+    }
+   ]
+  }
+ ]
+}

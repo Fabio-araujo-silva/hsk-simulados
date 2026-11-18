@@ -1,0 +1,699 @@
+{
+ "id": "H81001",
+ "parte1": [
+  {
+   "n": 1,
+   "zh": "兴趣是最好的老师。",
+   "pt": "O interesse é o melhor professor."
+  },
+  {
+   "n": 2,
+   "zh": "你别忘了带照相机。",
+   "pt": "Não esquece de levar a câmera."
+  },
+  {
+   "n": 3,
+   "zh": "桌子上放着一本书。",
+   "pt": "Tem um livro em cima da mesa."
+  },
+  {
+   "n": 4,
+   "zh": "这个问题必须马上解决。",
+   "pt": "Esse problema precisa ser resolvido imediatamente."
+  },
+  {
+   "n": 5,
+   "zh": "一年有春、夏、秋、冬四个季节。",
+   "pt": "O ano tem quatro estações: primavera, verão, outono e inverno."
+  },
+  {
+   "n": 6,
+   "zh": "我们对你很有信心。",
+   "pt": "A gente confia muito em você."
+  },
+  {
+   "n": 7,
+   "zh": "这张卡的密码是你的生日。",
+   "pt": "A senha deste cartão é a data do seu aniversário."
+  },
+  {
+   "n": 8,
+   "zh": "小李的男朋友特别幽默。",
+   "pt": "O namorado da Xiao Li é muito engraçado."
+  },
+  {
+   "n": 9,
+   "zh": "公司安排我下周三出差。",
+   "pt": "A empresa marcou uma viagem de trabalho para mim na quarta que vem."
+  },
+  {
+   "n": 10,
+   "zh": "王教授的教学经验比我丰富。",
+   "pt": "O professor Wang tem mais experiência de ensino do que eu."
+  }
+ ],
+ "parte2": [
+  {
+   "n": 11,
+   "img": "img/H81001/11.jpg",
+   "cena": "Pessoa de pijama e pantufas que pegou no sono debruçada sobre a mesa, em frente ao notebook.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "图片上的这个人在电脑前面睡着了。",
+       "pt": "A pessoa da foto pegou no sono na frente do computador."
+      },
+      {
+       "zh": "她穿着睡衣，脚上穿着拖鞋。",
+       "pt": "Ela está de pijama e de pantufas."
+      },
+      {
+       "zh": "她的头放在桌子上，看起来非常累。",
+       "pt": "Está com a cabeça apoiada na mesa e parece muito cansada."
+      },
+      {
+       "zh": "我想她可能工作到了很晚。",
+       "pt": "Acho que ela deve ter trabalhado até muito tarde."
+      },
+      {
+       "zh": "也可能是明天要考试，她一直在复习。",
+       "pt": "Ou talvez tenha prova amanhã e ficou estudando sem parar."
+      },
+      {
+       "zh": "后来她太累了，就在桌子上睡着了。",
+       "pt": "Aí ficou cansada demais e dormiu ali mesmo, na mesa."
+      },
+      {
+       "zh": "我觉得这样对身体不好，很容易感冒。",
+       "pt": "Acho que isso faz mal à saúde; é fácil pegar um resfriado."
+      },
+      {
+       "zh": "我们应该早点儿睡觉，第二天才有精神。",
+       "pt": "A gente deveria dormir mais cedo para ter disposição no dia seguinte."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "这张图片里有一个女孩子，她穿着睡衣和拖鞋，趴在桌子上睡着了。",
+       "pt": "Nesta imagem há uma moça de pijama e pantufas que pegou no sono debruçada sobre a mesa."
+      },
+      {
+       "zh": "桌子上有一台打开的笔记本电脑，可是她已经没有力气继续工作了。",
+       "pt": "Na mesa há um notebook aberto, mas ela já não tem forças para continuar trabalhando."
+      },
+      {
+       "zh": "我猜她最近工作压力很大，每天都要加班到半夜。",
+       "pt": "Imagino que ela anda sob muita pressão no trabalho e precisa fazer hora extra até meia-noite todos os dias."
+      },
+      {
+       "zh": "也有可能她是一个大学生，下周就要考试了，所以每天都学习到很晚。",
+       "pt": "Também pode ser uma universitária com provas na semana que vem, que estuda até tarde todos os dias."
+      },
+      {
+       "zh": "她本来只想休息一会儿，没想到一下子就睡着了。",
+       "pt": "Ela só queria descansar um pouquinho, mas acabou pegando no sono sem perceber."
+      },
+      {
+       "zh": "现在很多年轻人都有这样的经历。",
+       "pt": "Hoje em dia, muitos jovens já passaram por isso."
+      },
+      {
+       "zh": "虽然努力工作和学习很重要，但是身体健康更重要。",
+       "pt": "Embora trabalhar e estudar com dedicação seja importante, a saúde é ainda mais."
+      },
+      {
+       "zh": "如果经常睡得很晚，不但第二天没有精神，而且时间长了还会生病。",
+       "pt": "Quem dorme tarde com frequência não só fica sem disposição no dia seguinte, como, com o tempo, acaba ficando doente."
+      },
+      {
+       "zh": "所以我觉得应该好好安排时间，按时睡觉。",
+       "pt": "Por isso acho que é preciso organizar bem o tempo e ir dormir na hora certa."
+      },
+      {
+       "zh": "这样白天才能更好地工作和学习。",
+       "pt": "Só assim dá para trabalhar e estudar melhor durante o dia."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "睡着",
+     "py": "shuìzháo",
+     "pt": "pegar no sono"
+    },
+    {
+     "w": "睡衣",
+     "py": "shuìyī",
+     "pt": "pijama"
+    },
+    {
+     "w": "拖鞋",
+     "py": "tuōxié",
+     "pt": "chinelo; pantufa"
+    },
+    {
+     "w": "趴",
+     "py": "pā",
+     "pt": "debruçar-se; deitar de bruços"
+    },
+    {
+     "w": "加班",
+     "py": "jiābān",
+     "pt": "fazer hora extra"
+    },
+    {
+     "w": "压力",
+     "py": "yālì",
+     "pt": "pressão; estresse"
+    },
+    {
+     "w": "熬夜",
+     "py": "áoyè",
+     "pt": "virar a noite; ficar acordado até tarde"
+    },
+    {
+     "w": "精神",
+     "py": "jīngshen",
+     "pt": "disposição; energia"
+    },
+    {
+     "w": "按时",
+     "py": "ànshí",
+     "pt": "na hora certa"
+    },
+    {
+     "w": "安排",
+     "py": "ānpái",
+     "pt": "organizar; planejar"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "本来……，没想到……",
+     "pt": "a ideia era…, mas (sem esperar) acabou…",
+     "ex": "她本来只想休息一会儿，没想到一下子就睡着了。",
+     "exPt": "Ela só queria descansar um pouquinho, mas acabou pegando no sono."
+    },
+    {
+     "zh": "……到很晚",
+     "pt": "fazer algo até tarde (verbo + 到 + tempo)",
+     "ex": "她每天都学习到很晚。",
+     "exPt": "Ela estuda até tarde todos os dias."
+    },
+    {
+     "zh": "虽然……但是……",
+     "pt": "embora…, (mas)…",
+     "ex": "虽然学习很重要，但是身体更重要。",
+     "exPt": "Embora estudar seja importante, a saúde é mais importante."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "img": "img/H81001/12.jpg",
+   "cena": "Pai, mãe e filha pequena passeando de mãos dadas, com sacolas de compras, todos sorrindo.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "这是一家三口，有爸爸、妈妈和女儿。",
+       "pt": "É uma família de três: pai, mãe e filha."
+      },
+      {
+       "zh": "他们刚从商店出来，手里拿着很多购物袋。",
+       "pt": "Eles acabaram de sair da loja, com várias sacolas de compras na mão."
+      },
+      {
+       "zh": "女儿穿着一条粉色的裙子，非常可爱。",
+       "pt": "A filha está com um vestido cor-de-rosa e é muito fofa."
+      },
+      {
+       "zh": "妈妈拉着女儿的手，他们一起走路。",
+       "pt": "A mãe segura a mão da filha, e eles caminham juntos."
+      },
+      {
+       "zh": "他们每个人都笑得很开心。",
+       "pt": "Todos estão sorrindo, bem felizes."
+      },
+      {
+       "zh": "我想今天是周末，他们一起去逛街了。",
+       "pt": "Acho que hoje é fim de semana e eles foram passear e fazer compras juntos."
+      },
+      {
+       "zh": "可能他们给女儿买了新衣服和玩具。",
+       "pt": "Talvez tenham comprado roupas novas e brinquedos para a filha."
+      },
+      {
+       "zh": "我觉得周末和家人一起出去玩儿，是一件很幸福的事。",
+       "pt": "Acho que sair com a família no fim de semana é uma coisa que deixa a gente muito feliz."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "图片上是幸福的一家三口：爸爸、妈妈和他们的小女儿。",
+       "pt": "A foto mostra uma família feliz de três pessoas: pai, mãe e a filhinha."
+      },
+      {
+       "zh": "他们手里都提着购物袋，看样子刚刚逛完商场。",
+       "pt": "Eles carregam sacolas de compras, e parece que acabaram de dar uma volta no shopping."
+      },
+      {
+       "zh": "妈妈和爸爸都穿着牛仔裤，女儿穿着一条粉红色的裙子。",
+       "pt": "A mãe e o pai estão de calça jeans, e a filha usa um vestido cor-de-rosa."
+      },
+      {
+       "zh": "女儿一边走一边笑，看起来特别开心。",
+       "pt": "A menina vai andando e rindo; parece muito feliz."
+      },
+      {
+       "zh": "我猜今天是周末，父母带女儿去商场买新衣服，还给她买了玩具。",
+       "pt": "Imagino que hoje é fim de semana e os pais levaram a filha ao shopping para comprar roupa nova, e ainda compraram um brinquedo para ela."
+      },
+      {
+       "zh": "现在大家平时工作都很忙，很少有时间陪孩子。",
+       "pt": "Hoje em dia todo mundo trabalha muito durante a semana e sobra pouco tempo para os filhos."
+      },
+      {
+       "zh": "所以周末的时候，很多父母会带孩子出去玩儿。",
+       "pt": "Por isso, no fim de semana, muitos pais levam os filhos para passear."
+      },
+      {
+       "zh": "我认为，对孩子来说，父母能陪在身边，比买很多礼物更重要。",
+       "pt": "Acho que, para uma criança, ter os pais por perto é mais importante do que ganhar muitos presentes."
+      },
+      {
+       "zh": "小时候，我的父母也常常在周末带我出去玩儿，那些都是我最美好的回忆。",
+       "pt": "Quando eu era pequeno, meus pais também me levavam para passear nos fins de semana, e essas são as minhas melhores lembranças."
+      },
+      {
+       "zh": "总之，这张图片让人感到非常温暖。",
+       "pt": "Enfim, é uma imagem que transmite muito carinho."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "一家三口",
+     "py": "yì jiā sān kǒu",
+     "pt": "família de três pessoas"
+    },
+    {
+     "w": "购物袋",
+     "py": "gòuwùdài",
+     "pt": "sacola de compras"
+    },
+    {
+     "w": "逛街",
+     "py": "guàngjiē",
+     "pt": "passear pelas lojas; bater perna"
+    },
+    {
+     "w": "商场",
+     "py": "shāngchǎng",
+     "pt": "shopping; loja de departamentos"
+    },
+    {
+     "w": "牛仔裤",
+     "py": "niúzǎikù",
+     "pt": "calça jeans"
+    },
+    {
+     "w": "裙子",
+     "py": "qúnzi",
+     "pt": "saia; vestido"
+    },
+    {
+     "w": "玩具",
+     "py": "wánjù",
+     "pt": "brinquedo"
+    },
+    {
+     "w": "陪",
+     "py": "péi",
+     "pt": "fazer companhia"
+    },
+    {
+     "w": "幸福",
+     "py": "xìngfú",
+     "pt": "feliz (de vida); felicidade"
+    },
+    {
+     "w": "回忆",
+     "py": "huíyì",
+     "pt": "lembrança; recordar"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "看样子……",
+     "pt": "pelo jeito…; parece que…",
+     "ex": "看样子他们刚逛完商场。",
+     "exPt": "Pelo jeito eles acabaram de passear no shopping."
+    },
+    {
+     "zh": "对……来说",
+     "pt": "para… (do ponto de vista de alguém)",
+     "ex": "对孩子来说，父母陪在身边最重要。",
+     "exPt": "Para uma criança, o mais importante é ter os pais por perto."
+    },
+    {
+     "zh": "带……去……",
+     "pt": "levar alguém a algum lugar",
+     "ex": "父母带女儿去商场买衣服。",
+     "exPt": "Os pais levam a filha ao shopping para comprar roupa."
+    }
+   ]
+  }
+ ],
+ "parte3": [
+  {
+   "n": 13,
+   "zh": "你有什么兴趣和爱好？请谈谈它对你的影响。",
+   "pt": "Quais são os seus interesses e hobbies? Fale sobre como eles influenciam você.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "我的爱好很多，但是我最喜欢的是跑步。",
+       "pt": "Tenho muitos hobbies, mas o meu favorito é correr."
+      },
+      {
+       "zh": "我差不多每天早上都去公园跑半个小时。",
+       "pt": "Quase toda manhã vou ao parque correr meia hora."
+      },
+      {
+       "zh": "跑步对我的影响很大。",
+       "pt": "A corrida teve uma influência enorme em mim."
+      },
+      {
+       "zh": "以前我的身体不太好，常常感冒。",
+       "pt": "Antes minha saúde não era muito boa; eu vivia resfriado."
+      },
+      {
+       "zh": "开始跑步以后，我很少生病了。",
+       "pt": "Depois que comecei a correr, quase não fico mais doente."
+      },
+      {
+       "zh": "而且跑步的时候，我可以一边听音乐，一边想事情。",
+       "pt": "Além disso, enquanto corro, posso ouvir música e pensar nas coisas."
+      },
+      {
+       "zh": "跑完步以后，我的心情会变得很好。",
+       "pt": "Depois de correr, meu humor melhora muito."
+      },
+      {
+       "zh": "所以我觉得跑步是一个非常好的爱好。",
+       "pt": "Por isso acho que correr é um ótimo hobby."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我的兴趣爱好比较多，比如游泳、看书、听音乐，不过我最大的爱好是看中国电影。",
+       "pt": "Tenho vários interesses, como nadar, ler e ouvir música, mas o meu maior hobby é ver filmes chineses."
+      },
+      {
+       "zh": "我是从五年前开始喜欢上中国电影的。",
+       "pt": "Foi há cinco anos que comecei a gostar de cinema chinês."
+      },
+      {
+       "zh": "那时候我一句汉语也听不懂，只能看葡萄牙语字幕。",
+       "pt": "Na época eu não entendia uma frase sequer em chinês e só conseguia assistir com legenda em português."
+      },
+      {
+       "zh": "但是我越看越喜欢，后来就决定开始学习汉语。",
+       "pt": "Mas quanto mais eu assistia, mais eu gostava, e acabei decidindo estudar chinês."
+      },
+      {
+       "zh": "这个爱好对我的影响非常大。",
+       "pt": "Esse hobby teve uma influência enorme em mim."
+      },
+      {
+       "zh": "首先，看电影让我的听力提高了很多，现在我已经能听懂不少对话了。",
+       "pt": "Primeiro, ver filmes melhorou muito minha compreensão oral; hoje já entendo boa parte dos diálogos."
+      },
+      {
+       "zh": "其次，通过电影，我了解了很多中国的文化和历史。",
+       "pt": "Segundo, através dos filmes conheci muito da cultura e da história da China."
+      },
+      {
+       "zh": "另外，因为这个爱好，我还认识了几个中国朋友，我们经常一起讨论电影。",
+       "pt": "Além disso, por causa desse hobby fiz alguns amigos chineses, e a gente sempre conversa sobre filmes."
+      },
+      {
+       "zh": "总之，看中国电影不仅让我的生活更有意思，而且让我找到了新的学习目标。",
+       "pt": "Enfim, ver filmes chineses não só deixou minha vida mais interessante, como também me deu um novo objetivo de estudo."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "兴趣",
+     "py": "xìngqù",
+     "pt": "interesse"
+    },
+    {
+     "w": "爱好",
+     "py": "àihào",
+     "pt": "hobby; passatempo"
+    },
+    {
+     "w": "影响",
+     "py": "yǐngxiǎng",
+     "pt": "influência; influenciar"
+    },
+    {
+     "w": "提高",
+     "py": "tígāo",
+     "pt": "melhorar; elevar"
+    },
+    {
+     "w": "通过",
+     "py": "tōngguò",
+     "pt": "por meio de; através de"
+    },
+    {
+     "w": "了解",
+     "py": "liǎojiě",
+     "pt": "conhecer a fundo; entender"
+    },
+    {
+     "w": "文化",
+     "py": "wénhuà",
+     "pt": "cultura"
+    },
+    {
+     "w": "讨论",
+     "py": "tǎolùn",
+     "pt": "discutir; conversar sobre"
+    },
+    {
+     "w": "字幕",
+     "py": "zìmù",
+     "pt": "legenda"
+    },
+    {
+     "w": "目标",
+     "py": "mùbiāo",
+     "pt": "objetivo; meta"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "是从……开始……的",
+     "pt": "enfatizar quando algo começou (estrutura 是……的)",
+     "ex": "我是从五年前开始喜欢上中国电影的。",
+     "exPt": "Foi há cinco anos que comecei a gostar de cinema chinês."
+    },
+    {
+     "zh": "越……越……",
+     "pt": "quanto mais…, mais…",
+     "ex": "我越看越喜欢。",
+     "exPt": "Quanto mais eu assistia, mais gostava."
+    },
+    {
+     "zh": "……对我的影响很大",
+     "pt": "… teve muita influência em mim (responde à 2ª parte da pergunta)",
+     "ex": "跑步对我的影响很大。",
+     "exPt": "A corrida teve muita influência em mim."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "zh": "每个人对成功都有自己的理解，请谈谈你的看法。",
+   "pt": "Cada pessoa tem a sua própria visão de sucesso. Fale sobre a sua opinião.",
+   "modelos": [
+    {
+     "nivel": "HSK 3",
+     "frases": [
+      {
+       "zh": "每个人对成功的理解都不一样。",
+       "pt": "Cada pessoa entende o sucesso de um jeito."
+      },
+      {
+       "zh": "有的人觉得赚很多钱就是成功。",
+       "pt": "Tem gente que acha que sucesso é ganhar muito dinheiro."
+      },
+      {
+       "zh": "有的人觉得出名才是成功。",
+       "pt": "Tem gente que acha que sucesso de verdade é ficar famoso."
+      },
+      {
+       "zh": "我觉得，成功就是做自己喜欢的事情，而且把它做好。",
+       "pt": "Para mim, sucesso é fazer o que você gosta, e fazer bem-feito."
+      },
+      {
+       "zh": "比如我的一个朋友是老师，他的工资不太高。",
+       "pt": "Por exemplo, um amigo meu é professor e não ganha muito."
+      },
+      {
+       "zh": "但是他很喜欢自己的工作，学生们也都很喜欢他。",
+       "pt": "Mas ele adora o trabalho dele, e os alunos também gostam muito dele."
+      },
+      {
+       "zh": "我认为他就是一个成功的人。",
+       "pt": "Acho que ele é, sim, uma pessoa bem-sucedida."
+      },
+      {
+       "zh": "所以，成功不一定要有很多钱，快乐和满意更重要。",
+       "pt": "Por isso, sucesso não exige necessariamente muito dinheiro; estar feliz e satisfeito é mais importante."
+      }
+     ]
+    },
+    {
+     "nivel": "HSK 4",
+     "frases": [
+      {
+       "zh": "我觉得每个人对成功的理解确实不一样。",
+       "pt": "Acho que cada pessoa realmente entende o sucesso de um jeito diferente."
+      },
+      {
+       "zh": "有的人认为，有钱、有房子、有车就是成功。",
+       "pt": "Algumas pessoas acham que sucesso é ter dinheiro, casa e carro."
+      },
+      {
+       "zh": "也有的人认为，在工作上做出成绩，得到别人的尊重，才是成功。",
+       "pt": "Outras acham que sucesso de verdade é ter bons resultados no trabalho e conquistar o respeito dos outros."
+      },
+      {
+       "zh": "在我看来，成功并不只是跟别人比，更重要的是跟过去的自己比。",
+       "pt": "Na minha opinião, sucesso não é só se comparar com os outros; o mais importante é se comparar com quem você era antes."
+      },
+      {
+       "zh": "如果今天的我比昨天的我更好，那就是一种成功。",
+       "pt": "Se hoje eu sou melhor do que ontem, isso já é um tipo de sucesso."
+      },
+      {
+       "zh": "比如说，我刚开始学汉语的时候，连简单的句子都说不好。",
+       "pt": "Por exemplo, quando comecei a estudar chinês, não conseguia falar direito nem frases simples."
+      },
+      {
+       "zh": "经过两年的努力，现在我已经能用汉语跟中国人聊天了。",
+       "pt": "Depois de dois anos de esforço, hoje já consigo conversar em chinês com chineses."
+      },
+      {
+       "zh": "虽然我的汉语还有很多问题，但是我觉得这就是我的成功。",
+       "pt": "Embora meu chinês ainda tenha muitos problemas, para mim isso já é o meu sucesso."
+      },
+      {
+       "zh": "另外，在努力的过程中，我们会学到很多东西，也会变得更自信。",
+       "pt": "Além disso, no processo de se esforçar, a gente aprende muita coisa e fica mais confiante."
+      },
+      {
+       "zh": "总之，只要每天都在进步，我们每个人都可以是成功的人。",
+       "pt": "Enfim, desde que a gente esteja progredindo todo dia, qualquer um pode ser uma pessoa bem-sucedida."
+      }
+     ]
+    }
+   ],
+   "vocab": [
+    {
+     "w": "成功",
+     "py": "chénggōng",
+     "pt": "sucesso; ter sucesso"
+    },
+    {
+     "w": "理解",
+     "py": "lǐjiě",
+     "pt": "entendimento; entender"
+    },
+    {
+     "w": "看法",
+     "py": "kànfǎ",
+     "pt": "opinião; ponto de vista"
+    },
+    {
+     "w": "赚钱",
+     "py": "zhuànqián",
+     "pt": "ganhar dinheiro"
+    },
+    {
+     "w": "出名",
+     "py": "chūmíng",
+     "pt": "ficar famoso"
+    },
+    {
+     "w": "尊重",
+     "py": "zūnzhòng",
+     "pt": "respeito; respeitar"
+    },
+    {
+     "w": "成绩",
+     "py": "chéngjì",
+     "pt": "resultado; desempenho"
+    },
+    {
+     "w": "过程",
+     "py": "guòchéng",
+     "pt": "processo"
+    },
+    {
+     "w": "进步",
+     "py": "jìnbù",
+     "pt": "progresso; progredir"
+    },
+    {
+     "w": "自信",
+     "py": "zìxìn",
+     "pt": "autoconfiante"
+    }
+   ],
+   "estruturas": [
+    {
+     "zh": "在我看来，……",
+     "pt": "na minha opinião / do meu ponto de vista",
+     "ex": "在我看来，快乐比钱更重要。",
+     "exPt": "Na minha opinião, ser feliz é mais importante do que dinheiro."
+    },
+    {
+     "zh": "有的人认为……，也有的人认为……",
+     "pt": "apresentar opiniões diferentes antes de dar a sua",
+     "ex": "有的人认为有钱就是成功，也有的人认为快乐才是成功。",
+     "exPt": "Tem gente que acha que sucesso é ter dinheiro; outros acham que sucesso de verdade é ser feliz."
+    },
+    {
+     "zh": "连……都……",
+     "pt": "nem mesmo…",
+     "ex": "我刚开始学汉语的时候，连简单的句子都说不好。",
+     "exPt": "Quando comecei a estudar chinês, não conseguia falar direito nem frases simples."
+    }
+   ]
+  }
+ ]
+}
