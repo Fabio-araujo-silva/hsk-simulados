@@ -1,0 +1,857 @@
+{
+ "id": "H11222",
+ "nivel": 1,
+ "transcricao": "audio",
+ "fontes": [
+  "fontes\\raw\\H11222\\H11222.pdf"
+ ],
+ "grupos": {
+  "L3": {
+   "questoes": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "letras": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "exemploUsa": "C",
+   "imagens": {
+    "A": "img/H11222/L3-A.png",
+    "B": "img/H11222/L3-B.png",
+    "C": "img/H11222/L3-C.png",
+    "D": "img/H11222/L3-D.png",
+    "E": "img/H11222/L3-E.png",
+    "F": "img/H11222/L3-F.png"
+   }
+  },
+  "R2": {
+   "questoes": [
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "letras": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "exemploUsa": "E",
+   "imagens": {
+    "A": "img/H11222/R2-A.png",
+    "B": "img/H11222/R2-B.png",
+    "C": "img/H11222/R2-C.png",
+    "D": "img/H11222/R2-D.png",
+    "E": "img/H11222/R2-E.png",
+    "F": "img/H11222/R2-F.png"
+   }
+  },
+  "R3": {
+   "questoes": [
+    31,
+    32,
+    33,
+    34,
+    35
+   ],
+   "opcoes": {
+    "A": "20分钟后。",
+    "B": "在这儿。",
+    "C": "没。",
+    "D": "我。",
+    "E": "17块。",
+    "F": "好的，谢谢！"
+   },
+   "exemplo": {
+    "texto": "你喝水吗？",
+    "resposta": "F"
+   }
+  },
+  "R4": {
+   "questoes": [
+    36,
+    37,
+    38,
+    39,
+    40
+   ],
+   "opcoes": {
+    "A": "和",
+    "B": "后面",
+    "C": "几",
+    "D": "名字",
+    "E": "学生",
+    "F": "谢谢"
+   },
+   "exemplo": {
+    "texto": "你叫什么（＿＿）？",
+    "resposta": "D"
+   }
+  }
+ },
+ "roteiro": [
+  {
+   "tipo": "musica",
+   "texto": "（音乐，30秒，渐弱）"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "大家好！欢迎参加HSK（一级）考试。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "HSK（一级）听力考试分四部分，共20题。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "请大家注意，听力考试现在开始。"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第一部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "很高兴"
+    },
+    {
+     "fal": null,
+     "txt": "看电影"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第1题："
+  },
+  {
+   "tipo": "questao",
+   "n": 1
+  },
+  {
+   "tipo": "questao",
+   "n": 2
+  },
+  {
+   "tipo": "questao",
+   "n": 3
+  },
+  {
+   "tipo": "questao",
+   "n": 4
+  },
+  {
+   "tipo": "questao",
+   "n": 5
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第二部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "这是我的书。"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第6题："
+  },
+  {
+   "tipo": "questao",
+   "n": 6
+  },
+  {
+   "tipo": "questao",
+   "n": 7
+  },
+  {
+   "tipo": "questao",
+   "n": 8
+  },
+  {
+   "tipo": "questao",
+   "n": 9
+  },
+  {
+   "tipo": "questao",
+   "n": 10
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第三部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": "女",
+     "txt": "你好！"
+    },
+    {
+     "fal": "男",
+     "txt": "你好！很高兴认识你。"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第11题："
+  },
+  {
+   "tipo": "questao",
+   "n": 11
+  },
+  {
+   "tipo": "questao",
+   "n": 12
+  },
+  {
+   "tipo": "questao",
+   "n": 13
+  },
+  {
+   "tipo": "questao",
+   "n": 14
+  },
+  {
+   "tipo": "questao",
+   "n": 15
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "第四部分"
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "一共5个题，每题听两次。"
+  },
+  {
+   "tipo": "exemplo",
+   "falas": [
+    {
+     "fal": null,
+     "txt": "下午我去商店，我想买一些水果。"
+    },
+    {
+     "fal": "问",
+     "txt": "她下午去哪里？"
+    }
+   ]
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "现在开始第16题："
+  },
+  {
+   "tipo": "questao",
+   "n": 16
+  },
+  {
+   "tipo": "questao",
+   "n": 17
+  },
+  {
+   "tipo": "questao",
+   "n": 18
+  },
+  {
+   "tipo": "questao",
+   "n": 19
+  },
+  {
+   "tipo": "questao",
+   "n": 20
+  },
+  {
+   "tipo": "instrucao",
+   "texto": "听力考试现在结束。"
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "resposta": true,
+   "imagem": "img/H11222/q1.png",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "三本"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "resposta": false,
+   "imagem": "img/H11222/q2.png",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "吃米饭"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "resposta": true,
+   "imagem": "img/H11222/q3.png",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "打电话"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "resposta": false,
+   "imagem": "img/H11222/q4.png",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "不想听"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "secao": "L",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "resposta": true,
+   "imagem": "img/H11222/q5.png",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "在学习"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "imagem-abc",
+   "resposta": "C",
+   "imagens": {
+    "A": "img/H11222/q6-A.png",
+    "B": "img/H11222/q6-B.png",
+    "C": "img/H11222/q6-C.png"
+   },
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "你看，这儿少一个零。"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "imagem-abc",
+   "resposta": "C",
+   "imagens": {
+    "A": "img/H11222/q7-A.png",
+    "B": "img/H11222/q7-B.png",
+    "C": "img/H11222/q7-C.png"
+   },
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "太多了，我不想吃这么多。"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "imagem-abc",
+   "resposta": "B",
+   "imagens": {
+    "A": "img/H11222/q8-A.png",
+    "B": "img/H11222/q8-B.png",
+    "C": "img/H11222/q8-C.png"
+   },
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "能听见我说话吗？"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "imagem-abc",
+   "resposta": "B",
+   "imagens": {
+    "A": "img/H11222/q9-A.png",
+    "B": "img/H11222/q9-B.png",
+    "C": "img/H11222/q9-C.png"
+   },
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "没关系，哪个字不会写？"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "secao": "L",
+   "parte": 2,
+   "tipo": "imagem-abc",
+   "resposta": "C",
+   "imagens": {
+    "A": "img/H11222/q10-A.png",
+    "B": "img/H11222/q10-B.png",
+    "C": "img/H11222/q10-C.png"
+   },
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "苹果在桌子上。"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "imagem",
+   "grupo": "L3",
+   "resposta": "D",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "钱小姐，你的电话。"
+    },
+    {
+     "fal": "女",
+     "txt": "好的，谢谢。"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "imagem",
+   "grupo": "L3",
+   "resposta": "F",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "你看这个衣服怎么样？"
+    },
+    {
+     "fal": "男",
+     "txt": "很漂亮。"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "imagem",
+   "grupo": "L3",
+   "resposta": "E",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "你买什么东西了？"
+    },
+    {
+     "fal": "女",
+     "txt": "都是你爱吃的东西。"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "imagem",
+   "grupo": "L3",
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": "女",
+     "txt": "我们去哪儿吃饭？"
+    },
+    {
+     "fal": "男",
+     "txt": "前面有个饭馆，我们去那儿。"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "secao": "L",
+   "parte": 3,
+   "tipo": "imagem",
+   "grupo": "L3",
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": "男",
+     "txt": "这个字谁会读？"
+    },
+    {
+     "fal": "女",
+     "txt": "老师，我会。"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "6岁",
+    "B": "8岁",
+    "C": "9岁"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "我女儿今年6岁，她喜欢吃中国菜。"
+    },
+    {
+     "fal": "问",
+     "txt": "他女儿几岁了？"
+    }
+   ],
+   "pergunta": "他女儿几岁了？"
+  },
+  {
+   "n": 17,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "很热",
+    "B": "很冷",
+    "C": "下雨了"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "昨天很热，他没去学校。"
+    },
+    {
+     "fal": "问",
+     "txt": "昨天天气怎么样？"
+    }
+   ],
+   "pergunta": "昨天天气怎么样？"
+  },
+  {
+   "n": 18,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "儿子",
+    "B": "老师",
+    "C": "同学"
+   },
+   "resposta": "C",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "我同学下个月来北京，在我家住几天。"
+    },
+    {
+     "fal": "问",
+     "txt": "下个月谁来北京？"
+    }
+   ],
+   "pergunta": "下个月谁来北京？"
+  },
+  {
+   "n": 19,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "看电视",
+    "B": "看电影",
+    "C": "买电脑"
+   },
+   "resposta": "B",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "明天星期日，去看电影怎么样？"
+    },
+    {
+     "fal": "问",
+     "txt": "他明天想做什么？"
+    }
+   ],
+   "pergunta": "他明天想做什么？"
+  },
+  {
+   "n": 20,
+   "secao": "L",
+   "parte": 4,
+   "tipo": "abc",
+   "opcoes": {
+    "A": "打车",
+    "B": "开车",
+    "C": "坐飞机"
+   },
+   "resposta": "A",
+   "audioTexto": [
+    {
+     "fal": null,
+     "txt": "我们坐出租车去那儿，不开车了。"
+    },
+    {
+     "fal": "问",
+     "txt": "他们怎么去那儿？"
+    }
+   ],
+   "pergunta": "他们怎么去那儿？"
+  },
+  {
+   "n": 21,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "palavra": "高兴",
+   "resposta": false,
+   "imagem": "img/H11222/q21.png"
+  },
+  {
+   "n": 22,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "palavra": "猫",
+   "resposta": true,
+   "imagem": "img/H11222/q22.png"
+  },
+  {
+   "n": 23,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "palavra": "先生",
+   "resposta": false,
+   "imagem": "img/H11222/q23.png"
+  },
+  {
+   "n": 24,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "palavra": "中午",
+   "resposta": false,
+   "imagem": "img/H11222/q24.png"
+  },
+  {
+   "n": 25,
+   "secao": "R",
+   "parte": 1,
+   "tipo": "imagem-vf",
+   "palavra": "看",
+   "resposta": true,
+   "imagem": "img/H11222/q25.png"
+  },
+  {
+   "n": 26,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "imagem",
+   "grupo": "R2",
+   "enunciado": "再见，星期一见。",
+   "resposta": "F"
+  },
+  {
+   "n": 27,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "imagem",
+   "grupo": "R2",
+   "enunciado": "下面那个大，上面那个小。",
+   "resposta": "D"
+  },
+  {
+   "n": 28,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "imagem",
+   "grupo": "R2",
+   "enunciado": "现在是10点10分。",
+   "resposta": "C"
+  },
+  {
+   "n": 29,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "imagem",
+   "grupo": "R2",
+   "enunciado": "对不起，我想去睡觉了。",
+   "resposta": "B"
+  },
+  {
+   "n": 30,
+   "secao": "R",
+   "parte": 2,
+   "tipo": "imagem",
+   "grupo": "R2",
+   "enunciado": "他是医生，在医院工作。",
+   "resposta": "A"
+  },
+  {
+   "n": 31,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "pareamento",
+   "grupo": "R3",
+   "enunciado": "上午谁去火车站？",
+   "resposta": "D"
+  },
+  {
+   "n": 32,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "pareamento",
+   "grupo": "R3",
+   "enunciado": "你什么时候来？",
+   "resposta": "A"
+  },
+  {
+   "n": 33,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "pareamento",
+   "grupo": "R3",
+   "enunciado": "我的汉语书呢？",
+   "resposta": "B"
+  },
+  {
+   "n": 34,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "pareamento",
+   "grupo": "R3",
+   "enunciado": "你们那儿下雨了吗？",
+   "resposta": "C"
+  },
+  {
+   "n": 35,
+   "secao": "R",
+   "parte": 3,
+   "tipo": "pareamento",
+   "grupo": "R3",
+   "enunciado": "这个杯子多少钱？",
+   "resposta": "E"
+  },
+  {
+   "n": 36,
+   "secao": "R",
+   "parte": 4,
+   "tipo": "lacuna",
+   "grupo": "R4",
+   "enunciado": "那个人是我的（＿＿）。",
+   "resposta": "E"
+  },
+  {
+   "n": 37,
+   "secao": "R",
+   "parte": 4,
+   "tipo": "lacuna",
+   "grupo": "R4",
+   "enunciado": "我看见了，小狗在椅子（＿＿）。",
+   "resposta": "B"
+  },
+  {
+   "n": 38,
+   "secao": "R",
+   "parte": 4,
+   "tipo": "lacuna",
+   "grupo": "R4",
+   "enunciado": "喂，妈，我（＿＿）爸爸坐明天下午5点的飞机回去。",
+   "resposta": "A"
+  },
+  {
+   "n": 39,
+   "secao": "R",
+   "parte": 4,
+   "tipo": "lacuna",
+   "grupo": "R4",
+   "enunciado": "女：小朋友，你（＿＿）岁了？\n男：我今年4岁了。",
+   "resposta": "C"
+  },
+  {
+   "n": 40,
+   "secao": "R",
+   "parte": 4,
+   "tipo": "lacuna",
+   "grupo": "R4",
+   "enunciado": "男：（＿＿）你请我喝茶。\n女：不客气。",
+   "resposta": "F"
+  }
+ ]
+}

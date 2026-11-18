@@ -1,0 +1,170 @@
+{
+ "questoes": {
+  "1": [
+   {
+    "fal": null,
+    "txt": "很喜欢"
+   }
+  ],
+  "2": [
+   {
+    "fal": null,
+    "txt": "六块钱"
+   }
+  ],
+  "3": [
+   {
+    "fal": null,
+    "txt": "喝茶"
+   }
+  ],
+  "4": [
+   {
+    "fal": null,
+    "txt": "写字"
+   }
+  ],
+  "5": [
+   {
+    "fal": null,
+    "txt": "在前面"
+   }
+  ],
+  "6": [
+   {
+    "fal": null,
+    "txt": "怎么样？漂亮吗？"
+   }
+  ],
+  "7": [
+   {
+    "fal": null,
+    "txt": "他怎么不太高兴？"
+   }
+  ],
+  "8": [
+   {
+    "fal": null,
+    "txt": "她爱学习，爱读书。"
+   }
+  ],
+  "9": [
+   {
+    "fal": null,
+    "txt": "多少？四个。太少了。"
+   }
+  ],
+  "10": [
+   {
+    "fal": null,
+    "txt": "我看见了，小狗在下面。"
+   }
+  ],
+  "11": [
+   {
+    "fal": "男",
+    "txt": "苹果是什么时候买的？"
+   },
+   {
+    "fal": "女",
+    "txt": "昨天上午。"
+   }
+  ],
+  "12": [
+   {
+    "fal": "女",
+    "txt": "现在几点了？"
+   },
+   {
+    "fal": "男",
+    "txt": "七点零八。"
+   }
+  ],
+  "13": [
+   {
+    "fal": "男",
+    "txt": "认识这个字吗？"
+   },
+   {
+    "fal": "女",
+    "txt": "认识。这是米饭的米。"
+   }
+  ],
+  "14": [
+   {
+    "fal": "女",
+    "txt": "那个人是你的同学？"
+   },
+   {
+    "fal": "男",
+    "txt": "是。她今天去中国，九点的飞机。"
+   }
+  ],
+  "15": [
+   {
+    "fal": "男",
+    "txt": "下雨啦。"
+   },
+   {
+    "fal": "女",
+    "txt": "没关系，雨不大。"
+   }
+  ],
+  "16": [
+   {
+    "fal": null,
+    "txt": "今天是2012年2月2日，星期四。"
+   },
+   {
+    "fal": "问",
+    "txt": "今天星期几？"
+   }
+  ],
+  "17": [
+   {
+    "fal": null,
+    "txt": "我和我先生都喜欢看这个电影。"
+   },
+   {
+    "fal": "问",
+    "txt": "他们喜欢看什么？"
+   }
+  ],
+  "18": [
+   {
+    "fal": null,
+    "txt": "他中午回家吃饭。"
+   },
+   {
+    "fal": "问",
+    "txt": "他中午在哪儿吃饭？"
+   }
+  ],
+  "19": [
+   {
+    "fal": null,
+    "txt": "我女儿是医生，她在这个医院工作。"
+   },
+   {
+    "fal": "问",
+    "txt": "谁是医生？"
+   }
+  ],
+  "20": [
+   {
+    "fal": null,
+    "txt": "北京这几天很热。"
+   },
+   {
+    "fal": "问",
+    "txt": "北京这几天天气怎么样？"
+   }
+  ]
+ },
+ "duvidas": {
+  "7": "他/她 soam iguais: usei 他 porque a figura certa (B) mostra um homem.",
+  "11-15": "男/女 definido pelo tom de voz (f0): em cada diálogo a voz grave é 男 e a aguda 女; os rótulos do Scribe (voz 0/1) misturam locutora e personagem.",
+  "14": "他/她 soam iguais: usei 她 porque a figura certa (D) mostra uma moça de saia puxando uma mala.",
+  "16": "data escrita com algarismos (2012年2月2日), como falada/reconhecida."
+ }
+}

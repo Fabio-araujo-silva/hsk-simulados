@@ -1,0 +1,15 @@
+{
+ "_nota": "A figura da 24 saía errada (o extrator pegava a marca √/× do exemplo); recortada à mão da p. 7 pelo retângulo da imagem no PDF.",
+ "recortes": [
+  {
+   "pagina": 7,
+   "rect": [
+    221,
+    602,
+    274,
+    665
+   ],
+   "nome": "q24.png"
+  }
+ ]
+}

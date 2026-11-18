@@ -1,0 +1,424 @@
+{
+ "frases": {
+  "大家好！欢迎参加HSK（一级）考试。": "Olá a todos! Bem-vindos ao exame HSK (nível 1).",
+  "HSK（一级）听力考试分四部分，共20题。": "A prova de compreensão auditiva do HSK (nível 1) tem quatro partes, com 20 questões no total.",
+  "请大家注意，听力考试现在开始。": "Atenção, por favor: a prova de compreensão auditiva começa agora.",
+  "第一部分": "Primeira parte",
+  "一共5个题，每题听两次。": "São 5 questões no total; cada uma é ouvida duas vezes.",
+  "很高兴": "Muito feliz.",
+  "看电影": "Ver um filme.",
+  "现在开始第1题：": "Agora começa a questão 1:",
+  "第二部分": "Segunda parte",
+  "这是我的书。": "Este é o meu livro.",
+  "现在开始第6题：": "Agora começa a questão 6:",
+  "第三部分": "Terceira parte",
+  "你好！": "Olá!",
+  "你好！很高兴认识你。": "Olá! Prazer em conhecer você.",
+  "现在开始第11题：": "Agora começa a questão 11:",
+  "第四部分": "Quarta parte",
+  "下午我去商店，我想买一些水果。": "À tarde eu vou à loja; quero comprar algumas frutas.",
+  "她下午去哪里？": "Aonde ela vai à tarde?",
+  "现在开始第16题：": "Agora começa a questão 16:",
+  "听力考试现在结束。": "A prova de compreensão auditiva termina agora.",
+  "坐出租车。": "De táxi.",
+  "下雨了。": "Está chovendo.",
+  "桌子下面。": "Embaixo da mesa.",
+  "没有。": "Não.",
+  "苹果。": "Maçã.",
+  "好的，谢谢！": "Está bem, obrigado!",
+  "你喝水吗？": "Você quer beber água?",
+  "没关系": "Não tem problema",
+  "说": "dizer; falar",
+  "在": "estar em; em",
+  "名字": "nome",
+  "不": "não",
+  "学校": "escola",
+  "你叫什么名字？": "Qual é o seu nome?",
+  "四岁": "Quatro anos de idade",
+  "写字": "escrever (caracteres)",
+  "很冷": "muito frio",
+  "吃米饭": "comer arroz",
+  "没有钱": "Sem dinheiro",
+  "谢谢你请我喝茶。": "Obrigada por me convidar para tomar chá.",
+  "那是王小姐的狗。": "Aquele é o cachorro da senhorita Wang.",
+  "他在学习开车。": "Ele está aprendendo a dirigir.",
+  "这些东西都是你买的。": "Foi você que comprou todas estas coisas.",
+  "喂，我十五分钟后回去。": "Alô, volto em quinze minutos.",
+  "你喜欢哪个电脑？": "De qual computador você gosta?",
+  "这些我都喜欢。": "Eu gosto de todos estes.",
+  "你那儿有多少个椅子？": "Quantas cadeiras você tem aí?",
+  "五个。": "Cinco.",
+  "来，王医生，这块儿是你的。": "Tome, doutora Wang, este pedaço é seu.",
+  "好，谢谢。": "Certo, obrigada.",
+  "你一个人去中国？": "Você vai à China sozinho?",
+  "不，和我爸妈，我们三个人。": "Não, vou com meus pais, somos três pessoas.",
+  "在哪儿？": "Onde está?",
+  "在上面，看见了吗？": "Em cima. Está vendo?",
+  "明天是九月八号，星期二。": "Amanhã é dia 8 de setembro, terça-feira.",
+  "明天星期几？": "Que dia da semana é amanhã?",
+  "星期二": "terça-feira",
+  "星期四": "quinta-feira",
+  "星期六": "sábado",
+  "儿子在看电视呢。我去叫他。": "O filho está vendo TV. Vou chamá-lo.",
+  "儿子在做什么？": "O que o filho está fazendo?",
+  "读书": "ler; estudar",
+  "打电话": "telefonar",
+  "看电视": "ver TV",
+  "这是我朋友，她是小学老师。": "Esta é minha amiga, ela é professora do ensino fundamental.",
+  "谁是老师？": "Quem é professor(a)?",
+  "他同学": "colega de classe dele",
+  "他朋友": "amigo(a) dele",
+  "他的学生": "os alunos dele",
+  "上午我不在家，你下午来好吗？": "De manhã não estou em casa; você pode vir à tarde?",
+  "他什么时候在家？": "Quando ele está em casa?",
+  "昨天": "ontem",
+  "中午": "meio-dia",
+  "下午": "tarde",
+  "这个杯子很漂亮，我喜欢。": "Este copo é muito bonito, eu gosto.",
+  "那个杯子怎么样？": "Como é aquele copo?",
+  "很小": "muito pequeno",
+  "很漂亮": "muito bonito",
+  "太大了": "grande demais",
+  "她": "ela",
+  "听": "ouvir",
+  "衣服": "roupa",
+  "对不起": "desculpe",
+  "坐": "sentar",
+  "你今天做什么菜？": "Que prato você vai fazer hoje?",
+  "对不起，我想去睡觉了。": "Desculpe, quero ir dormir.",
+  "妈妈，你能看见我吗？": "Mamãe, você consegue me ver?",
+  "现在是13：17。": "Agora são 13h17.",
+  "不客气，你好点儿了吗？": "De nada. Você está um pouco melhor?",
+  "你爱吃什么水果？": "Que frutas você gosta de comer?",
+  "你们怎么去医院？": "Como vocês vão ao hospital?",
+  "北京今天天气怎么样？": "Como está o tempo em Pequim hoje?",
+  "小猫在哪儿？": "Onde está o gatinho?",
+  "他女儿工作了吗？": "A filha dele já está trabalhando?",
+  "她今天怎么不高兴？": "Por que ela está triste hoje?",
+  "妈妈，我去学校了，再见。": "Mamãe, estou indo para a escola. Tchau.",
+  "我在这里住了8年了。": "Moro aqui há 8 anos.",
+  "女：这家饭店人太多了。": "Mulher: Este restaurante está cheio demais.",
+  "男：没关系，我们去前面那家，那儿人少。": "Homem: Não tem problema, vamos àquele logo à frente, lá tem menos gente.",
+  "男：李先生会说汉语吗？": "Homem: O senhor Li fala chinês?",
+  "女：会一点儿。": "Mulher: Um pouquinho."
+ },
+ "lacunas": {
+  "她今天怎么（＿＿）高兴？": "Por que ela está ___ feliz hoje?",
+  "妈妈，我去（＿＿）了，再见。": "Mamãe, estou indo para ___. Tchau.",
+  "我（＿＿）这里住了8年了。": "Moro ___ aqui há 8 anos.",
+  "男：（＿＿），我们去前面那家，那儿人少。": "Homem: ___, vamos àquele logo à frente, lá tem menos gente.",
+  "男：李先生会（＿＿）汉语吗？": "Homem: O senhor Li sabe ___ chinês?"
+ },
+ "questoes": {
+  "1": {
+   "explicacao": "A fala é 四岁 (quatro anos). A figura mostra um homem adulto, não uma criança de quatro anos, então não combina.",
+   "trecho": "四岁",
+   "palavras": [
+    "岁"
+   ]
+  },
+  "2": {
+   "explicacao": "Você ouve 写字 (escrever). A foto mostra uma mão escrevendo num caderno, então combina.",
+   "trecho": "写字",
+   "palavras": [
+    "写字"
+   ]
+  },
+  "3": {
+   "explicacao": "Você ouve 很冷 (muito frio). A foto mostra uma moça de gorro e luvas, encolhida de frio, então combina.",
+   "trecho": "很冷",
+   "palavras": [
+    "冷"
+   ]
+  },
+  "4": {
+   "explicacao": "A fala é 吃米饭 (comer arroz), mas a foto mostra bananas. Não combina.",
+   "trecho": "吃米饭",
+   "palavras": [
+    "米饭"
+   ]
+  },
+  "5": {
+   "explicacao": "Você ouve 没有钱 (sem dinheiro). A foto mostra mãos abrindo uma carteira vazia, então combina.",
+   "trecho": "没有钱",
+   "palavras": [
+    "钱"
+   ]
+  },
+  "6": {
+   "explicacao": "Na frase aparece 请我喝茶 (me convidou para tomar chá). A figura A mostra uma moça bebendo numa xícara.",
+   "trecho": "谢谢你请我喝茶",
+   "palavras": [
+    "喝茶",
+    "请"
+   ]
+  },
+  "7": {
+   "explicacao": "A frase diz que aquele é o cachorro (狗) da senhorita Wang. A figura A é o cachorrinho; B é pintinho e C é gato.",
+   "trecho": "王小姐的狗",
+   "palavras": [
+    "狗",
+    "小姐"
+   ]
+  },
+  "8": {
+   "explicacao": "他在学习开车 = ele está aprendendo a dirigir (学习开车). A figura B mostra um homem ao volante de um carro.",
+   "trecho": "他在学习开车",
+   "palavras": [
+    "开车",
+    "学习"
+   ]
+  },
+  "9": {
+   "explicacao": "A frase diz que as coisas foram todas compradas por você (东西都是你买的). A figura C mostra uma mulher carregada de sacolas de compras.",
+   "trecho": "这些东西都是你买的",
+   "palavras": [
+    "东西",
+    "买"
+   ]
+  },
+  "10": {
+   "explicacao": "A pessoa diz 喂 (alô), ou seja, está ao telefone, e que volta em 15 minutos. A figura C mostra uma mulher falando ao celular.",
+   "trecho": "喂，我十五分钟后回去",
+   "palavras": [
+    "喂",
+    "回去"
+   ]
+  },
+  "11": {
+   "explicacao": "Ele pergunta de qual computador ela gosta (哪个电脑) e ela responde que gosta de todos. A figura F mostra uma moça diante de vários notebooks.",
+   "trecho": "你喜欢哪个电脑",
+   "palavras": [
+    "电脑",
+    "喜欢"
+   ]
+  },
+  "12": {
+   "explicacao": "A pergunta é quantas cadeiras (椅子) e a resposta é 五个 (cinco). A figura B mostra cinco cadeiras.",
+   "trecho": "你那儿有多少个椅子",
+   "palavras": [
+    "椅子",
+    "多少"
+   ]
+  },
+  "13": {
+   "explicacao": "Ele diz 这块儿是你的 (este pedaço é seu), oferecendo uma fatia. A figura A mostra uma fatia de bolo sendo servida num prato.",
+   "trecho": "这块儿是你的",
+   "palavras": [
+    "这块儿",
+    "医生"
+   ]
+  },
+  "14": {
+   "explicacao": "Ela pergunta se ele vai sozinho à China e ele diz 我们三个人 (somos três pessoas), com os pais. A figura D mostra um homem com mala de viagem.",
+   "trecho": "我们三个人",
+   "palavras": [
+    "中国",
+    "爸妈"
+   ]
+  },
+  "15": {
+   "explicacao": "Ele pergunta onde (在哪儿) e ela aponta: 在上面 (lá em cima). A figura E mostra um casal e a moça apontando para o alto.",
+   "trecho": "在上面",
+   "palavras": [
+    "上面",
+    "看见"
+   ]
+  },
+  "16": {
+   "explicacao": "A frase diz que amanhã é dia 8 de setembro, 星期二 (terça-feira). A resposta é A.",
+   "trecho": "星期二",
+   "palavras": [
+    "星期",
+    "明天"
+   ]
+  },
+  "17": {
+   "explicacao": "A frase diz 儿子在看电视呢 (o filho está vendo TV). A resposta é C.",
+   "trecho": "儿子在看电视呢",
+   "palavras": [
+    "看电视",
+    "儿子"
+   ]
+  },
+  "18": {
+   "explicacao": "A pessoa diz 这是我朋友 (esta é minha amiga) e que ela é professora. Quem é professora é a amiga, por isso B.",
+   "trecho": "这是我朋友，她是小学老师",
+   "palavras": [
+    "朋友",
+    "老师"
+   ]
+  },
+  "19": {
+   "explicacao": "Ele diz 上午我不在家 (de manhã não estou em casa) e pede que a pessoa venha 下午 (à tarde). Logo, ele está em casa à tarde: C.",
+   "trecho": "你下午来好吗",
+   "palavras": [
+    "上午",
+    "下午"
+   ]
+  },
+  "20": {
+   "explicacao": "A frase diz 这个杯子很漂亮 (este copo é muito bonito), e a pergunta é como o copo é. A resposta é B, 很漂亮.",
+   "trecho": "这个杯子很漂亮",
+   "palavras": [
+    "杯子",
+    "漂亮"
+   ]
+  },
+  "21": {
+   "explicacao": "A palavra 她 significa \"ela\", mas a figura mostra um rapaz fazendo sinal de positivo. Não combina.",
+   "trecho": "她",
+   "palavras": [
+    "她"
+   ]
+  },
+  "22": {
+   "explicacao": "A palavra 听 significa \"ouvir\". A foto mostra uma moça com fones de ouvido, então combina.",
+   "trecho": "听",
+   "palavras": [
+    "听"
+   ]
+  },
+  "23": {
+   "explicacao": "A palavra 衣服 significa \"roupa\", mas a foto mostra sapatos. Não combina.",
+   "trecho": "衣服",
+   "palavras": [
+    "衣服"
+   ]
+  },
+  "24": {
+   "explicacao": "A palavra 对不起 é \"desculpe\", mas a foto mostra um homem e uma menina acenando. Não combina.",
+   "trecho": "对不起",
+   "palavras": [
+    "对不起"
+   ]
+  },
+  "25": {
+   "explicacao": "A palavra 坐 significa \"sentar\". A foto mostra um homem sentado numa cadeira de escritório lendo jornal, então combina.",
+   "trecho": "坐",
+   "palavras": [
+    "坐"
+   ]
+  },
+  "26": {
+   "explicacao": "A frase pergunta que prato você vai fazer hoje (做什么菜). A figura B mostra um casal picando legumes.",
+   "trecho": "你今天做什么菜",
+   "palavras": [
+    "菜",
+    "今天"
+   ]
+  },
+  "27": {
+   "explicacao": "A frase pede desculpas e diz que quer ir dormir (想去睡觉). A figura D mostra uma mulher se espreguiçando e bocejando de sono.",
+   "trecho": "我想去睡觉了",
+   "palavras": [
+    "对不起",
+    "睡觉"
+   ]
+  },
+  "28": {
+   "explicacao": "A criança pergunta à mãe 你能看见我吗 (você consegue me ver?). A figura A mostra uma criança espiando atrás de uma árvore.",
+   "trecho": "你能看见我吗",
+   "palavras": [
+    "看见",
+    "妈妈"
+   ]
+  },
+  "29": {
+   "explicacao": "A frase informa a hora, 13h17. A figura F mostra um homem olhando o relógio de pulso.",
+   "trecho": "现在是13：17",
+   "palavras": [
+    "现在"
+   ]
+  },
+  "30": {
+   "explicacao": "A frase pergunta se a pessoa está melhor (好点儿了吗), como se faz com um doente. A figura C mostra uma mulher na cama do hospital recebendo flores.",
+   "trecho": "你好点儿了吗",
+   "palavras": [
+    "不客气",
+    "好点儿"
+   ]
+  },
+  "31": {
+   "explicacao": "A pergunta é de qual fruta (水果) você gosta, e a resposta é 苹果 (maçã): E.",
+   "trecho": "苹果。",
+   "palavras": [
+    "水果",
+    "苹果"
+   ]
+  },
+  "32": {
+   "explicacao": "A pergunta é como vão ao hospital (怎么去). A resposta natural é 坐出租车 (de táxi): A.",
+   "trecho": "坐出租车。",
+   "palavras": [
+    "怎么",
+    "医院"
+   ]
+  },
+  "33": {
+   "explicacao": "A pergunta é como está o tempo (天气怎么样). A resposta é 下雨了 (está chovendo): B.",
+   "trecho": "下雨了。",
+   "palavras": [
+    "天气",
+    "下雨"
+   ]
+  },
+  "34": {
+   "explicacao": "A pergunta é onde (在哪儿) está o gatinho. A resposta é 桌子下面 (embaixo da mesa): C.",
+   "trecho": "桌子下面。",
+   "palavras": [
+    "在哪儿",
+    "小猫"
+   ]
+  },
+  "35": {
+   "explicacao": "A pergunta é se a filha já trabalha (工作了吗). A resposta 没有 (ainda não) é um não: D.",
+   "trecho": "没有。",
+   "palavras": [
+    "工作",
+    "女儿"
+   ]
+  },
+  "36": {
+   "explicacao": "Falta o advérbio de negação 不: 怎么不高兴 (\"por que não está feliz?\"). A opção certa é E.",
+   "trecho": "她今天怎么（＿＿）高兴",
+   "palavras": [
+    "怎么",
+    "高兴"
+   ]
+  },
+  "37": {
+   "explicacao": "Depois de 去 vem o lugar aonde se vai: 去学校 (ir à escola). A opção certa é F.",
+   "trecho": "我去（＿＿）了",
+   "palavras": [
+    "学校",
+    "再见"
+   ]
+  },
+  "38": {
+   "explicacao": "在 indica o lugar onde se mora: 在这里住 (\"morar aqui\"). A opção certa é C.",
+   "trecho": "我（＿＿）这里住了8年了",
+   "palavras": [
+    "在",
+    "住"
+   ]
+  },
+  "39": {
+   "explicacao": "A mulher reclama que o restaurante está cheio e o homem responde que não há problema (没关系): vão a outro. A opção certa é A.",
+   "trecho": "（＿＿），我们去前面那家",
+   "palavras": [
+    "没关系",
+    "饭店"
+   ]
+  },
+  "40": {
+   "explicacao": "说 汉语 significa falar chinês. Ela responde 会一点儿 (sei um pouco). A opção certa é B.",
+   "trecho": "李先生会（＿＿）汉语吗",
+   "palavras": [
+    "说",
+    "汉语"
+   ]
+  }
+ },
+ "aceitas": {}
+}

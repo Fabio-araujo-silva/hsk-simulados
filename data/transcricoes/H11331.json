@@ -1,0 +1,169 @@
+{
+ "questoes": {
+  "1": [
+   {
+    "fal": null,
+    "txt": "老师和学生"
+   }
+  ],
+  "2": [
+   {
+    "fal": null,
+    "txt": "请坐"
+   }
+  ],
+  "3": [
+   {
+    "fal": null,
+    "txt": "不想听"
+   }
+  ],
+  "4": [
+   {
+    "fal": null,
+    "txt": "三个小狗"
+   }
+  ],
+  "5": [
+   {
+    "fal": null,
+    "txt": "在商店"
+   }
+  ],
+  "6": [
+   {
+    "fal": null,
+    "txt": "小王说九号坐飞机来。"
+   }
+  ],
+  "7": [
+   {
+    "fal": null,
+    "txt": "不客气，来喝杯热水。"
+   }
+  ],
+  "8": [
+   {
+    "fal": null,
+    "txt": "他怎么不高兴？"
+   }
+  ],
+  "9": [
+   {
+    "fal": null,
+    "txt": "我看见你的名字了。"
+   }
+  ],
+  "10": [
+   {
+    "fal": null,
+    "txt": "我们四个是好朋友。"
+   }
+  ],
+  "11": [
+   {
+    "fal": "男",
+    "txt": "女儿呢？"
+   },
+   {
+    "fal": "女",
+    "txt": "在那儿吃苹果呢。"
+   }
+  ],
+  "12": [
+   {
+    "fal": "女",
+    "txt": "现在几点了？"
+   },
+   {
+    "fal": "男",
+    "txt": "八点二十。"
+   }
+  ],
+  "13": [
+   {
+    "fal": "男",
+    "txt": "今天天气不太好。"
+   },
+   {
+    "fal": "女",
+    "txt": "是，下雨了，有点儿冷。"
+   }
+  ],
+  "14": [
+   {
+    "fal": "女",
+    "txt": "你什么时候学会开车了？"
+   },
+   {
+    "fal": "男",
+    "txt": "上个星期。"
+   }
+  ],
+  "15": [
+   {
+    "fal": "男",
+    "txt": "你不看电视啦？"
+   },
+   {
+    "fal": "女",
+    "txt": "不看了。我想去睡觉了。"
+   }
+  ],
+  "16": [
+   {
+    "fal": null,
+    "txt": "李小姐写的字很漂亮。"
+   },
+   {
+    "fal": "问",
+    "txt": "谁的字很漂亮？"
+   }
+  ],
+  "17": [
+   {
+    "fal": null,
+    "txt": "对不起，这儿少了三个椅子。"
+   },
+   {
+    "fal": "问",
+    "txt": "那儿少了什么东西？"
+   }
+  ],
+  "18": [
+   {
+    "fal": null,
+    "txt": "我来中国六个月了，有点儿想家。"
+   },
+   {
+    "fal": "问",
+    "txt": "他怎么了？"
+   }
+  ],
+  "19": [
+   {
+    "fal": null,
+    "txt": "后面那个桌子太大了。"
+   },
+   {
+    "fal": "问",
+    "txt": "那个桌子怎么样？"
+   }
+  ],
+  "20": [
+   {
+    "fal": null,
+    "txt": "我们去买些菜，中午在家里吃。"
+   },
+   {
+    "fal": "问",
+    "txt": "他们中午在哪儿吃饭？"
+   }
+  ]
+ },
+ "duvidas": {
+  "13": "\"是，下雨了\" — a vírgula depois de 是 é interpretação da pausa; o áudio diz 是 + 下雨了.",
+  "17": "a pergunta diz 那儿少了什么东西？ nas duas leituras (ouvido de novo com whisper small); mantido como falado, embora a frase anterior diga 这儿.",
+  "8": "他/她 soam iguais (tā); 他 porque a figura da resposta oficial (B) mostra um homem triste, de cabeça baixa."
+ }
+}
