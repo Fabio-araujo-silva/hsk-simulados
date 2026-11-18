@@ -17,7 +17,7 @@ def textos_da_questao(p: dict, q: dict) -> str:
     partes = []
     for f in q.get("audioTexto") or []:
         partes.append(f["txt"])
-    for k in ("afirmacao", "pergunta", "texto", "enunciado", "resposta", "antes", "depois"):
+    for k in ("afirmacao", "pergunta", "texto", "enunciado", "resposta", "antes", "depois", "palavra"):
         if isinstance(q.get(k), str):
             partes.append(q[k])
     partes.extend((q.get("opcoes") or {}).values())

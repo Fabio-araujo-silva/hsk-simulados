@@ -82,8 +82,10 @@ def textos_da_prova(p: dict) -> list[dict]:
         add(q.get("texto"), f"q{n} texto")
         for l, op in (q.get("opcoes") or {}).items():
             add(op, f"q{n} opção {l}")
-        if q["tipo"] == "pareamento":
+        if q["tipo"] in ("pareamento", "imagem"):
             add(q.get("enunciado"), f"q{n} frase")
+        if q["tipo"] == "imagem-vf":
+            add(q.get("palavra"), f"q{n} palavra ao lado da figura")
         if q["tipo"] == "lacuna":
             resp = (p["grupos"][q["grupo"]].get("opcoes") or {}).get(q.get("resposta"))
             for linha in q["enunciado"].split("\n"):
@@ -116,7 +118,15 @@ def dossie(pid: str):
         L.append(f"\n## {n} · {q['secao']}{q['parte']} · {tipo}")
         g = p["grupos"].get(q.get("grupo") or "", {})
         if tipo == "imagem":
-            L.append(f"(figuras {', '.join(g.get('letras', []))}; exemplo usa {g.get('exemploUsa')}) — figura correta: {q['resposta']}")
+            L.append(f"(figuras {', '.join(g.get('letras', []))}; exemplo usa {g.get('exemploUsa')}) — figura correta: {q['resposta']}  [arquivos: public/{(g.get('imagens') or {}).get(str(q['resposta']), '?')}]")
+            if q.get("enunciado"):
+                L.append(f"frase: {q['enunciado']}")
+        if tipo == "imagem-vf":
+            L.append(f"(uma figura: public/{q.get('imagem')}) — a figura corresponde? resposta: {'√ certo' if q['resposta'] else '× errado'}")
+            if q.get("palavra"):
+                L.append(f"palavra impressa: {q['palavra']}")
+        if tipo == "imagem-abc":
+            L.append(f"(três figuras A/B/C: {', '.join('public/' + v for v in (q.get('imagens') or {}).values())}) — figura correta: {q['resposta']}")
         if q.get("audioTexto"):
             L.append("Áudio:")
             for f in q["audioTexto"]:
@@ -234,12 +244,22 @@ class Montador:
                 nq["falas"] = falas or None
                 if q["tipo"] == "vf":
                     nq["afirmacao"] = self.F(q["afirmacao"])
+                if q.get("imagem"):
+                    nq["imagem"] = q["imagem"]
+                if q.get("imagens"):
+                    nq["imagens"] = q["imagens"]
                 if q["tipo"] == "abc":
                     nq["opcoes"] = {l: self.F(t) for l, t in q["opcoes"].items()}
                     if q.get("pergunta"):
                         nq["pergunta"] = self.F(q["pergunta"])
-            elif q["tipo"] == "pareamento":
-                nq["texto"] = self.F(q["enunciado"])
+            elif q["tipo"] in ("pareamento", "imagem"):
+                nq["texto"] = self.F(q.get("enunciado"))
+            elif q["tipo"] == "imagem-vf":
+                nq["imagem"] = q.get("imagem")
+                nq["palavra"] = self.F(q.get("palavra"))
+            elif q["tipo"] == "vf":  # HSK 2 leitura parte 3: frase + afirmação ★
+                nq["texto"] = self.F(q.get("texto"))
+                nq["afirmacao"] = self.F(q.get("afirmacao"))
             elif q["tipo"] == "lacuna":
                 resp = (p["grupos"][q["grupo"]].get("opcoes") or {}).get(q.get("resposta"))
                 nq["linhas"] = [self.F(l, lacuna_de=preenche(l, resp)) if LACUNA in l else self.F(l) for l in q["enunciado"].split("\n")]
@@ -291,7 +311,8 @@ class Montador:
             audio = {"src": f"audio/{self.pid}.mp3", "duracao": meta.get("duracao", 0)}
         return {
             "id": self.pid,
-            "titulo": meta.get("titulo", "HSK 3 — prova oficial"),
+            "nivel": p.get("nivel") or int(self.pid[1]),
+            "titulo": meta.get("titulo", "prova oficial"),
             "origem": meta.get("origem"),
             "transcricao": p.get("transcricao", "oficial") if p.get("roteiro") else None,
             "audio": audio,
@@ -375,6 +396,7 @@ def indice():
         out.append(
             {
                 "id": p["id"],
+                "nivel": p.get("nivel") or int(p["id"][1]),
                 "titulo": p["titulo"],
                 "origem": p.get("origem"),
                 "temAudio": bool(p.get("audio")),

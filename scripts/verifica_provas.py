@@ -2,7 +2,8 @@
 
     python scripts/verifica_provas.py [<ID> ...]   (sem IDs: todas)
 
-Confere o que o formato HSK 3 garante: quantidade de opções, letras únicas por grupo,
+HSK 1 e HSK 2 são conferidos pelo `verifica` de parse_hsk1.py / parse_hsk2.py.
+Para o HSK 3, confere o que o formato garante: quantidade de opções, letras únicas por grupo,
 exemplo não reutilizado, peças do "ordenar" = frase do gabarito, etc.
 """
 from __future__ import annotations
@@ -51,7 +52,7 @@ def verifica(p: dict, exige_transcricao: bool = True) -> list[str]:
             e.append(f"questões {nums[0]}–{nums[-1]}: letra repetida no gabarito {rep}")
         for n in nums:
             r = q.get(n, {}).get("resposta")
-            if r not in letras:
+            if not isinstance(r, str) or r not in letras:
                 e.append(f"{n}: resposta {r!r} fora de {letras}")
             if exemplo and r == exemplo:
                 e.append(f"{n}: resposta igual à letra do exemplo ({exemplo})")
@@ -119,12 +120,27 @@ def verifica(p: dict, exige_transcricao: bool = True) -> list[str]:
     return e
 
 
+def por_nivel(p: dict) -> list[str]:
+    """HSK 3 usa as checagens daqui; HSK 1 e 2 usam as do próprio parser (formatos diferentes)."""
+    nivel = p.get("nivel") or int(p["id"][1])
+    if nivel == 1:
+        import parse_hsk1
+
+        return parse_hsk1.verifica(p)
+    if nivel == 2:
+        import parse_hsk2
+
+        return parse_hsk2.verifica(p)
+    return verifica(p)
+
+
 if __name__ == "__main__":
+    sys.path.insert(0, str(Path(__file__).parent))
     sys.stdout.reconfigure(encoding="utf-8")
     ids = sys.argv[1:] or sorted(a.stem for a in (RAIZ / "data" / "provas").glob("H*.json"))
     for pid in ids:
         p = json.loads((RAIZ / "data" / "provas" / f"{pid}.json").read_text(encoding="utf-8"))
-        es = verifica(p)
+        es = por_nivel(p)
         print(f"{pid}: {'OK' if not es else f'{len(es)} problema(s)'}")
         for x in es:
             print("   -", x)
