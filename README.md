@@ -157,6 +157,7 @@ scripts/textos.py           segmentação (jieba + listas HSK + correções em d
 scripts/enriquece.py        junta tudo → public/conteudo/provas/<ID>.json, lexico.json, index.json
 scripts/valida_traducoes.py confere traduções/explicações contra a prova
 scripts/vocabulario.py      data/vocabulario/hsk1–3.txt → public/conteudo/vocabulario.json (aba Vocabulário)
+scripts/exemplos.py         exemplos (例如) do início de cada parte, por nível → public/conteudo/exemplos.json
 
 data/traducoes/<ID>.json    traduções PT, explicações, trecho e palavras-chave por questão
 data/transcricoes/<ID>.json texto do áudio reconstruído (provas sem 听力材料)

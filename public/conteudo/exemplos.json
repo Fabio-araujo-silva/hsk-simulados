@@ -1,0 +1,1265 @@
+{
+ "1": [
+  {
+   "parte": "L1",
+   "bloco": "L1",
+   "roteiro": 0,
+   "itens": [
+    {
+     "falas": [
+      0
+     ],
+     "resposta": true,
+     "explica": "No caderno, a figura deste item combina com 很高兴 (“muito contente”) → √. A figura não está no app.",
+     "origem": "conferir",
+     "conferir": true
+    },
+    {
+     "falas": [
+      1
+     ],
+     "resposta": false,
+     "explica": "No caderno, a figura deste item não mostra 看电影 (“ver um filme”) → ×. A figura não está no app.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "L2",
+   "bloco": "L2",
+   "roteiro": 1,
+   "itens": [
+    {
+     "falas": [
+      0
+     ],
+     "explica": "Ouve-se 这是我的书 (“este é o meu livro”): a resposta é a figura em que aparece um livro. As três figuras do exemplo não estão no app.",
+     "origem": "deduzido"
+    }
+   ]
+  },
+  {
+   "parte": "L3",
+   "bloco": "L3",
+   "roteiro": 2,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1
+     ],
+     "figura": "C",
+     "resposta": "C",
+     "explica": "Duas pessoas se cumprimentam (你好！很高兴认识你) → a figura delas apertando as mãos.",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "L4",
+   "bloco": "L4",
+   "roteiro": 3,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1
+     ],
+     "opcoes": {
+      "A": {
+       "zh": "商店",
+       "tk": [
+        "商店"
+       ],
+       "py": [
+        "shāngdiàn"
+       ],
+       "pt": "loja"
+      },
+      "B": {
+       "zh": "医院",
+       "tk": [
+        "医院"
+       ],
+       "py": [
+        "yīyuàn"
+       ],
+       "pt": "hospital"
+      },
+      "C": {
+       "zh": "学校",
+       "tk": [
+        "学校"
+       ],
+       "py": [
+        "xuéxiào"
+       ],
+       "pt": "escola"
+      }
+     },
+     "resposta": "A",
+     "explica": "下午我去商店 — “à tarde eu vou à loja”: a resposta é 商店 (dita no áudio). As alternativas impressas são do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R2",
+   "bloco": "R2",
+   "itens": [
+    {
+     "figura": "E",
+     "resposta": "E",
+     "texto": {
+      "zh": "我很喜欢这本书。",
+      "tk": [
+       "我",
+       "很",
+       "喜欢",
+       "这",
+       "本",
+       "书",
+       "。"
+      ],
+      "py": [
+       "wǒ",
+       "hěn",
+       "xǐhuān",
+       "zhè",
+       "běn",
+       "shū",
+       ""
+      ],
+      "pt": "Eu gosto muito deste livro."
+     },
+     "explica": "A frase fala de um livro → a figura da moça lendo. A letra da figura vem dos dados; a frase é a do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R3",
+   "bloco": "R3",
+   "itens": [
+    {
+     "texto": {
+      "zh": "你喝水吗？",
+      "tk": [
+       "你",
+       "喝",
+       "水",
+       "吗",
+       "？"
+      ],
+      "py": [
+       "nǐ",
+       "hē",
+       "shuǐ",
+       "ma",
+       ""
+      ],
+      "pt": "Você quer beber água?"
+     },
+     "opcoes": {
+      "F": {
+       "zh": "好的，谢谢！",
+       "tk": [
+        "好",
+        "的",
+        "，",
+        "谢谢",
+        "！"
+       ],
+       "py": [
+        "hǎo",
+        "de",
+        "",
+        "xièxiè",
+        ""
+       ],
+       "pt": "Está bem, obrigado!"
+      }
+     },
+     "resposta": "F",
+     "explica": "你喝水吗？ (“você bebe água?”) → 好的，谢谢！ (“sim, obrigado!”).",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "R4",
+   "bloco": "R4",
+   "itens": [
+    {
+     "texto": {
+      "zh": "你叫什么名字？",
+      "tk": [
+       "你",
+       "叫",
+       "什么",
+       "名字",
+       "？"
+      ],
+      "py": [
+       "nǐ",
+       "jiào",
+       "shénme",
+       "míngzì",
+       ""
+      ],
+      "pt": "Qual é o seu nome?"
+     },
+     "opcoes": {
+      "D": {
+       "zh": "名字",
+       "tk": [
+        "名字"
+       ],
+       "py": [
+        "míngzì"
+       ],
+       "pt": "nome"
+      }
+     },
+     "resposta": "D",
+     "destaque": "名字",
+     "explica": "你叫什么名字？ — “qual é o seu nome?”: a lacuna pede 名字 (nome).",
+     "origem": "dado"
+    }
+   ]
+  }
+ ],
+ "2": [
+  {
+   "parte": "L1",
+   "bloco": "L1",
+   "roteiro": 0,
+   "itens": [
+    {
+     "falas": [
+      0
+     ],
+     "resposta": true,
+     "explica": "No caderno, a figura deste item mostra uma família de três pessoas → √. A figura não está no app.",
+     "origem": "conferir",
+     "conferir": true
+    },
+    {
+     "falas": [
+      1
+     ],
+     "resposta": false,
+     "explica": "No caderno, a figura deste item não mostra alguém indo de ônibus ao trabalho → ×. A figura não está no app.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "L2",
+   "bloco": "L2a",
+   "roteiro": 1,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1
+     ],
+     "figura": "D",
+     "resposta": "D",
+     "explica": "我最喜欢踢足球 — “o que eu mais gosto é jogar futebol” → a figura da moça com a bola de futebol.",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "L3",
+   "bloco": "L3",
+   "roteiro": 2,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1,
+      2
+     ],
+     "opcoes": {
+      "A": {
+       "zh": "红色",
+       "tk": [
+        "红色"
+       ],
+       "py": [
+        "hóngsè"
+       ],
+       "pt": "vermelho"
+      },
+      "B": {
+       "zh": "黑色",
+       "tk": [
+        "黑色"
+       ],
+       "py": [
+        "hēisè"
+       ],
+       "pt": "preto"
+      },
+      "C": {
+       "zh": "白色",
+       "tk": [
+        "白色"
+       ],
+       "py": [
+        "báisè"
+       ],
+       "pt": "branco"
+      }
+     },
+     "resposta": "A",
+     "explica": "左边那个红色的是我的 — “o vermelho da esquerda é o meu”: a resposta é 红色 (dita no áudio). As alternativas impressas são do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "L4",
+   "bloco": "L4",
+   "roteiro": 3,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "opcoes": {
+      "A": {
+       "zh": "名字",
+       "tk": [
+        "名字"
+       ],
+       "py": [
+        "míngzì"
+       ],
+       "pt": "nome"
+      },
+      "B": {
+       "zh": "时间",
+       "tk": [
+        "时间"
+       ],
+       "py": [
+        "shíjiān"
+       ],
+       "pt": "horário"
+      },
+      "C": {
+       "zh": "房间号",
+       "tk": [
+        "房间",
+        "号"
+       ],
+       "py": [
+        "fángjiān",
+        "hào"
+       ],
+       "pt": "número do quarto"
+      }
+     },
+     "resposta": "A",
+     "explica": "请在这儿写您的名字 — “escreva o seu nome aqui”: a resposta é 名字. As alternativas impressas são do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R1",
+   "bloco": "R1",
+   "itens": [
+    {
+     "figura": "D",
+     "resposta": "D",
+     "texto": {
+      "zh": "每个星期六，我都去打篮球。",
+      "tk": [
+       "每",
+       "个",
+       "星期六",
+       "，",
+       "我",
+       "都",
+       "去",
+       "打",
+       "篮球",
+       "。"
+      ],
+      "py": [
+       "měi",
+       "gè",
+       "xīngqīliù",
+       "",
+       "wǒ",
+       "dōu",
+       "qù",
+       "dǎ",
+       "lánqiú",
+       ""
+      ],
+      "pt": "Todo sábado eu vou jogar basquete."
+     },
+     "explica": "打篮球 = jogar basquete → a figura do rapaz arremessando a bola. A letra da figura vem dos dados; a frase é a do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R2",
+   "bloco": "R2",
+   "itens": [
+    {
+     "texto": {
+      "zh": "这儿的羊肉很好吃，但是也很贵。",
+      "tk": [
+       "这儿",
+       "的",
+       "羊肉",
+       "很",
+       "好吃",
+       "，",
+       "但是",
+       "也",
+       "很",
+       "贵",
+       "。"
+      ],
+      "py": [
+       "zhèr",
+       "de",
+       "yángròu",
+       "hěn",
+       "hǎochī",
+       "",
+       "dànshì",
+       "yě",
+       "hěn",
+       "guì",
+       ""
+      ],
+      "pt": "A carne de carneiro daqui é muito gostosa, mas também é muito cara."
+     },
+     "opcoes": {
+      "E": {
+       "zh": "贵",
+       "tk": [
+        "贵"
+       ],
+       "py": [
+        "guì"
+       ],
+       "pt": "caro"
+      }
+     },
+     "resposta": "E",
+     "destaque": "贵",
+     "explica": "“O carneiro daqui é gostoso, mas também é muito ___”: o 但是 pede um contraste → 贵 (caro).",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "R3",
+   "bloco": "R3",
+   "itens": [
+    {
+     "texto": {
+      "zh": "现在是11点30分，他们已经游了20分钟了。",
+      "tk": [
+       "现在",
+       "是",
+       "11",
+       "点",
+       "30",
+       "分",
+       "，",
+       "他们",
+       "已经",
+       "游",
+       "了",
+       "20",
+       "分钟",
+       "了",
+       "。"
+      ],
+      "py": [
+       "xiànzài",
+       "shì",
+       "",
+       "diǎn",
+       "",
+       "fēn",
+       "",
+       "tāmen",
+       "yǐjīng",
+       "yóu",
+       "le",
+       "",
+       "fēnzhōng",
+       "le",
+       ""
+      ],
+      "pt": "Agora são 11h30, e eles já nadaram 20 minutos."
+     },
+     "afirmacao": {
+      "zh": "他们11点10分开始游泳。",
+      "tk": [
+       "他们",
+       "11",
+       "点",
+       "10",
+       "分",
+       "开始",
+       "游泳",
+       "。"
+      ],
+      "py": [
+       "tāmen",
+       "",
+       "diǎn",
+       "",
+       "fēn",
+       "kāishǐ",
+       "yóuyǒng",
+       ""
+      ],
+      "pt": "Eles começaram a nadar às 11h10."
+     },
+     "resposta": true,
+     "explica": "11h30 menos 20 minutos = 11h10 → √ (a frase é a do caderno padrão; a resposta sai da conta).",
+     "origem": "conferir",
+     "conferir": true
+    },
+    {
+     "texto": {
+      "zh": "我会跳舞，但跳得不怎么样。",
+      "tk": [
+       "我",
+       "会",
+       "跳舞",
+       "，",
+       "但",
+       "跳",
+       "得",
+       "不",
+       "怎么样",
+       "。"
+      ],
+      "py": [
+       "wǒ",
+       "huì",
+       "tiàowǔ",
+       "",
+       "dàn",
+       "tiào",
+       "de",
+       "bù",
+       "zěnmeyàng",
+       ""
+      ],
+      "pt": "Eu sei dançar, mas não danço muito bem."
+     },
+     "afirmacao": {
+      "zh": "我跳得非常好。",
+      "tk": [
+       "我",
+       "跳",
+       "得",
+       "非常",
+       "好",
+       "。"
+      ],
+      "py": [
+       "wǒ",
+       "tiào",
+       "de",
+       "fēicháng",
+       "hǎo",
+       ""
+      ],
+      "pt": "Eu danço muito bem."
+     },
+     "resposta": false,
+     "explica": "不怎么样 = “não grande coisa”, o contrário de 非常好 → × (a frase é a do caderno padrão).",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R4",
+   "bloco": "R4a",
+   "itens": [
+    {
+     "texto": {
+      "zh": "他还在教室里学习。",
+      "tk": [
+       "他",
+       "还",
+       "在",
+       "教室",
+       "里",
+       "学习",
+       "。"
+      ],
+      "py": [
+       "tā",
+       "hái",
+       "zài",
+       "jiàoshì",
+       "lǐ",
+       "xuéxí",
+       ""
+      ],
+      "pt": "Ele ainda está estudando na sala de aula."
+     },
+     "opcoes": {
+      "E": {
+       "zh": "他在哪儿呢？你看见他了吗？",
+       "tk": [
+        "他",
+        "在",
+        "哪儿",
+        "呢",
+        "？",
+        "你",
+        "看见",
+        "他",
+        "了",
+        "吗",
+        "？"
+       ],
+       "py": [
+        "tā",
+        "zài",
+        "nǎr",
+        "ne",
+        "",
+        "nǐ",
+        "kànjiàn",
+        "tā",
+        "le",
+        "ma",
+        ""
+       ],
+       "pt": "Onde ele está? Você o viu?"
+      }
+     },
+     "resposta": "E",
+     "explica": "他在哪儿呢？你看见他了吗？ (“onde ele está? você o viu?”) → 他还在教室里学习 (“ele ainda está estudando na sala de aula”).",
+     "origem": "dado"
+    }
+   ]
+  }
+ ],
+ "3": [
+  {
+   "parte": "L1",
+   "bloco": "L1a",
+   "roteiro": 0,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1
+     ],
+     "figura": "D",
+     "resposta": "D",
+     "explica": "喂，请问张经理在吗？ — uma ligação telefônica → a figura da moça ao telefone.",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "L2",
+   "bloco": "L2",
+   "roteiro": 1,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1
+     ],
+     "resposta": true,
+     "explica": "为了让自己更健康 — ele se exercita “para ficar mais saudável” → √.",
+     "origem": "deduzido"
+    },
+    {
+     "falas": [
+      2,
+      3
+     ],
+     "resposta": false,
+     "explica": "我的手表不走了 — “o MEU relógio parou”: o relógio é dele → ×.",
+     "origem": "deduzido"
+    }
+   ]
+  },
+  {
+   "parte": "L3",
+   "bloco": "L3",
+   "roteiro": 2,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1,
+      2
+     ],
+     "opcoes": {
+      "A": {
+       "zh": "开门",
+       "tk": [
+        "开",
+        "门"
+       ],
+       "py": [
+        "kāi",
+        "mén"
+       ],
+       "pt": "abrir a porta"
+      },
+      "B": {
+       "zh": "拿东西",
+       "tk": [
+        "拿",
+        "东西"
+       ],
+       "py": [
+        "ná",
+        "dōngxī"
+       ],
+       "pt": "pegar as coisas"
+      },
+      "C": {
+       "zh": "去超市买东西",
+       "tk": [
+        "去",
+        "超市",
+        "买",
+        "东西"
+       ],
+       "py": [
+        "qù",
+        "chāoshì",
+        "mǎi",
+        "dōngxī"
+       ],
+       "pt": "ir ao supermercado fazer compras"
+      }
+     },
+     "resposta": "A",
+     "explica": "帮我开一下门 — “abre a porta para mim?”: a resposta é 开门. As alternativas impressas são do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "L4",
+   "bloco": "L4",
+   "roteiro": 3,
+   "itens": [
+    {
+     "falas": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "opcoes": {
+      "A": {
+       "zh": "洗澡",
+       "tk": [
+        "洗澡"
+       ],
+       "py": [
+        "xǐzǎo"
+       ],
+       "pt": "tomando banho"
+      },
+      "B": {
+       "zh": "吃饭",
+       "tk": [
+        "吃饭"
+       ],
+       "py": [
+        "chīfàn"
+       ],
+       "pt": "comendo"
+      },
+      "C": {
+       "zh": "看电视",
+       "tk": [
+        "看",
+        "电视"
+       ],
+       "py": [
+        "kàn",
+        "diànshì"
+       ],
+       "pt": "vendo TV"
+      }
+     },
+     "resposta": "C",
+     "explica": "比赛还有三分钟就结束了…我马上就看完了 — ele está vendo uma partida (na TV) → 看电视. As alternativas impressas são do caderno padrão.",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "R1",
+   "bloco": "R1a",
+   "itens": [
+    {
+     "texto": {
+      "zh": "你知道怎么去那儿吗？",
+      "tk": [
+       "你",
+       "知道",
+       "怎么",
+       "去",
+       "那儿",
+       "吗",
+       "？"
+      ],
+      "py": [
+       "nǐ",
+       "zhīdào",
+       "zěnme",
+       "qù",
+       "nàr",
+       "ma",
+       ""
+      ],
+      "pt": "Você sabe como chegar lá?"
+     },
+     "opcoes": {
+      "E": {
+       "zh": "当然。我们先坐公共汽车，然后换地铁。",
+       "tk": [
+        "当然",
+        "。",
+        "我们",
+        "先",
+        "坐",
+        "公共汽车",
+        "，",
+        "然后",
+        "换",
+        "地铁",
+        "。"
+       ],
+       "py": [
+        "dāngrán",
+        "",
+        "wǒmen",
+        "xiān",
+        "zuò",
+        "gōnggòngqìchē",
+        "",
+        "ránhòu",
+        "huàn",
+        "dìtiě",
+        ""
+       ],
+       "pt": "Claro. Primeiro pegamos o ônibus e depois trocamos para o metrô."
+      }
+     },
+     "resposta": "E",
+     "explica": "你知道怎么去那儿吗？ (“você sabe como chegar lá?”) → 当然。我们先坐公共汽车，然后换地铁。",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "R2",
+   "bloco": "R2a",
+   "itens": [
+    {
+     "texto": {
+      "zh": "她说话的声音多好听啊！",
+      "tk": [
+       "她",
+       "说话",
+       "的",
+       "声音",
+       "多",
+       "好听",
+       "啊",
+       "！"
+      ],
+      "py": [
+       "tā",
+       "shuōhuà",
+       "de",
+       "shēngyīn",
+       "duō",
+       "hǎotīng",
+       "a",
+       ""
+      ],
+      "pt": "Como é bonita a voz dela!"
+     },
+     "opcoes": {
+      "E": {
+       "zh": "声音",
+       "tk": [
+        "声音"
+       ],
+       "py": [
+        "shēngyīn"
+       ],
+       "pt": "som; voz"
+      }
+     },
+     "resposta": "E",
+     "destaque": "声音",
+     "explica": "说话的___多好听啊 — “como é bonita a ___ dela ao falar” → 声音 (voz).",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "R2",
+   "bloco": "R2b",
+   "itens": [
+    {
+     "texto": {
+      "zh": "A：你有什么爱好？ B：我喜欢体育。",
+      "tk": [
+       "A：",
+       "你",
+       "有",
+       "什么",
+       "爱好",
+       "？",
+       "B：",
+       "我",
+       "喜欢",
+       "体育",
+       "。"
+      ],
+      "py": [
+       "",
+       "nǐ",
+       "yǒu",
+       "shénme",
+       "àihào",
+       "",
+       "",
+       "wǒ",
+       "xǐhuān",
+       "tǐyù",
+       ""
+      ],
+      "pt": "A: Quais são os seus hobbies? B: Eu gosto de esportes."
+     },
+     "opcoes": {
+      "D": {
+       "zh": "爱好",
+       "tk": [
+        "爱好"
+       ],
+       "py": [
+        "àihào"
+       ],
+       "pt": "hobby; passatempo"
+      }
+     },
+     "resposta": "D",
+     "destaque": "爱好",
+     "explica": "A pergunta “qual é o seu ___?” tem como resposta “eu gosto de esporte” → 爱好 (hobby).",
+     "origem": "dado"
+    }
+   ]
+  },
+  {
+   "parte": "R3",
+   "bloco": "R3",
+   "itens": [
+    {
+     "texto": {
+      "zh": "您是来参加今天会议的吗？您来早了一点儿，现在才八点半。您先进来坐吧。",
+      "tk": [
+       "您",
+       "是",
+       "来",
+       "参加",
+       "今天",
+       "会议",
+       "的",
+       "吗",
+       "？",
+       "您",
+       "来",
+       "早",
+       "了",
+       "一点儿",
+       "，",
+       "现在",
+       "才",
+       "八",
+       "点",
+       "半",
+       "。",
+       "您",
+       "先",
+       "进来",
+       "坐",
+       "吧",
+       "。"
+      ],
+      "py": [
+       "nín",
+       "shì",
+       "lái",
+       "cānjiā",
+       "jīntiān",
+       "huìyì",
+       "de",
+       "ma",
+       "",
+       "nín",
+       "lái",
+       "zǎo",
+       "le",
+       "yìdiǎnr",
+       "",
+       "xiànzài",
+       "cái",
+       "bā",
+       "diǎn",
+       "bàn",
+       "",
+       "nín",
+       "xiān",
+       "jìnlái",
+       "zuò",
+       "ba",
+       ""
+      ],
+      "pt": "O senhor veio para a reunião de hoje? Chegou um pouco cedo: agora são só oito e meia. Entre e sente-se."
+     },
+     "pergunta": {
+      "zh": "★会议最可能几点开始？",
+      "tk": [
+       "★",
+       "会议",
+       "最",
+       "可能",
+       "几",
+       "点",
+       "开始",
+       "？"
+      ],
+      "py": [
+       "",
+       "huìyì",
+       "zuì",
+       "kěnéng",
+       "jǐ",
+       "diǎn",
+       "kāishǐ",
+       ""
+      ],
+      "pt": "★ A que horas a reunião deve começar?"
+     },
+     "opcoes": {
+      "A": {
+       "zh": "8点",
+       "tk": [
+        "8",
+        "点"
+       ],
+       "py": [
+        "",
+        "diǎn"
+       ],
+       "pt": "8h"
+      },
+      "B": {
+       "zh": "8点半",
+       "tk": [
+        "8",
+        "点",
+        "半"
+       ],
+       "py": [
+        "",
+        "diǎn",
+        "bàn"
+       ],
+       "pt": "8h30"
+      },
+      "C": {
+       "zh": "9点",
+       "tk": [
+        "9",
+        "点"
+       ],
+       "py": [
+        "",
+        "diǎn"
+       ],
+       "pt": "9h"
+      }
+     },
+     "resposta": "C",
+     "explica": "São 8h30 e a pessoa “chegou um pouco cedo” → a reunião deve ser às 9h (texto e alternativas do caderno padrão).",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "W1",
+   "bloco": "W1",
+   "itens": [
+    {
+     "frase": {
+      "zh": "河上有一条小船。",
+      "tk": [
+       "河",
+       "上",
+       "有",
+       "一",
+       "条",
+       "小船",
+       "。"
+      ],
+      "py": [
+       "hé",
+       "shàng",
+       "yǒu",
+       "yì",
+       "tiáo",
+       "xiǎochuán",
+       ""
+      ],
+      "pt": "Há um barquinho no rio."
+     },
+     "pecas": [
+      {
+       "zh": "小船",
+       "tk": [
+        "小船"
+       ],
+       "py": [
+        "xiǎochuán"
+       ]
+      },
+      {
+       "zh": "上",
+       "tk": [
+        "上"
+       ],
+       "py": [
+        "shàng"
+       ]
+      },
+      {
+       "zh": "一",
+       "tk": [
+        "一"
+       ],
+       "py": [
+        "yì"
+       ]
+      },
+      {
+       "zh": "河",
+       "tk": [
+        "河"
+       ],
+       "py": [
+        "hé"
+       ]
+      },
+      {
+       "zh": "条",
+       "tk": [
+        "条"
+       ],
+       "py": [
+        "tiáo"
+       ]
+      },
+      {
+       "zh": "有",
+       "tk": [
+        "有"
+       ],
+       "py": [
+        "yǒu"
+       ]
+      }
+     ],
+     "resposta": "河上有一条小船。",
+     "explica": "Lugar + 上 + 有 + número + classificador + coisa: 河上 + 有 + 一条 + 小船 (exemplo do caderno padrão).",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  },
+  {
+   "parte": "W2",
+   "bloco": "W2",
+   "itens": [
+    {
+     "frase": {
+      "zh": "没有关系，别难过，高兴点儿。",
+      "tk": [
+       "没有",
+       "关系",
+       "，",
+       "别",
+       "难过",
+       "，",
+       "高兴",
+       "点儿",
+       "。"
+      ],
+      "py": [
+       "méiyǒu",
+       "guānxì",
+       "",
+       "bié",
+       "nánguò",
+       "",
+       "gāoxìng",
+       "diǎnr",
+       ""
+      ],
+      "pt": "Não tem problema, não fique triste, alegre-se um pouco."
+     },
+     "antes": "",
+     "depois": "有关系，别难过，高兴点儿。",
+     "pinyin": "méi",
+     "resposta": "没",
+     "explica": "méi + 有关系 → 没有关系 (“não tem problema”) (exemplo do caderno padrão).",
+     "origem": "conferir",
+     "conferir": true
+    }
+   ]
+  }
+ ]
+}
