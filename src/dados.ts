@@ -1,4 +1,4 @@
-import type { Lexico, Nivel, Prova, ResumoProva, Secao } from "./tipos";
+import type { Lexico, Nivel, PalavraVocab, Prova, ResumoProva, Secao } from "./tipos";
 
 const BASE = import.meta.env.BASE_URL;
 const cache = new Map<string, Promise<unknown>>();
@@ -18,6 +18,8 @@ function busca<T>(caminho: string): Promise<T> {
 export const carregaIndice = () => busca<ResumoProva[]>("conteudo/provas/index.json");
 export const carregaProva = (id: string) => busca<Prova>(`conteudo/provas/${id}.json`);
 export const carregaLexico = () => busca<Lexico>("conteudo/lexico.json");
+/** palavras do HSK 1 a 3 da aba Vocabulário (scripts/vocabulario.py) */
+export const carregaVocabulario = () => busca<PalavraVocab[]>("conteudo/vocabulario.json");
 
 export const urlPublica = (caminho: string) => BASE + caminho;
 

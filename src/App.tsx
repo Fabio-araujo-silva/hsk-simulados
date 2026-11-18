@@ -8,6 +8,7 @@ import { PaginaExame } from "./paginas/Exame";
 import { PaginaResultado } from "./paginas/Resultado";
 import { PaginaRevisao } from "./paginas/Revisao";
 import { PaginaCartoes } from "./paginas/Cartoes";
+import { PaginaVocabulario } from "./paginas/Vocabulario";
 import { PaginaDesempenho } from "./paginas/Desempenho";
 import { PaginaConfig } from "./paginas/Config";
 
@@ -65,6 +66,9 @@ export default function App() {
     case "cartoes":
       pagina = <PaginaCartoes />;
       break;
+    case "vocabulario":
+      pagina = <PaginaVocabulario />;
+      break;
     case "desempenho":
       pagina = <PaginaDesempenho />;
       break;
@@ -94,6 +98,9 @@ export default function App() {
             </a>
             <a href="#/cartoes" className={partes[0] === "cartoes" ? "on" : ""}>
               Cartões
+            </a>
+            <a href="#/vocabulario" className={partes[0] === "vocabulario" ? "on" : ""}>
+              Vocabulário
             </a>
             <a href="#/desempenho" className={partes[0] === "desempenho" ? "on" : ""}>
               Desempenho

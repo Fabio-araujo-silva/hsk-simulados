@@ -8,7 +8,7 @@ export interface UnidadeFala {
 }
 
 /** velocidades oferecidas para a voz sintética (abaixo de 1× para treinar o ouvido) */
-const VELOCIDADES = [0.5, 0.6, 0.75, 0.9, 1];
+export const VELOCIDADES = [0.5, 0.6, 0.75, 0.9, 1];
 
 /**
  * "Ouvir com voz sintética": lê o enunciado e as alternativas de uma questão sem áudio original.
