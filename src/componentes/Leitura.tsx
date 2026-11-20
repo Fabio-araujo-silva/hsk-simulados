@@ -4,6 +4,20 @@ import type { Frase as TFrase, Lexico } from "../tipos";
 
 // Contexto de leitura: tradução por hover, pinyin, clique-para-ouvir e realce karaokê.
 
+// No celular não existe hover: tocar numa palavra dispara o "mouseenter" (abre a tradução) e o clique (ouvir dali)
+// juntos. Guardando o tipo do último toque, o 1º toque numa palavra só traduz e o 2º toca o áudio dali.
+let ponteiro = "mouse";
+if (typeof window !== "undefined") {
+  window.addEventListener(
+    "pointerdown",
+    (e) => {
+      ponteiro = e.pointerType || "mouse";
+    },
+    { capture: true, passive: true },
+  );
+}
+const ehToque = () => ponteiro !== "mouse";
+
 interface Dica {
   x: number;
   y: number;
@@ -14,6 +28,8 @@ interface Dica {
   hsk?: number;
   frase?: string;
   selecao?: { w: string; py: string; pt?: string }[];
+  /** no celular: lembrete de que um 2º toque na palavra toca o áudio dali */
+  toque?: string;
 }
 
 interface Ctx {
@@ -108,6 +124,7 @@ function BalaoDica({ d }: { d: Dica }) {
         </div>
       )}
       {d.frase && <div className="dica-frase">{d.frase}</div>}
+      {d.toque && <div className="dica-toque">{d.toque}</div>}
     </div>
   );
 }
@@ -137,6 +154,8 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
   const temTempo = !!(f?.a?.some(Boolean) || f?.a2?.some(Boolean));
   const { tempo, tocando } = useTempo(temTempo && !inerte ? ctx.audio : null);
   const refSpan = useRef<HTMLSpanElement>(null);
+  /** palavra cuja tradução um toque acabou de abrir (o clique desse mesmo toque não toca o áudio) */
+  const abriuNoToque = useRef<{ i: number; em: number } | null>(null);
 
   // índices dos tokens que caem dentro do trecho destacado
   const destacados = useMemo(() => {
@@ -159,8 +178,12 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
   const mostraPy = !!comPinyin || (ctx.pinyin && !inerte) || !!ctx.pinyinFixo;
   const traduzFrase = semSpoiler ? f.ptL ?? undefined : f.pt;
 
+  const temAudioNo = (i: number) => !!ctx.audio && !!(f.a?.[i] || f.a2?.[i]);
+
   const aoEntrar = (i: number, ev: React.MouseEvent) => {
     if (inerte || !ctx.traducao) return;
+    const toque = ehToque();
+    abriuNoToque.current = toque ? { i, em: performance.now() } : null;
     const w = f.tk[i];
     const r = (ev.currentTarget as HTMLElement).getBoundingClientRect();
     if (ehPontuacao(w)) {
@@ -177,6 +200,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
       en: v?.en,
       hsk: v?.hsk,
       frase: traduzFrase,
+      toque: toque && temAudioNo(i) ? "toque de novo para ouvir daqui" : undefined,
     });
     ctx.consultou?.(w);
   };
@@ -204,6 +228,10 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
     const t1 = f.a?.[i];
     const t2 = f.a2?.[i];
     if (!t1 && !t2) return;
+    // celular com tradução ligada: o toque que acabou de abrir a tradução desta palavra não toca o áudio
+    // (o 2º toque, sim). No iPhone o próprio Safari às vezes já engole esse 1º clique — dá no mesmo.
+    const ab = abriuNoToque.current;
+    if (ctx.traducao && ehToque() && ab?.i === i && performance.now() - ab.em < 300) return;
     // se está tocando a 2ª leitura, pula dentro dela; senão, na 1ª
     const naSegunda = t2 && fim2 !== undefined && f.a2 && tempo >= (f.a2.find(Boolean)?.[0] ?? Infinity) - 0.5 && tempo <= fim2 + 0.5;
     if (naSegunda && t2) ctx.audio.toca(t2[0], fim2 ?? null);
