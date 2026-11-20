@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { mudaConfig, useConfig } from "../armazenamento";
 import { MODO_PUBLICO } from "../publico";
-import { falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
+import { destravaNoToque, falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
 import type { UnidadeFala } from "../falaQuestao";
 export type { UnidadeFala } from "../falaQuestao";
 
@@ -103,6 +103,8 @@ export function OuvirSintetico({ unidades }: { unidades: UnidadeFala[] }) {
 
   const toca = async (indices: number[]) => {
     para();
+    // ainda dentro do clique (antes do 1º await): no iPhone, sem isso o play() depois de buscar a voz é recusado
+    destravaNoToque(audio.current);
     const minha = ++sessao.current;
     for (const i of indices) {
       if (minha !== sessao.current) return;

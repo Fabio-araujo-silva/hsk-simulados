@@ -69,6 +69,54 @@ export function obtemTts(texto: string): Promise<Tts> {
 
 export const urlTts = (t: Tts) => BASE + t.arquivo;
 
+// ---------------------------------------------------- iPhone: liberar o som dentro do toque
+// A voz só toca depois de buscar o arquivo (fora do toque), e o Safari do iPhone recusa esse play().
+// Tocar um silêncio de 0,1 s no próprio toque libera o elemento <audio> para os próximos play();
+// a voz do navegador tem a mesma regra para o primeiro speak().
+
+let silencioUrl = "";
+/** WAV mudo de 0,1 s (8 kHz, 8 bits: 128 = silêncio), gerado aqui para não depender de arquivo. */
+function silencio() {
+  if (silencioUrl) return silencioUrl;
+  const n = 800;
+  const v = new DataView(new ArrayBuffer(44 + n));
+  const txt = (o: number, t: string) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  txt(0, "RIFF");
+  v.setUint32(4, 36 + n, true);
+  txt(8, "WAVE");
+  txt(12, "fmt ");
+  v.setUint32(16, 16, true);
+  v.setUint16(20, 1, true); // PCM
+  v.setUint16(22, 1, true); // mono
+  v.setUint32(24, 8000, true);
+  v.setUint32(28, 8000, true);
+  v.setUint16(32, 1, true);
+  v.setUint16(34, 8, true);
+  txt(36, "data");
+  v.setUint32(40, n, true);
+  for (let i = 0; i < n; i++) v.setUint8(44 + i, 128);
+  silencioUrl = "data:audio/wav;base64," + btoa(String.fromCharCode(...new Uint8Array(v.buffer)));
+  return silencioUrl;
+}
+
+const destravados = new WeakSet<HTMLAudioElement>();
+let vozDestravada = false;
+
+/** Chamar DENTRO do clique/toque, antes de qualquer await: libera `el` (e a voz do navegador) para tocar depois. */
+export function destravaNoToque(el: HTMLAudioElement | null) {
+  if (el && !destravados.has(el)) {
+    destravados.add(el);
+    el.src = silencio();
+    el.play().catch(() => {});
+  }
+  if (!vozDestravada && window.speechSynthesis && typeof SpeechSynthesisUtterance !== "undefined") {
+    vozDestravada = true;
+    const u = new SpeechSynthesisUtterance("");
+    u.volume = 0;
+    window.speechSynthesis.speak(u);
+  }
+}
+
 /** O navegador tem alguma voz chinesa instalada? (no Windows, muitas vezes não — aí a voz do navegador fica muda) */
 export const temVozChinesaNoNavegador = () => !!window.speechSynthesis?.getVoices().some((v) => v.lang.toLowerCase().startsWith("zh"));
 

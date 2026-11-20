@@ -2,7 +2,7 @@ import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useStat
 import { marcaVocab, mudaConfig, mudaPinyinSempre, useConfig, useEstado, zeraVocab } from "../armazenamento";
 import { VELOCIDADES } from "../componentes/OuvirSintetico";
 import { carregaVocabulario } from "../dados";
-import { falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
+import { destravaNoToque, falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
 import { MODO_PUBLICO } from "../publico";
 import type { MarcaVocab, PalavraVocab } from "../tipos";
 
@@ -423,6 +423,8 @@ function useVoz() {
     cancela.current();
     cancela.current = () => {};
     audio.current?.pause();
+    // ainda dentro do clique: no iPhone, sem isso o play() depois de buscar a voz é recusado
+    destravaNoToque(audio.current);
     const fim = () => {
       if (minha === sessao.current) setTocando(null);
     };
