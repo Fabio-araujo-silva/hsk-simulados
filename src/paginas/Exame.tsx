@@ -219,7 +219,8 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
               {tocando ? "pausar" : "continuar"}
             </button>
           )}
-          {etapa === "L" && tocandoN && <span className="tocando">♪ tocando: questão {tocandoN}</span>}
+          {/* sempre presente no listening: aparecer só na 1ª questão fazia o cabeçalho fixo crescer e a página pular */}
+          {etapa === "L" && <span className="tocando">{tocandoN ? `♪ tocando: questão ${tocandoN}` : "♪ instruções"}</span>}
           <button
             className="sec"
             onClick={() => {

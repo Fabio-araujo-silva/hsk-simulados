@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ControleAudio } from "../audio";
+import { alternaTrecho, ControleAudio } from "../audio";
 import { leEstado, mudaConfig, mudaTentativa, novaTentativa, resetaSimulado, useConfig, useEstado } from "../armazenamento";
 import { confere, notaDoEstudo } from "../correcao";
 import { carregaLexico, carregaProva, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
@@ -186,8 +186,9 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
       else if (e.key.toLowerCase() === "p") mudaConfig({ pinyin: !cfg.pinyin });
       else if (e.key === " " && audio && q?.audio) {
         e.preventDefault();
+        // igual ao ▶ do player: continua de onde parou em vez de recomeçar a 1ª leitura
         if (audio.tocando) audio.pausa();
-        else audio.toca(q.audio.s, q.audio.e);
+        else alternaTrecho(audio, q.audio);
       } else if (!revelado && q) {
         const k = e.key.toUpperCase();
         const ehVF = q.tipo === "vf" || q.tipo === "imagem-vf";

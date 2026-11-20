@@ -27,7 +27,8 @@ export function RoteiroCompleto({ prova, audio }: { prova: Prova; audio: Control
   return (
     <div className="roteiro">
       <div className="roteiro-controles">
-        <button className="btn-play" onClick={() => (tocando ? audio.pausa() : audio.continua())}>
+        {/* o roteiro é o áudio inteiro: o ▶ não para no fim da última leitura que você ouviu */}
+        <button className="btn-play" onClick={() => (tocando ? audio.pausa() : audio.continua(null, true))}>
           {tocando ? "❚❚" : "▶"}
         </button>
         <span>

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useTempo, type ControleAudio } from "../audio";
+import { alternaTrecho, useTempo, type ControleAudio } from "../audio";
 import { mudaConfig, useConfig } from "../armazenamento";
 import { formataTempo } from "../dados";
 import type { TrechoAudio } from "../tipos";
@@ -13,11 +13,12 @@ export function AudioQuestao({ audio, trecho, autoTocar }: { audio: ControleAudi
     audio?.velocidade(cfg.velocidade);
   }, [audio, cfg.velocidade]);
 
+  // (o áudio chega um instante depois da prova: sem `audio` aqui, a 1ª questão aberta não tocaria sozinha)
   useEffect(() => {
     if (autoTocar && audio && trecho) audio.toca(trecho.s, trecho.e);
     return () => audio?.pausa();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [trecho?.s]);
+  }, [trecho?.s, audio]);
 
   if (!audio || !trecho) {
     return <div className="aviso">Sem áudio alinhado para esta questão — use a transcrição.</div>;
@@ -26,11 +27,13 @@ export function AudioQuestao({ audio, trecho, autoTocar }: { audio: ControleAudi
   const dentro = tempo >= trecho.s - 0.3 && tempo <= fim + 0.3;
   const prog = dentro ? (tempo - trecho.s) / Math.max(0.1, fim - trecho.s) : 0;
   const naSegunda = trecho.s2 !== undefined && tempo >= trecho.s2 - 0.2;
+  // o áudio é um só para a página (exemplo + questão): este player só "está tocando" se o trecho dele está
+  const meu = tocando && dentro;
 
   return (
     <div className="player">
-      <button className="btn-play" onClick={() => (tocando ? audio.pausa() : dentro && tempo < fim - 0.2 ? audio.continua() : audio.toca(trecho.s, trecho.e))} title="Espaço">
-        {tocando ? "❚❚" : "▶"}
+      <button className="btn-play" onClick={() => alternaTrecho(audio, trecho)} title="Espaço">
+        {meu ? "❚❚" : "▶"}
       </button>
       <div className="player-meio">
         <div className="player-botoes">

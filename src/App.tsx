@@ -16,6 +16,7 @@ import { PaginaConfig } from "./paginas/Config";
 import { PaginaConta } from "./paginas/Conta";
 import { PaginaSobre } from "./paginas/Sobre";
 import { PaginaAdmin } from "./paginas/Admin";
+import { AvisoAudioBloqueado } from "./componentes/AvisoAudioBloqueado";
 import { useAdmin, useConta } from "./nuvem";
 import { MODO_PUBLICO } from "./publico";
 
@@ -201,6 +202,7 @@ export default function App() {
       {/* só monta a página depois que o progresso do disco chegou: senão uma tentativa criada antes
           (ex.: recarregar dentro de #/estudo/…) seria descartada quando o arquivo substitui o estado */}
       <main className={emProva ? "principal tela-cheia" : "principal"}>{disco === "verificando" ? <div className="carregando">carregando o seu progresso…</div> : pagina}</main>
+      <AvisoAudioBloqueado />
       {MODO_PUBLICO && !emProva && (
         <footer className="rodape">
           Provas do Hanban / Chinese Testing International, reunidas só para estudo · site gratuito e não comercial · <a href="#/sobre">Sobre</a>
