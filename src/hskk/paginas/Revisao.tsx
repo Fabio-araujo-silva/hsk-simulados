@@ -5,6 +5,7 @@ import { contaNovoHoje, hojeChave, salvaCartoes, useConfig, useEstado } from "..
 import { Comparacao } from "../componentes/Comparacao";
 import { BotaoGravar } from "../componentes/Gravador";
 import { Frase, ProvedorLeitura } from "../../componentes/Leitura";
+import { AdicionaPalavras } from "../../componentes/AdicionaPalavras";
 import { carregaLexico, carregaProva, TEMPO_REPETIR, urlMidia } from "../dados";
 import { salvaGravacao, SEM_TRANSCRICAO, transcreve } from "../gravacoes";
 import { MODO_PUBLICO } from "../../publico";
@@ -185,6 +186,8 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
                 <small className="falta">{MODO_PUBLICO ? `${SEM_TRANSCRICAO}.` : "não deu para transcrever agora (precisa do servidor local e da chave no .env)"}</small>
               )}
               {dito !== null && <Comparacao alvo={cartao.frase.zh} dito={dito} limiar={cfg.limiarRevisao} />}
+              {/* as palavras viram cartões da revisão do HSK (leitura e escrita) */}
+              <AdicionaPalavras frases={[cartao.frase]} origem={cartao.origem} lexico={lexico} />
             </>
           )}
         </div>

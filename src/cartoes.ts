@@ -72,17 +72,7 @@ export function sugereCartoes(prova: Prova, q: Questao, lexico: Lexico | null, c
     const id = `p:${w}`;
     const consultada = consultas.includes(w);
     out.push({
-      cartao: {
-        id,
-        tipo: "palavra",
-        ...base(prova, q),
-        palavra: w,
-        py: v?.py,
-        pt: v?.pt ?? v?.en,
-        frase: exemplo,
-        audio: exemplo ? trechoDe(exemplo, prova.id) : null,
-        audioPalavra: exemplo ? trechoPalavra(exemplo, w, prova.id) : null,
-      },
+      cartao: cartaoPalavra(w, { prova: prova.id, n: q.n }, lexico, exemplo, prova.id),
       rotulo: w,
       detalhe: `${v?.py ?? ""} ${v?.pt ?? v?.en ?? ""}${consultada ? " · você consultou" : ""}`.trim(),
       marcado: (q.palavras ?? []).includes(w) || consultada,
@@ -90,4 +80,29 @@ export function sugereCartoes(prova: Prova, q: Questao, lexico: Lexico | null, c
     });
   }
   return out;
+}
+
+/** id do cartão de uma palavra (o mesmo em qualquer prova: a palavra só entra uma vez na revisão) */
+export const idPalavra = (w: string) => `p:${w}`;
+
+/**
+ * Cartão novo de uma palavra, com a frase onde ela apareceu como exemplo.
+ * `provaAudio`: prova do HSK cujo áudio tem essa frase (sem ele, o cartão fica sem áudio — ex.: frase do HSKK).
+ */
+export function cartaoPalavra(w: string, origem: Cartao["origem"], lexico: Lexico | null, frase?: Frase, provaAudio?: string): Cartao {
+  const v = lexico?.[w];
+  const i = frase ? frase.tk.indexOf(w) : -1;
+  return {
+    id: idPalavra(w),
+    tipo: "palavra",
+    criado: Date.now(),
+    origem,
+    srs: srsNovo(),
+    palavra: w,
+    py: v?.py ?? (i >= 0 ? frase!.py[i] || undefined : undefined),
+    pt: v?.pt ?? v?.en,
+    frase,
+    audio: frase && provaAudio ? trechoDe(frase, provaAudio) : null,
+    audioPalavra: frase && provaAudio ? trechoPalavra(frase, w, provaAudio) : null,
+  };
 }

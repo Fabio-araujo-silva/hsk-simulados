@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useFilaRevisao } from "../filaRevisao";
 import { ControleAudio } from "../audio";
 import { contaNovoHoje, hojeChave, salvaCartoes, useConfig, useEstado } from "../armazenamento";
-import { confere } from "../correcao";
+import { confere, frasesDaQuestao } from "../correcao";
 import { carregaLexico, carregaProva, urlMidia } from "../dados";
 import { Frase, ProvedorLeitura } from "../componentes/Leitura";
 import { instrucao, VisaoQuestao } from "../componentes/Questao";
@@ -12,6 +12,9 @@ import { AbasRevisao, type Aba } from "../componentes/AbasRevisao";
 import { usePendentes } from "../pendentes";
 import { useEstado as useEstadoHskk } from "../hskk/armazenamento";
 import { RevisaoOral } from "../hskk/paginas/Revisao";
+import { CampoPinyin } from "../componentes/CampoPinyin";
+import { AdicionaPalavras } from "../componentes/AdicionaPalavras";
+import type { ResultadoPinyin } from "../pinyin";
 
 /**
  * Revisão espaçada do app: a do HSK (leitura e escrita) e, quando houver frases orais do HSKK, uma escolha no topo.
@@ -106,6 +109,8 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
   const [virado, setVirado] = useState(false);
   const [valor, setValor] = useState<string | boolean | null>(null);
   const [verTexto, setVerTexto] = useState(false);
+  /** resultado do pinyin digitado no cartão de palavra */
+  const [pinyinRes, setPinyinRes] = useState<ResultadoPinyin | null>(null);
   const audio = audioDe(prova);
   const prev = useMemo(() => previas(cartao), [cartao]);
   const inicio = useRef(Date.now());
@@ -148,7 +153,12 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
   });
 
   const q = cartao.tipo === "questao" && prova ? prova.questoes.find((x) => x.n === cartao.origem.n) : undefined;
-  const acertou = q && valor !== null ? confere(q, valor) : null;
+  const acertou = q && valor !== null ? confere(q, valor) : pinyinRes ? pinyinRes === "certo" : null;
+  const pyPalavra = cartao.tipo === "palavra" ? cartao.py ?? lexico?.[cartao.palavra ?? ""]?.py : undefined;
+  // frases do cartão (para criar cartões das palavras delas)
+  const frasesCartao =
+    cartao.tipo === "questao" ? (q && prova ? frasesDaQuestao(q, q.grupo ? prova.grupos[q.grupo] : undefined) : []) : [cartao.frase];
+  const provaAudio = prova?.audio ? prova.id : cartao.audio?.prova;
 
   return (
     <ProvedorLeitura lexico={lexico} traducao={virado} pinyin={virado && cfg.pinyin} audio={audio}>
@@ -222,6 +232,16 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
         {cartao.tipo === "palavra" && (
           <div className="frente-palavra">
             <div className="palavra-grande zh">{cartao.palavra}</div>
+            {(!virado || pinyinRes) && (
+              <CampoPinyin
+                esperado={pyPalavra}
+                autoFoco
+                onConfere={(r) => {
+                  setPinyinRes(r);
+                  setVirado(true);
+                }}
+              />
+            )}
             {cartao.frase && (
               <p className="exemplo">
                 <Frase f={cartao.frase} destaque={cartao.palavra} fim1={cartao.audio?.e} />
@@ -256,8 +276,14 @@ function SessaoCartao({ cartao }: { cartao: Cartao }) {
         )}
 
         {virado && (
+          <AdicionaPalavras frases={frasesCartao} origem={cartao.origem} lexico={lexico} provaAudio={provaAudio} ignora={cartao.palavra} />
+        )}
+
+        {virado && (
           <div className="notas">
-            {acertou === false && <div className="dica-nota">Você errou — o normal aqui é “De novo”.</div>}
+            {acertou === false && (
+              <div className="dica-nota">{pinyinRes ? "Pinyin errado" : "Você errou"} — o normal aqui é “De novo”.</div>
+            )}
             {NOTAS.map((n) => (
               <button key={n.nota} className={`nota nota-${n.nota}`} onClick={() => nota(n.nota)}>
                 <b>{n.rotulo}</b>

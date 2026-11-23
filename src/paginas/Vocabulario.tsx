@@ -4,6 +4,7 @@ import { VELOCIDADES } from "../componentes/OuvirSintetico";
 import { carregaVocabulario } from "../dados";
 import { destravaNoToque, falaNavegador, obtemTts, temVozChinesaNoNavegador, urlTts } from "../tts";
 import { MODO_PUBLICO } from "../publico";
+import { CampoPinyin } from "../componentes/CampoPinyin";
 import type { MarcaVocab, PalavraVocab } from "../tipos";
 
 type FiltroNivel = 0 | 1 | 2 | 3;
@@ -314,6 +315,17 @@ interface PropsCartao {
 const CartaoPalavra = memo(function CartaoPalavra({ p, chave, marca, aberto, pinyinSempre, tocando, variasLeituras, onAlterna, onFala }: PropsCartao) {
   const pyVisivel = aberto || pinyinSempre;
   const mostra = () => onAlterna(chave);
+  // caixinha do pinyin: some quando o cartão abre sem você ter digitado; volta vazia quando o cartão é tampado de novo
+  const [conferido, setConferido] = useState(false);
+  const [rodada, setRodada] = useState(0);
+  const abertoAntes = useRef(aberto);
+  useEffect(() => {
+    if (abertoAntes.current && !aberto) {
+      setConferido(false);
+      setRodada((r) => r + 1);
+    }
+    abertoAntes.current = aberto;
+  }, [aberto]);
   return (
     <div className={`vocab-cartao${marca === "k" ? " certa" : marca === "x" ? " errada" : ""}`}>
       <div className="vocab-topo">
@@ -332,6 +344,17 @@ const CartaoPalavra = memo(function CartaoPalavra({ p, chave, marca, aberto, pin
       <button className={`vocab-hz zh${tocando ? " tocando" : ""}`} onClick={() => onFala(p, chave)} title="ouvir" aria-label={`ouvir ${p.hz}`}>
         {p.hz}
       </button>
+      {!pinyinSempre && (!aberto || conferido) && (
+        <CampoPinyin
+          key={rodada}
+          esperado={p.py}
+          compacto
+          onConfere={(r) => {
+            if (r) setConferido(true);
+            if (!aberto) mostra();
+          }}
+        />
+      )}
       {pyVisivel ? (
         <div className="vocab-py">{p.py}</div>
       ) : (
