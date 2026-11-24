@@ -4,6 +4,7 @@ import { carregaIndice, formataTempo, pontuacao, REGRAS, regras, secaoDe } from 
 import type { Nivel, ResumoProva, Tentativa } from "../tipos";
 import { notaDoEstudo } from "../correcao";
 import { CartaoHskk } from "../hskk/componentes/CartaoHskk";
+import { BannerQuick } from "../quick/BannerQuick";
 
 const nivelDe = (id: string): Nivel => (Number(id[1]) || 3) as Nivel;
 
@@ -55,6 +56,7 @@ export function EscolhaNivel() {
           <b>modo estudo</b> você confere cada questão, ouve o áudio palavra por palavra, traduz passando o mouse e manda o que errou para a
           revisão espaçada. Escolha o nível — ou o <b>HSKK</b>, a prova oral:
         </p>
+        <BannerQuick />
       </section>
       <div className="niveis">
         {niveis.map((nv) => {
@@ -135,6 +137,9 @@ export function Inicio({ nivel }: { nivel: Nivel }) {
               ir para o {regras(n).nome}
             </a>
           ))}
+          <a className="botao sec ql-atalho" href={`#/quick/${nivel}`} title={`5 áudios das provas do ${rg.nome} com 3 palavras faltando em cada`}>
+            Quick Listen 🔥
+          </a>
         </div>
         <h1>Simulados oficiais do {rg.nome}</h1>
         <ul className="regras-curtas">

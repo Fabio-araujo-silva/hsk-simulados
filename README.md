@@ -77,6 +77,22 @@ Questão a questão, com correção imediata e **explicação em português** de
 A aba **Vocabulário** tem as 602 palavras do HSK 1 a 3 em cartões (汉字 → pinyin → significado), com filtro por nível,
 busca, embaralhar, pinyin sempre visível, marcação de acerto/erro (✓/✗) e voz. As marcações ficam no mesmo progresso.
 
+### Quick Listen 🔥
+Treino rápido de ouvido (`#/quick`, no menu e na escolha de nível). Cada rodada sorteia **5 áudios** de listening das
+provas reais (qualquer prova, ou só do HSK 1, 2 ou 3) e mostra o texto em hanzi com **3 palavras faltando**, para
+**digitar** — vale o hanzi ou o pinyin, com ou sem tom (`ni3` também). Dá para ouvir quantas vezes quiser; com tempo, são
+**30 s por áudio**, contados a partir do fim da 1ª escuta (ou jogue sem tempo). Enquanto o áudio toca, um dragão chinês
+voa atrás da pérola no ritmo do trecho, e a palavra falada acende no texto (a lacuna pisca na vez dela).
+
+- **Pontos**: 100 por palavra certa; acertou as 3, +2 por segundo que sobrou; áudios perfeitos seguidos fazem combo 🔥
+  (+50, +100…). No fim: recorde (por nível e tempo), sequência de dias, a correção de cada áudio com pinyin e tradução,
+  e um botão que manda as palavras que escaparam para a revisão espaçada (com a frase e o áudio da prova).
+- **Lacunas**: só palavras do glossário, nunca partículas (的, 了, 吗…) nem a pergunta lida (问), nunca uma palavra que
+  aparece de novo no texto; pronomes e palavras muito curtas só quando faltam outras. Textos com menos de 7 palavras
+  ficam de fora (≈ 1.150 questões servem). As questões das últimas 30 rodadas não se repetem.
+- Lógica em `src/quick/sorteio.ts` (sorteio, lacunas, conferência, pontos) e `src/quick/historico.ts`; tela em
+  `src/paginas/QuickListen.tsx`; dragão em `src/quick/Dragao.tsx`. As rodadas ficam no mesmo progresso (`quick.sessoes`).
+
 ### HSKK 中级 (prova oral)
 O cartão **HSKK** na escolha de nível abre a parte oral: você fala no microfone, o app grava, transcreve com o
 ElevenLabs Scribe e compara com o original. Tem modo prova (o áudio original do começo ao fim, com o microfone

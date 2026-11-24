@@ -276,6 +276,36 @@ export interface EstadoVocab {
   atualizado: number;
 }
 
+// --------------------------------------------------------- Quick Listen 🔥
+
+/** Opções do Quick Listen (ficam na Config). As lacunas são sempre digitadas (hanzi ou pinyin). */
+export interface ConfigQuick {
+  /** 0 = qualquer prova (HSK 1–3) */
+  nivel: 0 | 1 | 2 | 3;
+  /** 30 s para responder cada áudio (false = sem tempo) */
+  tempo: boolean;
+}
+
+/** Uma rodada terminada do Quick Listen (5 áudios). */
+export interface SessaoQuick {
+  id: string;
+  /** quando terminou (ms) */
+  em: number;
+  atualizado: number;
+  nivel: 0 | 1 | 2 | 3;
+  tempo: boolean;
+  pontos: number;
+  /** lacunas certas / lacunas da rodada */
+  certas: number;
+  total: number;
+  /** questões usadas (para não repetir logo) e o placar de cada */
+  itens: { prova: string; n: number; certas: number; total: number }[];
+}
+
+export interface EstadoQuick {
+  sessoes: Record<string, SessaoQuick>;
+}
+
 export interface Config {
   traducao: boolean;
   pinyin: boolean;
@@ -298,4 +328,6 @@ export interface Config {
   velocidadeVoz?: number;
   /** aba Vocabulário: último filtro de nível (0 = HSK 1–3) */
   vocabNivel?: 0 | 1 | 2 | 3;
+  /** Quick Listen 🔥: nível, tempo e jeito de responder da última rodada */
+  quick?: ConfigQuick;
 }

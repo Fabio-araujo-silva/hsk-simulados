@@ -16,6 +16,7 @@ import { PaginaConfig } from "./paginas/Config";
 import { PaginaConta } from "./paginas/Conta";
 import { PaginaSobre } from "./paginas/Sobre";
 import { PaginaAdmin } from "./paginas/Admin";
+import { PaginaQuick } from "./paginas/QuickListen";
 import { AvisoAudioBloqueado } from "./componentes/AvisoAudioBloqueado";
 import { useAdmin, useConta } from "./nuvem";
 import { MODO_PUBLICO } from "./publico";
@@ -121,6 +122,10 @@ export default function App() {
     case "vocabulario":
       pagina = <PaginaVocabulario />;
       break;
+    case "quick":
+      // #/quick/3 chega com o nível já escolhido (atalho da página do nível)
+      pagina = <PaginaQuick nivelRota={partes[1] ? Number(partes[1]) : undefined} />;
+      break;
     case "desempenho":
       pagina = <PaginaDesempenho />;
       break;
@@ -157,6 +162,9 @@ export default function App() {
               className={partes.length === 0 || partes[0] === "nivel" || noHskk ? "on" : ""}
             >
               Simulados{noHskk ? " · HSKK" : cfg.nivel ? ` · HSK ${cfg.nivel}` : ""}
+            </a>
+            <a href="#/quick" className={partes[0] === "quick" ? "on" : ""} title="5 áudios de prova com 3 palavras faltando em cada">
+              Quick Listen 🔥
             </a>
             <a
               href="#/revisao"

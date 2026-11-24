@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from "react";
-import type { Cartao, Config, EstadoVocab, MarcaVocab, Tentativa } from "./tipos";
+import type { Cartao, Config, ConfigQuick, EstadoQuick, EstadoVocab, MarcaVocab, SessaoQuick, Tentativa } from "./tipos";
 import { leBackup } from "./backup";
 import { criaSincronia } from "./sincronia";
 // na nuvem, as frases dos cartões vão como referência às provas (src/compacta.ts): diz de onde tirá-las
@@ -23,6 +23,8 @@ interface Estado {
   apagados: Record<string, number>;
   /** aba Vocabulário: acertei/errei de cada palavra e a opção de pinyin sempre visível */
   vocab: EstadoVocab;
+  /** Quick Listen 🔥: rodadas terminadas (pontos, recordes, sequência de dias) */
+  quick: EstadoQuick;
   /** última alteração (ms) */
   salvoEm: number;
 }
@@ -40,10 +42,31 @@ export const CONFIG_PADRAO: Config = {
   porBlocos: true,
 };
 
+export const CONFIG_QUICK_PADRAO: ConfigQuick = { nivel: 0, tempo: true };
+
 const vocabVazio = (): EstadoVocab => ({ marcas: {}, pinyinSempre: false, atualizado: 0 });
 
 function vazio(): Estado {
-  return { versao: 1, tentativas: {}, cartoes: {}, config: { ...CONFIG_PADRAO }, novosHoje: {}, apagados: {}, vocab: vocabVazio(), salvoEm: 0 };
+  return {
+    versao: 1,
+    tentativas: {},
+    cartoes: {},
+    config: { ...CONFIG_PADRAO },
+    novosHoje: {},
+    apagados: {},
+    vocab: vocabVazio(),
+    quick: { sessoes: {} },
+    salvoEm: 0,
+  };
+}
+
+/** Progresso antigo (sem o campo) ou campo estragado: sem rodadas; rodadas sem id/pontos são ignoradas. */
+function normalizaQuick(q: Partial<EstadoQuick> | null | undefined): EstadoQuick {
+  const sessoes: Record<string, SessaoQuick> = {};
+  if (q && typeof q === "object" && q.sessoes && typeof q.sessoes === "object")
+    for (const [id, s] of Object.entries(q.sessoes))
+      if (s && typeof s === "object" && typeof s.pontos === "number" && typeof s.em === "number") sessoes[id] = s;
+  return { sessoes };
 }
 
 /** Progresso antigo (sem o campo) ou campo estragado: vocabulário vazio; marcações inválidas são ignoradas. */
@@ -66,6 +89,7 @@ function normaliza(e: Partial<Estado> | null | undefined): Estado {
     apagados: e.apagados ?? {},
     config: { ...CONFIG_PADRAO, ...(e.config ?? {}) },
     vocab: normalizaVocab(e.vocab),
+    quick: normalizaQuick(e.quick),
     salvoEm: e.salvoEm ?? 0,
   };
 }
@@ -96,6 +120,8 @@ export function mescla(a: Estado, b: Estado): Estado {
     apagados,
     // as marcações não têm data uma a uma: fica o vocabulário inteiro que foi alterado por último
     vocab: b.vocab.atualizado > a.vocab.atualizado ? b.vocab : a.vocab,
+    // rodadas do Quick Listen: a união das duas (cada rodada tem id próprio e não muda depois de gravada)
+    quick: { sessoes: junta(a.quick.sessoes, b.quick.sessoes) },
     salvoEm: Math.max(a.salvoEm, b.salvoEm),
   };
 }
@@ -247,6 +273,28 @@ export function mudaPinyinSempre(ligado: boolean) {
 /** Apaga todas as marcações do vocabulário (a opção de pinyin continua como está). */
 export function zeraVocab() {
   mudaVocab(() => ({ marcas: {} }));
+}
+
+// ----------------------------------------------------------- Quick Listen 🔥
+
+/** rodadas guardadas: as mais antigas saem (recordes e sequência de dias olham para as recentes) */
+const MAX_SESSOES_QUICK = 300;
+
+export function mudaConfigQuick(parcial: Partial<ConfigQuick>) {
+  mudaConfig({ quick: { ...CONFIG_QUICK_PADRAO, ...estado.config.quick, ...parcial } });
+}
+
+export function salvaSessaoQuick(s: SessaoQuick) {
+  muda((e) => {
+    const todas = { ...e.quick.sessoes, [s.id]: s };
+    const ids = Object.values(todas)
+      .sort((a, b) => b.em - a.em)
+      .slice(0, MAX_SESSOES_QUICK)
+      .map((x) => x.id);
+    const sessoes: Record<string, SessaoQuick> = {};
+    for (const id of ids) sessoes[id] = todas[id];
+    return { ...e, quick: { sessoes } };
+  });
 }
 
 // --------------------------------------------------------------- formatar
