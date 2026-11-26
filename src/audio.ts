@@ -183,6 +183,15 @@ export class ControleAudio {
     this.el.pause();
   }
 
+  /** Vai para `t` (s) sem mudar se está tocando ou pausado; o trecho em curso é esquecido. */
+  vaiPara(t: number) {
+    this.limite = null;
+    this.trecho = null;
+    const alvo = Math.min(Math.max(0, t), this.duracao || Infinity);
+    if (this.el.readyState < HTMLMediaElement.HAVE_METADATA) this.alvoPendente = alvo;
+    this.el.currentTime = alvo;
+  }
+
   velocidade(v: number) {
     this.el.playbackRate = v;
     this.el.preservesPitch = true;

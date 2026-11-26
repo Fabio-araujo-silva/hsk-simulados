@@ -52,7 +52,14 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
         <h1>
           {prova.id} · {t.modo === "prova" ? "resultado da prova" : "resultado do estudo"}
         </h1>
-        <p className="data">{new Date(t.fim ?? t.inicio).toLocaleString("pt-BR")}</p>
+        <p className="data">
+          {new Date(t.fim ?? t.inicio).toLocaleString("pt-BR")}
+          {t.comAjuda && (
+            <span className="tag" title="O listening foi pausado, voltado ou tocado em outra velocidade — no exame real não dá.">
+              listening com pausa/velocidade
+            </span>
+          )}
+        </p>
 
         <div className="placar">
           {(["L", "R", "W"] as const).filter((s) => regras(prova.nivel).questoes[s] > 0).map((s) => (

@@ -120,7 +120,14 @@ function DesempenhoHsk({
                     <a href={`#/resultado/${t.id}`}>{new Date(t.fim!).toLocaleDateString("pt-BR")}</a>
                   </td>
                   <td>{t.prova}</td>
-                  <td>{t.semListening ? "—" : r.L}</td>
+                  <td>
+                    {t.semListening ? "—" : r.L}
+                    {t.comAjuda && (
+                      <span className="marca-ajuda" title="listening com pausa, volta ou outra velocidade">
+                        {" "}*
+                      </span>
+                    )}
+                  </td>
                   <td>{r.R}</td>
                   <td>{regras(provas[t.prova].nivel).questoes.W ? r.W : "—"}</td>
                   <td className={r.aprovado ? "aprovado" : "reprovado"}>{r.total}</td>

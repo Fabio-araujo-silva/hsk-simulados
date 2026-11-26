@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { arquivaTentativa, leEstado, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
-import { useTempo } from "../audio";
+import { arquivaTentativa, leEstado, mudaConfig, mudaTentativa, novaTentativa, useConfig, useEstado } from "../armazenamento";
+import { useTempo, type ControleAudio } from "../audio";
 import { confere } from "../correcao";
 import { formataTempo, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados";
 import { ProvedorLeitura, Frase } from "../componentes/Leitura";
@@ -55,6 +55,7 @@ export function PaginaExame({ id }: { id: string }) {
           </li>
           <li>Use fones e um lugar silencioso — como no dia.</li>
         </ul>
+        {prova.audio && <OpcaoControles />}
         {!prova.audio && <div className="aviso">Esta prova ainda não tem áudio: o listening será pulado e a nota considera só leitura e escrita.</div>}
         <div className="acoes">
           {pendente ? (
@@ -108,6 +109,19 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   const { tempo, tocando } = useTempo(audio);
   const [iniciado, setIniciado] = useState(false);
   const etapa = t?.etapa ?? "L";
+  const controles = cfg.pausarProva && !!audio;
+  const velocidade = controles ? cfg.velocidadeProva ?? 1 : 1;
+
+  /** pausar, voltar ou mudar a velocidade: o resultado mostra que o listening não foi "como no dia" */
+  const marcaAjuda = useCallback(() => {
+    if (!leEstado().tentativas[tid]?.comAjuda) mudaTentativa(tid, (x) => ({ ...x, comAjuda: true }));
+  }, [tid]);
+
+  useEffect(() => {
+    if (!audio || etapa !== "L") return;
+    audio.velocidade(velocidade);
+    if (velocidade !== 1 && iniciado) marcaAjuda();
+  }, [audio, etapa, velocidade, iniciado, marcaAjuda]);
 
   const avanca = useCallback(() => {
     mudaTentativa(tid, (x) => {
@@ -129,7 +143,7 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   // listening: tocar a partir da posição salva
   useEffect(() => {
     if (!audio || etapa !== "L" || !iniciado) return;
-    audio.velocidade(1);
+    audio.velocidade(velocidade);
     audio.toca(t?.audioPos ?? 0, null);
     const fimAudio = () => avanca();
     audio.el.addEventListener("ended", fimAudio);
@@ -188,6 +202,7 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
           {etapa === "L" && t.audioPos ? ` (áudio em ${formataTempo(t.audioPos)})` : ""}
           {etapa !== "L" && t.restante !== undefined ? ` · ${formataTempo(t.restante)} restantes` : ""}
         </p>
+        {etapa === "L" && <OpcaoControles />}
         <button className="pri grande" onClick={() => setIniciado(true)}>
           {t.audioPos || etapa !== "L" ? "Continuar" : "Iniciar — o áudio começa agora"}
         </button>
@@ -214,11 +229,7 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
           <span className="contagem">
             {respondidas}/{questoes.length} respondidas
           </span>
-          {etapa === "L" && cfg.pausarProva && (
-            <button className="sec" onClick={() => (tocando ? audio?.pausa() : audio?.continua())}>
-              {tocando ? "pausar" : "continuar"}
-            </button>
-          )}
+          {etapa === "L" && controles && audio && <ControlesListening audio={audio} prova={prova} tempo={tempo} tocando={tocando} velocidade={velocidade} marcaAjuda={marcaAjuda} />}
           {/* sempre presente no listening: aparecer só na 1ª questão fazia o cabeçalho fixo crescer e a página pular */}
           {etapa === "L" && <span className="tocando">{tocandoN ? `♪ tocando: questão ${tocandoN}` : "♪ instruções"}</span>}
           <button
@@ -238,6 +249,103 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
         <FolhaProva prova={prova} questoes={questoes} t={t} responde={responde} tocandoN={tocandoN} />
       </div>
     </ProvedorLeitura>
+  );
+}
+
+/** Liga/desliga os controles do áudio do listening (vale para esta e para as próximas provas). */
+function OpcaoControles() {
+  const cfg = useConfig();
+  return (
+    <label className="opcao-controles">
+      <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
+      <span>
+        <b>Treinar com controles no listening</b> — pausar, voltar o áudio e mudar a velocidade. No exame real não dá; o resultado fica marcado.
+      </span>
+    </label>
+  );
+}
+
+const VELOCIDADES_PROVA = [0.6, 0.75, 0.9, 1, 1.15, 1.25];
+
+/** Começos das leituras (cada item do listening é lido duas vezes), em ordem. */
+function iniciosLeituras(prova: Prova) {
+  const ts = new Set<number>([0]);
+  for (const q of prova.questoes) {
+    if (q.secao !== "L" || !q.audio) continue;
+    ts.add(q.audio.s);
+    if (q.audio.s2 !== undefined) ts.add(q.audio.s2);
+  }
+  return [...ts].sort((a, b) => a - b);
+}
+
+/** ⏮, −5 s, ❚❚/▶ e velocidade — no cabeçalho da prova. Atalhos: ↑ (começo da leitura), ← (−5 s), Espaço. */
+function ControlesListening({ audio, prova, tempo, tocando, velocidade, marcaAjuda }: { audio: ControleAudio; prova: Prova; tempo: number; tocando: boolean; velocidade: number; marcaAjuda: () => void }) {
+  const inicios = useMemo(() => iniciosLeituras(prova), [prova]);
+  const alterna = useCallback(() => {
+    marcaAjuda();
+    if (audio.tocando) audio.pausa();
+    else void audio.continua(null, true);
+  }, [audio, marcaAjuda]);
+  const recua = useCallback(
+    (seg: number) => {
+      marcaAjuda();
+      audio.vaiPara(audio.tempo - seg);
+    },
+    [audio, marcaAjuda],
+  );
+  /** volta ao começo da leitura em curso; nos 2 primeiros segundos dela, à leitura anterior */
+  const voltaLeitura = useCallback(() => {
+    marcaAjuda();
+    const agora = audio.tempo;
+    let i = 0;
+    for (let k = 0; k < inicios.length; k++) if (inicios[k] <= agora + 0.05) i = k;
+    if (agora - inicios[i] < 2 && i > 0) i--;
+    audio.vaiPara(inicios[i]);
+  }, [audio, inicios, marcaAjuda]);
+
+  useEffect(() => {
+    const ignora = (e: KeyboardEvent) => e.ctrlKey || e.metaKey || e.altKey || !!(e.target as HTMLElement | null)?.closest("input, textarea, select, [contenteditable]");
+    const f = (e: KeyboardEvent) => {
+      if (ignora(e)) return;
+      if (e.key === " ") {
+        if (!e.repeat) alterna();
+      } else if (e.key === "ArrowLeft") recua(5);
+      else if (e.key === "ArrowUp") voltaLeitura();
+      else return;
+      e.preventDefault();
+    };
+    // o Espaço "clica" no botão em foco (ex.: a bolha que acabou de marcar) ao soltar a tecla: aqui ele só pausa
+    const solta = (e: KeyboardEvent) => {
+      if (e.key === " " && !ignora(e)) e.preventDefault();
+    };
+    window.addEventListener("keydown", f);
+    window.addEventListener("keyup", solta);
+    return () => {
+      window.removeEventListener("keydown", f);
+      window.removeEventListener("keyup", solta);
+    };
+  }, [alterna, recua, voltaLeitura]);
+
+  return (
+    <span className="controles-prova">
+      <button className="sec" onClick={voltaLeitura} title="Voltar ao começo da leitura (↑) — de novo logo em seguida: leitura anterior">
+        ⏮
+      </button>
+      <button className="sec" onClick={() => recua(5)} title="Voltar 5 segundos (←)">
+        −5 s
+      </button>
+      <button className="pri" onClick={alterna} title={tocando ? "Pausar (Espaço)" : "Continuar (Espaço)"}>
+        {tocando ? "❚❚ pausar" : "▶ continuar"}
+      </button>
+      <select value={velocidade} onChange={(e) => mudaConfig({ velocidadeProva: Number(e.target.value) })} title="velocidade do áudio">
+        {VELOCIDADES_PROVA.map((v) => (
+          <option key={v} value={v}>
+            {v}×
+          </option>
+        ))}
+      </select>
+      {!tocando && tempo > 0 && <span className="pausado">pausado</span>}
+    </span>
   );
 }
 

@@ -2520,3 +2520,51 @@ button:disabled {
   color: var(--ok);
   font-weight: 400;
 }
+
+/* modo prova: controles do áudio do listening (opcionais, para treinar) */
+.opcao-controles {
+  display: flex;
+  gap: 0.6em;
+  align-items: flex-start;
+  margin: 1em 0;
+  padding: 0.7em 0.9em;
+  border: 1px dashed var(--linha);
+  border-radius: var(--raio);
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.92rem;
+}
+.opcao-controles input {
+  margin-top: 0.25em;
+}
+.controles-prova {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  flex-wrap: wrap;
+}
+.controles-prova button {
+  padding: 0.35em 0.75em;
+  min-width: 2.6em;
+}
+.controles-prova .pausado {
+  color: var(--tinta-3);
+  font-size: 0.85rem;
+}
+.marca-ajuda {
+  color: var(--tinta-3);
+  cursor: help;
+}
+.data .tag {
+  margin-left: 0.6em;
+}
+@media (max-width: 600px) {
+  .controles-prova {
+    order: 10;
+    width: 100%;
+  }
+  .controles-prova button {
+    padding: 0.3em 0.6em;
+    font-size: 0.82rem;
+  }
+}

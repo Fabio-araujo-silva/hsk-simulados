@@ -219,6 +219,8 @@ export interface Tentativa {
   restante?: number;
   /** prova feita sem a parte de listening (prova sem áudio) */
   semListening?: boolean;
+  /** modo prova: o listening foi pausado, voltado ou tocado em outra velocidade (o exame real não deixa) */
+  comAjuda?: boolean;
   /** palavras consultadas no hover por questão (sugestões de cartões) */
   consultas?: Record<number, string[]>;
   /** modo estudo por blocos: grupos (ex.: "R1a") já corrigidos — antes disso as respostas do bloco ficam ocultas */
@@ -312,8 +314,10 @@ export interface Config {
   velocidade: number;
   /** modo estudo: mostrar a transcrição do áudio antes de responder */
   transcricaoAntes: boolean;
-  /** modo prova: permitir pausar o áudio */
+  /** modo prova: liberar os controles do áudio do listening (pausar, voltar, velocidade) */
   pausarProva: boolean;
+  /** modo prova: velocidade do áudio do listening (só vale com os controles liberados) */
+  velocidadeProva?: number;
   /** quantos cartões novos por dia */
   novosPorDia: number;
   /** modo estudo: tocar o áudio sozinho ao abrir uma questão de listening ainda não respondida */
