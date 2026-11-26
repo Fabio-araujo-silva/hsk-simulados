@@ -40,7 +40,7 @@ export function PaginaConfig() {
         </label>
         <label className="linha-cfg">
           <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
-          Modo prova: liberar pausar, voltar e mudar a velocidade do áudio do listening (no exame real não pode)
+          Modo prova: liberar pausar o tempo das seções e, no listening, voltar e mudar a velocidade do áudio (no exame real não pode)
         </label>
         <label className="linha-cfg">
           Cartões novos por dia

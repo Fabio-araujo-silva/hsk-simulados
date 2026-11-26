@@ -196,6 +196,9 @@ export interface Resposta {
   pendente?: boolean;
 }
 
+/** fogo = ponho a mão no fogo · acho = acho que sei · gato = pulo do gato · nada = não faço ideia */
+export type Rotulo = "fogo" | "acho" | "gato" | "nada";
+
 export interface Tentativa {
   id: string;
   prova: string;
@@ -219,8 +222,10 @@ export interface Tentativa {
   restante?: number;
   /** prova feita sem a parte de listening (prova sem áudio) */
   semListening?: boolean;
-  /** modo prova: o listening foi pausado, voltado ou tocado em outra velocidade (o exame real não deixa) */
+  /** modo prova: o tempo foi pausado ou o áudio voltado / tocado em outra velocidade (o exame real não deixa) */
   comAjuda?: boolean;
+  /** modo prova: quanto você sabia de cada questão (marcado na prova, ajustável na correção) */
+  rotulos?: Record<number, Rotulo>;
   /** palavras consultadas no hover por questão (sugestões de cartões) */
   consultas?: Record<number, string[]>;
   /** modo estudo por blocos: grupos (ex.: "R1a") já corrigidos — antes disso as respostas do bloco ficam ocultas */
@@ -314,7 +319,7 @@ export interface Config {
   velocidade: number;
   /** modo estudo: mostrar a transcrição do áudio antes de responder */
   transcricaoAntes: boolean;
-  /** modo prova: liberar os controles do áudio do listening (pausar, voltar, velocidade) */
+  /** modo prova: liberar os controles de treino (pausar o tempo; no listening, voltar e velocidade) */
   pausarProva: boolean;
   /** modo prova: velocidade do áudio do listening (só vale com os controles liberados) */
   velocidadeProva?: number;

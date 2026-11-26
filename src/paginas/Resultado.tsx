@@ -1,5 +1,8 @@
 import { useMemo, useState } from "react";
-import { salvaCartoes, useConfig, useEstado } from "../armazenamento";
+import { mudaTentativa, salvaCartoes, useConfig, useEstado } from "../armazenamento";
+import { MarcaRotulo, ROTULOS, SeletorRotulo } from "../componentes/RotuloQuestao";
+import type { Rotulo } from "../tipos";
+import { comRotulo } from "./Exame";
 import { sugereCartoes } from "../cartoes";
 import { resumoTentativa, textoResposta } from "../correcao";
 import { nomeParte, NOMES_SECAO, regras } from "../dados";
@@ -16,7 +19,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
   const audio = useAudioDaProva(prova);
   const cfg = useConfig();
   const [aberta, setAberta] = useState<number | null>(null);
-  const [filtro, setFiltro] = useState<"erradas" | "todas">("erradas");
+  const [filtro, setFiltro] = useState<"erradas" | "todas" | Rotulo>("erradas");
   const [msg, setMsg] = useState<string | null>(null);
 
   const res = useMemo(() => (prova && t ? resumoTentativa(prova, t) : null), [prova, t]);
@@ -37,7 +40,20 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
     if (t.semListening && q.secao === "L") return false;
     return !r || !(r.certa || r.manual);
   });
-  const lista = filtro === "erradas" ? erradas : prova.questoes.filter((q) => !(t.semListening && q.secao === "L"));
+  const validas = prova.questoes.filter((q) => !(t.semListening && q.secao === "L"));
+  const rotulos = t.rotulos ?? {};
+  const acertou = (n: number) => {
+    const r = t.respostas[n];
+    return !!r && (r.certa || r.manual);
+  };
+  // confiança × acerto: quantas de cada rótulo você acertou
+  const porRotulo = ROTULOS.map((r) => {
+    const qs = validas.filter((q) => rotulos[q.n] === r.id);
+    return { ...r, total: qs.length, certas: qs.filter((q) => acertou(q.n)).length };
+  });
+  const comRotulos = t.modo === "prova";
+  const filtroRotulo = ROTULOS.find((r) => r.id === filtro);
+  const lista = filtro === "erradas" ? erradas : filtroRotulo ? validas.filter((q) => rotulos[q.n] === filtroRotulo.id) : validas;
 
   const adicionaTodas = () => {
     const novos = erradas.flatMap((q) => sugereCartoes(prova, q, lexico, t.consultas?.[q.n] ?? []).filter((s) => !s.existe && s.marcado).map((s) => s.cartao));
@@ -55,8 +71,8 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
         <p className="data">
           {new Date(t.fim ?? t.inicio).toLocaleString("pt-BR")}
           {t.comAjuda && (
-            <span className="tag" title="O listening foi pausado, voltado ou tocado em outra velocidade — no exame real não dá.">
-              listening com pausa/velocidade
+            <span className="tag" title="Você pausou o tempo, voltou o áudio ou mudou a velocidade — no exame real não dá.">
+              com pausa/velocidade
             </span>
           )}
         </p>
@@ -124,9 +140,29 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
           </>
         )}
 
+        {comRotulos && porRotulo.some((r) => r.total > 0) && (
+          <>
+            <h2>Confiança × acerto</h2>
+            <div className="confianca">
+              {porRotulo
+                .filter((r) => r.total > 0)
+                .map((r) => (
+                  <button key={r.id} className="confianca-item" onClick={() => setFiltro(r.id)} title="ver estas questões">
+                    <MarcaRotulo id={r.id} />
+                    <span className="confianca-nome">{r.nome}</span>
+                    <b>
+                      {r.certas}/{r.total}
+                    </b>
+                    <small>{Math.round((r.certas / r.total) * 100)}% certas</small>
+                  </button>
+                ))}
+            </div>
+          </>
+        )}
+
         <div className="revisar-cabecalho">
           <h2>
-            Revisar {filtro === "erradas" ? `as ${erradas.length} erradas` : "todas"}
+            Revisar {filtro === "erradas" ? `as ${erradas.length} erradas` : filtroRotulo ? `${filtroRotulo.nome} (${lista.length})` : "todas"}
           </h2>
           <div className="alternadores">
             <button className={filtro === "erradas" ? "pri" : "sec"} onClick={() => setFiltro("erradas")}>
@@ -135,6 +171,13 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
             <button className={filtro === "todas" ? "pri" : "sec"} onClick={() => setFiltro("todas")}>
               todas
             </button>
+            {porRotulo
+              .filter((r) => r.total > 0)
+              .map((r) => (
+                <button key={r.id} className={`filtro-rotulo ${filtro === r.id ? "pri" : "sec"}`} onClick={() => setFiltro(r.id)} title={r.nome}>
+                  <MarcaRotulo id={r.id} /> {r.total}
+                </button>
+              ))}
             <label className={`chave ${cfg.traducao ? "on" : ""}`}>
               <input type="checkbox" checked={cfg.traducao} onChange={(e) => mudaConfig({ traducao: e.target.checked })} /> Tradução
             </label>
@@ -163,6 +206,8 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
             const grupo = q.grupo ? prova.grupos[q.grupo] : undefined;
             return (
               <div key={q.n} className={`item-revisar ${ok ? "ok" : "erro"}`}>
+                <div className="item-linha">
+                {comRotulos && <SeletorRotulo valor={rotulos[q.n]} onMuda={(r) => mudaTentativa(t.id, (x) => comRotulo(x, q.n, r))} />}
                 <button className="item-cabeca" onClick={() => setAberta(aberta === q.n ? null : q.n)}>
                   <span className="numero">{q.n}</span>
                   <span className="parte">{nomeParte(prova.nivel, `${q.secao}${q.parte}`)}</span>
@@ -170,6 +215,7 @@ export function PaginaResultado({ tentativaId }: { tentativaId: string }) {
                   {!ok && <span className="oficial zh">certa: {textoResposta(q, grupo)}</span>}
                   <span className="seta">{aberta === q.n ? "▲" : "▼"}</span>
                 </button>
+                </div>
                 {aberta === q.n && (
                   <div className="item-corpo">
                     <VisaoQuestao prova={prova} q={q} valor={r?.valor ?? null} revelado modo="revisao" audio={audio} />

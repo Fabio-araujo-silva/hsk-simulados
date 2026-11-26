@@ -6,7 +6,8 @@ import { formataTempo, nomeParte, NOMES_SECAO, regras, urlMidia } from "../dados
 import { ProvedorLeitura, Frase } from "../componentes/Leitura";
 import { VisaoQuestao } from "../componentes/Questao";
 import { BlocoExemplo } from "../componentes/Exemplo";
-import type { Prova, Questao, Tentativa } from "../tipos";
+import type { Prova, Questao, Rotulo, Tentativa } from "../tipos";
+import { SeletorRotulo } from "../componentes/RotuloQuestao";
 import { useAudioDaProva, useProvaELexico } from "./Estudo";
 import { vaiPara } from "../App";
 import { useRiscadas } from "../riscadas";
@@ -55,7 +56,7 @@ export function PaginaExame({ id }: { id: string }) {
           </li>
           <li>Use fones e um lugar silencioso — como no dia.</li>
         </ul>
-        {prova.audio && <OpcaoControles />}
+        <OpcaoControles />
         {!prova.audio && <div className="aviso">Esta prova ainda não tem áudio: o listening será pulado e a nota considera só leitura e escrita.</div>}
         <div className="acoes">
           {pendente ? (
@@ -98,6 +99,14 @@ export function PaginaExame({ id }: { id: string }) {
   return <Exame prova={prova} tid={tid} />;
 }
 
+/** A tentativa com o rótulo da questão `n` trocado (null = sem rótulo). */
+export function comRotulo(x: Tentativa, n: number, r: Rotulo | null): Tentativa {
+  const rotulos = { ...(x.rotulos ?? {}) };
+  if (r) rotulos[n] = r;
+  else delete rotulos[n];
+  return { ...x, rotulos };
+}
+
 function etapaNome(e?: Etapa) {
   return e === "L" ? "listening" : e === "Lfolha" ? "revisão do listening" : e === "R" ? "leitura" : e === "W" ? "escrita" : "fim";
 }
@@ -109,10 +118,13 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
   const { tempo, tocando } = useTempo(audio);
   const [iniciado, setIniciado] = useState(false);
   const etapa = t?.etapa ?? "L";
-  const controles = cfg.pausarProva && !!audio;
+  const controles = cfg.pausarProva;
   const velocidade = controles ? cfg.velocidadeProva ?? 1 : 1;
+  /** cronômetro da etapa parado (revisão do listening, leitura, escrita); cada etapa começa correndo */
+  const [pausado, setPausado] = useState(false);
+  useEffect(() => setPausado(false), [etapa]);
 
-  /** pausar, voltar ou mudar a velocidade: o resultado mostra que o listening não foi "como no dia" */
+  /** pausar, voltar ou mudar a velocidade: o resultado mostra que o simulado não foi "como no dia" */
   const marcaAjuda = useCallback(() => {
     if (!leEstado().tentativas[tid]?.comAjuda) mudaTentativa(tid, (x) => ({ ...x, comAjuda: true }));
   }, [tid]);
@@ -165,16 +177,18 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
 
   // cronômetro das etapas com tempo fixo (só corre com a aba aberta)
   useEffect(() => {
-    if (etapa === "L" || etapa === "fim" || !iniciado) return;
+    if (etapa === "L" || etapa === "fim" || !iniciado || pausado) return;
     const id = window.setInterval(() => {
       mudaTentativa(tid, (x) => ({ ...x, restante: Math.max(0, (x.restante ?? tempoEtapa(prova, etapa)) - 1) }));
     }, 1000);
     return () => window.clearInterval(id);
-  }, [etapa, tid, iniciado, prova]);
+  }, [etapa, tid, iniciado, prova, pausado]);
 
   useEffect(() => {
     if (etapa !== "L" && etapa !== "fim" && t?.restante === 0) avanca();
   }, [t?.restante, etapa, avanca]);
+
+  const mudaRotulo = useCallback((n: number, r: Rotulo | null) => mudaTentativa(tid, (x) => comRotulo(x, n, r)), [tid]);
 
   const responde = useCallback(
     (q: Questao, v: string | boolean) => {
@@ -202,7 +216,7 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
           {etapa === "L" && t.audioPos ? ` (áudio em ${formataTempo(t.audioPos)})` : ""}
           {etapa !== "L" && t.restante !== undefined ? ` · ${formataTempo(t.restante)} restantes` : ""}
         </p>
-        {etapa === "L" && <OpcaoControles />}
+        <OpcaoControles />
         <button className="pri grande" onClick={() => setIniciado(true)}>
           {t.audioPos || etapa !== "L" ? "Continuar" : "Iniciar — o áudio começa agora"}
         </button>
@@ -225,10 +239,25 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
           <b>{prova.id}</b>
           <span className="secao-nome">{NOMES_SECAO[secao]}</span>
           {etapa === "Lfolha" && <span className="tag">5 min para conferir o listening</span>}
-          <span className={`relogio ${restante < 60 && etapa !== "L" ? "urgente" : ""}`}>{formataTempo(restante)}</span>
+          <span className={`relogio ${restante < 60 && etapa !== "L" ? "urgente" : ""} ${pausado && etapa !== "L" ? "parado" : ""}`}>{formataTempo(restante)}</span>
           <span className="contagem">
             {respondidas}/{questoes.length} respondidas
           </span>
+          {etapa !== "L" && controles && (
+            <span className="controles-prova">
+              <button
+                className={pausado ? "pri" : "sec"}
+                onClick={() => {
+                  marcaAjuda();
+                  setPausado((p) => !p);
+                }}
+                title={pausado ? "Voltar a correr o cronômetro" : "Parar o cronômetro desta seção"}
+              >
+                {pausado ? "▶ continuar" : "❚❚ pausar"}
+              </button>
+              {pausado && <span className="pausado">cronômetro parado</span>}
+            </span>
+          )}
           {etapa === "L" && controles && audio && <ControlesListening audio={audio} prova={prova} tempo={tempo} tocando={tocando} velocidade={velocidade} marcaAjuda={marcaAjuda} />}
           {/* sempre presente no listening: aparecer só na 1ª questão fazia o cabeçalho fixo crescer e a página pular */}
           {etapa === "L" && <span className="tocando">{tocandoN ? `♪ tocando: questão ${tocandoN}` : "♪ instruções"}</span>}
@@ -246,20 +275,20 @@ function Exame({ prova, tid }: { prova: Prova; tid: string }) {
             {etapa === "W" || (etapa === "R" && !regras(prova.nivel).questoes.W) ? "entregar prova" : "encerrar seção →"}
           </button>
         </header>
-        <FolhaProva prova={prova} questoes={questoes} t={t} responde={responde} tocandoN={tocandoN} />
+        <FolhaProva prova={prova} questoes={questoes} t={t} responde={responde} tocandoN={tocandoN} mudaRotulo={mudaRotulo} />
       </div>
     </ProvedorLeitura>
   );
 }
 
-/** Liga/desliga os controles do áudio do listening (vale para esta e para as próximas provas). */
+/** Liga/desliga os controles de treino: pausar o cronômetro e, no listening, voltar e mudar a velocidade do áudio. */
 function OpcaoControles() {
   const cfg = useConfig();
   return (
     <label className="opcao-controles">
       <input type="checkbox" checked={cfg.pausarProva} onChange={(e) => mudaConfig({ pausarProva: e.target.checked })} />
       <span>
-        <b>Treinar com controles no listening</b> — pausar, voltar o áudio e mudar a velocidade. No exame real não dá; o resultado fica marcado.
+        <b>Treinar com controles</b> — pausar o tempo de qualquer seção e, no listening, voltar o áudio e mudar a velocidade. No exame real não dá; o resultado fica marcado.
       </span>
     </label>
   );
@@ -350,11 +379,22 @@ function ControlesListening({ audio, prova, tempo, tocando, velocidade, marcaAju
 }
 
 /** A seção como no caderno: grupos (figuras, banco de palavras) aparecem uma vez só. */
-function FolhaProva({ prova, questoes, t, responde, tocandoN }: { prova: Prova; questoes: Questao[]; t: Tentativa; responde: (q: Questao, v: string | boolean) => void; tocandoN: number | null }) {
-  const refs = useRef<Record<number, HTMLDivElement | null>>({});
-  useEffect(() => {
-    if (tocandoN) refs.current[tocandoN]?.scrollIntoView({ block: "center", behavior: "smooth" });
-  }, [tocandoN]);
+function FolhaProva({
+  prova,
+  questoes,
+  t,
+  responde,
+  tocandoN,
+  mudaRotulo,
+}: {
+  prova: Prova;
+  questoes: Questao[];
+  t: Tentativa;
+  responde: (q: Questao, v: string | boolean) => void;
+  tocandoN: number | null;
+  mudaRotulo: (n: number, r: Rotulo | null) => void;
+}) {
+  // a questão que está tocando só fica destacada: centralizar a tela nela tirava você do lugar onde estava
 
   const blocos: { chave: string; parte: string; grupo?: string; qs: Questao[] }[] = [];
   for (const q of questoes) {
@@ -377,8 +417,11 @@ function FolhaProva({ prova, questoes, t, responde, tocandoN }: { prova: Prova; 
             <BlocoExemplo prova={prova} bloco={b.chave} modo="prova" />
             {agrupado && grupo && <CabecalhoGrupo grupo={grupo} tipo={b.qs[0].tipo} chave={`${prova.id}:${b.grupo}`} />}
             {b.qs.map((q) => (
-              <div key={q.n} ref={(el) => (refs.current[q.n] = el)} className={`item-folha ${tocandoN === q.n ? "tocando" : ""}`}>
-                <span className="numero">{q.n}</span>
+              <div key={q.n} className={`item-folha ${tocandoN === q.n ? "tocando" : ""}`}>
+                <div className="lado-folha">
+                  <span className="numero">{q.n}</span>
+                  <SeletorRotulo valor={t.rotulos?.[q.n]} onMuda={(r) => mudaRotulo(q.n, r)} />
+                </div>
                 {agrupado && grupo ? (
                   <LinhaGrupo q={q} grupo={grupo} chave={`${prova.id}:${q.n}`} valor={t.respostas[q.n]?.valor ?? null} onResponde={(v) => responde(q, v)} />
                 ) : (
