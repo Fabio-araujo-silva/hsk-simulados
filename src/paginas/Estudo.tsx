@@ -52,6 +52,14 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     return 1;
   });
   const [verRoteiro, setVerRoteiro] = useState(false);
+  // menu de questões recolhido (preferência deste aparelho, não vai para o progresso)
+  const [navOculto, setNavOculto] = useState(() => localStorage.getItem("hsk-nav-oculto") === "1");
+  const alternaNav = useCallback(() => {
+    setNavOculto((o) => {
+      localStorage.setItem("hsk-nav-oculto", o ? "0" : "1");
+      return !o;
+    });
+  }, []);
   const [caixaFechada, setCaixaFechada] = useState<Record<number, boolean>>({});
   const [caixaAberta, setCaixaAberta] = useState<Record<number, boolean>>({});
   const topoRef = useRef<HTMLDivElement>(null);
@@ -184,6 +192,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
       else if (e.key === "Enter" && resposta) vai(n + 1);
       else if (e.key.toLowerCase() === "t") mudaConfig({ traducao: !cfg.traducao });
       else if (e.key.toLowerCase() === "p") mudaConfig({ pinyin: !cfg.pinyin });
+      else if (e.key.toLowerCase() === "m") alternaNav();
       else if (e.key === " " && audio && q?.audio) {
         e.preventDefault();
         // igual ao ▶ do player: continua de onde parou em vez de recomeçar a 1ª leitura
@@ -205,7 +214,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
     };
     window.addEventListener("keydown", f);
     return () => window.removeEventListener("keydown", f);
-  }, [n, revelado, resposta, bloco, blocoCorrigido, faltamBloco, corrigeBloco, cfg.traducao, cfg.pinyin, audio, q, responde, vai, prova]);
+  }, [n, revelado, resposta, bloco, blocoCorrigido, faltamBloco, corrigeBloco, cfg.traducao, cfg.pinyin, audio, q, responde, vai, prova, alternaNav]);
 
   const resumo = useMemo(() => {
     if (!prova || !tentativa) return null;
@@ -226,8 +235,21 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
 
   return (
     <ProvedorLeitura lexico={lexico} traducao={cfg.traducao} pinyin={cfg.pinyin || (regras(prova.nivel).pinyinNaProva && cfg.pinyinHsk1 !== false)} audio={audio} consultou={consultou}>
-      <div className="estudo" ref={topoRef}>
+      <div className={`estudo ${navOculto ? "nav-oculto" : ""}`} ref={topoRef}>
+        {navOculto ? (
+          <aside className="navegador recolhido">
+            <button className="nav-alterna" onClick={alternaNav} title="mostrar o menu de questões (atalho: M)">
+              »
+            </button>
+            <span className="nav-vertical">
+              {q.n}/{prova.questoes.length}
+            </span>
+          </aside>
+        ) : (
         <aside className="navegador">
+          <button className="nav-alterna" onClick={alternaNav} title="recolher o menu de questões (atalho: M)">
+            «
+          </button>
           <div className="nav-titulo">
             <b>{prova.id}</b> · estudo
             {resumo && (
@@ -299,6 +321,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
             </button>
           </div>
         </aside>
+        )}
 
         <section className="painel">
           <div className="barra-ferramentas">
@@ -411,7 +434,7 @@ export function PaginaEstudo({ id, nInicial }: { id: string; nInicial?: number }
                 </button>
               </div>
               <p className="atalhos">
-                atalhos: <kbd>←</kbd>/<kbd>→</kbd> navegar · <kbd>A</kbd>–<kbd>F</kbd> responder · <kbd>V</kbd>/<kbd>F</kbd> certo/errado · <kbd>espaço</kbd> tocar · <kbd>Enter</kbd> próxima
+                atalhos: <kbd>←</kbd>/<kbd>→</kbd> navegar · <kbd>A</kbd>–<kbd>F</kbd> responder · <kbd>V</kbd>/<kbd>F</kbd> certo/errado · <kbd>espaço</kbd> tocar · <kbd>Enter</kbd> próxima · <kbd>M</kbd> menu
               </p>
             </>
           )}

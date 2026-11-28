@@ -30,6 +30,8 @@ interface Dica {
   selecao?: { w: string; py: string; pt?: string }[];
   /** no celular: lembrete de que um 2º toque na palavra toca o áudio dali */
   toque?: string;
+  /** palavra que abriu o balão: enquanto o cursor estiver nela, o balão fica (e acompanha a rolagem) */
+  alvo?: HTMLElement;
 }
 
 interface Ctx {
@@ -68,7 +70,9 @@ export function ProvedorLeitura(props: {
   const mostraDica = useCallback((d: Dica | null) => {
     window.clearTimeout(timer.current);
     if (d) setDica(d);
-    else timer.current = window.setTimeout(() => setDica(null), 120);
+    // um mouseleave falso (a tela re-renderizou ou mudou de lugar com o cursor parado) não fecha o balão
+    // se o cursor continua em cima da palavra
+    else timer.current = window.setTimeout(() => setDica((a) => (a?.alvo?.isConnected && a.alvo.matches(":hover") ? a : null)), 120);
   }, []);
   const valor = useMemo(
     () => ({ lexico: props.lexico, traducao: props.traducao, pinyin: props.pinyin, pinyinFixo: props.pinyinFixo, audio: props.audio, mostraDica, consultou: props.consultou }),
@@ -78,7 +82,14 @@ export function ProvedorLeitura(props: {
     if (!props.traducao) setDica(null);
   }, [props.traducao]);
   useEffect(() => {
-    const some = () => setDica(null);
+    // rolou a página: o balão de uma palavra acompanha a palavra (rolagens automáticas, como a do salvamento
+    // ou a do áudio, não fecham mais o balão depois de 1 s); o de uma seleção fecha
+    const some = () =>
+      setDica((a) => {
+        if (!a?.alvo?.isConnected) return null;
+        const r = a.alvo.getBoundingClientRect();
+        return { ...a, x: r.left + r.width / 2, y: r.bottom };
+      });
     window.addEventListener("scroll", some, true);
     return () => window.removeEventListener("scroll", some, true);
   }, []);
@@ -187,7 +198,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
     const w = f.tk[i];
     const r = (ev.currentTarget as HTMLElement).getBoundingClientRect();
     if (ehPontuacao(w)) {
-      ctx.mostraDica({ x: r.left + r.width / 2, y: r.bottom, frase: traduzFrase });
+      ctx.mostraDica({ x: r.left + r.width / 2, y: r.bottom, frase: traduzFrase, alvo: ev.currentTarget as HTMLElement });
       return;
     }
     const v = ctx.lexico?.[w];
@@ -201,6 +212,7 @@ export function Frase({ f, semSpoiler, fim1, fim2, destaque, className, inerte, 
       hsk: v?.hsk,
       frase: traduzFrase,
       toque: toque && temAudioNo(i) ? "toque de novo para ouvir daqui" : undefined,
+      alvo: ev.currentTarget as HTMLElement,
     });
     ctx.consultou?.(w);
   };
